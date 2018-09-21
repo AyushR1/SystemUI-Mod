@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_indication_dash_charging_time">ഡാഷ് ചാര്‍ജിങ്ങ് (%s until full)</string>
+    <string name="keyguard_indication_turbo_power_time">ടർബോ പവർ ഘടിപ്പിച്ചിരിക്കുന്നു (ചാർജിങ് പൂർത്തിയാവാൻ %s കൂടി.)</string>
+    <string name="keyguard_plugged_in_dash_charging">ഡാഷ് ചാർജിങ്</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">ടർബോ ചാർജർ കണക്ട് ചെയ്തിരിക്കുന്നു</string>
+</resources>

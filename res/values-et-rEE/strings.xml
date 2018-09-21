@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_indication_dash_charging_time">Kiire laadimine (%s jäänud)</string>
+    <string name="keyguard_indication_turbo_power_time">TurboPower on ühendatud (%s jäänud)</string>
+    <string name="keyguard_plugged_in_dash_charging">Kiire laadimine</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower on ühendatud</string>
+</resources>

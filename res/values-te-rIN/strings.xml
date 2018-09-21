@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_indication_dash_charging_time">ఫాస్ట్ ఛార్జింగ్(%sపూర్తి వరకు)</string>
+    <string name="keyguard_plugged_in_dash_charging">డాష్ ఛార్జింగ్</string>
+</resources>

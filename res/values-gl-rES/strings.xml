@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_indication_dash_charging_time">Carga rápida (%s até encher)</string>
+    <string name="keyguard_indication_turbo_power_time">Carga rápida conectada (%s ata completar)</string>
+    <string name="keyguard_plugged_in_dash_charging">Carga Rápida</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">Carga rápida conectada</string>
+</resources>
