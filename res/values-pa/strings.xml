@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">ਖੱਬੇ ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਵੀ ਅਣਲਾਕ ਹੁੰਦੀ ਹੈ</string>
     <string name="lockscreen_unlock_right">ਸੱਜੇ ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਵੀ ਅਣਲਾਕ ਹੁੰਦੀ ਹੈ</string>
     <string name="manage_notifications_text">ਸੂਚਨਾਵਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</string>
-    <string name="managed_profile_foreground_toast">ਤੁਸੀਂ ਆਪਣੀ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਵਰਤ ਰਹੇ ਹੋ</string>
     <string name="managed_user_title">ਸਾਰੀਆਂ ਕੰਮ ਐਪਾਂ</string>
     <string name="media_category">ਮੀਡੀਆ</string>
     <string name="media_projection_action_text">ਹੁਣ ਚਾਲੂ ਕਰੋ</string>

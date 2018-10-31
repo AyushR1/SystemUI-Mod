@@ -1,6 +1,9 @@
 .class Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;
-.super Landroid/util/FloatProperty;
+.super Ljava/lang/Object;
 .source "NotificationStackScrollLayout.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -13,66 +16,76 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/util/FloatProperty<",
-        "Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public get(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Ljava/lang/Float;
-    .locals 1
+.method public run()V
+    .locals 6
 
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->getDarkAmount()F
+    iget-object v0, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$700(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1000(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Landroid/widget/OverScroller;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v2, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    check-cast p1, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+    invoke-static {v2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$800(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)I
 
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->get(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Ljava/lang/Float;
+    move-result v2
 
-    move-result-object p1
+    iget-object v3, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    return-object p1
-.end method
+    invoke-static {v3}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$900(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)I
 
-.method public setValue(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;F)V
-    .locals 0
+    move-result v3
 
-    invoke-static {p1, p2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$700(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;F)V
+    iget-object v4, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    return-void
-.end method
+    invoke-static {v4}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$900(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)I
 
-.method public bridge synthetic setValue(Ljava/lang/Object;F)V
-    .locals 0
+    move-result v4
 
-    check-cast p1, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+    sub-int v4, v0, v4
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->setValue(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;F)V
+    const/4 v5, 0x0
+
+    invoke-virtual {v1, v2, v3, v5, v4}, Landroid/widget/OverScroller;->startScroll(IIII)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    const/4 v2, 0x1
+
+    invoke-static {v1, v2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1102(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;Z)Z
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-static {v1, v2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1202(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;Z)Z
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$7;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-static {v1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1300(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)V
 
     return-void
 .end method

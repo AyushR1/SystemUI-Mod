@@ -683,11 +683,11 @@ priorità"</string>
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • In carica (%s al termine)</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • Ricarica veloce (%s al termine)</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • Ricarica lenta (%s al termine)</string>
-    <string name="keyguard_indication_dash_charging_time">Ricarica rapida ( %s al termine)</string>
+    <string name="keyguard_indication_dash_charging_time">Ricarica Dash ( %s fino al completamento)</string>
     <string name="keyguard_indication_trust_disabled">Il dispositivo resterà bloccato fino allo sblocco manuale</string>
     <string name="keyguard_indication_trust_granted">Sbloccato per %1$s</string>
     <string name="keyguard_indication_trust_managed">%1$s in esecuzione</string>
-    <string name="keyguard_indication_turbo_power_time">TurboPower connesso (%s al termine)</string>
+    <string name="keyguard_indication_turbo_power_time">TurboPower connesso (%s fino al completamento)</string>
     <string name="keyguard_instructions_when_pattern_disabled">Premi Menu per sbloccare.</string>
     <string name="keyguard_low_battery">Collega il caricabatterie.</string>
     <string name="keyguard_missing_sim_instructions">Inserisci una scheda SIM.</string>
@@ -710,7 +710,7 @@ priorità"</string>
     <string name="keyguard_plugged_in">%s • In carica</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Ricarica veloce</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Ricarica lenta</string>
-    <string name="keyguard_plugged_in_dash_charging">Ricarica Rapida</string>
+    <string name="keyguard_plugged_in_dash_charging">Ricarica Dash</string>
     <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connesso</string>
     <string name="keyguard_sim_error_message_short">Scheda non valida.</string>
     <string name="keyguard_sim_locked_message">La SIM è bloccata.</string>
@@ -828,7 +828,6 @@ Riprova tra %2$d secondi."</string>
     <string name="lockscreen_unlock_left">Anche la scorciatoia sinistra consente di sbloccare</string>
     <string name="lockscreen_unlock_right">Anche la scorciatoia destra consente di sbloccare</string>
     <string name="manage_notifications_text">Gestisci le notifiche</string>
-    <string name="managed_profile_foreground_toast">Stai utilizzando il profilo di lavoro</string>
     <string name="managed_user_title">Tutte le app di lavoro</string>
     <string name="media_category">Contenuti multimediali</string>
     <string name="media_projection_action_text">Avvia adesso</string>
@@ -1186,6 +1185,7 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="saved_network">Salvata da %1$s</string>
     <string name="screen_pinning_description">La schermata rimane visibile finché non viene sganciata. Per sganciarla, tieni premuto Indietro e Panoramica.</string>
     <string name="screen_pinning_description_accessible">La schermata rimane visibile finché non viene sganciata. Per sganciarla, tieni premuto Panoramica.</string>
+    <string name="screen_pinning_description_no_navbar">Questo lo tiene in vista finché non lo sblocchi. Tocca &amp; tieni premuto Indietro per sbloccare.</string>
     <string name="screen_pinning_description_recents_invisible">La schermata rimane visibile finché non viene disattivato il blocco su schermo. Per disattivarlo, tocca e tieni premuto Indietro e Home.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">La schermata rimane visibile finché non viene disattivato il blocco su schermo. Per disattivarlo, tocca e tieni premuto Home.</string>
     <string name="screen_pinning_exit">Blocco su schermo disattivato</string>
@@ -1194,6 +1194,7 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="screen_pinning_start">Blocco su schermo attivato</string>
     <string name="screen_pinning_title">La schermata è fissata</string>
     <string name="screen_pinning_toast">Per disattivare il blocco su schermo, tocca e tieni premuti i pulsanti Indietro e Panoramica</string>
+    <string name="screen_pinning_toast_no_navbar">Per sbloccare questa schermata, tocca &amp; tieni premuto il tasto indietro</string>
     <string name="screen_pinning_toast_recents_invisible">Per disattivare il blocco su schermo, tocca e tieni premuti i pulsanti Indietro e Home</string>
     <string name="screen_zoom_summary_custom">Personalizzato (%d)</string>
     <string name="screen_zoom_summary_default">Predefinite</string>

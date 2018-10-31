@@ -249,6 +249,12 @@
     return-void
 .end method
 
+.method public toggleCameraFlash()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public toggleKeyboardShortcutsMenu(I)V
     .locals 0
 

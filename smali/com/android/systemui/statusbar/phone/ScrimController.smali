@@ -248,7 +248,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703e2
+    const v2, 0x7f0703e4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getFloat(I)F
 
@@ -1994,6 +1994,32 @@
     return-void
 .end method
 
+.method public setHasBackdrop(Z)V
+    .locals 4
+
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/ScrimState;->values()[Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3, p1}, Lcom/android/systemui/statusbar/phone/ScrimState;->setHasBackdrop(Z)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method public setKeyguardOccluded(Z)V
     .locals 0
 
@@ -2001,6 +2027,32 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrims()V
 
+    return-void
+.end method
+
+.method public setLaunchingAffordanceWithPreview(Z)V
+    .locals 4
+
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/ScrimState;->values()[Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3, p1}, Lcom/android/systemui/statusbar/phone/ScrimState;->setLaunchingAffordanceWithPreview(Z)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
@@ -2545,157 +2597,147 @@
 .end method
 
 .method protected updateScrims()V
-    .locals 7
+    .locals 10
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mNeedsDrawableColorUpdate:Z
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_5
 
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mNeedsDrawableColorUpdate:Z
+    iput-boolean v2, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mNeedsDrawableColorUpdate:Z
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    sget-object v3, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    if-eq v0, v3, :cond_3
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    sget-object v3, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    if-eq v0, v3, :cond_3
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    sget-object v3, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    if-ne v0, v3, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
-
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/ScrimView;->getViewAlpha()F
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isKeyguardVisible()Z
 
     move-result v0
 
-    const/4 v3, 0x0
+    if-eqz v0, :cond_0
 
-    cmpl-float v0, v0, v3
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardOccluded:Z
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
-    :cond_1
-    move v0, v1
+    :cond_0
+    move v0, v2
 
     :goto_0
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
+    if-eqz v0, :cond_1
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mLockColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mSystemColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
+
+    :goto_1
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
 
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/ScrimView;->getViewAlpha()F
 
     move-result v4
 
-    cmpl-float v3, v4, v3
+    const/4 v5, 0x0
 
-    if-eqz v3, :cond_2
+    cmpl-float v4, v4, v5
 
-    move v3, v2
+    if-eqz v4, :cond_2
 
-    goto :goto_1
+    iget-boolean v4, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankScreen:Z
+
+    if-nez v4, :cond_2
+
+    move v4, v1
+
+    goto :goto_2
 
     :cond_2
-    move v3, v1
+    move v4, v2
 
-    :goto_1
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
-
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mSystemColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    invoke-virtual {v4, v5, v0}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
-
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
-
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mSystemColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    invoke-virtual {v4, v5, v3}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mSystemColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    goto :goto_3
-
-    :cond_3
     :goto_2
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
-
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mLockColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    invoke-virtual {v0, v3, v2}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
-
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mLockColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    invoke-virtual {v0, v3, v2}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mLockColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
-
-    :goto_3
-    nop
-
-    invoke-virtual {v0}, Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;->supportsDarkText()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const/high16 v3, -0x1000000
-
-    goto :goto_4
-
-    :cond_4
-    const/4 v3, -0x1
-
-    :goto_4
-    invoke-virtual {v0}, Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;->getMainColor()I
-
-    move-result v4
-
-    const/high16 v5, 0x40900000    # 4.5f
-
-    invoke-static {v3, v4, v5}, Lcom/android/internal/graphics/ColorUtils;->calculateMinimumBackgroundAlpha(IIF)I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    const/high16 v6, 0x437f0000    # 255.0f
-
-    div-float/2addr v5, v6
-
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehindAlphaResValue:F
-
-    invoke-static {v6, v5}, Ljava/lang/Math;->max(FF)F
-
-    move-result v6
-
-    iput v6, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehindAlpha:F
-
     iget-object v6, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
 
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/ScrimView;->getViewAlpha()F
 
     move-result v6
 
-    invoke-direct {p0, v6}, Lcom/android/systemui/statusbar/phone/ScrimController;->dispatchScrimState(F)V
+    cmpl-float v5, v6, v5
+
+    if-eqz v5, :cond_3
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankScreen:Z
+
+    if-nez v5, :cond_3
+
+    move v5, v1
+
+    goto :goto_3
+
+    :cond_3
+    move v5, v2
+
+    :goto_3
+    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
+
+    invoke-virtual {v6, v3, v4}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
+
+    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
+
+    invoke-virtual {v6, v3, v5}, Lcom/android/systemui/statusbar/ScrimView;->setColors(Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;Z)V
+
+    invoke-virtual {v3}, Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;->supportsDarkText()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    const/high16 v6, -0x1000000
+
+    goto :goto_4
+
+    :cond_4
+    const/4 v6, -0x1
+
+    :goto_4
+    invoke-virtual {v3}, Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;->getMainColor()I
+
+    move-result v7
+
+    const/high16 v8, 0x40900000    # 4.5f
+
+    invoke-static {v6, v7, v8}, Lcom/android/internal/graphics/ColorUtils;->calculateMinimumBackgroundAlpha(IIF)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    const/high16 v9, 0x437f0000    # 255.0f
+
+    div-float/2addr v8, v9
+
+    iget v9, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehindAlphaResValue:F
+
+    invoke-static {v9, v8}, Ljava/lang/Math;->max(FF)F
+
+    move-result v9
+
+    iput v9, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehindAlpha:F
+
+    iget-object v9, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
+
+    invoke-virtual {v9}, Lcom/android/systemui/statusbar/ScrimView;->getViewAlpha()F
+
+    move-result v9
+
+    invoke-direct {p0, v9}, Lcom/android/systemui/statusbar/phone/ScrimController;->dispatchScrimState(F)V
 
     :cond_5
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
@@ -2708,12 +2750,12 @@
 
     if-eqz v0, :cond_6
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_5
 
     :cond_6
-    move v0, v1
+    move v0, v2
 
     :goto_5
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
@@ -2733,11 +2775,12 @@
 
     if-eqz v3, :cond_8
 
-    move v1, v2
-
-    nop
+    goto :goto_6
 
     :cond_8
+    move v1, v2
+
+    :goto_6
     if-nez v0, :cond_9
 
     if-eqz v1, :cond_a

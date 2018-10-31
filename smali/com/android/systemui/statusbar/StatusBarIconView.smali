@@ -564,7 +564,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070411
+    const v4, 0x7f070413
 
     const/4 v5, 0x1
 
@@ -695,7 +695,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070330
+    const v2, 0x7f070331
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -703,7 +703,7 @@
 
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mStaticDotRadius:I
 
-    const v2, 0x7f070412
+    const v2, 0x7f070414
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -711,7 +711,7 @@
 
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mStatusBarIconSize:I
 
-    const v2, 0x7f07040f
+    const v2, 0x7f070411
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -719,7 +719,7 @@
 
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mStatusBarIconDrawingSizeDark:I
 
-    const v2, 0x7f07040e
+    const v2, 0x7f070410
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

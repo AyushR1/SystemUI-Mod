@@ -396,7 +396,7 @@
     <string name="bluetooth_talkback_input_peripheral">পেরিফেরাল ইনপুট</string>
     <string name="bluetooth_talkback_phone">ফোন</string>
     <string name="bluetooth_tethered">ব্লুটুথ টিথার করা হয়েছে</string>
-    <string name="branded_monitoring_description_app_personal">আপনি %1$s এর সাথে সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ এবং ওয়েবসাইটগুলি সহ আপনার ব্যক্তিগত নেটওয়ার্কের কার্যকলাপ নিরীক্ষণ করবে৷</string>
+    <string name="branded_monitoring_description_app_personal">আপনি %1$s এর সাথে সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ এবং ওয়েবসাইটগুলি সহ আপনার ব্যক্তিগত নেটওয়ার্কের অ্যাক্টিভিটি নিরীক্ষণ করবে৷</string>
     <string name="branded_vpn_footer">নেটওয়ার্ক নিরীক্ষণ করা হতে পারে</string>
     <string name="broadcast_tile">সম্প্রচার টাইল</string>
     <string name="bt_hci_snoop_log">ব্লুটুথ HCI স্নুপ লগ সক্ষম করুন</string>
@@ -592,8 +592,8 @@
     <string name="high_temp_title">ফোনটি গরম হচ্ছে</string>
     <string name="home">সেটিংস হোম</string>
     <string name="ime_security_warning">এই ইনপুট পদ্ধতিটি হয়ত পাসওয়ার্ড এবং ক্রেডিট কার্ড নম্বর সহ আপনার টাইপ করা সমস্ত টেক্সট সংগ্রহ করতে সক্ষম হতে পারে। এটি %1$s অ্যাপ থেকে এসেছে। এই ইনপুট পদ্ধতিটি ব্যবহার করবেন?</string>
-    <string name="immediately_destroy_activities">কার্যকলাপ রাখবেন না</string>
-    <string name="immediately_destroy_activities_summary">ব্যবহারকারী এটি ছেড়ে যাওয়ার পরে যত তাড়াতাড়ি সম্ভব প্রতিটি কার্যকলাপ ধ্বংস করুন</string>
+    <string name="immediately_destroy_activities">অ্যাক্টিভিটি রাখবেন না</string>
+    <string name="immediately_destroy_activities_summary">ব্যবহারকারী এটি ছেড়ে যাওয়ার পরে যত তাড়াতাড়ি সম্ভব প্রতিটি অ্যাক্টিভিটি ধ্বংস করুন</string>
     <string name="ims_reg_status_not_registered">রেজিস্টার করা নয়</string>
     <string name="ims_reg_status_registered">রেজিস্টার করা</string>
     <string name="ims_reg_title">IMS রেজিস্ট্রেশনের স্থিতি</string>
@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">বাঁদিকের শর্টকাট দিয়েও আনলক করা যায়</string>
     <string name="lockscreen_unlock_right">ডানদিকের শর্টকাট দিয়েও আনলক করা যায়</string>
     <string name="manage_notifications_text">বিজ্ঞপ্তি পরিচালনা করুন</string>
-    <string name="managed_profile_foreground_toast">আপনি আপনার কাজের প্রোফাইল ব্যবহার করছেন</string>
     <string name="managed_user_title">সমস্ত কাজের অ্যাপ্লিকেশান</string>
     <string name="media_category">মিডিয়া</string>
     <string name="media_projection_action_text">এখন শুরু করুন</string>
@@ -844,18 +843,18 @@
     <string name="mock_location_app_set">অনুরূপ লোকেশন অ্যাপ্লিকেশান: %1$s</string>
     <string name="monitoring_button_view_policies">নীতিগুলি দেখুন</string>
     <string name="monitoring_description_app">আপনি %1$s এর সাথে সংযুক্ত রয়েছেন, যেটি ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক কার্যকলাপে নজর রাখতে পারে৷</string>
-    <string name="monitoring_description_app_personal">আপনি %1$s -এ সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ্লিকেশান এবং ওয়েবসাইটগুলি সমেত আপনার ব্যক্তিগত নেটওয়ার্ক কার্যকলাপ নিরীক্ষণ করতে পারে৷</string>
-    <string name="monitoring_description_app_personal_work">"%1$s আপনার কর্মস্থলের প্রোফাইল পরিচালনা করে। প্রোফাইলটি %2$s এর সাথে সংযুক্ত, যেটি ইমেল অ্যাপ, ও ওয়েবসাইট সহ আপনার কর্মস্থলের নেটওয়ার্ক কার্যকলাপের উপরে নজর রাখতে পারে।
+    <string name="monitoring_description_app_personal">আপনি %1$s -এ সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ্লিকেশান এবং ওয়েবসাইটগুলি সমেত আপনার ব্যক্তিগত নেটওয়ার্ক অ্যাক্টিভিটি নিরীক্ষণ করতে পারে৷</string>
+    <string name="monitoring_description_app_personal_work">"%1$s আপনার কর্মস্থলের প্রোফাইল পরিচালনা করে। প্রোফাইলটি %2$s এর সাথে সংযুক্ত, যেটি ইমেল অ্যাপ, ও ওয়েবসাইট সহ আপনার কর্মস্থলের নেটওয়ার্ক অ্যাক্টিভিটির উপরে নজর রাখতে পারে।
 
  এ ছাড়াও আপনি %3$s এর সাথে সংযুক্ত, যেটি আপনার ব্যক্তিগত নেটওয়ার্কে নজর রাখে।"</string>
-    <string name="monitoring_description_app_work">"%1$s আপনার কর্মস্থলের প্রোফাইল পরিচালনা করে। প্রোফাইলটি %2$s এর সাথে সংযুক্ত, যেটি ইমেল, অ্যাপ, ও ওয়েবসাইট সহ আপনার কর্মস্থলের নেটওয়ার্ক কার্যকলাপের উপরে নজর রাখতে পারে।
+    <string name="monitoring_description_app_work">"%1$s আপনার কর্মস্থলের প্রোফাইল পরিচালনা করে। প্রোফাইলটি %2$s এর সাথে সংযুক্ত, যেটি ইমেল, অ্যাপ, ও ওয়েবসাইট সহ আপনার কর্মস্থলের নেটওয়ার্ক অ্যাক্টিভিটির উপরে নজর রাখতে পারে।
 
 আরও তথ্যের জন্য প্রশাসকের সাথে যোগাযোগ করুন।"</string>
     <string name="monitoring_description_ca_cert_settings">বিশ্বস্ত শংসাপত্রগুলি খুলুন</string>
     <string name="monitoring_description_ca_cert_settings_separator">" "</string>
     <string name="monitoring_description_ca_certificate">এই ডিভাইসে একটি সার্টিফিকেট কর্তৃপক্ষ ইনস্টল করা আছে। আপনার নিরাপদ নেটওয়ার্ক ট্রাফিকে নজর রাখা হতে পারে বা তাতে পরিবর্তন করা হতে পারে।</string>
     <string name="monitoring_description_do_body">আপনার প্রশাসক আপনার ডিভাইসের লোকেশন তথ্য সহ এই ডিভাইসের সেটিংস, কর্পোরেট অ্যাক্সেস, অ্যাপ্স, ডেটা নিরীক্ষণ ও পরিচালনা করতে পারেন।</string>
-    <string name="monitoring_description_do_body_vpn">আপনি %1$s এ সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ এবং ওয়েবসাইটগুলি সহ আপনার নেটওয়ার্ক কার্যকলাপ নিরীক্ষণ করবে৷</string>
+    <string name="monitoring_description_do_body_vpn">আপনি %1$s এ সংযুক্ত হয়েছেন, যা ইমেল, অ্যাপ এবং ওয়েবসাইটগুলি সহ আপনার নেটওয়ার্ক অ্যাক্টিভিটি নিরীক্ষণ করবে৷</string>
     <string name="monitoring_description_do_header_generic">আপনার ডিভাইসটি %1$s এর দ্বারা পরিচালিত৷</string>
     <string name="monitoring_description_do_header_with_name">%1$s আপনার ডিভাইস পরিচালনা করার জন্য %2$s ব্যবহার করে৷</string>
     <string name="monitoring_description_do_learn_more">আরও জানুন</string>
@@ -874,22 +873,22 @@
 আপনার প্রশাসক এই ডিভাইসের সেটিংস, কর্পোরেট অ্যাক্সেস, অ্যাপ, ডিভাইসের সাথে সম্পর্কিত ডেটা এবং ডিভাইসের লোকেশন তথ্য নিরীক্ষণ ও পরিচালনা করতে পারেন।
 
 আরও তথ্যের জন্য আপনার প্রশাসকের সাথে যোগাযোগ করুন।"</string>
-    <string name="monitoring_description_named_vpn">আপনি %1$s এ সংযুক্ত রয়েছেন, যা আপনার ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক কার্যকলাপের উপর নজর রাখতে পারে।</string>
+    <string name="monitoring_description_named_vpn">আপনি %1$s এ সংযুক্ত রয়েছেন, যা আপনার ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক অ্যাক্টিভিটির উপর নজর রাখতে পারে।</string>
     <string name="monitoring_description_network_logging">"আপনার প্রশাসক নেটওয়ার্ক লগিং চালু করেছেন, যা আপনার ডিভাইসের ট্রাফিক নিরীক্ষণ করে।
 
 আরও তথ্যের জন্য আপনার প্রশাসকের সাথে যোগাযোগ করুন।"</string>
     <string name="monitoring_description_personal_profile_named_vpn">আপনার ব্যক্তিগত প্রোফাইল %1$s এর সাথে সংযুক্ত রয়েছে, যেটি ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক কার্যকলাপে নজর রাখতে পারে৷</string>
-    <string name="monitoring_description_two_named_vpns">আপনি %1$s এবং %2$s এর সাথে সংযুক্ত রয়েছেন, যেগুলি আপনার ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক কার্যকলাপের উপর নজর রাখতে পারে।</string>
+    <string name="monitoring_description_two_named_vpns">আপনি %1$s এবং %2$s এর সাথে সংযুক্ত রয়েছেন, যেগুলি আপনার ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক অ্যাক্টিভিটির উপর নজর রাখতে পারে।</string>
     <string name="monitoring_description_vpn">"আপনি VPN সংযোগ সেট আপ করার জন্য একটি অ্যাপ্লিকেশানকে অনুমতি দিন৷
 
-এই অ্যাপ্লিকেশানটি ইমেল, অ্যাপ্লিকেশান ও ওয়েবসাইটগুলি সহ আপনার ডিভাইস এবং নেটওয়ার্কের কার্যকলাপ নিরীক্ষণ করতে পারে।"</string>
+এই অ্যাপ্লিকেশানটি ইমেল, অ্যাপ্লিকেশান ও ওয়েবসাইটগুলি সহ আপনার ডিভাইস এবং নেটওয়ার্কের অ্যাক্টিভিটি নিরীক্ষণ করতে পারে।"</string>
     <string name="monitoring_description_vpn_profile_owned">"আপনার কর্মস্থলের প্রোফাইলটি %1$s দ্বারা পরিচালিত হয়।
 
-আপনার প্রশাসক আপনার ইমেল, অ্যাপ্স ও ওয়েবসাইট সহ কর্মস্থলের নেটওয়ার্ক কার্যকলাপ নিরীক্ষণ করতে পারেন।
+আপনার প্রশাসক আপনার ইমেল, অ্যাপ্স ও ওয়েবসাইট সহ কর্মস্থলের নেটওয়ার্ক অ্যাক্টিভিটি নিরীক্ষণ করতে পারেন।
 
 আরও তথ্যের জন্য আপনার প্রশাসকের সঙ্গে যোগাযোগ করুন।
 
-এছাড়া আপনি একটি VPN এর সাথেও সংযুক্ত যা আপনার নেটওয়ার্ক কার্যকলাপ নিরীক্ষণ করতে পারে।"</string>
+এছাড়া আপনি একটি VPN এর সাথেও সংযুক্ত যা আপনার নেটওয়ার্ক অ্যাক্টিভিটি নিরীক্ষণ করতে পারে।"</string>
     <string name="monitoring_description_vpn_settings">VPN সেটিংস খুলুন</string>
     <string name="monitoring_description_vpn_settings_separator">" "</string>
     <string name="monitoring_subtitle_ca_certificate">CA সার্টিফিকেট</string>
@@ -1229,7 +1228,7 @@
     <string name="show_hw_layers_updates_summary">যখন হার্ডওয়্যার স্তরগুলি আপডেট হয় তখন সেগুলিকে সবুজ রঙে ফ্ল্যাশ করুন</string>
     <string name="show_hw_screen_updates">GPU দৃশ্য আপডেটগুলি প্রদর্শন করুন</string>
     <string name="show_hw_screen_updates_summary">GPU এর সহ অঙ্কনের সময় উইন্ডোগুলির মধ্যেকার দৃশ্যগুলি ফ্ল্যাশ করুন।</string>
-    <string name="show_non_rect_clip">অ-আয়তক্ষেত্রাকার ক্লিপ কার্যকলাপ ডিবাগ করুন</string>
+    <string name="show_non_rect_clip">অ-আয়তক্ষেত্রাকার ক্লিপ অ্যাক্টিভিটি ডিবাগ করুন</string>
     <string name="show_notification_channel_warnings">বিজ্ঞপ্তির সতর্কতা দেখুন</string>
     <string name="show_notification_channel_warnings_summary">অ্যাপ সঠিক চ্যানেল ছাড়া বিজ্ঞপ্তি দেখালে সতর্ক করে</string>
     <string name="show_screen_updates">সারফেস আপডেটগুলি দেখান</string>
@@ -1293,7 +1292,7 @@
     <string name="stream_system">সিস্টেম</string>
     <string name="stream_voice_call">কল</string>
     <string name="strict_mode">কঠোর মোড সক্ষম</string>
-    <string name="strict_mode_summary">মুখ্য থ্রেডে অ্যাপ্লিকেশানগুলির দীর্ঘ কার্যকলাপের সময় স্ক্রিন ফ্ল্যাশ করে</string>
+    <string name="strict_mode_summary">মুখ্য থ্রেডে অ্যাপ্লিকেশানগুলির দীর্ঘ অ্যাক্টিভিটির সময় স্ক্রিন ফ্ল্যাশ করে</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="switch_bar_off">বন্ধ আছে</string>
     <string name="switch_bar_on">চালু আছে</string>

@@ -523,7 +523,7 @@ Datu-konexioa erabiltzeari berrekiten badiozu, datuen erabileragatiko gastuak iz
     <string name="enable_bluetooth_confirmation_ok">Aktibatu</string>
     <string name="enable_bluetooth_message">Teklatua tabletara konektatzeko, Bluetooth eginbidea aktibatu behar duzu.</string>
     <string name="enable_bluetooth_title">Bluetooth eginbidea aktibatu nahi duzu?</string>
-    <string name="enable_demo_mode">Gaitu proba modua</string>
+    <string name="enable_demo_mode">Gaitu demo modua</string>
     <string name="enable_freeform_support">Gaitu estilo libreko leihoak</string>
     <string name="enable_freeform_support_summary">Onartu estilo libreko leiho esperimentalak.</string>
     <string name="enable_gpu_debug_layers">Gaitu GPUaren arazte-geruzak</string>
@@ -824,7 +824,6 @@ Saiatu berriro %2$d segundo barru."</string>
     <string name="lockscreen_unlock_left">Ezkerreko lasterbideak desblokeatzeko ere balio du</string>
     <string name="lockscreen_unlock_right">Eskuineko lasterbideak desblokeatzeko ere balio du</string>
     <string name="manage_notifications_text">Kudeatu jakinarazpenak</string>
-    <string name="managed_profile_foreground_toast">Work profila erabiltzen ari zara</string>
     <string name="managed_user_title">Laneko aplikazio guztiak</string>
     <string name="media_category">Multimedia-edukia</string>
     <string name="media_projection_action_text">Hasi</string>
@@ -1223,7 +1222,7 @@ Horrez gain, VPN batera zaude konektatuta, eta hark ere kontrola ditzake zure sa
     <string name="show_battery_percentage">Erakutsi txertatutako bateriaren ehunekoa</string>
     <string name="show_battery_percentage_summary">Erakutsi bateria-mailaren ehunekoa egoera-barraren ikonoan, kargatzen ari ez denean</string>
     <string name="show_brightness">Erakutsi distira Ezarpen bizkorretan</string>
-    <string name="show_demo_mode">Erakutsi proba modua</string>
+    <string name="show_demo_mode">Erakutsi demo modua</string>
     <string name="show_hw_layers_updates">Hardware-geruzen eguneratzeak</string>
     <string name="show_hw_layers_updates_summary">Eguneratu bitartean, hardware-geruzak berdez</string>
     <string name="show_hw_screen_updates">GPU ikuspegi-eguneratzeak</string>

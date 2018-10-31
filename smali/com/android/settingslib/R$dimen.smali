@@ -25,12 +25,12 @@
 
 .field public static final bt_battery_padding:I = 0x7f07007a
 
-.field public static final signal_icon_size:I = 0x7f0703ec
+.field public static final signal_icon_size:I = 0x7f0703ee
 
-.field public static final stat_sys_mobile_signal_circle_inset:I = 0x7f070400
+.field public static final stat_sys_mobile_signal_circle_inset:I = 0x7f070402
 
-.field public static final two_target_pref_medium_icon_size:I = 0x7f070431
+.field public static final two_target_pref_medium_icon_size:I = 0x7f070433
 
-.field public static final two_target_pref_small_icon_size:I = 0x7f070432
+.field public static final two_target_pref_small_icon_size:I = 0x7f070434
 
-.field public static final wifi_preference_badge_padding:I = 0x7f070471
+.field public static final wifi_preference_badge_padding:I = 0x7f070473

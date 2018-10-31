@@ -28,24 +28,24 @@
         <item>Ne prikazuj ovu ikonu</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>16 bitova/uzorak</item>
         <item>24 bitova/uzorak</item>
         <item>32 bitova/uzorak</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>16 bitova/uzorak</item>
         <item>24 bitova/uzorak</item>
         <item>32 bitova/uzorak</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>Mono</item>
         <item>Stereo</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>Mono</item>
         <item>Stereo</item>
     </string-array>
@@ -53,47 +53,47 @@
         <item>Optimizirano za kvalitet zvuka</item>
         <item>Uravnotežen kvalitet zvuka i veze</item>
         <item>Optimizirano za kvalitet veze</item>
-        <item>Maksimalan napor (Prilagodljiva brzina prijenosa)</item>
+        <item>Maksimalan napor (prilagodljiva brzina prijenosa)</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
         <item>Optimizirano za kvalitet zvuka (990 kbps/909 kbps)</item>
         <item>Uravnotežen kvalitet zvuka i veze (660kbps/606kbps)</item>
         <item>Optimizirano za kvalitet veze (330 kbps/303 kbps)</item>
-        <item>Maksimalan napor (Prilagodljiva brzina prijenosa)</item>
+        <item>Maksimalan napor (prilagodljiva brzina prijenosa)</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>44,1 kHz</item>
         <item>48,0 kHz</item>
         <item>88,2 kHz</item>
         <item>96,0 kHz</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>44,1 kHz</item>
         <item>48,0 kHz</item>
         <item>88,2 kHz</item>
         <item>96,0 kHz</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_summaries">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>SBC</item>
         <item>AAC</item>
         <item>Qualcomm® aptX™ audio</item>
         <item>Qualcomm® aptX™ HD audio</item>
         <item>LDAC</item>
-        <item>Omogućite opcionalne kodeke</item>
-        <item>Onemogućite opcionalne kodeke</item>
+        <item>Omogući opcionalne kodeke</item>
+        <item>Onemogući opcionalne kodeke</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
-        <item>Koristi odabir sistema (Zadano)</item>
+        <item>Koristi odabir sistema (zadano)</item>
         <item>SBC</item>
         <item>AAC</item>
         <item>Qualcomm® aptX™ audio</item>
         <item>Qualcomm® aptX™ HD audio</item>
         <item>LDAC</item>
-        <item>Omogućite opcionalne kodeke</item>
-        <item>Onemogućite opcionalne kodeke</item>
+        <item>Omogući opcionalne kodeke</item>
+        <item>Onemogući opcionalne kodeke</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>
@@ -108,7 +108,7 @@
         <item>avrcp16</item>
     </string-array>
     <string-array name="bluetooth_avrcp_versions">
-        <item>AVRCP 1.4 (Zadano)</item>
+        <item>AVRCP 1.4 (zadano)</item>
         <item>AVRCP 1.3</item>
         <item>AVRCP 1.5</item>
         <item>AVRCP 1.6</item>
@@ -124,9 +124,9 @@
         <item>Boje optimizirane za digitalni sadržaj</item>
     </string-array>
     <string-array name="color_mode_names">
-        <item>Živopisan (zadano)</item>
+        <item>Živopisno (zadano)</item>
         <item>Prirodan</item>
-        <item>Standardni</item>
+        <item>Standardno</item>
     </string-array>
     <string-array name="debug_hw_overdraw_entries">
         <item>Isključeno</item>
@@ -164,13 +164,13 @@
     <string-array name="overlay_display_devices_entries">
         <item>Nema</item>
         <item>480p</item>
-        <item>480p (osiguran)</item>
+        <item>480p (sigurno)</item>
         <item>720p</item>
-        <item>720p (osiguran)</item>
+        <item>720p (sigurno)</item>
         <item>1080p</item>
-        <item>1080p (osiguran)</item>
+        <item>1080p (sigurno)</item>
         <item>4K</item>
-        <item>4K (osiguran)</item>
+        <item>4K (sigurno)</item>
         <item>4K (povećava rezoluciju)</item>
         <item>4K (povećava rezoluciju, osiguran)</item>
         <item>720p, 1080p (dupli ekran)</item>
@@ -206,7 +206,7 @@
     <string-array name="select_logpersist_titles">
         <item>Isključeno</item>
         <item>Sve</item>
-        <item>Svi osim radija</item>
+        <item>Sve osim radija</item>
         <item>samo kernel</item>
     </string-array>
     <string-array name="show_non_rect_clip_entries">
@@ -254,7 +254,7 @@
         <item>Autentifikacija…</item>
         <item>Dobivanje IP adrese…</item>
         <item>Povezano</item>
-        <item>Suspendiran</item>
+        <item>Suspendirano</item>
         <item>Prekidanje veze…</item>
         <item>Isključen</item>
         <item>Neuspješno</item>
@@ -265,11 +265,11 @@
         <item></item>
         <item>Skeniranje…</item>
         <item>Povezivanje na mrežu %1$s...</item>
-        <item>Autentifikacija sa mrežom %1$s…</item>
+        <item>Autentifikacija s mrežom %1$s…</item>
         <item>Dobivanje IP adrese iz mreže %1$s…</item>
-        <item>Povezan na mrežu %1$s</item>
-        <item>Suspendiran</item>
-        <item>Prekidanje veze sa mrežom %1$s…</item>
+        <item>Povezano na mrežu %1$s</item>
+        <item>Suspendirano</item>
+        <item>Prekidanje veze s mrežom %1$s…</item>
         <item>Isključen</item>
         <item>Neuspješno</item>
         <item>Blokirano</item>

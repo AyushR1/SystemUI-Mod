@@ -210,7 +210,7 @@
 .end method
 
 .method private getRtlTranslation()I
-    .locals 4
+    .locals 10
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mPoint:Landroid/graphics/Point;
 
@@ -254,27 +254,86 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
+    if-eqz v1, :cond_2
 
-    move-result v2
+    invoke-virtual {v1}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mStackScroller:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+    move-result-object v2
 
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->getRight()I
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x0
+
+    :goto_0
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/view/WindowInsets;->getStableInsetLeft()I
+
+    move-result v4
+
+    goto :goto_1
+
+    :cond_3
+    move v4, v3
+
+    :goto_1
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Landroid/view/WindowInsets;->getStableInsetRight()I
+
+    move-result v5
+
+    goto :goto_2
+
+    :cond_4
+    move v5, v3
+
+    :goto_2
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
+
+    move-result v6
+
+    goto :goto_3
+
+    :cond_5
+    move v6, v3
+
+    :goto_3
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
 
     move-result v3
 
-    add-int/2addr v2, v3
+    nop
 
-    invoke-virtual {v1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
+    :cond_6
+    invoke-static {v4, v6}, Ljava/lang/Math;->max(II)I
 
-    move-result v3
+    move-result v7
 
-    add-int/2addr v2, v3
+    invoke-static {v5, v3}, Ljava/lang/Math;->max(II)I
 
-    sub-int/2addr v2, v0
+    move-result v8
 
-    return v2
+    iget-object v9, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mStackScroller:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {v9}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->getRight()I
+
+    move-result v9
+
+    add-int/2addr v9, v7
+
+    add-int/2addr v9, v8
+
+    sub-int/2addr v9, v0
+
+    return v9
 .end method
 
 .method public static synthetic lambda$new$0(Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;Landroid/view/View;IIIIIIII)V

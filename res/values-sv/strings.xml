@@ -829,7 +829,6 @@ Försök igen om %2$d sekunder."</string>
     <string name="lockscreen_unlock_left">Lås även upp enheten med vänster genväg</string>
     <string name="lockscreen_unlock_right">Lås även upp enheten med höger genväg</string>
     <string name="manage_notifications_text">Hantera aviseringar</string>
-    <string name="managed_profile_foreground_toast">Du använder din jobbprofil</string>
     <string name="managed_user_title">Alla jobbappar</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Starta nu</string>

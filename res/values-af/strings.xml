@@ -829,7 +829,6 @@ Probeer weer oor %2$d sekondes."</string>
     <string name="lockscreen_unlock_left">Links-kortpad ontsluit ook</string>
     <string name="lockscreen_unlock_right">Regs-kortpad ontsluit ook</string>
     <string name="manage_notifications_text">Bestuur kennisgewings</string>
-    <string name="managed_profile_foreground_toast">Jy gebruik tans jou werkprofiel</string>
     <string name="managed_user_title">Alle werkprogramme</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Begin nou</string>

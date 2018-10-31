@@ -21,6 +21,8 @@
 # instance fields
 .field private final mBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+.field private mDisplayCutoutTouchableRegionSize:I
+
 .field private mEntriesToRemoveAfterExpand:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -256,7 +258,7 @@
 
     move-result-object v0
 
-    const v1, 0x105019e
+    const v1, 0x10501a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -266,7 +268,7 @@
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarHeight:I
 
-    const v2, 0x7f070176
+    const v2, 0x7f070178
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -275,6 +277,81 @@
     add-int/2addr v1, v2
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mHeadsUpInset:I
+
+    const v1, 0x7f070151
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mDisplayCutoutTouchableRegionSize:I
+
+    return-void
+.end method
+
+.method private setCollapsedTouchableInsets(Landroid/view/ViewTreeObserver$InternalInsetsInfo;)V
+    .locals 4
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
+
+    iget-object v0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarWindowView:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarHeight:I
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/Region;->set(IIII)Z
+
+    iget-object v0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->updateRegionForNotch(Landroid/graphics/Region;)V
+
+    return-void
+.end method
+
+.method private updateRegionForNotch(Landroid/graphics/Region;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarWindowView:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/16 v1, 0x30
+
+    invoke-static {v0, v1}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(Landroid/view/DisplayCutout;I)Landroid/graphics/Region;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    iget v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mDisplayCutoutTouchableRegionSize:I
+
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/Region;->translate(II)V
+
+    sget-object v2, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Region;->op(Landroid/graphics/Region;Landroid/graphics/Region$Op;)Z
+
+    invoke-virtual {v1}, Landroid/graphics/Region;->recycle()V
 
     return-void
 .end method
@@ -293,6 +370,18 @@
     if-nez v0, :cond_1
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mWaitingOnCollapseWhenGoingAway:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarWindowView:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
@@ -479,7 +568,7 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mIsExpanded:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -496,10 +585,6 @@
 
     move-result v0
 
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
     if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->getTopEntry()Lcom/android/systemui/statusbar/NotificationData$Entry;
@@ -510,88 +595,70 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->isChildInGroup()Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_1
+    if-eqz v1, :cond_1
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mGroupManager:Lcom/android/systemui/statusbar/phone/NotificationGroupManager;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mGroupManager:Lcom/android/systemui/statusbar/phone/NotificationGroupManager;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getStatusBarNotification()Landroid/service/notification/StatusBarNotification;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/phone/NotificationGroupManager;->getGroupSummary(Landroid/service/notification/StatusBarNotification;)Lcom/android/systemui/statusbar/ExpandableNotificationRow;
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/NotificationGroupManager;->getGroupSummary(Landroid/service/notification/StatusBarNotification;)Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    move-result-object v3
+    move-result-object v1
 
-    if-eqz v3, :cond_1
+    if-eqz v1, :cond_1
 
-    move-object v0, v3
+    move-object v0, v1
 
     :cond_1
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTmpTwoArray:[I
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTmpTwoArray:[I
 
-    invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getLocationOnScreen([I)V
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getLocationOnScreen([I)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTmpTwoArray:[I
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTmpTwoArray:[I
 
     aget v3, v3, v2
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTmpTwoArray:[I
-
-    aget v4, v4, v2
-
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getWidth()I
 
-    move-result v5
+    move-result v4
 
-    add-int/2addr v4, v5
+    add-int/2addr v3, v4
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getIntrinsicHeight()I
 
-    move-result v5
+    move-result v4
 
-    invoke-virtual {p1, v1}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
+    const/4 v5, 0x3
 
-    iget-object v1, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
+    invoke-virtual {p1, v5}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
+
+    iget-object v5, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
     iget v6, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mHeadsUpInset:I
 
-    add-int/2addr v6, v5
+    add-int/2addr v6, v4
 
-    invoke-virtual {v1, v3, v2, v4, v6}, Landroid/graphics/Region;->set(IIII)Z
+    invoke-virtual {v5, v1, v2, v3, v6}, Landroid/graphics/Region;->set(IIII)Z
 
     goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mHeadsUpGoingAway:Z
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->setCollapsedTouchableInsets(Landroid/view/ViewTreeObserver$InternalInsetsInfo;)V
 
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mWaitingOnCollapseWhenGoingAway:Z
-
-    if-eqz v0, :cond_4
-
-    :cond_3
-    invoke-virtual {p1, v1}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
-
-    iget-object v0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarWindowView:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mStatusBarHeight:I
-
-    invoke-virtual {v0, v2, v2, v1, v3}, Landroid/graphics/Region;->set(IIII)Z
-
-    :cond_4
     :goto_0
     return-void
 
-    :cond_5
+    :cond_3
     :goto_1
     return-void
 .end method
@@ -605,7 +672,7 @@
 
     move-result-object v0
 
-    const v1, 0x105019e
+    const v1, 0x10501a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -679,6 +746,14 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mEntriesToRemoveAfterExpand:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+
+    return-void
+.end method
+
+.method public onOverlayChanged()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->initResources()V
 
     return-void
 .end method

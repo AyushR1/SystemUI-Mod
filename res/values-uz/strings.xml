@@ -824,7 +824,6 @@ muhimlar"</string>
     <string name="lockscreen_unlock_left">Chapga tugmasi ham qulfdan chiqaradi</string>
     <string name="lockscreen_unlock_right">O‘ngga tugmasi ham qulfdan chiqaradi</string>
     <string name="manage_notifications_text">Bildirishnomalarni boshqarish</string>
-    <string name="managed_profile_foreground_toast">Siz ishchi profildan foydalanmoqdasiz</string>
     <string name="managed_user_title">Barcha ishchi ilovalar</string>
     <string name="media_category">Multimedia</string>
     <string name="media_projection_action_text">Boshlash</string>

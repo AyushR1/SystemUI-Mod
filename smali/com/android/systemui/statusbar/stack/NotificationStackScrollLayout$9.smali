@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->startTopAnimation()V
+    value = Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->startBottomAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,21 +36,21 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$9;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1500(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Landroid/graphics/Rect;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1400(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Landroid/graphics/Rect;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    iput v1, v0, Landroid/graphics/Rect;->top:I
+    iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$9;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1600(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Landroid/graphics/Rect;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->access$1500(Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    iput v1, v0, Landroid/graphics/Rect;->top:I
+    iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$9;->this$0:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 

@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">მარცხენა მალსახმობი ასევე განბლოკავს</string>
     <string name="lockscreen_unlock_right">მარჯვენა მალსახმობი ასევე განბლოკავს</string>
     <string name="manage_notifications_text">შეტყობინებების მართვა</string>
-    <string name="managed_profile_foreground_toast">თქვენ სამსახურის პროფილს იყენებთ</string>
     <string name="managed_user_title">სამსახურის ყველა აპი</string>
     <string name="media_category">მედია</string>
     <string name="media_projection_action_text">დაწყება ახლავე</string>

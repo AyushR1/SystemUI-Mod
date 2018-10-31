@@ -825,7 +825,6 @@ prioritet"</string>
     <string name="lockscreen_unlock_left">Sol qısayol kiliddən çıxır</string>
     <string name="lockscreen_unlock_right">Sağ qısayol kiliddən çıxır</string>
     <string name="manage_notifications_text">Bildirişləri idarə edin</string>
-    <string name="managed_profile_foreground_toast">İş profilinizi istifadə edirsiniz</string>
     <string name="managed_user_title">Bütün iş tətbiqləri</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">İndi başlayın</string>

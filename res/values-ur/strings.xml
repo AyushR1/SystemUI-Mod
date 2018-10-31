@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">بائيں جانب کے شارٹ کٹ سے بھی غیرمقفل ہوتا ہے</string>
     <string name="lockscreen_unlock_right">دائيں جانب کے شارٹ کٹ سے بھی غیرمقفل ہو تا ہے</string>
     <string name="manage_notifications_text">اطلاعات کا نظم کریں</string>
-    <string name="managed_profile_foreground_toast">آپ اپنا دفتری پروفائل استعمال کر رہے ہیں۔</string>
     <string name="managed_user_title">تمام کام کی ایپس</string>
     <string name="media_category">میڈیا</string>
     <string name="media_projection_action_text">ابھی شروع کریں</string>

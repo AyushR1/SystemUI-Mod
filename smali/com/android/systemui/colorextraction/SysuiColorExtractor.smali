@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private mMediaBackdropVisible:Z
+.field private mHasBackdrop:Z
 
 .field private mWallpaperVisible:Z
 
@@ -307,7 +307,7 @@
     return-object v0
 
     :cond_2
-    iget-boolean v0, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mMediaBackdropVisible:Z
+    iget-boolean v0, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mHasBackdrop:Z
 
     if-eqz v0, :cond_3
 
@@ -369,14 +369,14 @@
     return-void
 .end method
 
-.method public setMediaBackdropVisible(Z)V
+.method public setHasBackdrop(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mMediaBackdropVisible:Z
+    iget-boolean v0, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mHasBackdrop:Z
 
     if-eq v0, p1, :cond_0
 
-    iput-boolean p1, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mMediaBackdropVisible:Z
+    iput-boolean p1, p0, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->mHasBackdrop:Z
 
     const/4 v0, 0x2
 

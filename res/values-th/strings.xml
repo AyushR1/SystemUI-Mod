@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">ทางลัดทางซ้ายปลดล็อกได้ด้วย</string>
     <string name="lockscreen_unlock_right">ทางลัดทางขวาปลดล็อกได้ด้วย</string>
     <string name="manage_notifications_text">จัดการการแจ้งเตือน</string>
-    <string name="managed_profile_foreground_toast">คุณกำลังใช้โปรไฟล์งานของคุณ</string>
     <string name="managed_user_title">แอปการทำงานทั้งหมด</string>
     <string name="media_category">สื่อ</string>
     <string name="media_projection_action_text">เริ่มเลย</string>
@@ -862,7 +861,7 @@
     <string name="monitoring_description_do_body_vpn">คุณเชื่อมต่อกับ %1$s ซึ่งสามารถตรวจสอบกิจกรรมในเครือข่ายของคุณ รวมถึงอีเมล แอป และเว็บไซต์ได้</string>
     <string name="monitoring_description_do_header_generic">อุปกรณ์ของคุณได้รับการจัดการโดย %1$s</string>
     <string name="monitoring_description_do_header_with_name">%1$s ใช้ %2$s เพื่อจัดการอุปกรณ์</string>
-    <string name="monitoring_description_do_learn_more">เรียนรู้เพิ่มเติม</string>
+    <string name="monitoring_description_do_learn_more">ดูข้อมูลเพิ่มเติม</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">องค์กรของคุณติดตั้งผู้ออกใบรับรองในโปรไฟล์งาน อาจมีการตรวจสอบหรือแก้ไขการจราจรของข้อมูลในเครือข่ายที่ปลอดภัยของคุณ</string>
     <string name="monitoring_description_managed_profile_named_vpn">โปรไฟล์งานของคุณเชื่อมต่ออยู่กับ %1$s ซึ่งสามารถตรวจสอบกิจกรรมในเครือข่ายของคุณ รวมถึงอีเมล แอป และเว็บไซต์</string>
@@ -1375,7 +1374,7 @@
     <string name="unlock_label">ปลดล็อก</string>
     <string name="usb_accessory_confirm_prompt">เปิด %1$s เพื่อจัดการ %2$s ไหม</string>
     <string name="usb_accessory_permission_prompt">อนุญาตให้ %1$s เข้าถึง %2$s ไหม</string>
-    <string name="usb_accessory_uri_prompt">แอปพลิเคชันที่ติดตั้งใช้กับอุปกรณ์ USB นี้ไม่ได้ เรียนรู้เพิ่มเติมเกี่ยวกับอุปกรณ์เสริมนี้ที่ %1$s</string>
+    <string name="usb_accessory_uri_prompt">แอปพลิเคชันที่ติดตั้งใช้กับอุปกรณ์ USB นี้ไม่ได้ ดูข้อมูลเพิ่มเติมเกี่ยวกับอุปกรณ์เสริมนี้ที่ %1$s</string>
     <string name="usb_audio_disable_routing">ปิดการกำหนดเส้นทางเสียงทาง USB</string>
     <string name="usb_audio_disable_routing_summary">ปิดการกำหนดเส้นทางโดยอัตโนมัติไปยังอุปกรณ์ต่อพ่วงเสียงทาง USB</string>
     <string name="usb_debugging_always">อนุญาตจากคอมพิวเตอร์เครื่องนี้เสมอ</string>

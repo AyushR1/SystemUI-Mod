@@ -680,6 +680,40 @@
     .end array-data
 .end method
 
+.method private updateMinimumHeight()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x10501a1
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070389
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    add-int v2, v0, v1
+
+    invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setMinimumHeight(I)V
+
+    return-void
+.end method
+
 .method private updateResources()V
     .locals 4
 
@@ -689,13 +723,15 @@
 
     move-result-object v0
 
+    invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateMinimumHeight()V
+
     iget-object v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHeaderTextContainerView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    const v2, 0x7f07037d
+    const v2, 0x7f07037e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -741,26 +777,38 @@
 
     move-result-object v1
 
+    check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
+
     iget-boolean v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQsDisabled:Z
 
     if-eqz v3, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    const v2, 0x1050188
-
-    :goto_0
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getMinimumHeight()I
 
+    move-result v2
+
+    const v3, 0x1050188
+
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
+
+    :goto_0
     invoke-virtual {p0, v1}, Lcom/android/systemui/qs/QuickStatusBarHeader;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateStatusIconAlphaAnimator()V
@@ -825,13 +873,13 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
-    const v6, 0x7f0803b5
+    const v6, 0x7f0803b4
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f110422
+    const v6, 0x7f110421
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -846,13 +894,13 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
-    const v6, 0x7f0803b4
+    const v6, 0x7f0803b3
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f110421
+    const v6, 0x7f110420
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -1154,7 +1202,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070416
+    const v4, 0x7f070418
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1164,7 +1212,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f070415
+    const v5, 0x7f070417
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

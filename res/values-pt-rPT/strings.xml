@@ -829,7 +829,6 @@ Tente novamente dentro de %2$d segundos."</string>
     <string name="lockscreen_unlock_left">O atalho esquerdo também desbloqueia</string>
     <string name="lockscreen_unlock_right">O atalho direito também desbloqueia</string>
     <string name="manage_notifications_text">Gerir notificações</string>
-    <string name="managed_profile_foreground_toast">Está a utilizar o seu perfil de trabalho</string>
     <string name="managed_user_title">Todas as apl. de trabalho</string>
     <string name="media_category">Multimédia</string>
     <string name="media_projection_action_text">Começar agora</string>

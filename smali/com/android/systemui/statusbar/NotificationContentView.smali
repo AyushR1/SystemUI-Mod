@@ -373,7 +373,7 @@
     :cond_3
     iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationContentView;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f06016e
+    const v4, 0x7f060170
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
 
@@ -381,7 +381,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationContentView;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f06016b
+    const v5, 0x7f06016d
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getColor(I)I
 
@@ -3790,7 +3790,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070289
+    const v1, 0x7f07028a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

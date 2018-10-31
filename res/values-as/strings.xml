@@ -215,6 +215,7 @@
     <string name="accessibility_rotation_lock_on_landscape_changed">স্ক্ৰীণখন এতিয়া লেণ্ডস্কেইপ দিশত লক কৰা অৱস্থাত আছে।</string>
     <string name="accessibility_rotation_lock_on_portrait">"স্ক্ৰীণ প'ৰ্ট্ৰেইট দিশত লক কৰা হ'ল।"</string>
     <string name="accessibility_rotation_lock_on_portrait_changed">"স্ক্ৰীণখন এতিয়া প'ৰ্ট্ৰেইট দিশত লক কৰা অৱস্থাত আছে।"</string>
+    <string name="accessibility_scanning_face">চেহেৰা স্কেন কৰি থকা হৈছে</string>
     <string name="accessibility_search_light">সন্ধান কৰক</string>
     <string name="accessibility_send_smart_reply">পঠিয়াওক</string>
     <string name="accessibility_settings_button">ছিষ্টেমৰ ছেটিংসমূহ৷</string>
@@ -374,6 +375,8 @@
     <string name="bluetooth_select_a2dp_codec_channel_mode_dialog_title">"ব্লুটুথ অডিঅ' ক'ডেকৰ বাছনি
 আৰম্ভ কৰক: চ্চেনেল ম'ড"</string>
     <string name="bluetooth_select_a2dp_codec_ldac_playback_quality">ব্লুটুথ অডিঅ’ LDAC ক’ডেক: পৰিৱেশনৰ মান</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">"ব্লুটুথ অডিঅ' LDAC
+ক'ডেক বাছনি আৰম্ভ কৰক: প্লেবেকৰ গুণগত মান"</string>
     <string name="bluetooth_select_a2dp_codec_sample_rate">"ব্লুটুথ অডিঅ' ছেম্পল ৰেইট"</string>
     <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">"ব্লুটুথ অডিঅ' LDAC বাছনি
 আৰম্ভ কৰক: নমুনাৰ হাৰ"</string>
@@ -575,6 +578,7 @@
     <string name="hdcp_checking_dialog_title">HDCP পৰীক্ষণ আচৰণ ছেট কৰক</string>
     <string name="hdcp_checking_title">HDCP পৰীক্ষণ</string>
     <string name="headset">হেডছেট</string>
+    <string name="heap_dump_tile_name">SysUI হীপ ডাম্প কৰক</string>
     <string name="help_feedback_label">সহায় আৰু ফীডবেক</string>
     <string name="hidden_notifications_cancel">নালাগে, ধন্যবাদ</string>
     <string name="hidden_notifications_setup">ছেট আপ কৰক</string>
@@ -820,7 +824,6 @@
     <string name="lockscreen_unlock_left">বাওঁ শ্বৰ্টকাটটোৱেও আনলক কৰিব</string>
     <string name="lockscreen_unlock_right">সোঁ শ্বৰ্টকাটটোৱেও আনলক কৰিব</string>
     <string name="manage_notifications_text">জনানীসমূহ পৰিচালনা কৰক</string>
-    <string name="managed_profile_foreground_toast">"আপুনি আপোনাৰ কৰ্মস্থানৰ প্ৰ'ফাইল ব্যৱহাৰ কৰি আছে"</string>
     <string name="managed_user_title">কৰ্মস্থানৰ সকলো এপ</string>
     <string name="media_category">মিডিয়া</string>
     <string name="media_projection_action_text">এতিয়াই আৰম্ভ কৰক</string>
@@ -966,6 +969,8 @@
     <string name="power_discharge_by_enhanced">আপোনাৰ ব্যৱহাৰৰ ওপৰত ভিত্তি কৰি বেটাৰি আনুমানিকভাৱে %1$s লৈকে চলিব (%2$s)</string>
     <string name="power_discharge_by_only">বেটাৰি আনুমানিকভাৱে %1$s লৈকে চলিব</string>
     <string name="power_discharge_by_only_enhanced">আপোনাৰ ব্যৱহাৰৰ ওপৰত ভিত্তি কৰি বেটাৰি আনুমানিকভাৱে %1$s লৈকে চলিব</string>
+    <string name="power_discharging_duration">প্রায় %1$s বাকী আছে (%2$s)</string>
+    <string name="power_discharging_duration_enhanced">আপোনাৰ ব্যৱহাৰৰ ওপৰত ভিত্তি কৰি প্রায় %1$s বাকী আছে (%2$s)</string>
     <string name="power_notification_controls_description">"জাননী নিয়ন্ত্ৰণৰ অধিক কৰ্তৃত্বৰ সৈতে আপুনি এটা এপৰ জাননীৰ গুৰুত্বৰ স্তৰ ০ৰ পৰা ৫লৈ ছেট কৰিব পাৰে।
 
 "<b>স্তৰ ৫</b>" 
@@ -996,12 +1001,16 @@
 "<b>স্তৰ ০</b>" 
 - এই এপৰ সকলো জাননী অৱৰোধ কৰক"</string>
     <string name="power_remaining_charging_duration_only">"সম্পূৰ্ণকৈ চ্চাৰ্জ হ'বলৈ %1$s বাকী"</string>
+    <string name="power_remaining_duration_only">প্রায় %1$s বাকী আছে</string>
+    <string name="power_remaining_duration_only_enhanced">আপোনাৰ ব্যৱহাৰৰ ওপৰত ভিত্তি কৰি প্ৰায় %1$s বাকী আছে</string>
+    <string name="power_remaining_duration_only_short">%1$s বাকী আছে</string>
     <string name="power_remaining_duration_only_shutdown_imminent">"ফ'নটো সোনকালেই বন্ধ হ'ব পাৰে"</string>
     <string name="power_remaining_duration_shutdown_imminent">"ফ'নটো সোনকালেই বন্ধ হ'ব পাৰে (%1$s)"</string>
     <string name="power_remaining_less_than_duration">%1$sতকৈও কম সময় বাকী আছে (%2$s)</string>
     <string name="power_remaining_less_than_duration_only">%1$sতকৈও কম সময় বাকী আছে</string>
     <string name="power_remaining_more_than_subtext">%1$sতকৈও বেছি সময় বাকী আছে (%2$s)</string>
     <string name="power_remaining_only_more_than_subtext">%1$sতকৈও বেছি সময় বাকী আছে</string>
+    <string name="power_remaining_settings_home_page">%1$s - %2$s</string>
     <string name="preference_summary_default_combination">%1$s / %2$s</string>
     <string name="private_dns_mode_off">অফ</string>
     <string name="private_dns_mode_opportunistic">স্বয়ংক্ৰিয়</string>
@@ -1354,9 +1363,11 @@
     <string name="use_ptp_button_title">কেমেৰা (পিটিপি) হিচাপে সংলগ্ন কৰক</string>
     <string name="use_system_language_to_select_input_method_subtypes">ছিষ্টেমৰ ভাষা ব্যৱহাৰ কৰক</string>
     <string name="user_add_user">ব্যৱহাৰকাৰী যোগ কৰক</string>
+    <string name="user_add_user_message_setup">আপুনি কোনো নতুন ব্য়ৱহাৰকাৰীক যোগ কৰিলে তেখেতে নিজৰ বাবে খালী ঠাই ছেট আপ কৰিব লাগে।</string>
     <string name="user_add_user_message_short">"আপুনি যেতিয়া এজন নতুন ব্যৱহাৰকাৰী যোগ কৰে, তেওঁ নিজৰ স্থান ছেট আপ কৰা প্ৰয়োজন।
 
 যিকোনো ব্যৱহাৰকাৰীয়ে নিজৰ লগতে আন ব্যৱহাৰকাৰীৰো এপ্ আপডেট কৰিব পাৰে।"</string>
+    <string name="user_add_user_message_update">সকলো ব্য়ৱহাৰকাৰীয়ে অইন ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।</string>
     <string name="user_add_user_title">নতুন ব্যৱহাৰকাৰী যোগ কৰিবনে?</string>
     <string name="user_guest">অতিথি</string>
     <string name="user_logout_notification_action">ব্যৱহাৰকাৰীক লগ আউট কৰক</string>

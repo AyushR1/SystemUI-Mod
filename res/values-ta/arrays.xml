@@ -2,12 +2,12 @@
 <resources>
     <string-array name="animator_duration_scale_entries">
         <item>அனிமேஷனை முடக்கு</item>
-        <item>அனிமேஷன் அளவு .5x</item>
-        <item>அனிமேஷன் அளவு 1x</item>
-        <item>அனிமேஷன் அளவு 1.5x</item>
-        <item>அனிமேஷன் அளவு 2x</item>
-        <item>அனிமேஷன் அளவு 5x</item>
-        <item>அனிமேஷன் அளவு 10x</item>
+        <item>அனிமேஷன் வேகம் .5x</item>
+        <item>அனிமேஷன் வேகம் 1x</item>
+        <item>அனிமேஷன் வேகம் 1.5x</item>
+        <item>அனிமேஷன் வேகம் 2x</item>
+        <item>அனிமேஷன் வேகம் 5x</item>
+        <item>அனிமேஷன் வேகம் 10x</item>
     </string-array>
     <string-array name="app_process_limit_entries">
         <item>நிலையான வரம்பு</item>
@@ -221,12 +221,12 @@
     </string-array>
     <string-array name="transition_animation_scale_entries">
         <item>அனிமேஷனை முடக்கு</item>
-        <item>அனிமேஷன் அளவு .5x</item>
-        <item>அனிமேஷன் அளவு 1x</item>
-        <item>அனிமேஷன் அளவு 1.5x</item>
-        <item>அனிமேஷன் அளவு 2x</item>
-        <item>அனிமேஷன் அளவு 5x</item>
-        <item>அனிமேஷன் அளவு 10x</item>
+        <item>அனிமேஷன் வேகம் .5x</item>
+        <item>அனிமேஷன் வேகம் 1x</item>
+        <item>அனிமேஷன் வேகம் 1.5x</item>
+        <item>அனிமேஷன் வேகம் 2x</item>
+        <item>அனிமேஷன் வேகம் 5x</item>
+        <item>அனிமேஷன் வேகம் 10x</item>
     </string-array>
     <string-array name="tts_rate_entries">
         <item>மிகவும் மெதுவாக</item>
@@ -249,7 +249,7 @@
     </string-array>
     <string-array name="wifi_status">
         <item></item>
-        <item>ஸ்கேன் செய்கிறது…</item>
+        <item>தேடுகிறது...</item>
         <item>இணைக்கிறது...</item>
         <item>அங்கீகரிக்கிறது...</item>
         <item>IP முகவரியைப் பெறுகிறது…</item>
@@ -263,7 +263,7 @@
     </string-array>
     <string-array name="wifi_status_with_ssid">
         <item></item>
-        <item>ஸ்கேன் செய்கிறது…</item>
+        <item>தேடுகிறது...</item>
         <item>%1$s இல் இணைக்கிறது…</item>
         <item>%1$s உடன் அங்கீகரிக்கிறது…</item>
         <item>%1$s இலிருந்து IP முகவரியைப் பெறுகிறது…</item>
@@ -277,11 +277,11 @@
     </string-array>
     <string-array name="window_animation_scale_entries">
         <item>அனிமேஷனை முடக்கு</item>
-        <item>அனிமேஷன் அளவு .5x</item>
-        <item>அனிமேஷன் அளவு 1x</item>
-        <item>அனிமேஷன் அளவு 1.5x</item>
-        <item>அனிமேஷன் அளவு 2x</item>
-        <item>அனிமேஷன் அளவு 5x</item>
-        <item>அனிமேஷன் அளவு 10x</item>
+        <item>அனிமேஷன் வேகம் .5x</item>
+        <item>அனிமேஷன் வேகம் 1x</item>
+        <item>அனிமேஷன் வேகம் 1.5x</item>
+        <item>அனிமேஷன் வேகம் 2x</item>
+        <item>அனிமேஷன் வேகம் 5x</item>
+        <item>அனிமேஷன் வேகம் 10x</item>
     </string-array>
 </resources>

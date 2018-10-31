@@ -828,7 +828,6 @@ Zkuste to znovu za %2$d s."</string>
     <string name="lockscreen_unlock_left">Zkratka vlevo také odemyká</string>
     <string name="lockscreen_unlock_right">Zkratka vpravo také odemyká</string>
     <string name="manage_notifications_text">Spravovat oznámení</string>
-    <string name="managed_profile_foreground_toast">Používáte pracovní profil</string>
     <string name="managed_user_title">Všechny pracovní aplikace</string>
     <string name="media_category">Média</string>
     <string name="media_projection_action_text">Spustit</string>

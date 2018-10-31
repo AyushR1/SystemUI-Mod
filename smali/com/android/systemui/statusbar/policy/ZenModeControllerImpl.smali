@@ -365,19 +365,8 @@
 
 # virtual methods
 .method public addCallback(Lcom/android/systemui/statusbar/policy/ZenModeController$Callback;)V
-    .locals 2
+    .locals 1
 
-    if-nez p1, :cond_0
-
-    const-string v0, "ZenModeController"
-
-    const-string v1, "Attempted to add a null callback."
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z

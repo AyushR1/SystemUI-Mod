@@ -825,7 +825,6 @@ Cuba lagi dalam %2$d saat."</string>
     <string name="lockscreen_unlock_left">Pintasan kiri juga membuka kunci</string>
     <string name="lockscreen_unlock_right">Pintasan kanan juga membuka kunci</string>
     <string name="manage_notifications_text">Urus pemberitahuan</string>
-    <string name="managed_profile_foreground_toast">Anda sedang menggunakan profil kerja</string>
     <string name="managed_user_title">Semua apl kerja</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Mulakan sekarang</string>

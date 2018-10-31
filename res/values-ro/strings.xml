@@ -828,7 +828,6 @@ cu prioritate"</string>
     <string name="lockscreen_unlock_left">Comanda rapidă din stânga și deblochează</string>
     <string name="lockscreen_unlock_right">Comanda rapidă din dreapta și deblochează</string>
     <string name="manage_notifications_text">Gestionați notificările</string>
-    <string name="managed_profile_foreground_toast">Acum folosiți profilul de serviciu</string>
     <string name="managed_user_title">Toate aplicațiile de serviciu</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Începeți acum</string>

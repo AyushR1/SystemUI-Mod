@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">ປຸ່ມລັດຊ້າຍປົດລັອກນຳ</string>
     <string name="lockscreen_unlock_right">ປຸ່ມລັດຂວາປົດລັອກນຳ</string>
     <string name="manage_notifications_text">ຈັດການການແຈ້ງເຕືອນ</string>
-    <string name="managed_profile_foreground_toast">ທ່ານກຳລັງໃຊ້ໂປຣໄຟລ໌ບ່ອນເຮັດວຽກຂອງທ່ານ</string>
     <string name="managed_user_title">ແອັບເຮັດວຽກທັງໝົດ</string>
     <string name="media_category">ມີເດຍ</string>
     <string name="media_projection_action_text">ເລີ່ມດຽວນີ້</string>

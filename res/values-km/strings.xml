@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">ផ្លូវកាត់​ខាង​ឆ្វេង​ក៏​ដោះសោ​ដែរ</string>
     <string name="lockscreen_unlock_right">ផ្លូវកាត់​ខាង​ស្តាំ​ក៏​ដោះសោ​ដែរ</string>
     <string name="manage_notifications_text">គ្រប់គ្រងការជូនដំណឹង</string>
-    <string name="managed_profile_foreground_toast">អ្នកកំពុងប្រើប្រវត្តិរូបការងាររបស់អ្នក</string>
     <string name="managed_user_title">កម្មវិធីការងារទាំងអស់</string>
     <string name="media_category">មេឌៀ</string>
     <string name="media_projection_action_text">ចាប់ផ្ដើម​ឥឡូវ</string>

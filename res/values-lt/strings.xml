@@ -610,8 +610,8 @@ Toliau juos rodyti?"</string>
     <string name="inline_undo">Anuliuoti</string>
     <string name="install_other_apps">Nežinomų programų diegimas</string>
     <string name="installer_cd_button_title">Įdiegti „Mac“ skirtą „Android“ perkėl. priem. pr.</string>
-    <string name="instant_apps">Akimirksniu įkeliamos programėlės</string>
-    <string name="instant_apps_message">Akimirksniu įkeliamų programėlių nereikia įdiegti.</string>
+    <string name="instant_apps">Akimirksniu įkeliamos programos</string>
+    <string name="instant_apps_message">Akimirksniu įkeliamų programų nereikia įdiegti.</string>
     <string name="interruption_level_alarms">Tik signalai</string>
     <string name="interruption_level_alarms_twoline">"Tik
 signalai"</string>
@@ -829,7 +829,6 @@ Bandykite dar kartą po %2$d sek."</string>
     <string name="lockscreen_unlock_left">Spartusis klavišas kairėje taip pat atrakina</string>
     <string name="lockscreen_unlock_right">Spartusis klavišas dešinėje taip pat atrakina</string>
     <string name="manage_notifications_text">Pranešimų tvarkymas</string>
-    <string name="managed_profile_foreground_toast">Naudojate darbo profilį</string>
     <string name="managed_user_title">Visos darbo programos</string>
     <string name="media_category">Medija</string>
     <string name="media_projection_action_text">Pradėti dabar</string>
@@ -1187,6 +1186,7 @@ Taip pat esate prisijungę prie VPN, kuris gali stebėti jūsų tinklo veiklą."
     <string name="saved_network">Išsaugojo %1$s</string>
     <string name="screen_pinning_description">Tai bus rodoma, kol atsegsite. Palieskite ir palaikykite „Atgal“ ir „Apžvalga“, kad atsegtumėte.</string>
     <string name="screen_pinning_description_accessible">Tai bus rodoma, kol atsegsite. Palieskite ir palaikykite „Apžvalga“, kad atsegtumėte.</string>
+    <string name="screen_pinning_description_no_navbar">Tai laikys jį matomą iki kol išpakuosite. Palieskite ir laikykite mygtuką &amp; kad išpakuotumėte.</string>
     <string name="screen_pinning_description_recents_invisible">Tai bus rodoma, kol atsegsite. Palieskite ir palaikykite „Atgal“ ir „Pagrindinis ekranas“, kad atsegtumėte.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Tai bus rodoma, kol atsegsite. Palieskite ir palaikykite „Pagrindinis ekranas“, kad atsegtumėte.</string>
     <string name="screen_pinning_exit">Ekranas atsegtas</string>
@@ -1195,6 +1195,7 @@ Taip pat esate prisijungę prie VPN, kuris gali stebėti jūsų tinklo veiklą."
     <string name="screen_pinning_start">Ekranas prisegtas</string>
     <string name="screen_pinning_title">Ekranas prisegtas</string>
     <string name="screen_pinning_toast">Kad atsegtumėte šį ekraną, palieskite ir palaikykite mygtukus „Atgal“ ir „Apžvalga“</string>
+    <string name="screen_pinning_toast_no_navbar">Kad atsegtumėte šį ekraną palieskite ir laikykite &amp; mygtuką atgal</string>
     <string name="screen_pinning_toast_recents_invisible">Kad atsegtumėte šį ekraną, palieskite ir palaikykite mygtukus „Atgal“ ir „Pagrindinis ekranas“</string>
     <string name="screen_zoom_summary_custom">Tinkintas (%d)</string>
     <string name="screen_zoom_summary_default">Numatytasis</string>

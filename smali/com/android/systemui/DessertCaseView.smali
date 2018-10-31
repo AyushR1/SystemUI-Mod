@@ -354,7 +354,7 @@
 
     iput-boolean v3, v0, Lcom/android/systemui/DessertCaseView;->mStarted:Z
 
-    const v4, 0x7f07014b
+    const v4, 0x7f07014c
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

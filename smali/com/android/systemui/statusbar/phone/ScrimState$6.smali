@@ -38,17 +38,11 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState$6;->mCurrentInFrontTint:I
 
-    nop
-
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState$6;->mWallpaperSupportsAmbientMode:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState$6;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->hasLockscreenWallpaper()Z
-
-    move-result v2
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState$6;->mHasBackdrop:Z
 
     if-nez v2, :cond_0
 

@@ -257,7 +257,7 @@
 
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    const v0, 0x7f1103ca
+    const v0, 0x7f1103c9
 
     const/4 v3, 0x0
 
@@ -552,7 +552,7 @@
 
     move-result-object v0
 
-    const v1, 0x10402bf
+    const v1, 0x10402c3
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

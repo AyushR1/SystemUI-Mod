@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">Левата кратенка исто така отклучува</string>
     <string name="lockscreen_unlock_right">Десната кратенка исто така отклучува</string>
     <string name="manage_notifications_text">Управувајте со известувањата</string>
-    <string name="managed_profile_foreground_toast">Го користите работниот профил</string>
     <string name="managed_user_title">Сите апликации за работа</string>
     <string name="media_category">Медиуми</string>
     <string name="media_projection_action_text">Започни сега</string>

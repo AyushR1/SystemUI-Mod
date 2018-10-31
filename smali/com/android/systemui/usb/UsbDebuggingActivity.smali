@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f110538
+    const v3, 0x7f110539
 
     invoke-static {v0, v3, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -230,7 +230,7 @@
     :cond_1
     iget-object v4, p0, Lcom/android/systemui/usb/UsbDebuggingActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
-    const v5, 0x7f110577
+    const v5, 0x7f110578
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/usb/UsbDebuggingActivity;->getString(I)Ljava/lang/String;
 
@@ -238,7 +238,7 @@
 
     iput-object v5, v4, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
-    const v5, 0x7f110574
+    const v5, 0x7f110575
 
     const/4 v6, 0x1
 
@@ -298,7 +298,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/usb/UsbDebuggingActivity;->mAlwaysAllow:Landroid/widget/CheckBox;
 
-    const v7, 0x7f110573
+    const v7, 0x7f110574
 
     invoke-virtual {p0, v7}, Lcom/android/systemui/usb/UsbDebuggingActivity;->getString(I)Ljava/lang/String;
 

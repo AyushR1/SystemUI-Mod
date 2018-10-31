@@ -14,6 +14,8 @@
 
 .field mPanel:Lcom/android/systemui/statusbar/phone/PanelView;
 
+.field protected mPanelFraction:F
+
 .field private mState:I
 
 .field private mTracking:Z
@@ -125,6 +127,14 @@
     return-void
 .end method
 
+.method public getExpansionFraction()F
+    .locals 1
+
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanelFraction:F
+
+    return v0
+.end method
+
 .method public getState()I
     .locals 1
 
@@ -156,6 +166,14 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public isExpanded()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mExpanded:Z
+
     return v0
 .end method
 
@@ -419,6 +437,8 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanel:Lcom/android/systemui/statusbar/phone/PanelView;
 
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mExpanded:Z
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanelFraction:F
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PanelBar;->updateVisibility()V
 

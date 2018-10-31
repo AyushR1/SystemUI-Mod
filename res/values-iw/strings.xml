@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">קיצור דרך שמאלי גם מבטל נעילה</string>
     <string name="lockscreen_unlock_right">קיצור דרך ימני גם מבטל נעילה</string>
     <string name="manage_notifications_text">ניהול התראות</string>
-    <string name="managed_profile_foreground_toast">אתה משתמש בפרופיל העבודה שלך</string>
     <string name="managed_user_title">כל אפליקציות העבודה</string>
     <string name="media_category">מדיה</string>
     <string name="media_projection_action_text">התחל כעת</string>
@@ -1195,6 +1194,7 @@
     <string name="screen_pinning_start">המסך מוצמד</string>
     <string name="screen_pinning_title">המסך מוצמד</string>
     <string name="screen_pinning_toast">"כדי לבטל את ההצמדה של מסך זה, יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'סקירה'"</string>
+    <string name="screen_pinning_toast_no_navbar">בכדי לבטל נעיצת מסך זה, גע והחזק בלחצן \"הקודם\"</string>
     <string name="screen_pinning_toast_recents_invisible">"כדי לבטל את ההצמדה של מסך זה, יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'דף הבית'"</string>
     <string name="screen_zoom_summary_custom">מותאם אישית (%d)</string>
     <string name="screen_zoom_summary_default">ברירת מחדל</string>

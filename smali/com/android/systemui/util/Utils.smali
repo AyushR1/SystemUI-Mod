@@ -33,18 +33,21 @@
     add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    if-ltz v0, :cond_0
+    if-ltz v0, :cond_1
 
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
+    if-eqz v1, :cond_0
+
     invoke-interface {p1, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
+    :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return-void
 .end method

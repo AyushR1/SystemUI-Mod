@@ -709,7 +709,7 @@
     <string name="keyguard_plugged_in_charging_fast">%s • 고속 충전 중</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • 저속 충전 중</string>
     <string name="keyguard_plugged_in_dash_charging">대시 충전 중</string>
-    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower 연결됨</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">고속충전 중</string>
     <string name="keyguard_sim_error_message_short">유효하지 않은 카드</string>
     <string name="keyguard_sim_locked_message">SIM 카드가 잠겨 있습니다.</string>
     <string name="keyguard_sim_puk_locked_message">SIM 카드가 PUK로 잠겨 있습니다.</string>
@@ -826,7 +826,6 @@
     <string name="lockscreen_unlock_left">왼쪽 바로가기도 잠금 해제 가능</string>
     <string name="lockscreen_unlock_right">오른쪽 바로가기도 잠금 해제 가능</string>
     <string name="manage_notifications_text">알림 관리</string>
-    <string name="managed_profile_foreground_toast">직장 프로필을 사용하고 있습니다.</string>
     <string name="managed_user_title">모든 직장 앱</string>
     <string name="media_category">미디어</string>
     <string name="media_projection_action_text">시작하기</string>
@@ -1184,6 +1183,7 @@
     <string name="saved_network">%1$s(으)로 저장됨</string>
     <string name="screen_pinning_description">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 뒤로 및 최근 사용을 길게 터치하세요.</string>
     <string name="screen_pinning_description_accessible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 최근 사용을 길게 터치하세요.</string>
+    <string name="screen_pinning_description_no_navbar">이렇게 유지하면 고정을 해제할 때까지 계속 볼 수 있습니다. &amp; 를 터치하면 고정이 해제됩니다.</string>
     <string name="screen_pinning_description_recents_invisible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 뒤로 및 홈을 길게 터치하세요.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 홈을 길게 터치하세요.</string>
     <string name="screen_pinning_exit">화면 고정 해제됨</string>
@@ -1192,6 +1192,7 @@
     <string name="screen_pinning_start">화면 고정됨</string>
     <string name="screen_pinning_title">화면 고정됨</string>
     <string name="screen_pinning_toast">이 화면을 고정 해제하려면 뒤로 및 최근 사용 버튼을 길게 터치하세요.</string>
+    <string name="screen_pinning_toast_no_navbar">이 화면의 고정을 해제하려면 뒤의 &amp; 버튼을 길게 누릅니다.</string>
     <string name="screen_pinning_toast_recents_invisible">이 화면을 고정 해제하려면 뒤로 및 홈 버튼을 길게 터치하세요.</string>
     <string name="screen_zoom_summary_custom">맞춤(%d)</string>
     <string name="screen_zoom_summary_default">기본</string>

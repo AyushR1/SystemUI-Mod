@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">ఎడమవైపు షార్ట్‌కట్ కూడా అన్‌లాక్ చేస్తుంది</string>
     <string name="lockscreen_unlock_right">కుడివైపు షార్ట్‌కట్ కూడా అన్‌లాక్ చేస్తుంది</string>
     <string name="manage_notifications_text">నోటిఫికేషన్‌లను నిర్వహించండి</string>
-    <string name="managed_profile_foreground_toast">మీరు మీ కార్యాలయ ప్రొఫైల్‌ను ఉపయోగిస్తున్నారు</string>
     <string name="managed_user_title">అన్ని కార్యాలయ అనువర్తనాలు</string>
     <string name="media_category">మీడియా</string>
     <string name="media_projection_action_text">ఇప్పుడే ప్రారంభించు</string>

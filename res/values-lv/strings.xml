@@ -826,7 +826,6 @@ Mēģiniet vēlreiz pēc %2$d sekundes(-ēm)."</string>
     <string name="lockscreen_unlock_left">Saīsne kreisajā pusē arī atbloķē</string>
     <string name="lockscreen_unlock_right">Saīsne labajā pusē arī atbloķē</string>
     <string name="manage_notifications_text">Pārvaldīt paziņojumus</string>
-    <string name="managed_profile_foreground_toast">Jūs izmantojat darba profilu.</string>
     <string name="managed_user_title">Visas darba grupas</string>
     <string name="media_category">Multivide</string>
     <string name="media_projection_action_text">Sākt tūlīt</string>

@@ -684,7 +684,7 @@
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • 正在充电（还需 %s充满）</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • 正在快速充电（还需 %s充满）</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • 正在慢速充电（还需 %s充满）</string>
-    <string name="keyguard_indication_dash_charging_time">Dash 闪充 (还需 %s 充满)</string>
+    <string name="keyguard_indication_dash_charging_time">快速充电 (还需 %s 充满)</string>
     <string name="keyguard_indication_trust_disabled">在您手动解锁之前，设备会保持锁定状态</string>
     <string name="keyguard_indication_trust_granted">已为%1$s解锁</string>
     <string name="keyguard_indication_trust_managed">“%1$s”正在运行</string>
@@ -711,7 +711,7 @@
     <string name="keyguard_plugged_in">%s • 正在充电</string>
     <string name="keyguard_plugged_in_charging_fast">%s • 正在快速充电</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • 正在慢速充电</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash 闪充</string>
+    <string name="keyguard_plugged_in_dash_charging">正在快速充电</string>
     <string name="keyguard_plugged_in_turbo_power_charging">TurboPower 已连接</string>
     <string name="keyguard_sim_error_message_short">SIM 卡无效。</string>
     <string name="keyguard_sim_locked_message">SIM 卡已锁定。</string>
@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">向左快捷方式也可以解锁设备</string>
     <string name="lockscreen_unlock_right">向右快捷方式也可以解锁设备</string>
     <string name="manage_notifications_text">管理通知</string>
-    <string name="managed_profile_foreground_toast">您当前正在使用工作资料</string>
     <string name="managed_user_title">所有工作应用</string>
     <string name="media_category">媒体</string>
     <string name="media_projection_action_text">立即开始</string>

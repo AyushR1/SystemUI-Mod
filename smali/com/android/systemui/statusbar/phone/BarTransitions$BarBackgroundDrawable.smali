@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060186
+    const v1, 0x7f060188
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -82,7 +82,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;->mSemiTransparent:I
 
-    const v1, 0x7f060187
+    const v1, 0x7f060189
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 

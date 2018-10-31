@@ -862,19 +862,19 @@
 
     iget-object v1, p0, Lcom/android/systemui/recents/RecentsImpl;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0703c6
+    const v2, 0x7f0703c8
 
-    const v3, 0x7f0703c6
+    const v3, 0x7f0703c8
 
-    const v4, 0x7f0703c6
+    const v4, 0x7f0703c8
 
-    const v5, 0x7f0703c7
+    const v5, 0x7f0703c9
 
-    const v6, 0x7f0703c6
+    const v6, 0x7f0703c8
 
-    const v7, 0x7f0703c7
+    const v7, 0x7f0703c9
 
-    const v8, 0x7f0703a6
+    const v8, 0x7f0703a8
 
     invoke-static/range {v1 .. v8}, Lcom/android/systemui/recents/views/TaskStackLayoutAlgorithm;->getDimensionForDevice(Landroid/content/Context;IIIIIII)I
 

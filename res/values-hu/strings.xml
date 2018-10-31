@@ -829,7 +829,6 @@ Próbálja újra %2$d másodperc múlva."</string>
     <string name="lockscreen_unlock_left">A bal oldali parancsikon szintén feloldja a zárolást</string>
     <string name="lockscreen_unlock_right">A jobb oldali parancsikon szintén feloldja a zárolást</string>
     <string name="manage_notifications_text">Az értesítések kezelése</string>
-    <string name="managed_profile_foreground_toast">A munkaprofilt használja</string>
     <string name="managed_user_title">Összes munkaalkalmazás</string>
     <string name="media_category">Média</string>
     <string name="media_projection_action_text">Indítás most</string>

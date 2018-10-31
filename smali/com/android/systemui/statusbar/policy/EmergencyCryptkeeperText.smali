@@ -245,7 +245,7 @@
 
     move-result-object v5
 
-    const v10, 0x10401d2
+    const v10, 0x10401d6
 
     invoke-virtual {v5, v10}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

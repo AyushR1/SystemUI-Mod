@@ -17,4 +17,4 @@
 # static fields
 .field public static final expand_button_title:I = 0x7f110233
 
-.field public static final summary_collapsed_preference_list:I = 0x7f110521
+.field public static final summary_collapsed_preference_list:I = 0x7f110522

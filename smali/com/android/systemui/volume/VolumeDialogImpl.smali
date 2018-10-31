@@ -438,17 +438,17 @@
 
     packed-switch p2, :pswitch_data_0
 
-    const v0, 0x7f110599
+    const v0, 0x7f11059a
 
     goto :goto_0
 
     :pswitch_0
-    const v0, 0x7f11059b
+    const v0, 0x7f11059c
 
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f11059a
+    const v0, 0x7f11059b
 
     nop
 
@@ -2156,7 +2156,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v5, 0x104068b
+    const v5, 0x104068f
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2179,7 +2179,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f110593
+    const v6, 0x7f110594
 
     new-array v7, v3, [Ljava/lang/Object;
 
@@ -2206,7 +2206,7 @@
     :cond_2
     iget-object v4, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v5, 0x104068a
+    const v5, 0x104068e
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3428,7 +3428,7 @@
 
     if-eqz v5, :cond_35
 
-    const v16, 0x7f11059d
+    const v16, 0x7f11059e
 
     if-eqz v4, :cond_30
 
@@ -3458,7 +3458,7 @@
 
     aput-object v8, v9, v16
 
-    const v8, 0x7f11059e
+    const v8, 0x7f11059f
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3498,12 +3498,12 @@
 
     if-eqz v8, :cond_2d
 
-    const v8, 0x7f1105a0
+    const v8, 0x7f1105a1
 
     goto :goto_17
 
     :cond_2d
-    const v8, 0x7f11059f
+    const v8, 0x7f1105a0
 
     :goto_17
     move/from16 v23, v10
@@ -3548,7 +3548,7 @@
     goto :goto_18
 
     :cond_2f
-    const v8, 0x7f11059c
+    const v8, 0x7f11059d
 
     :goto_18
     const/4 v9, 0x1
@@ -3627,7 +3627,7 @@
     goto :goto_19
 
     :cond_33
-    const v8, 0x7f11059c
+    const v8, 0x7f11059d
 
     :goto_19
     const/4 v9, 0x1
@@ -3670,7 +3670,7 @@
 
     aput-object v10, v9, v16
 
-    const v10, 0x7f11059e
+    const v10, 0x7f11059f
 
     invoke-virtual {v6, v10, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4187,7 +4187,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f110594
+    const v2, 0x7f110595
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -4815,11 +4815,11 @@
 
     iget v6, v6, Lcom/android/systemui/plugins/VolumeDialogController$State;->ringerModeInternal:I
 
-    const v7, 0x7f110597
+    const v7, 0x7f110598
 
     const v8, 0x7f0802bd
 
-    const v9, 0x7f110596
+    const v9, 0x7f110597
 
     packed-switch v6, :pswitch_data_0
 
@@ -4946,7 +4946,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f110598
+    const v7, 0x7f110599
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

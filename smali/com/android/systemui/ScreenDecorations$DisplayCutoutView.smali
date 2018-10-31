@@ -27,19 +27,25 @@
 
 .field private mColor:I
 
+.field private final mDecorations:Lcom/android/systemui/ScreenDecorations;
+
 .field private final mInfo:Landroid/view/DisplayInfo;
+
+.field private final mInitialStart:Z
 
 .field private final mLocation:[I
 
 .field private final mPaint:Landroid/graphics/Paint;
 
-.field private final mStart:Z
+.field private mRotation:I
+
+.field private mStart:Z
 
 .field private final mVisibilityChangedListener:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZLjava/lang/Runnable;)V
+.method public constructor <init>(Landroid/content/Context;ZLjava/lang/Runnable;Lcom/android/systemui/ScreenDecorations;)V
     .locals 1
 
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -84,9 +90,11 @@
 
     iput v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mColor:I
 
-    iput-boolean p2, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mStart:Z
+    iput-boolean p2, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mInitialStart:Z
 
     iput-object p3, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mVisibilityChangedListener:Ljava/lang/Runnable;
+
+    iput-object p4, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mDecorations:Lcom/android/systemui/ScreenDecorations;
 
     const v0, 0x7f0a00f1
 
@@ -95,7 +103,7 @@
     return-void
 .end method
 
-.method public static boundsFromDirection(Landroid/view/DisplayCutout;ILandroid/graphics/Rect;)V
+.method public static boundsFromDirection(Landroid/view/DisplayCutout;I)Landroid/graphics/Region;
     .locals 7
 
     invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBounds()Landroid/graphics/Region;
@@ -139,12 +147,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Region;->op(IIIILandroid/graphics/Region$Op;)Z
 
-    invoke-virtual {v6}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
     goto :goto_0
 
     :cond_1
@@ -163,12 +165,6 @@
     move-object v0, v6
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Region;->op(IIIILandroid/graphics/Region$Op;)Z
-
-    invoke-virtual {v6}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
@@ -191,12 +187,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Region;->op(IIIILandroid/graphics/Region$Op;)Z
 
-    invoke-virtual {v6}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
     goto :goto_0
 
     :cond_3
@@ -216,16 +206,26 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Region;->op(IIIILandroid/graphics/Region$Op;)Z
 
-    invoke-virtual {v6}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
     nop
 
     :goto_0
-    invoke-virtual {v6}, Landroid/graphics/Region;->recycle()V
+    return-object v6
+.end method
+
+.method public static boundsFromDirection(Landroid/view/DisplayCutout;ILandroid/graphics/Rect;)V
+    .locals 2
+
+    invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(Landroid/view/DisplayCutout;I)Landroid/graphics/Region;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0}, Landroid/graphics/Region;->recycle()V
 
     return-void
 .end method
@@ -297,6 +297,57 @@
     move v1, v3
 
     :goto_3
+    return v1
+.end method
+
+.method private isStart()Z
+    .locals 4
+
+    iget v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mRotation:I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_1
+
+    iget v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mRotation:I
+
+    const/4 v3, 0x3
+
+    if-ne v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_3
+
+    iget-boolean v3, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mInitialStart:Z
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_3
+    iget-boolean v1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mInitialStart:Z
+
+    :goto_2
     return v1
 .end method
 
@@ -449,6 +500,29 @@
 .method private update()V
     .locals 2
 
+    invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mDecorations:Lcom/android/systemui/ScreenDecorations;
+
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$300(Lcom/android/systemui/ScreenDecorations;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->isStart()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mStart:Z
+
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->requestLayout()V
 
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->getDisplay()Landroid/view/Display;
@@ -479,13 +553,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->hasCutout()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mBounds:Landroid/graphics/Region;
 
@@ -511,7 +585,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/16 v0, 0x8
 
     :goto_0
@@ -519,7 +593,7 @@
 
     move-result v1
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setVisibility(I)V
 
@@ -527,7 +601,11 @@
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    :cond_1
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_1
     return-void
 .end method
 
@@ -884,6 +962,16 @@
     iput p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mColor:I
 
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->invalidate()V
+
+    return-void
+.end method
+
+.method public setRotation(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mRotation:I
+
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->update()V
 
     return-void
 .end method

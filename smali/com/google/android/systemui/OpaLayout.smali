@@ -747,7 +747,7 @@
 
     const/16 v2, 0x53
 
-    const v3, 0x7f070329
+    const v3, 0x7f07032a
 
     if-eqz v1, :cond_0
 
@@ -811,7 +811,7 @@
 
     const/16 v5, 0x64
 
-    const v8, 0x7f070328
+    const v8, 0x7f070329
 
     if-eqz v4, :cond_1
 
@@ -1127,7 +1127,7 @@
 
     iget-object v2, p0, Lcom/google/android/systemui/OpaLayout;->mDiamondInterpolator:Landroid/view/animation/Interpolator;
 
-    const v3, 0x7f070326
+    const v3, 0x7f070327
 
     invoke-direct {p0, v3}, Lcom/google/android/systemui/OpaLayout;->getPxVal(I)F
 
@@ -1321,13 +1321,13 @@
 
     iget-boolean v1, p0, Lcom/google/android/systemui/OpaLayout;->mVertical:Z
 
-    const v2, 0x7f07032a
+    const v2, 0x7f07032b
 
     const/16 v3, 0x85
 
-    const v4, 0x7f07032c
+    const v4, 0x7f07032d
 
-    const v5, 0x7f07032b
+    const v5, 0x7f07032c
 
     const/16 v6, 0x113
 
@@ -2296,19 +2296,19 @@
 
     invoke-direct {v4, v5}, Lcom/android/systemui/statusbar/phone/ShadowKeyDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    const v5, 0x7f0702d5
+    const v5, 0x7f0702d6
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    const v6, 0x7f0702d6
+    const v6, 0x7f0702d7
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v6
 
-    const v7, 0x7f0702d7
+    const v7, 0x7f0702d8
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

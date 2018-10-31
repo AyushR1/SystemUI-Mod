@@ -136,53 +136,49 @@
     :cond_3
     const/4 v6, 0x0
 
-    const/16 v7, 0xa
-
     if-nez v4, :cond_8
 
-    iget-object v3, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    invoke-static {v3}, Lcom/android/systemui/recents/RecentsOnboarding;->access$300(Lcom/android/systemui/recents/RecentsOnboarding;)I
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$300(Lcom/android/systemui/recents/RecentsOnboarding;)I
 
-    move-result v3
+    move-result v7
 
     const/4 v8, 0x3
 
-    if-lt v3, v8, :cond_b
+    if-lt v7, v8, :cond_b
 
-    iget-object v3, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    invoke-static {v3}, Lcom/android/systemui/recents/RecentsOnboarding;->access$400(Lcom/android/systemui/recents/RecentsOnboarding;)Z
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$400(Lcom/android/systemui/recents/RecentsOnboarding;)Z
 
-    move-result v3
+    move-result v7
 
-    const v8, 0x7f110495
+    const v8, 0x7f110494
 
-    if-eqz v3, :cond_7
+    if-eqz v7, :cond_7
 
-    iget-object v3, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    invoke-static {v3}, Lcom/android/systemui/recents/RecentsOnboarding;->access$500(Lcom/android/systemui/recents/RecentsOnboarding;)I
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$500(Lcom/android/systemui/recents/RecentsOnboarding;)I
 
-    move-result v3
+    move-result v7
 
-    const/4 v9, 0x4
+    const/4 v9, 0x2
 
-    if-le v3, v9, :cond_4
+    if-le v7, v9, :cond_4
 
     return-void
 
     :cond_4
-    const/4 v9, 0x2
+    if-gt v7, v3, :cond_5
 
-    if-gt v3, v9, :cond_5
-
-    const/4 v7, 0x5
+    const/4 v3, 0x5
 
     goto :goto_0
 
     :cond_5
-    nop
+    const/16 v3, 0x28
 
     :goto_0
     iget-object v9, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
@@ -195,7 +191,7 @@
 
     move-result v9
 
-    if-lt v9, v7, :cond_6
+    if-lt v9, v3, :cond_6
 
     iget-object v9, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
@@ -227,31 +223,33 @@
     goto :goto_3
 
     :cond_8
-    iget-object v8, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    invoke-static {v8}, Lcom/android/systemui/recents/RecentsOnboarding;->access$800(Lcom/android/systemui/recents/RecentsOnboarding;)I
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$800(Lcom/android/systemui/recents/RecentsOnboarding;)I
 
-    move-result v8
+    move-result v7
 
-    if-lt v8, v7, :cond_b
+    const/16 v8, 0xa
 
-    iget-object v8, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    if-lt v7, v8, :cond_b
 
-    invoke-static {v8}, Lcom/android/systemui/recents/RecentsOnboarding;->access$900(Lcom/android/systemui/recents/RecentsOnboarding;)Z
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    move-result v8
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$900(Lcom/android/systemui/recents/RecentsOnboarding;)Z
 
-    const v9, 0x7f110492
+    move-result v7
 
-    if-eqz v8, :cond_9
+    const v9, 0x7f110491
 
-    iget-object v8, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
+    if-eqz v7, :cond_9
 
-    invoke-static {v8}, Lcom/android/systemui/recents/RecentsOnboarding;->access$1000(Lcom/android/systemui/recents/RecentsOnboarding;)I
+    iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 
-    move-result v8
+    invoke-static {v7}, Lcom/android/systemui/recents/RecentsOnboarding;->access$1000(Lcom/android/systemui/recents/RecentsOnboarding;)I
 
-    if-lt v8, v7, :cond_a
+    move-result v7
+
+    if-lt v7, v8, :cond_a
 
     iget-object v7, p0, Lcom/android/systemui/recents/RecentsOnboarding$1;->this$0:Lcom/android/systemui/recents/RecentsOnboarding;
 

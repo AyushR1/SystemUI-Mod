@@ -171,23 +171,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/os/UserManager;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mUserManager:Landroid/os/UserManager;
-
-    return-object v0
-.end method
-
-.method static synthetic access$300(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->showForegroundManagedProfileActivityToast()V
-
-    return-void
-.end method
-
-.method static synthetic access$400(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/internal/statusbar/IStatusBarService;
+.method static synthetic access$200(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/internal/statusbar/IStatusBarService;
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mBarService:Lcom/android/internal/statusbar/IStatusBarService;
@@ -195,7 +179,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/util/SparseBooleanArray;
+.method static synthetic access$300(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/util/SparseBooleanArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mUsersAllowingNotifications:Landroid/util/SparseBooleanArray;
@@ -203,7 +187,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+.method static synthetic access$400(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
@@ -324,54 +308,6 @@
     move-result v0
 
     return v0
-.end method
-
-.method private showForegroundManagedProfileActivityToast()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mContext:Landroid/content/Context;
-
-    const/4 v1, 0x0
-
-    const v2, 0x7f11035b
-
-    invoke-static {v0, v2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    const v3, 0x102000b
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    const v3, 0x7f0803b1
-
-    invoke-virtual {v2, v3, v1, v1, v1}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(IIII)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v3, 0x7f070284
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
 .end method
 
 .method private updateCurrentProfilesCache()V
@@ -974,10 +910,6 @@
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v2, "android.intent.action.USER_ADDED"
-
-    invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v2, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 

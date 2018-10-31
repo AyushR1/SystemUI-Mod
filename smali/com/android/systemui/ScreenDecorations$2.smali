@@ -17,20 +17,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/systemui/ScreenDecorations;
 
-.field final synthetic val$cutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
-
-.field final synthetic val$cutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
+.method constructor <init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/ScreenDecorations$2;->this$0:Lcom/android/systemui/ScreenDecorations;
-
-    iput-object p5, p0, Lcom/android/systemui/ScreenDecorations$2;->val$cutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
-
-    iput-object p6, p0, Lcom/android/systemui/ScreenDecorations$2;->val$cutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/android/systemui/qs/SecureSetting;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
 
@@ -116,11 +108,19 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations$2;->val$cutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations$2;->this$0:Lcom/android/systemui/ScreenDecorations;
+
+    invoke-static {v2}, Lcom/android/systemui/ScreenDecorations;->access$500(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setColor(I)V
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations$2;->val$cutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations$2;->this$0:Lcom/android/systemui/ScreenDecorations;
+
+    invoke-static {v2}, Lcom/android/systemui/ScreenDecorations;->access$600(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setColor(I)V
 

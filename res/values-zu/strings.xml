@@ -825,7 +825,6 @@ Zama futhi emasekhondini angu-%2$d."</string>
     <string name="lockscreen_unlock_left">Isinqamuleli sangakwesokunxele naso siyavula</string>
     <string name="lockscreen_unlock_right">Isinqamuleli sangakwesokudla naso siyavula</string>
     <string name="manage_notifications_text">Phatha izaziso</string>
-    <string name="managed_profile_foreground_toast">Usebenzisa iphrofayela yakho yomsebenzi</string>
     <string name="managed_user_title">Zonke izinhlelo zokusebenza zomsebenzi</string>
     <string name="media_category">Imidiya</string>
     <string name="media_projection_action_text">Qala manje</string>

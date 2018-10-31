@@ -151,7 +151,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f11043d
+    const v5, 0x7f11043c
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -280,7 +280,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f11043f
+    const v8, 0x7f11043e
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     const v1, 0x7f080253
 
-    const v2, 0x7f110430
+    const v2, 0x7f11042f
 
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/qs/QSDetailItems;->setEmptyState(II)V
 
@@ -420,7 +420,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110433
+    const v1, 0x7f110432
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

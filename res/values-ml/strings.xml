@@ -825,7 +825,6 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="lockscreen_unlock_left">ഇടത് കുറുക്കുവഴിയും അൺലോക്കുചെയ്യുന്നു</string>
     <string name="lockscreen_unlock_right">വലത് കുറുക്കുവഴിയും അൺലോക്കുചെയ്യുന്നു</string>
     <string name="manage_notifications_text">അറിയിപ്പുകൾ മാനേജ് ചെയ്യുക</string>
-    <string name="managed_profile_foreground_toast">നിങ്ങൾ ഉപയോഗിക്കുന്നത് ഔദ്യോഗിക പ്രൊഫൈലാണ്</string>
     <string name="managed_user_title">എല്ലാ ഔദ്യോഗിക ആപ്‌സും</string>
     <string name="media_category">മീഡിയ</string>
     <string name="media_projection_action_text">ഇപ്പോൾ ആരംഭിക്കുക</string>

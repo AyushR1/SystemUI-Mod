@@ -54,9 +54,11 @@
 
 .field mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
+.field mHasBackdrop:Z
+
 .field mIndex:I
 
-.field mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+.field mLaunchingAffordanceWithPreview:Z
 
 .field mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
 
@@ -342,16 +344,6 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDisplayRequiresBlanking:Z
 
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/ScrimView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
     return-void
 .end method
 
@@ -373,6 +365,22 @@
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAodFrontScrimAlpha:F
+
+    return-void
+.end method
+
+.method public setHasBackdrop(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mHasBackdrop:Z
+
+    return-void
+.end method
+
+.method public setLaunchingAffordanceWithPreview(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mLaunchingAffordanceWithPreview:Z
 
     return-void
 .end method

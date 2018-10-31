@@ -22,6 +22,8 @@
 
 .field public static final FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
+.field public static final FAST_OUT_SLOW_IN_REVERSE:Landroid/view/animation/Interpolator;
+
 .field public static final HEADS_UP_APPEAR:Landroid/view/animation/Interpolator;
 
 .field public static final ICON_OVERSHOT:Landroid/view/animation/Interpolator;
@@ -34,10 +36,12 @@
 
 .field public static final TOUCH_RESPONSE:Landroid/view/animation/Interpolator;
 
+.field public static final TOUCH_RESPONSE_REVERSE:Landroid/view/animation/Interpolator;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
@@ -52,6 +56,16 @@
     invoke-direct {v0, v2, v4, v1, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/android/systemui/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
+
+    new-instance v0, Landroid/view/animation/PathInterpolator;
+
+    const v5, 0x3f19999a    # 0.6f
+
+    const v6, 0x3f4ccccd    # 0.8f
+
+    invoke-direct {v0, v6, v4, v5, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    sput-object v0, Lcom/android/systemui/Interpolators;->FAST_OUT_SLOW_IN_REVERSE:Landroid/view/animation/Interpolator;
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
@@ -73,9 +87,7 @@
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    const v5, 0x3f4ccccd    # 0.8f
-
-    invoke-direct {v0, v4, v4, v5, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v0, v4, v4, v6, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/android/systemui/Interpolators;->ALPHA_OUT:Landroid/view/animation/Interpolator;
 
@@ -99,15 +111,13 @@
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
-    const/high16 v5, 0x40200000    # 2.5f
+    const/high16 v6, 0x40200000    # 2.5f
 
-    invoke-direct {v0, v5}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
+    invoke-direct {v0, v6}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
     sput-object v0, Lcom/android/systemui/Interpolators;->DECELERATE_QUINT:Landroid/view/animation/Interpolator;
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
-
-    const v5, 0x3f19999a    # 0.6f
 
     invoke-direct {v0, v2, v4, v5, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
@@ -150,6 +160,16 @@
     invoke-direct {v0, v1, v4, v2, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/android/systemui/Interpolators;->TOUCH_RESPONSE:Landroid/view/animation/Interpolator;
+
+    new-instance v0, Landroid/view/animation/PathInterpolator;
+
+    const v1, 0x3f666666    # 0.9f
+
+    const v2, 0x3f333333    # 0.7f
+
+    invoke-direct {v0, v1, v4, v2, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    sput-object v0, Lcom/android/systemui/Interpolators;->TOUCH_RESPONSE_REVERSE:Landroid/view/animation/Interpolator;
 
     return-void
 .end method

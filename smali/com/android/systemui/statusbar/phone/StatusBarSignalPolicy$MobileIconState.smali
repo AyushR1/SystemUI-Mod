@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field public mContext:Landroid/content/Context;
+
 .field private mProvisioned:Z
 
 .field public needsLeadingPadding:Z
@@ -31,7 +33,7 @@
 
 
 # direct methods
-.method private constructor <init>(I)V
+.method private constructor <init>(ILandroid/content/Context;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -44,15 +46,9 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->subId:I
 
-    invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/ActivityThread;->getSystemContext()Landroid/app/ContextImpl;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/internal/telephony/util/TelephonyExtUtils;->getInstance(Landroid/content/Context;)Lcom/android/internal/telephony/util/TelephonyExtUtils;
+    invoke-static {p2}, Lcom/android/internal/telephony/util/TelephonyExtUtils;->getInstance(Landroid/content/Context;)Lcom/android/internal/telephony/util/TelephonyExtUtils;
 
     move-result-object v0
 
@@ -72,10 +68,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(ILcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$1;)V
+.method synthetic constructor <init>(ILandroid/content/Context;Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$1;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(I)V
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(ILandroid/content/Context;)V
 
     return-void
 .end method
@@ -107,7 +103,7 @@
 .end method
 
 .method private static copyStates(Ljava/util/List;)Ljava/util/List;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -145,7 +141,9 @@
 
     iget v4, v2, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->subId:I
 
-    invoke-direct {v3, v4}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(I)V
+    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
+
+    invoke-direct {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(ILandroid/content/Context;)V
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->copyTo(Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;)V
 
@@ -160,13 +158,15 @@
 
 # virtual methods
 .method public copy()Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->subId:I
 
-    invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(I)V
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1, v2}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(ILandroid/content/Context;)V
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->copyTo(Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;)V
 
@@ -201,6 +201,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeContentDescription:Ljava/lang/String;
 
     iput-object v0, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeContentDescription:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
+
+    iput-object v0, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -293,7 +297,7 @@
 .method public hashCode()I
     .locals 3
 
-    const/4 v0, 0x7
+    const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -362,6 +366,12 @@
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeContentDescription:Ljava/lang/String;
 
     const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->mContext:Landroid/content/Context;
+
+    const/4 v2, 0x7
 
     aput-object v1, v0, v2
 

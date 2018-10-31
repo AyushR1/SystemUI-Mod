@@ -46,6 +46,8 @@
 
 .field private mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
 
+.field private mShowPercentAvailable:Z
+
 .field private final mSlotBattery:Ljava/lang/String;
 
 .field private mTextColor:I
@@ -133,6 +135,18 @@
 
     iput-object v3, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
 
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x1120022
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v3
+
+    iput-boolean v3, p0, Lcom/android/systemui/BatteryMeterView;->mShowPercentAvailable:Z
+
     new-instance v3, Lcom/android/systemui/util/Utils$DisableStateTracker;
 
     const/4 v4, 0x2
@@ -141,7 +155,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/BatteryMeterView;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const v3, 0x104060f
+    const v3, 0x1040613
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -167,7 +181,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f070403
+    const v5, 0x7f070405
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -177,7 +191,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f070402
+    const v6, 0x7f070404
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -323,7 +337,7 @@
 
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    const v2, 0x7f070411
+    const v2, 0x7f070413
 
     const/4 v3, 0x1
 
@@ -333,13 +347,13 @@
 
     move-result v2
 
-    const v3, 0x7f070402
+    const v3, 0x7f070404
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    const v4, 0x7f070403
+    const v4, 0x7f070405
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -377,7 +391,7 @@
 
     iget-object v7, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
 
-    const v8, 0x7f07039a
+    const v8, 0x7f07039c
 
     invoke-static {v7, v8}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
 
@@ -439,95 +453,109 @@
 .end method
 
 .method private updateShowPercent()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    move v0, v2
 
     :goto_0
+    nop
+
     invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "status_bar_show_battery_percent"
+    const-string v4, "status_bar_show_battery_percent"
 
-    iget v4, p0, Lcom/android/systemui/BatteryMeterView;->mUser:I
+    iget v5, p0, Lcom/android/systemui/BatteryMeterView;->mUser:I
 
-    invoke-static {v2, v3, v1, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v3, v4, v2, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    move-result v1
+    move-result v3
 
-    if-nez v1, :cond_2
-
-    iget-boolean v1, p0, Lcom/android/systemui/BatteryMeterView;->mForceShowPercent:Z
-
-    if-eqz v1, :cond_1
+    if-eqz v3, :cond_1
 
     goto :goto_1
 
     :cond_1
-    if-eqz v0, :cond_4
+    move v1, v2
 
-    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+    :goto_1
+    iget-boolean v2, p0, Lcom/android/systemui/BatteryMeterView;->mShowPercentAvailable:Z
 
-    invoke-virtual {p0, v1}, Lcom/android/systemui/BatteryMeterView;->removeView(Landroid/view/View;)V
+    if-eqz v2, :cond_2
 
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    goto :goto_2
+    if-nez v1, :cond_3
 
     :cond_2
-    :goto_1
-    if-nez v0, :cond_4
+    iget-boolean v2, p0, Lcom/android/systemui/BatteryMeterView;->mForceShowPercent:Z
+
+    if-eqz v2, :cond_5
+
+    :cond_3
+    if-nez v0, :cond_6
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->loadPercentView()Landroid/widget/TextView;
 
-    move-result-object v1
+    move-result-object v2
 
-    iput-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    iget v1, p0, Lcom/android/systemui/BatteryMeterView;->mTextColor:I
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
 
     iget v2, p0, Lcom/android/systemui/BatteryMeterView;->mTextColor:I
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
+    if-eqz v2, :cond_4
 
-    :cond_3
-    invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updatePercentText()V
+    iget-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+    iget v3, p0, Lcom/android/systemui/BatteryMeterView;->mTextColor:I
 
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x2
-
-    const/4 v4, -0x1
-
-    invoke-direct {v2, v3, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v1, v2}, Lcom/android/systemui/BatteryMeterView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_4
+    invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updatePercentText()V
+
+    iget-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v4, -0x2
+
+    const/4 v5, -0x1
+
+    invoke-direct {v3, v4, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v2, v3}, Lcom/android/systemui/BatteryMeterView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_2
+
+    :cond_5
+    if-eqz v0, :cond_6
+
+    iget-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v2}, Lcom/android/systemui/BatteryMeterView;->removeView(Landroid/view/View;)V
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    :cond_6
     :goto_2
     return-void
 .end method
@@ -781,6 +809,28 @@
     check-cast v0, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/ConfigurationController;->removeCallback(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public onOverlayChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x1120022
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/BatteryMeterView;->mShowPercentAvailable:Z
 
     return-void
 .end method

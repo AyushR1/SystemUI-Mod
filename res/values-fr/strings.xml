@@ -828,7 +828,6 @@ Réessayez dans %2$d secondes."</string>
     <string name="lockscreen_unlock_left">Le raccourci gauche déverrouille également</string>
     <string name="lockscreen_unlock_right">Le raccourci droit déverrouille également</string>
     <string name="manage_notifications_text">Gérer les notifications</string>
-    <string name="managed_profile_foreground_toast">Vous utilisez votre profil professionnel.</string>
     <string name="managed_user_title">Toutes applis profession.</string>
     <string name="media_category">Multimédia</string>
     <string name="media_projection_action_text">Commencer</string>
@@ -1186,6 +1185,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="saved_network">Enregistré lors de : %1$s</string>
     <string name="screen_pinning_description">"Cet écran est épinglé jusqu'à l'annulation de l'opération. Pour annuler l'épinglage, appuyez de manière prolongée sur les boutons Retour et Aperçu."</string>
     <string name="screen_pinning_description_accessible">"Cet écran est épinglé jusqu'à l'annulation de l'opération. Pour annuler l'épinglage, appuyez de manière prolongée sur le bouton Aperçu."</string>
+    <string name="screen_pinning_description_no_navbar">"Cet écran est épinglé et visible jusqu'à annulation de l'opération. Pour annuler l'épinglage de l'écran, appuyez et maintenez le bouton Retour."</string>
     <string name="screen_pinning_description_recents_invisible">"Cet écran est épinglé jusqu'à l'annulation de l'opération. Pour annuler l'épinglage, appuyez de manière prolongée sur les boutons \"Retour\" et \"Accueil\"."</string>
     <string name="screen_pinning_description_recents_invisible_accessible">"Cet écran est épinglé jusqu'à l'annulation de l'opération. Pour annuler l'épinglage, appuyez de manière prolongée sur le bouton \"Accueil\"."</string>
     <string name="screen_pinning_exit">"Épinglage d'écran annulé"</string>
@@ -1194,6 +1194,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="screen_pinning_start">Écran épinglé</string>
     <string name="screen_pinning_title">Écran épinglé</string>
     <string name="screen_pinning_toast">"Pour annuler l'épinglage de l'écran, appuyez de manière prolongée sur les boutons \"Retour\" et \"Aperçu\""</string>
+    <string name="screen_pinning_toast_no_navbar">"Pour annuler l'épinglage de l'écran, appuyez et maintenez le bouton Retour"</string>
     <string name="screen_pinning_toast_recents_invisible">"Pour annuler l'épinglage de l'écran, appuyez de manière prolongée sur les boutons \"Retour\" et \"Accueil\""</string>
     <string name="screen_zoom_summary_custom">Personnalisé (%d)</string>
     <string name="screen_zoom_summary_default">Par défaut</string>

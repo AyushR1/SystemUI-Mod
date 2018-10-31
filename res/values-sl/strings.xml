@@ -826,7 +826,6 @@ Poskusite znova čez %2$d s."</string>
     <string name="lockscreen_unlock_left">Levo bližnjico uporabi tudi za odklepanje</string>
     <string name="lockscreen_unlock_right">Desno bližnjico uporabi tudi za odklepanje</string>
     <string name="manage_notifications_text">Upravljanje obvestil</string>
-    <string name="managed_profile_foreground_toast">Uporabljate delovni profil</string>
     <string name="managed_user_title">Vse delovne aplikacije</string>
     <string name="media_category">Predstavnosti</string>
     <string name="media_projection_action_text">Začni zdaj</string>

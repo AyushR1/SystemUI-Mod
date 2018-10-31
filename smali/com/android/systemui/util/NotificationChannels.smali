@@ -83,7 +83,7 @@
 
     sget-object v2, Lcom/android/systemui/util/NotificationChannels;->BATTERY:Ljava/lang/String;
 
-    const v3, 0x7f1103af
+    const v3, 0x7f1103ae
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -151,7 +151,7 @@
 
     sget-object v7, Lcom/android/systemui/util/NotificationChannels;->ALERTS:Ljava/lang/String;
 
-    const v8, 0x7f1103ae
+    const v8, 0x7f1103ad
 
     invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -163,7 +163,7 @@
 
     sget-object v8, Lcom/android/systemui/util/NotificationChannels;->GENERAL:Ljava/lang/String;
 
-    const v9, 0x7f1103b3
+    const v9, 0x7f1103b2
 
     invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -175,7 +175,7 @@
 
     sget-object v9, Lcom/android/systemui/util/NotificationChannels;->STORAGE:Ljava/lang/String;
 
-    const v10, 0x7f1103b7
+    const v10, 0x7f1103b6
 
     invoke-virtual {p0, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -207,7 +207,7 @@
 
     sget-object v10, Lcom/android/systemui/util/NotificationChannels;->HINTS:Ljava/lang/String;
 
-    const v11, 0x7f1103b4
+    const v11, 0x7f1103b3
 
     invoke-virtual {p0, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -227,7 +227,7 @@
 
     aput-object v8, v10, v12
 
-    const v3, 0x7f1103b6
+    const v3, 0x7f1103b5
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -269,7 +269,7 @@
 
     sget-object v6, Lcom/android/systemui/util/NotificationChannels;->TVPIP:Ljava/lang/String;
 
-    const v10, 0x7f1103b9
+    const v10, 0x7f1103b8
 
     invoke-virtual {p0, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -1300,7 +1300,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f07033d
+    const v4, 0x7f07033e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1312,7 +1312,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070342
+    const v4, 0x7f070343
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1830,7 +1830,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07033f
+    const v1, 0x7f070340
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1854,7 +1854,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->updateFromIntent(Landroid/content/Intent;)V
 
-    const v0, 0x7f1103e4
+    const v0, 0x7f1103e3
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->setTitle(I)V
 

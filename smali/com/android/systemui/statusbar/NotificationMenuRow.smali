@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1103bf
+    const v1, 0x7f1103be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -369,7 +369,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070308
+    const v1, 0x7f070309
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -379,7 +379,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/NotificationMenuRow;->mHorizSpaceForIcon:F
 
-    const v1, 0x7f07030a
+    const v1, 0x7f07030b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -589,7 +589,7 @@
 
     check-cast v1, Lcom/android/systemui/statusbar/NotificationSnooze;
 
-    const v2, 0x7f1103c1
+    const v2, 0x7f1103c0
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2157,7 +2157,7 @@
 
     check-cast v4, Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$MenuItem;
 
-    const v5, 0x7f1103be
+    const v5, 0x7f1103bd
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

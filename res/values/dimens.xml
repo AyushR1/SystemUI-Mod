@@ -265,6 +265,7 @@
     <dimen name="cardview_default_radius">2.0dip</dimen>
     <dimen name="carrier_label_height">24.0dip</dimen>
     <dimen name="cell_overlay_padding">18.0dip</dimen>
+    <dimen name="charging_indication_burn_in_prevention_offset_y">5.0dip</dimen>
     <dimen name="circle_avatar_size">40.0dip</dimen>
     <dimen name="clear_all_padding_top">12.0dip</dimen>
     <dimen name="clock_collapsed_bottom_margin">10.0dip</dimen>
@@ -335,6 +336,7 @@
     <item type="dimen" name="disabled_alpha_material_light">0.26</item>
     <dimen name="disappear_y_translation">-32.0dip</dimen>
     <dimen name="display_cutout_margin_consumption">0.0px</dimen>
+    <dimen name="display_cutout_touchable_region_size">12.0dip</dimen>
     <dimen name="docked_divider_handle_height">2.0dip</dimen>
     <dimen name="docked_divider_handle_width">16.0dip</dimen>
     <dimen name="docked_stack_divider_lift_elevation">4.0dip</dimen>
@@ -643,7 +645,6 @@
     <dimen name="logout_button_layout_height">32.0dip</dimen>
     <dimen name="logout_button_margin_bottom">12.0dip</dimen>
     <dimen name="logout_button_padding_horizontal">16.0dip</dimen>
-    <dimen name="managed_profile_toast_padding">4.0dip</dimen>
     <dimen name="match_parent">-1.0px</dimen>
     <dimen name="max_avatar_size">48.0dip</dimen>
     <dimen name="max_notification_fadeout_height">100.0dip</dimen>
@@ -897,6 +898,7 @@
     <dimen name="qs_panel_padding_top">30.0dip</dimen>
     <item type="dimen" name="qs_panel_width">@dimen/notification_panel_width</item>
     <dimen name="qs_peek_height">0.0dip</dimen>
+    <dimen name="qs_quick_header_panel_height">128.0dip</dimen>
     <dimen name="qs_quick_tile_padding">12.0dip</dimen>
     <dimen name="qs_quick_tile_size">48.0dip</dimen>
     <dimen name="qs_quick_tile_space_width">0.0dip</dimen>
@@ -971,9 +973,9 @@
     <dimen name="restricted_padlock_pading">4.0dip</dimen>
     <dimen name="roaming_icon_start_padding">2.0dip</dimen>
     <dimen name="rounded_corner_content_padding">8.0dip</dimen>
-    <dimen name="rounded_corner_radius">0.0dip</dimen>
-    <dimen name="rounded_corner_radius_bottom">0.0dip</dimen>
-    <dimen name="rounded_corner_radius_top">0.0dip</dimen>
+    <item type="dimen" name="rounded_corner_radius">@android:dimen/screen_percentage_10</item>
+    <item type="dimen" name="rounded_corner_radius_bottom">@android:dimen/screen_percentage_12</item>
+    <item type="dimen" name="rounded_corner_radius_top">@android:dimen/screen_percentage_15</item>
     <dimen name="scenery_z">6.0dip</dimen>
     <dimen name="screen_pinning_nav_highlight_outer_size">84.0dip</dimen>
     <dimen name="screen_pinning_nav_highlight_size">56.0dip</dimen>
@@ -1029,13 +1031,13 @@
     <dimen name="status_bar_header_height_expanded">124.0dip</dimen>
     <dimen name="status_bar_header_height_keyguard">40.0dip</dimen>
     <dimen name="status_bar_header_padding_bottom">48.0dip</dimen>
-    <item type="dimen" name="status_bar_height">@android:dimen/status_bar_height_landscape</item>
+    <item type="dimen" name="status_bar_height">@android:dimen/subtitle_corner_radius</item>
     <item type="dimen" name="status_bar_icon_drawing_alpha">90.0%</item>
     <dimen name="status_bar_icon_drawing_size">15.0dip</dimen>
     <item type="dimen" name="status_bar_icon_drawing_size_dark">@android:dimen/notification_header_margin_bottom</item>
     <dimen name="status_bar_icon_padding">0.0dip</dimen>
     <item type="dimen" name="status_bar_icon_scale_factor">1.0</item>
-    <item type="dimen" name="status_bar_icon_size">@android:dimen/subtitle_corner_radius</item>
+    <item type="dimen" name="status_bar_icon_size">@android:dimen/subtitle_shadow_radius</item>
     <dimen name="status_bar_left_clock_end_padding">7.0dip</dimen>
     <dimen name="status_bar_left_clock_starting_padding">0.0dip</dimen>
     <dimen name="status_bar_padding_end">6.0dip</dimen>

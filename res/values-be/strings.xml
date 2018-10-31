@@ -824,7 +824,6 @@
     <string name="lockscreen_unlock_left">Разблакіроўка таксама ярлыком \"улева\"</string>
     <string name="lockscreen_unlock_right">Разблакіроўка таксама ярлыком \"управа\"</string>
     <string name="manage_notifications_text">Кіраванне апавяшчэннямі</string>
-    <string name="managed_profile_foreground_toast">Вы выкарыстоўваеце свой працоўны профіль</string>
     <string name="managed_user_title">Усе працоўныя праграмы</string>
     <string name="media_category">Медыя</string>
     <string name="media_projection_action_text">Пачаць зараз</string>

@@ -544,6 +544,10 @@
 
     move-result-object v2
 
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/stack/AnimationFilter;->hasDelays()Lcom/android/systemui/statusbar/stack/AnimationFilter;
+
+    move-result-object v2
+
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/stack/AnimationFilter;->animateY()Lcom/android/systemui/statusbar/stack/AnimationFilter;
 
     move-result-object v2
@@ -557,6 +561,10 @@
     invoke-direct {v2}, Lcom/android/systemui/statusbar/stack/AnimationFilter;-><init>()V
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/stack/AnimationFilter;->animateAlpha()Lcom/android/systemui/statusbar/stack/AnimationFilter;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/stack/AnimationFilter;->hasDelays()Lcom/android/systemui/statusbar/stack/AnimationFilter;
 
     move-result-object v2
 

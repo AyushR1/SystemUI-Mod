@@ -376,9 +376,9 @@ Selección: modo de canal"</string>
     <string name="bluetooth_select_a2dp_codec_ldac_playback_quality">Códec de audio LDAC de Bluetooth: calidad de reproducción</string>
     <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">"Activar LDAC de audio por Bluetooth
 Selección de códec: calidad de reproducción"</string>
-    <string name="bluetooth_select_a2dp_codec_sample_rate">Porcentaje de muestreo de audio por Bluetooth</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate">Frecuencia de muestreo de audio por Bluetooth</string>
     <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">"Activar el códec de audio por Bluetooth
-Selección: porcentaje de muestreo"</string>
+Selección: frecuencia de muestreo"</string>
     <string name="bluetooth_select_a2dp_codec_streaming_label">Streaming: %1$s</string>
     <string name="bluetooth_select_a2dp_codec_type">Códec de audio de Bluetooth</string>
     <string name="bluetooth_select_a2dp_codec_type_dialog_title">"Activar el códec de audio por Bluetooth
@@ -828,7 +828,6 @@ Vuelve a intentarlo dentro de %2$d segundos."</string>
     <string name="lockscreen_unlock_left">Desbloquear también con el acceso directo a la izquierda</string>
     <string name="lockscreen_unlock_right">Desbloquear también con el acceso directo a la derecha</string>
     <string name="manage_notifications_text">Gestionar notificaciones</string>
-    <string name="managed_profile_foreground_toast">Estás usando tu perfil de trabajo</string>
     <string name="managed_user_title">Todas las aplicaciones de trabajo</string>
     <string name="media_category">Multimedia</string>
     <string name="media_projection_action_text">Iniciar ahora</string>
@@ -1214,7 +1213,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="search_menu_title">Buscar</string>
     <string name="select_application">Selecciona una aplicación</string>
     <string name="select_logd_size_dialog_title">Elige el tamaño del Logger por búfer</string>
-    <string name="select_logd_size_title">Tamaños de búfer de registrador</string>
+    <string name="select_logd_size_title">Tamaños del búfer para registrar</string>
     <string name="select_logpersist_dialog_title">Seleccionar búferes de registro para guardarlos de forma continua en dispositivo</string>
     <string name="select_logpersist_title">Guardar datos de forma continua</string>
     <string name="select_private_dns_configuration_dialog_title">Selecciona el modo de DNS privado</string>

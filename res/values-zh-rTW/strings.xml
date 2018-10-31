@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">向左快速鍵可一併解鎖裝置</string>
     <string name="lockscreen_unlock_right">向右快速鍵可一併解鎖裝置</string>
     <string name="manage_notifications_text">管理通知</string>
-    <string name="managed_profile_foreground_toast">你正在使用工作資料夾</string>
     <string name="managed_user_title">所有 Work 應用程式</string>
     <string name="media_category">媒體</string>
     <string name="media_projection_action_text">立即開始</string>

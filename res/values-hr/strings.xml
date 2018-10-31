@@ -829,7 +829,6 @@ Pokušajte ponovo za %2$d s."</string>
     <string name="lockscreen_unlock_left">Lijevi prečac također otključava</string>
     <string name="lockscreen_unlock_right">Desni prečac također otključava</string>
     <string name="manage_notifications_text">Upravljanje obavijestima</string>
-    <string name="managed_profile_foreground_toast">Upotrebljavate radni profil</string>
     <string name="managed_user_title">Sve radne aplikacije</string>
     <string name="media_category">Mediji</string>
     <string name="media_projection_action_text">Započni sad</string>

@@ -243,7 +243,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationInfo;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1103ab
+    const v5, 0x7f1103aa
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -513,7 +513,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1103c4
+    const v1, 0x7f1103c3
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -860,7 +860,7 @@
 
     iput v4, p0, Lcom/android/systemui/statusbar/NotificationInfo;->mChosenImportance:I
 
-    const v6, 0x7f1103b5
+    const v6, 0x7f1103b4
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -869,7 +869,7 @@
     :cond_2
     iput v5, p0, Lcom/android/systemui/statusbar/NotificationInfo;->mChosenImportance:I
 
-    const v6, 0x7f1103b2
+    const v6, 0x7f1103b1
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -1456,7 +1456,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationInfo;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1103b1
+    const v4, 0x7f1103b0
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1479,7 +1479,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationInfo;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1103b0
+    const v4, 0x7f1103af
 
     new-array v2, v2, [Ljava/lang/Object;
 

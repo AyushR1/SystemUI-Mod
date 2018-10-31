@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">Сол жақ таңбаша құлыпты ашады</string>
     <string name="lockscreen_unlock_right">Оң жақ таңбаша құлыпты ашады</string>
     <string name="manage_notifications_text">Хабарландыруларды басқару</string>
-    <string name="managed_profile_foreground_toast">Сіз жұмыс профиліңізді пайдаланып жатырсыз</string>
     <string name="managed_user_title">Барлық жұмыс қолданбалары</string>
     <string name="media_category">Meдиа</string>
     <string name="media_projection_action_text">Қазір бастау</string>

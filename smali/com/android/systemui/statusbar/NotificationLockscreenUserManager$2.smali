@@ -102,7 +102,7 @@
 
     invoke-interface {v1, v2}, Lcom/android/systemui/statusbar/NotificationPresenter;->onUserSwitched(I)V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_0
     const-string v1, "android.intent.action.USER_ADDED"
@@ -117,7 +117,7 @@
 
     invoke-static {v1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$100(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)V
 
-    goto/16 :goto_2
+    goto :goto_1
 
     :cond_1
     const-string v1, "android.intent.action.USER_UNLOCKED"
@@ -138,61 +138,16 @@
 
     invoke-virtual {v1}, Lcom/android/systemui/OverviewProxyService;->startConnectionToCurrentUser()V
 
-    goto/16 :goto_2
+    goto :goto_1
 
     :cond_2
-    const-string v1, "android.intent.action.USER_PRESENT"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    :try_start_0
-    invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/app/IActivityManager;->getLastResumedActivityUserId()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$2;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
-
-    invoke-static {v2}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$200(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/os/UserManager;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/os/UserManager;->isManagedProfile(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$2;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
-
-    invoke-static {v2}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$300(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    :cond_3
-    :goto_0
-    goto :goto_2
-
-    :cond_4
     const-string v1, "com.android.systemui.statusbar.work_challenge_unlocked_notification_action"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_4
 
     const-string v1, "android.intent.extra.INTENT"
 
@@ -208,9 +163,9 @@
 
     move-result-object v8
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_3
 
-    :try_start_1
+    :try_start_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$2;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
     iget-object v2, v2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->mContext:Landroid/content/Context;
@@ -226,17 +181,17 @@
     move-object v3, v1
 
     invoke-virtual/range {v2 .. v7}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;III)V
-    :try_end_1
-    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_1 .. :try_end_1} :catch_1
+    :try_end_0
+    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 
-    :catch_1
+    :catch_0
     move-exception v2
 
-    :cond_5
-    :goto_1
-    if-eqz v8, :cond_6
+    :cond_3
+    :goto_0
+    if-eqz v8, :cond_4
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$2;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
@@ -272,23 +227,23 @@
 
     move-result-object v4
 
-    :try_start_2
+    :try_start_1
     iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$2;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    invoke-static {v5}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$400(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/internal/statusbar/IStatusBarService;
+    invoke-static {v5}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$200(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/internal/statusbar/IStatusBarService;
 
     move-result-object v5
 
     invoke-interface {v5, v8, v4}, Lcom/android/internal/statusbar/IStatusBarService;->onNotificationClick(Ljava/lang/String;Lcom/android/internal/statusbar/NotificationVisibility;)V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_2
+    goto :goto_1
 
-    :catch_2
+    :catch_1
     move-exception v5
 
-    :cond_6
-    :goto_2
+    :cond_4
+    :goto_1
     return-void
 .end method

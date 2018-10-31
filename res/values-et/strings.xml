@@ -824,7 +824,6 @@ Proovige %2$d sekundi pärast uuesti."</string>
     <string name="lockscreen_unlock_left">Vasak otsetee avab ka</string>
     <string name="lockscreen_unlock_right">Parem otsetee avab ka</string>
     <string name="manage_notifications_text">Märguannete haldamine</string>
-    <string name="managed_profile_foreground_toast">Kasutate oma tööprofiili</string>
     <string name="managed_user_title">Kõik töörakendused</string>
     <string name="media_category">Meedia</string>
     <string name="media_projection_action_text">Alusta kohe</string>

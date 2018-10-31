@@ -550,7 +550,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f07038c
+    const v4, 0x7f07038e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -558,7 +558,7 @@
 
     iput v3, p0, Lcom/android/systemui/qs/TileLayout;->mCellHeight:I
 
-    const v3, 0x7f07038f
+    const v3, 0x7f070391
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -566,7 +566,7 @@
 
     iput v3, p0, Lcom/android/systemui/qs/TileLayout;->mCellMarginHorizontal:I
 
-    const v3, 0x7f070392
+    const v3, 0x7f070394
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -574,7 +574,7 @@
 
     iput v3, p0, Lcom/android/systemui/qs/TileLayout;->mCellMarginVertical:I
 
-    const v3, 0x7f070390
+    const v3, 0x7f070392
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -582,7 +582,7 @@
 
     iput v3, p0, Lcom/android/systemui/qs/TileLayout;->mCellMarginTop:I
 
-    const v3, 0x7f07038e
+    const v3, 0x7f070390
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110465
+    const v1, 0x7f110464
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -75,7 +75,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110464
+    const v1, 0x7f110463
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110470
+    const v1, 0x7f11046f
 
     goto :goto_1
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110463
+    const v1, 0x7f110462
 
     :goto_1
     invoke-virtual {v0}, Ljava/time/LocalTime;->getMinute()I
@@ -179,7 +179,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110462
+    const v1, 0x7f110461
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -288,7 +288,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NightDisplayTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110462
+    const v1, 0x7f110461
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

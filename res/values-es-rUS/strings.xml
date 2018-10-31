@@ -824,7 +824,6 @@ Vuelve a intentarlo en %2$d segundos."</string>
     <string name="lockscreen_unlock_left">El acceso directo izquierdo también lo desbloquea</string>
     <string name="lockscreen_unlock_right">El acceso directo derecho también lo desbloquea</string>
     <string name="manage_notifications_text">Administrar notificaciones</string>
-    <string name="managed_profile_foreground_toast">Estás usando tu perfil de trabajo</string>
     <string name="managed_user_title">Todas las apps de trabajo</string>
     <string name="media_category">Multimedia</string>
     <string name="media_projection_action_text">Comenzar ahora</string>

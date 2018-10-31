@@ -703,115 +703,119 @@
 
 .field public static final qs_user_detail_name:I = 0x7f060157
 
-.field public static final quick_step_track_background_dark:I = 0x7f060158
+.field public static final quick_step_track_background_background_dark:I = 0x7f060158
 
-.field public static final quick_step_track_background_light:I = 0x7f060159
+.field public static final quick_step_track_background_background_light:I = 0x7f060159
 
-.field public static final recents_clear_all_button_bg_dark_color:I = 0x7f06015a
+.field public static final quick_step_track_background_foreground_dark:I = 0x7f06015a
 
-.field public static final recents_clear_all_button_bg_light_color:I = 0x7f06015b
+.field public static final quick_step_track_background_foreground_light:I = 0x7f06015b
 
-.field public static final recents_freeform_workspace_bg_color:I = 0x7f06015c
+.field public static final recents_clear_all_button_bg_dark_color:I = 0x7f06015c
 
-.field public static final recents_task_bar_dark_icon_color:I = 0x7f06015d
+.field public static final recents_clear_all_button_bg_light_color:I = 0x7f06015d
 
-.field public static final recents_task_bar_dark_text_color:I = 0x7f06015e
+.field public static final recents_freeform_workspace_bg_color:I = 0x7f06015e
 
-.field public static final recents_task_bar_default_background_color:I = 0x7f06015f
+.field public static final recents_task_bar_dark_icon_color:I = 0x7f06015f
 
-.field public static final recents_task_bar_disabled_background_color:I = 0x7f060160
+.field public static final recents_task_bar_dark_text_color:I = 0x7f060160
 
-.field public static final recents_task_bar_light_icon_color:I = 0x7f060161
+.field public static final recents_task_bar_default_background_color:I = 0x7f060161
 
-.field public static final recents_task_bar_light_text_color:I = 0x7f060162
+.field public static final recents_task_bar_disabled_background_color:I = 0x7f060162
 
-.field public static final recents_task_view_default_background_color:I = 0x7f060163
+.field public static final recents_task_bar_light_icon_color:I = 0x7f060163
 
-.field public static final recents_task_view_lock_to_app_button_background_color:I = 0x7f060164
+.field public static final recents_task_bar_light_text_color:I = 0x7f060164
 
-.field public static final recents_task_view_lock_to_app_button_color:I = 0x7f060165
+.field public static final recents_task_view_default_background_color:I = 0x7f060165
 
-.field public static final recents_tv_card_background_color:I = 0x7f060166
+.field public static final recents_task_view_lock_to_app_button_background_color:I = 0x7f060166
 
-.field public static final recents_tv_card_title_text_color:I = 0x7f060167
+.field public static final recents_task_view_lock_to_app_button_color:I = 0x7f060167
 
-.field public static final recents_tv_dismiss_text_color:I = 0x7f060168
+.field public static final recents_tv_card_background_color:I = 0x7f060168
 
-.field public static final recents_tv_text_shadow_color:I = 0x7f060169
+.field public static final recents_tv_card_title_text_color:I = 0x7f060169
 
-.field public static final remote_input_accent:I = 0x7f06016a
+.field public static final recents_tv_dismiss_text_color:I = 0x7f06016a
 
-.field public static final remote_input_hint:I = 0x7f06016b
+.field public static final recents_tv_text_shadow_color:I = 0x7f06016b
 
-.field public static final remote_input_send:I = 0x7f06016c
+.field public static final remote_input_accent:I = 0x7f06016c
 
-.field public static final remote_input_text:I = 0x7f06016d
+.field public static final remote_input_hint:I = 0x7f06016d
 
-.field public static final remote_input_text_enabled:I = 0x7f06016e
+.field public static final remote_input_send:I = 0x7f06016e
 
-.field public static final ripple_material_dark:I = 0x7f06016f
+.field public static final remote_input_text:I = 0x7f06016f
 
-.field public static final ripple_material_light:I = 0x7f060170
+.field public static final remote_input_text_enabled:I = 0x7f060170
 
-.field public static final screen_pinning_nav_icon_highlight_outer:I = 0x7f060171
+.field public static final ripple_material_dark:I = 0x7f060171
 
-.field public static final screen_pinning_primary_text:I = 0x7f060172
+.field public static final ripple_material_light:I = 0x7f060172
 
-.field public static final screen_pinning_request_window_bg:I = 0x7f060173
+.field public static final screen_pinning_nav_icon_highlight_outer:I = 0x7f060173
 
-.field public static final secondary_text_default_material_dark:I = 0x7f060174
+.field public static final screen_pinning_primary_text:I = 0x7f060174
 
-.field public static final secondary_text_default_material_light:I = 0x7f060175
+.field public static final screen_pinning_request_window_bg:I = 0x7f060175
 
-.field public static final secondary_text_disabled_material_dark:I = 0x7f060176
+.field public static final secondary_text_default_material_dark:I = 0x7f060176
 
-.field public static final secondary_text_disabled_material_light:I = 0x7f060177
+.field public static final secondary_text_default_material_light:I = 0x7f060177
 
-.field public static final segmented_button_text_selector:I = 0x7f060178
+.field public static final secondary_text_disabled_material_dark:I = 0x7f060178
 
-.field public static final segmented_buttons_background:I = 0x7f060179
+.field public static final secondary_text_disabled_material_light:I = 0x7f060179
 
-.field public static final smart_reply_button_background:I = 0x7f06017a
+.field public static final segmented_button_text_selector:I = 0x7f06017a
 
-.field public static final smart_reply_button_stroke:I = 0x7f06017b
+.field public static final segmented_buttons_background:I = 0x7f06017b
 
-.field public static final smart_reply_button_text:I = 0x7f06017c
+.field public static final smart_reply_button_background:I = 0x7f06017c
 
-.field public static final smart_reply_button_text_dark_bg:I = 0x7f06017d
+.field public static final smart_reply_button_stroke:I = 0x7f06017d
 
-.field public static final speed_bump_background:I = 0x7f06017e
+.field public static final smart_reply_button_text:I = 0x7f06017e
 
-.field public static final status_bar_clock_color:I = 0x7f06017f
+.field public static final smart_reply_button_text_dark_bg:I = 0x7f06017f
 
-.field public static final switch_thumb_disabled_material_dark:I = 0x7f060180
+.field public static final speed_bump_background:I = 0x7f060180
 
-.field public static final switch_thumb_disabled_material_light:I = 0x7f060181
+.field public static final status_bar_clock_color:I = 0x7f060181
 
-.field public static final switch_thumb_material_dark:I = 0x7f060182
+.field public static final switch_thumb_disabled_material_dark:I = 0x7f060182
 
-.field public static final switch_thumb_material_light:I = 0x7f060183
+.field public static final switch_thumb_disabled_material_light:I = 0x7f060183
 
-.field public static final switch_thumb_normal_material_dark:I = 0x7f060184
+.field public static final switch_thumb_material_dark:I = 0x7f060184
 
-.field public static final switch_thumb_normal_material_light:I = 0x7f060185
+.field public static final switch_thumb_material_light:I = 0x7f060185
 
-.field public static final system_bar_background_opaque:I = 0x7f060186
+.field public static final switch_thumb_normal_material_dark:I = 0x7f060186
 
-.field public static final system_bar_background_transparent:I = 0x7f060187
+.field public static final switch_thumb_normal_material_light:I = 0x7f060187
 
-.field public static final tint_color_selector:I = 0x7f060188
+.field public static final system_bar_background_opaque:I = 0x7f060188
 
-.field public static final tooltip_background_dark:I = 0x7f060189
+.field public static final system_bar_background_transparent:I = 0x7f060189
 
-.field public static final tooltip_background_light:I = 0x7f06018a
+.field public static final tint_color_selector:I = 0x7f06018a
 
-.field public static final transparent:I = 0x7f06018b
+.field public static final tooltip_background_dark:I = 0x7f06018b
 
-.field public static final usage_graph_dots:I = 0x7f06018c
+.field public static final tooltip_background_light:I = 0x7f06018c
 
-.field public static final white_disabled:I = 0x7f06018d
+.field public static final transparent:I = 0x7f06018d
 
-.field public static final zen_introduction:I = 0x7f06018e
+.field public static final usage_graph_dots:I = 0x7f06018e
+
+.field public static final white_disabled:I = 0x7f06018f
+
+.field public static final zen_introduction:I = 0x7f060190
 
 
 # direct methods

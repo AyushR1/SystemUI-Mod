@@ -338,15 +338,15 @@
     <string name="bluetooth_opp_profile_summary_connected">Установлено подключение к серверу передачи файлов</string>
     <string name="bluetooth_opp_profile_summary_not_connected">Нет подключения к серверу передачи файлов</string>
     <string name="bluetooth_opp_profile_summary_use_for">Используется для передачи файлов</string>
-    <string name="bluetooth_pairing">Сопряжение...</string>
+    <string name="bluetooth_pairing">Устанавливается соединение...</string>
     <string name="bluetooth_pairing_accept">Добавить</string>
     <string name="bluetooth_pairing_accept_all_caps">ДОБАВИТЬ</string>
     <string name="bluetooth_pairing_decline">Отмена</string>
     <string name="bluetooth_pairing_device_down_error_message">Не удается установить соединение с устройством \"%1$s\".</string>
-    <string name="bluetooth_pairing_error_message">Не удалось установить сопряжение с устройством \"%1$s\".</string>
-    <string name="bluetooth_pairing_pin_error_message">Не удалось установить сопряжение с устройством \"%1$s\", так как введен неверный PIN-код или пароль.</string>
-    <string name="bluetooth_pairing_rejected_error_message">%1$s не разрешает сопряжение.</string>
-    <string name="bluetooth_pairing_will_share_phonebook">Сопряжение обеспечивает доступ к вашим контактам и журналу звонков при подключении.</string>
+    <string name="bluetooth_pairing_error_message">Не удалось подключиться к устройству \"%1$s\".</string>
+    <string name="bluetooth_pairing_pin_error_message">Не удалось подключиться к устройству \"%1$s\", так как введен неверный PIN-код или пароль.</string>
+    <string name="bluetooth_pairing_rejected_error_message">%1$s не разрешает подключение.</string>
+    <string name="bluetooth_pairing_will_share_phonebook">Установление соединения обеспечивает доступ к вашим контактам и журналу звонков при подключении.</string>
     <string name="bluetooth_pan_nap_profile_summary_connected">Устройство работает в режиме модема</string>
     <string name="bluetooth_pan_profile_summary_use_for">Использовать для доступа к Интернету</string>
     <string name="bluetooth_pan_user_profile_summary_connected">Используется подключение другого устройства</string>
@@ -826,7 +826,6 @@
     <string name="lockscreen_unlock_left">Ярлык слева также разблокирует экран</string>
     <string name="lockscreen_unlock_right">Ярлык справа также разблокирует экран</string>
     <string name="manage_notifications_text">Настроить уведомления</string>
-    <string name="managed_profile_foreground_toast">Вы перешли в рабочий профиль</string>
     <string name="managed_user_title">Корпоративные приложения</string>
     <string name="media_category">Мультимедиа</string>
     <string name="media_projection_action_text">Начать</string>
@@ -1193,6 +1192,7 @@
     <string name="screen_pinning_start">Блокировка включена</string>
     <string name="screen_pinning_title">Блокировка в приложении включена</string>
     <string name="screen_pinning_toast">Чтобы отменить блокировку, нажмите и удерживайте кнопки \"Назад\" и \"Обзор\"</string>
+    <string name="screen_pinning_toast_no_navbar">Чтобы открепить экран, нажмите и удерживайте кнопку «Назад»</string>
     <string name="screen_pinning_toast_recents_invisible">Чтобы отменить блокировку, нажмите и удерживайте кнопки \"Назад\" и \"Главный экран\"</string>
     <string name="screen_zoom_summary_custom">Другой (%d)</string>
     <string name="screen_zoom_summary_default">По умолчанию</string>

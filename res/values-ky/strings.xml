@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">Сол жактагы кыска жол дагы кулпуну ачат</string>
     <string name="lockscreen_unlock_right">Оң жактагы кыска жол дагы кулпуну ачат</string>
     <string name="manage_notifications_text">Эскертмелерди башкаруу</string>
-    <string name="managed_profile_foreground_toast">Жумуш профилиңизди колдонуп жатасыз</string>
     <string name="managed_user_title">Жумуш профилинин колднмлр</string>
     <string name="media_category">Медиа</string>
     <string name="media_projection_action_text">Азыр баштоо</string>
@@ -1127,7 +1126,7 @@
     <string name="quick_settings_rotation_locked_landscape_label">Туурасынан</string>
     <string name="quick_settings_rotation_locked_portrait_label">Тигинен</string>
     <string name="quick_settings_rotation_unlocked_label">Автоматтык бурулуу</string>
-    <string name="quick_settings_rssi_emergency_only">Куткаруучуларга чалуу гана</string>
+    <string name="quick_settings_rssi_emergency_only">Өзгөчө кырдаалда гана чалууга болот</string>
     <string name="quick_settings_rssi_label">RSSI</string>
     <string name="quick_settings_secondary_label_until">%s чейин</string>
     <string name="quick_settings_settings_label">Жөндөөлөр</string>

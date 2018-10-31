@@ -228,7 +228,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    if-ge v1, v0, :cond_3
+    if-ge v1, v0, :cond_5
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -280,13 +280,33 @@
 
     iput-wide v3, p0, Lcom/android/systemui/statusbar/stack/AnimationFilter;->customDelay:J
 
+    goto :goto_1
+
     :cond_2
+    iget v3, v2, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
+
+    const/16 v4, 0x13
+
+    if-eq v3, v4, :cond_3
+
+    iget v3, v2, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
+
+    const/16 v4, 0x14
+
+    if-ne v3, v4, :cond_4
+
+    :cond_3
+    const-wide/16 v3, 0x113
+
+    iput-wide v3, p0, Lcom/android/systemui/statusbar/stack/AnimationFilter;->customDelay:J
+
+    :cond_4
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_5
     return-void
 .end method
 

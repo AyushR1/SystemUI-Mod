@@ -560,7 +560,7 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="forced_resizable_secondary_display">Aplikasi mungkin tidak berfungsi pada layar sekunder.</string>
     <string name="global_action_screenshot">Screenshot</string>
     <string name="go_to_web">Buka browser</string>
-    <string name="got_it">Mengerti</string>
+    <string name="got_it">Oke</string>
     <string name="gps_notification_found_text">Lokasi yang disetel oleh GPS</string>
     <string name="gps_notification_searching_text">Menelusuri GPS</string>
     <string name="guest_exit_guest">Buang tamu</string>
@@ -684,11 +684,11 @@ prioritas"</string>
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • Mengisi daya (%s hingga penuh)</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • Mengisi daya dengan cepat (%s hingga penuh)</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • Mengisi daya dengan lambat (%s hingga penuh)</string>
-    <string name="keyguard_indication_dash_charging_time">Pengisian Cepat (%s hingga penuh)</string>
+    <string name="keyguard_indication_dash_charging_time">Pengisian Daya Cepat (%s hingga penuh)</string>
     <string name="keyguard_indication_trust_disabled">Perangkat akan tetap terkunci hingga Anda membukanya secara manual</string>
     <string name="keyguard_indication_trust_granted">Dibuka kuncinya untuk %1$s</string>
     <string name="keyguard_indication_trust_managed">%1$s sedang berjalan</string>
-    <string name="keyguard_indication_turbo_power_time">TurboPower terhubung (%s sampai penuh)</string>
+    <string name="keyguard_indication_turbo_power_time">TurboPower terhubung (%s hingga penuh)</string>
     <string name="keyguard_instructions_when_pattern_disabled">Tekan Menu untuk membuka kunci.</string>
     <string name="keyguard_low_battery">Hubungkan pengisi daya.</string>
     <string name="keyguard_missing_sim_instructions">Masukkan kartu SIM.</string>
@@ -711,7 +711,7 @@ prioritas"</string>
     <string name="keyguard_plugged_in">%s • Mengisi daya</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Mengisi daya dengan cepat</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Mengisi daya dengan lambat</string>
-    <string name="keyguard_plugged_in_dash_charging">Pengisian Cepat</string>
+    <string name="keyguard_plugged_in_dash_charging">Pengisian Daya Cepat</string>
     <string name="keyguard_plugged_in_turbo_power_charging">TurboPower terhubung</string>
     <string name="keyguard_sim_error_message_short">Kartu Tidak Valid</string>
     <string name="keyguard_sim_locked_message">Kartu SIM terkunci.</string>
@@ -829,7 +829,6 @@ Coba lagi dalam %2$d detik."</string>
     <string name="lockscreen_unlock_left">Pintasan kiri juga membuka kunci</string>
     <string name="lockscreen_unlock_right">Pintasan kanan juga membuka kunci</string>
     <string name="manage_notifications_text">Kelola notifikasi</string>
-    <string name="managed_profile_foreground_toast">Anda menggunakan profil kerja</string>
     <string name="managed_user_title">Semua aplikasi kerja</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Mulai sekarang</string>
@@ -1187,6 +1186,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="saved_network">Disimpan oleh %1$s</string>
     <string name="screen_pinning_description">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh &amp; tahan tombol Kembali dan Ringkasan untuk melepas pin.</string>
     <string name="screen_pinning_description_accessible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh dan tahan tombol Ringkasan untuk melepas pin.</string>
+    <string name="screen_pinning_description_no_navbar">Hal ini membuatnya tetap dalam tampilan sampai Anda melepas sematan. Sentuh &amp; tahan tombol kembali untuk melepas sematan.</string>
     <string name="screen_pinning_description_recents_invisible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh &amp; tahan tombol Kembali dan Beranda untuk melepas pin.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh dan tahan tombol Beranda untuk melepas pin.</string>
     <string name="screen_pinning_exit">Layar dilepas pinnya</string>
@@ -1195,6 +1195,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="screen_pinning_start">Layar dipasangi pin</string>
     <string name="screen_pinning_title">Layar dipasangi pin</string>
     <string name="screen_pinning_toast">Untuk melepas pin layar ini, sentuh &amp; tahan tombol Kembali dan Ringkasan</string>
+    <string name="screen_pinning_toast_no_navbar">Untuk melepaskan sematan layar ini, sentuh &amp; tahan tombol kembali</string>
     <string name="screen_pinning_toast_recents_invisible">Untuk melepas pin layar ini, sentuh &amp; tahan tombol Kembali dan Beranda</string>
     <string name="screen_zoom_summary_custom">(%d) khusus</string>
     <string name="screen_zoom_summary_default">Default</string>

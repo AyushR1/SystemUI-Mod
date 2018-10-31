@@ -142,7 +142,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/HardwareUiLayout;->setOutsideTouchListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x1040257
+    const v1, 0x104025b
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->setTitle(I)V
 
@@ -176,7 +176,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070165
+    const v1, 0x7f070167
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 

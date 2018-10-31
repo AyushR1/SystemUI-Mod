@@ -77,7 +77,7 @@
 
     iput v1, p0, Lcom/android/systemui/qs/DataUsageGraph;->mOverlimitColor:I
 
-    const v1, 0x7f07011b
+    const v1, 0x7f07011c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

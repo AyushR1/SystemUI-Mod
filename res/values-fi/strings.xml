@@ -829,7 +829,6 @@ Yritä uudelleen %2$d sekunnin kuluttua."</string>
     <string name="lockscreen_unlock_left">Myös vasen pikakuvake avaa lukituksen</string>
     <string name="lockscreen_unlock_right">Myös oikea pikakuvake avaa lukituksen</string>
     <string name="manage_notifications_text">Hallinnoi ilmoituksia</string>
-    <string name="managed_profile_foreground_toast">Käytät työprofiilia.</string>
     <string name="managed_user_title">Kaikki työsovellukset</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Aloita nyt</string>

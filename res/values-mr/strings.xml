@@ -822,7 +822,6 @@
     <string name="lockscreen_unlock_left">डावा शॉर्टकट देखील अनलॉक करतो</string>
     <string name="lockscreen_unlock_right">उजवा शॉर्टकट देखील अनलॉक करतो</string>
     <string name="manage_notifications_text">सूचना व्यवस्थापित करा</string>
-    <string name="managed_profile_foreground_toast">तुम्ही तुमचे कार्य प्रोफाईल वापरत आहात</string>
     <string name="managed_user_title">सर्व कार्य अॅप्स</string>
     <string name="media_category">मीडिया</string>
     <string name="media_projection_action_text">आता सुरू करा</string>

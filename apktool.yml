@@ -41,7 +41,6 @@ doNotCompress:
 - res/drawable-xxhdpi-v4/lb_in_app_search_shadow_normal.9.png
 - res/drawable-xxhdpi-v4/nav_background.9.png
 - res/drawable-xxhdpi-v4/pip_dismiss_scrim.9.png
-- res/drawable-xxhdpi-v4/qs_scrubber_track.9.png
 - res/drawable-xxhdpi-v4/recents_lower_gradient.9.png
 - res/drawable-xxhdpi-v4/recents_status_gradient.9.png
 - res/drawable-xxhdpi-v4/recents_task_shadow.9.png

@@ -249,7 +249,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/WifiTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f110481
+    const v1, 0x7f110480
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -415,7 +415,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/WifiTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11047c
+    const v1, 0x7f11047b
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -791,7 +791,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f11047c
+    const v10, 0x7f11047b
 
     if-eqz v7, :cond_f
 

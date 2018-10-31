@@ -36,7 +36,7 @@
 .method public get(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)Ljava/lang/Float;
     .locals 1
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$100(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)F
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$200(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)F
 
     move-result v0
 
@@ -60,9 +60,17 @@
 .end method
 
 .method public setValue(Lcom/android/systemui/statusbar/phone/NotificationPanelView;F)V
-    .locals 0
+    .locals 1
 
-    invoke-static {p1, p2}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$000(Lcom/android/systemui/statusbar/phone/NotificationPanelView;F)V
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$000(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)Landroid/view/animation/Interpolator;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+
+    move-result v0
+
+    invoke-static {p1, p2, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$100(Lcom/android/systemui/statusbar/phone/NotificationPanelView;FF)V
 
     return-void
 .end method

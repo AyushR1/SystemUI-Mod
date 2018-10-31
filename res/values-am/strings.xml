@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">የግራ አቋራጭ እንዲሁም ይከፍታል</string>
     <string name="lockscreen_unlock_right">ቀኝ አቋራጭ እንዲሁም ይከፍታል</string>
     <string name="manage_notifications_text">ማሳወቂያዎችን ያስተዳድሩ</string>
-    <string name="managed_profile_foreground_toast">የስራ መገለጫዎን እየተጠቀሙ ነው</string>
     <string name="managed_user_title">ሁሉም የሥራ መተግበሪያዎች</string>
     <string name="media_category">ማህደረመረጃ</string>
     <string name="media_projection_action_text">አሁን ጀምር</string>

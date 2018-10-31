@@ -558,7 +558,7 @@
     <string name="force_rtl_layout_all_locales">Փոխել RTL-ի դասավորության ուղղությունը</string>
     <string name="force_rtl_layout_all_locales_summary">Դարձնել էկրանի դասավորության ուղղությունը դեպի RTL բոլոր լեզուների համար</string>
     <string name="forced_resizable_secondary_display">Հավելվածը կարող է չաշխատել լրացուցիչ էկրանի վրա</string>
-    <string name="global_action_screenshot">Էկրանի պատկեր</string>
+    <string name="global_action_screenshot">Սքրինշոթ</string>
     <string name="go_to_web">Անցնել դիտարկիչ</string>
     <string name="got_it">Եղավ</string>
     <string name="gps_notification_found_text">Տեղադրությունը կարգավորվել է GPS-ի կողմից</string>
@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">Ձախ դյուրանցումը նաև ապակողպում է</string>
     <string name="lockscreen_unlock_right">Աջ դյուրանցումը նաև ապակողպում է</string>
     <string name="manage_notifications_text">Կառավարել ծանուցումները</string>
-    <string name="managed_profile_foreground_toast">Դուք օգտագործում եք ձեր աշխատանքային պրոֆիլը</string>
     <string name="managed_user_title">Բոլոր աշխատանքային հավելվածները</string>
     <string name="media_category">Մեդիա</string>
     <string name="media_projection_action_text">Սկսել հիմա</string>
@@ -935,7 +934,7 @@
     <string name="notification_channel_general">Ընդհանուր հաղորդագրություններ</string>
     <string name="notification_channel_hints">Հուշումներ</string>
     <string name="notification_channel_minimized">Այս ծանուցումները կծալվեն:</string>
-    <string name="notification_channel_screenshot">Էկրանի պատկերներ</string>
+    <string name="notification_channel_screenshot">Սքրինշոթներ</string>
     <string name="notification_channel_storage">Տարածք</string>
     <string name="notification_channel_switch_accessibility">Թույլ տալ ծանուցումներ այս ալիքից</string>
     <string name="notification_channel_tv_pip">Նկար նկարի մեջ</string>
@@ -1198,14 +1197,14 @@
     <string name="screen_zoom_summary_large">Մեծ</string>
     <string name="screen_zoom_summary_small">Փոքր</string>
     <string name="screen_zoom_summary_very_large">Ավելի մեծ</string>
-    <string name="screenshot_failed_title">Չհաջողվեց պահել էկրանի պատկերը</string>
-    <string name="screenshot_failed_to_capture_text">Հավելվածը կամ ձեր կազմակերպությունը չի թույլատրում էկրանի պատկերի ստացումը</string>
-    <string name="screenshot_failed_to_save_text">Չհաջողվեց պահել էկրանի պատկերը անբավարար հիշողության պատճառով</string>
+    <string name="screenshot_failed_title">Չհաջողվեց պահել սքրինշոթը</string>
+    <string name="screenshot_failed_to_capture_text">Հավելվածը կամ ձեր կազմակերպությունը չի թույլատրում սքրինշոթի ստացումը</string>
+    <string name="screenshot_failed_to_save_text">Չհաջողվեց պահել սքրինշոթը անբավարար հիշողության պատճառով</string>
     <string name="screenshot_failed_to_save_unknown_text">Փորձեք նորից</string>
-    <string name="screenshot_saved_text">Հպեք՝ էկրանի պատկերը տեսնելու համար</string>
-    <string name="screenshot_saved_title">Էկրանի պատկերը պահվեց</string>
-    <string name="screenshot_saving_ticker">Էկրանի պատկերը պահվում է…</string>
-    <string name="screenshot_saving_title">Էկրանի պատկերը պահվում է...</string>
+    <string name="screenshot_saved_text">Հպեք՝ սքրինշոթը տեսնելու համար</string>
+    <string name="screenshot_saved_title">Սքրինշոթը պահվեց</string>
+    <string name="screenshot_saving_ticker">Սքրինշոթը պահվում է…</string>
+    <string name="screenshot_saving_title">Սքրինշոթը պահվում է...</string>
     <string name="search_menu_title">Որոնել</string>
     <string name="select_application">Ընտրել հավելվածը</string>
     <string name="select_logd_size_dialog_title">Ընտրեք տեղեկամատյանի չափը մեկ պահնակի համար</string>

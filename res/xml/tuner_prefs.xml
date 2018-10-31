@@ -9,7 +9,7 @@
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_hotspot_label" android:key="hotspot" />
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_bluetooth_label" android:key="bluetooth" />
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_dnd_label" android:key="zen" />
-        <com.android.systemui.tuner.StatusBarSwitch android:title="@android:string/volume_unknown" android:key="volume" />
+        <com.android.systemui.tuner.StatusBarSwitch android:title="@android:string/vpn_lockdown_disconnected" android:key="volume" />
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_wifi_label" android:key="wifi" />
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/status_bar_ethernet" android:key="ethernet" />
         <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_cellular_detail_title" android:key="mobile" />

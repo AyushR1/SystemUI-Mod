@@ -827,7 +827,6 @@ Bitte versuche es in %2$d Sekunden noch einmal."</string>
     <string name="lockscreen_unlock_left">Linke Verknüpfung entsperrt außerdem</string>
     <string name="lockscreen_unlock_right">Rechte Verknüpfung entsperrt außerdem</string>
     <string name="manage_notifications_text">Benachrichtigungen verwalten</string>
-    <string name="managed_profile_foreground_toast">Du verwendest dein Arbeitsprofil.</string>
     <string name="managed_user_title">Alle Arbeitsprofil-Apps</string>
     <string name="media_category">Medien</string>
     <string name="media_projection_action_text">Jetzt starten</string>
@@ -1185,6 +1184,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="saved_network">Gespeichert von %1$s</string>
     <string name="screen_pinning_description">Der Bildschirm bleibt so lange eingeblendet, bis du die Fixierung aufhebst. Berühre und halte dazu \"Zurück\" und \"Übersicht\".</string>
     <string name="screen_pinning_description_accessible">Der Bildschirm bleibt so lange eingeblendet, bis du die Fixierung aufhebst. Berühre und halte dazu \"Übersicht\".</string>
+    <string name="screen_pinning_description_no_navbar">Der Bildschirm wird solange angezeigt, bis Sie die Fixierung aufheben. Berühren und halten Sie \"Zurück\", wenn Sie die Fixierung aufheben möchten.</string>
     <string name="screen_pinning_description_recents_invisible">Der Bildschirm wird so lange angezeigt, bis du die Fixierung aufhebst. Berühre und halte dazu \"Zurück\" und \"Startbildschirm\".</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Der Bildschirm wird so lange angezeigt, bis du die Fixierung aufhebst. Berühre und halte dazu \"Startbildschirm\".</string>
     <string name="screen_pinning_exit">Fixierung für Bildschirm aufgehoben</string>
@@ -1193,6 +1193,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="screen_pinning_start">Bildschirm fixiert</string>
     <string name="screen_pinning_title">Bildschirm ist fixiert</string>
     <string name="screen_pinning_toast">Um die Fixierung für diesen Bildschirm aufzuheben, berühre und halte \"Zurück\" und \"Übersicht\"</string>
+    <string name="screen_pinning_toast_no_navbar">Um die Fixierung dieses Bildschirms aufzuheben, \"Zurück\" berühren und halten</string>
     <string name="screen_pinning_toast_recents_invisible">Um die Fixierung für diesen Bildschirm aufzuheben, berühre und halte \"Zurück\" und \"Startbildschirm\"</string>
     <string name="screen_zoom_summary_custom">Benutzerdefiniert (%d)</string>
     <string name="screen_zoom_summary_default">Standard</string>

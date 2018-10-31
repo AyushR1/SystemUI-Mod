@@ -45,7 +45,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView$17;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$1700()Landroid/graphics/Rect;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$1800()Landroid/graphics/Rect;
 
     move-result-object v2
 

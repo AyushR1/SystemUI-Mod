@@ -614,6 +614,10 @@
 
     iget-boolean v1, v7, Lcom/android/systemui/ImageWallpaper$DrawableEngine;->mSurfaceRedrawNeeded:Z
 
+    if-nez v1, :cond_6
+
+    iget-boolean v1, v7, Lcom/android/systemui/ImageWallpaper$DrawableEngine;->mNeedsDrawAfterLoadingWallpaper:Z
+
     if-eqz v1, :cond_5
 
     goto :goto_2

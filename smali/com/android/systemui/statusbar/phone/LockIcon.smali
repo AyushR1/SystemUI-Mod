@@ -101,7 +101,7 @@
 
     if-ne p2, v0, :cond_1
 
-    const v0, 0x7f0803d9
+    const v0, 0x7f0803d8
 
     return v0
 
@@ -792,7 +792,7 @@
     goto :goto_8
 
     :cond_8
-    const v3, 0x7f0803d9
+    const v3, 0x7f0803d8
 
     if-ne v0, v3, :cond_9
 
@@ -857,7 +857,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f070186
+    const v6, 0x7f070188
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -867,7 +867,7 @@
 
     move-result-object v6
 
-    const v8, 0x7f070187
+    const v8, 0x7f070189
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -901,7 +901,7 @@
 
     move-result-object v8
 
-    const v2, 0x7f070163
+    const v2, 0x7f070165
 
     invoke-virtual {v8, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

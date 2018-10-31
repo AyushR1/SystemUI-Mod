@@ -1896,7 +1896,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLines">2</item>
-        <item name="android:fontFamily">@android:string/config_geofenceProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
     </style>
     <style name="TextAppearance.Keyguard.Secondary" parent="@style/TextAppearance.Keyguard">
         <item name="android:textSize">@dimen/widget_label_font_size</item>
@@ -3733,7 +3733,7 @@
         <item name="android:background">@null</item>
         <item name="android:paddingBottom">-16.0dip</item>
         <item name="android:singleLine">true</item>
-        <item name="android:fontFamily">@android:string/config_geofenceProviderPackageName</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
     </style>
     <style name="Widget.TextView.NumPadKey.Klondike" parent="@style/Widget.TextView.NumPadKey">
         <item name="android:textSize">12.0sp</item>
@@ -3794,8 +3794,8 @@
     <style name="widget_big_thin">
         <item name="android:textSize">@dimen/widget_big_font_size</item>
         <item name="android:paddingBottom">@dimen/bottom_text_spacing_digital</item>
-        <item name="android:fontFamily">@android:string/config_geofenceProviderPackageName</item>
-        <item name="android:fontFeatureSettings">@android:string/config_headlineFontFamily</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
+        <item name="android:fontFeatureSettings">@android:string/config_headlineFontFamilyMedium</item>
     </style>
     <style name="widget_label">
         <item name="android:textSize">@dimen/widget_label_font_size</item>

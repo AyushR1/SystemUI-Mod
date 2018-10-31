@@ -140,11 +140,11 @@
 
     sget-object v13, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->WIFI_CONNECTION_STRENGTH:[I
 
-    const v14, 0x7f0803cc
+    const v14, 0x7f0803cb
 
     const v16, 0x7f080275
 
-    const v17, 0x7f0803cc
+    const v17, 0x7f0803cb
 
     const v18, 0x7f080275
 

@@ -842,7 +842,6 @@
     <string name="lockscreen_unlock_left">[Ļéƒţ šĥöŕţçûţ åļšö ûñļöçķš one two three four]</string>
     <string name="lockscreen_unlock_right">[Ŕîĝĥţ šĥöŕţçûţ åļšö ûñļöçķš one two three four]</string>
     <string name="manage_notifications_text">[Ḿåñåĝé ñöţîƒîçåţîöñš one two three]</string>
-    <string name="managed_profile_foreground_toast">"[Ýöû'ŕé ûšîñĝ ýöûŕ ŵöŕķ þŕöƒîļé one two three four]"</string>
     <string name="managed_user_title">[Åļļ ŵöŕķ åþþš one two]</string>
     <string name="media_category">[Ḿéðîå one]</string>
     <string name="media_projection_action_text">[Šţåŕţ ñöŵ one two]</string>
@@ -1205,6 +1204,7 @@ Föŕ ḿöŕé îñƒöŕḿåţîöñ, çöñţåçţ ýöûŕ åðḿîñ.
     <string name="screen_pinning_description">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð βåçķ åñð ÖVéŕVîéŵ ţö ûñþîñ. one two three four five six seven eight nine]"</string>
     <string name="screen_pinning_description_accessible">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð ÖVéŕVîéŵ ţö ûñþîñ. one two three four five six seven eight]"</string>
     <string name="screen_pinning_description_no_navbar">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð βåçķ ţö ûñþîñ. one two three four five six seven]"</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð ƒîñĝéŕþŕîñţ šéñšöŕ ţö ûñþîñ. one two three four five six seven eight nine]"</string>
     <string name="screen_pinning_description_recents_invisible">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð βåçķ åñð Ĥöḿé ţö ûñþîñ. one two three four five six seven eight]"</string>
     <string name="screen_pinning_description_recents_invisible_accessible">"[Ţĥîš ķééþš îţ îñ Vîéŵ ûñţîļ ýöû ûñþîñ. Ţöûçĥ &amp;  ĥöļð Ĥöḿé ţö ûñþîñ. one two three four five six seven]"</string>
     <string name="screen_pinning_exit">[Šçŕééñ ûñþîññéð one two three]</string>
@@ -1214,6 +1214,7 @@ Föŕ ḿöŕé îñƒöŕḿåţîöñ, çöñţåçţ ýöûŕ åðḿîñ.
     <string name="screen_pinning_title">[Šçŕééñ îš þîññéð one two three]</string>
     <string name="screen_pinning_toast">"[Ţö ûñþîñ ţĥîš šçŕééñ, ţöûçĥ &amp;  ĥöļð βåçķ åñð ÖVéŕVîéŵ ɓûţţöñš one two three four five six seven]"</string>
     <string name="screen_pinning_toast_no_navbar">"[Ţö ûñþîñ ţĥîš šçŕééñ, ţöûçĥ &amp;  ĥöļð βåçķ ɓûţţöñ one two three four five]"</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">"[Ţö ûñþîñ ţĥîš šçŕééñ, ţöûçĥ &amp;  ĥöļð ƒîñĝéŕþŕîñţ šéñšöŕ one two three four five six]"</string>
     <string name="screen_pinning_toast_recents_invisible">"[Ţö ûñþîñ ţĥîš šçŕééñ, ţöûçĥ &amp;  ĥöļð βåçķ åñð Ĥöḿé ɓûţţöñš one two three four five six seven]"</string>
     <string name="screen_zoom_summary_custom">[Çûšţöḿ (%d) one two]</string>
     <string name="screen_zoom_summary_default">[Ðéƒåûļţ one two]</string>

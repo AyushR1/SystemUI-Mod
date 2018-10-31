@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">И лева пречица откључава</string>
     <string name="lockscreen_unlock_right">И десна пречица откључава</string>
     <string name="manage_notifications_text">Управљајте обавештењима</string>
-    <string name="managed_profile_foreground_toast">Користите профил за Work</string>
     <string name="managed_user_title">Све радне апликације</string>
     <string name="media_category">Медији</string>
     <string name="media_projection_action_text">Започни одмах</string>

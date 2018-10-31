@@ -5052,6 +5052,14 @@
     return v0
 .end method
 
+.method public isKeyguardVisible()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mKeyguardIsVisible:Z
+
+    return v0
+.end method
+
 .method public isLogoutEnabled()Z
     .locals 1
 

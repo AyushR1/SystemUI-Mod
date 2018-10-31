@@ -919,7 +919,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f0803a2
+    const v4, 0x7f0803a1
 
     const v5, 0x7f110040
 
@@ -1132,6 +1132,10 @@
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v2, "android.telephony.action.CARRIER_CONFIG_CHANGED"
+
+    invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v2, "android.intent.action.ANY_DATA_STATE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
@@ -1444,7 +1448,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f0803a2
+    const v3, 0x7f0803a1
 
     const v4, 0x7f110040
 
@@ -1694,7 +1698,7 @@
 
     new-instance v8, Lcom/android/systemui/statusbar/policy/NetworkController$IconState;
 
-    const v9, 0x7f0803a2
+    const v9, 0x7f0803a1
 
     const v10, 0x7f110040
 

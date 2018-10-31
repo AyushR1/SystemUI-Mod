@@ -383,15 +383,15 @@ Selección: taxa de mostraxe"</string>
     <string name="bluetooth_select_a2dp_codec_type">Códec de audio por Bluetooth</string>
     <string name="bluetooth_select_a2dp_codec_type_dialog_title">"Activar códec de audio por Bluetooth
 Selección"</string>
-    <string name="bluetooth_select_avrcp_version_dialog_title">Selecciona a versión AVRCP de Bluetooth</string>
-    <string name="bluetooth_select_avrcp_version_string">Versión AVRCP de Bluetooth</string>
+    <string name="bluetooth_select_avrcp_version_dialog_title">Selecciona a versión de Bluetooth AVRCP</string>
+    <string name="bluetooth_select_avrcp_version_string">Versión de Bluetooth AVRCP</string>
     <string name="bluetooth_show_devices_without_names">Mostrar dispositivos Bluetooth sen nomes</string>
     <string name="bluetooth_show_devices_without_names_summary">Mostraranse dispositivos Bluetooth sen nomes (só enderezos MAC)</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Ordenador</string>
     <string name="bluetooth_talkback_headphone">Auriculares</string>
     <string name="bluetooth_talkback_headset">Auriculares con micrófono</string>
-    <string name="bluetooth_talkback_imaging">Imaxes</string>
+    <string name="bluetooth_talkback_imaging">Dispositivo de imaxe</string>
     <string name="bluetooth_talkback_input_peripheral">Periférico de entrada</string>
     <string name="bluetooth_talkback_phone">Teléfono</string>
     <string name="bluetooth_tethered">Conexión compartida por Bluetooth</string>
@@ -403,7 +403,7 @@ Selección"</string>
     <string name="bt_is_off">O Bluetooth está desactivado</string>
     <string name="bugreport_in_power">Atallo do informe de erros</string>
     <string name="bugreport_in_power_summary">Mostra un botón no menú de acendido para crear un informe de erros</string>
-    <string name="button_convert_fbe">Limpar e converter...</string>
+    <string name="button_convert_fbe">Borrar e converter...</string>
     <string name="camera_hint">Pasa o dedo desde a icona para acceder á cámara</string>
     <string name="camera_label">abrir cámara</string>
     <string name="cancel">Cancelar</string>
@@ -435,7 +435,7 @@ Selección"</string>
     <string name="convert_to_fbe_warning">"Converte a partición de datos nunha encriptación baseada en ficheiros.
  Advertencia: Esta acción borrará todos os datos.
  Esta función é alfa e quizais non funcione correctamente.
- Para continuar, toca Limpar e converter..."</string>
+ Para continuar, toca Borrar e converter..."</string>
     <string name="convert_to_file_encryption">Cambiar a cifraxe de ficheiros</string>
     <string name="convert_to_file_encryption_done">Xa se encriptou o ficheiro</string>
     <string name="convert_to_file_encryption_enabled">Converter...</string>
@@ -824,7 +824,6 @@ Téntao de novo en %2$d segundos."</string>
     <string name="lockscreen_unlock_left">O atallo á esquerda tamén desbloquea o dispositivo</string>
     <string name="lockscreen_unlock_right">O atallo á dereita tamén desbloquea o dispositivo</string>
     <string name="manage_notifications_text">Xestionar notificacións</string>
-    <string name="managed_profile_foreground_toast">Estás usando o perfil de traballo</string>
     <string name="managed_user_title">Aplicacións de traballo</string>
     <string name="media_category">Multimedia</string>
     <string name="media_projection_action_text">Iniciar agora</string>

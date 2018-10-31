@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">قفل میان‌بر چپ هم باز می‌شود</string>
     <string name="lockscreen_unlock_right">قفل میان‌بر راست هم باز می‌شود</string>
     <string name="manage_notifications_text">مدیریت اعلان‌ها</string>
-    <string name="managed_profile_foreground_toast">درحال استفاده از نمایه کاری‌تان هستید</string>
     <string name="managed_user_title">همه برنامه‌های کاری</string>
     <string name="media_category">رسانه</string>
     <string name="media_projection_action_text">اکنون شروع شود</string>
@@ -1350,7 +1349,7 @@
     <string name="tts_status_checking">در حال بررسی…</string>
     <string name="tts_status_not_supported">%1$s پشتیبانی نمی‌شود</string>
     <string name="tts_status_ok">%1$s کاملاً پشتیبانی می‌شود</string>
-    <string name="tts_status_requires_network">%1$s به اتصال شبکه نیاز دارد</string>
+    <string name="tts_status_requires_network">%1$s باید اتصال شبکه داشته باشد</string>
     <string name="tts_status_title">وضعیت زبان پیش‌فرض</string>
     <string name="tuner_app">%1$s برنامه</string>
     <string name="tuner_circle">دایره</string>

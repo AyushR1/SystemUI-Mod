@@ -23,6 +23,8 @@
 
 .field private mExpandAnimationRunning:Z
 
+.field private mExpandingBelowNotch:Z
+
 .field private mFakeWindow:Landroid/view/Window;
 
 .field private mFalsingManager:Lcom/android/systemui/classifier/FalsingManager;
@@ -44,6 +46,8 @@
 .field private mService:Lcom/android/systemui/statusbar/phone/StatusBar;
 
 .field private mStackScrollLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+.field private mStatusBarView:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
 .field private mTouchActive:Z
 
@@ -563,7 +567,7 @@
 .end method
 
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 6
+    .locals 9
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -587,9 +591,7 @@
 
     move-result v3
 
-    const/4 v4, 0x3
-
-    if-ne v3, v4, :cond_1
+    if-ne v3, v1, :cond_1
 
     move v3, v1
 
@@ -599,140 +601,196 @@
     move v3, v2
 
     :goto_1
-    if-nez v3, :cond_2
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
+    move-result v4
 
-    invoke-virtual {v5}, Lcom/android/systemui/statusbar/phone/StatusBar;->shouldIgnoreTouch()Z
+    const/4 v5, 0x3
 
-    move-result v5
+    if-ne v4, v5, :cond_2
 
-    if-eqz v5, :cond_2
+    move v4, v1
+
+    goto :goto_2
+
+    :cond_2
+    move v4, v2
+
+    :goto_2
+    iget-boolean v6, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandingBelowNotch:Z
+
+    if-nez v3, :cond_3
+
+    if-eqz v4, :cond_4
+
+    :cond_3
+    iput-boolean v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandingBelowNotch:Z
+
+    :cond_4
+    if-nez v4, :cond_5
+
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v7}, Lcom/android/systemui/statusbar/phone/StatusBar;->shouldIgnoreTouch()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
 
     return v2
 
-    :cond_2
-    if-eqz v0, :cond_3
+    :cond_5
+    if-eqz v0, :cond_6
 
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mNotificationPanel:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mNotificationPanel:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-virtual {v5}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isFullyCollapsed()Z
+    invoke-virtual {v7}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isFullyCollapsed()Z
 
-    move-result v5
+    move-result v7
 
-    if-eqz v5, :cond_3
+    if-eqz v7, :cond_6
 
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mNotificationPanel:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mNotificationPanel:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-virtual {v5}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->startExpandLatencyTracking()V
+    invoke-virtual {v7}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->startExpandLatencyTracking()V
 
-    :cond_3
-    if-eqz v0, :cond_4
+    :cond_6
+    if-eqz v0, :cond_7
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setTouchActive(Z)V
 
     iput-boolean v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mTouchCancelled:Z
 
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v5
-
-    if-eq v5, v1, :cond_5
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v1
-
-    if-ne v1, v4, :cond_6
-
-    :cond_5
-    invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setTouchActive(Z)V
-
-    :cond_6
-    :goto_2
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mTouchCancelled:Z
-
-    if-nez v1, :cond_b
-
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandAnimationRunning:Z
-
-    if-nez v1, :cond_b
-
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandAnimationPending:Z
-
-    if-eqz v1, :cond_7
-
     goto :goto_3
 
     :cond_7
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mFalsingManager:Lcom/android/systemui/classifier/FalsingManager;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getWidth()I
+    move-result v7
 
-    move-result v4
-
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getHeight()I
-
-    move-result v5
-
-    invoke-virtual {v1, p1, v4, v5}, Lcom/android/systemui/classifier/FalsingManager;->onTouchEvent(Landroid/view/MotionEvent;II)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mBrightnessMirror:Landroid/view/View;
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mBrightnessMirror:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
-
-    move-result v1
-
-    if-nez v1, :cond_8
+    if-eq v7, v1, :cond_8
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    move-result v1
+    move-result v7
 
-    const/4 v4, 0x5
+    if-ne v7, v5, :cond_9
 
-    if-ne v1, v4, :cond_8
+    :cond_8
+    invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setTouchActive(Z)V
+
+    :cond_9
+    :goto_3
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mTouchCancelled:Z
+
+    if-nez v5, :cond_10
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandAnimationRunning:Z
+
+    if-nez v5, :cond_10
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandAnimationPending:Z
+
+    if-eqz v5, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mFalsingManager:Lcom/android/systemui/classifier/FalsingManager;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getWidth()I
+
+    move-result v7
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getHeight()I
+
+    move-result v8
+
+    invoke-virtual {v5, p1, v7, v8}, Lcom/android/systemui/classifier/FalsingManager;->onTouchEvent(Landroid/view/MotionEvent;II)V
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mBrightnessMirror:Landroid/view/View;
+
+    if-eqz v5, :cond_b
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mBrightnessMirror:Landroid/view/View;
+
+    invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
+
+    move-result v5
+
+    if-nez v5, :cond_b
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v5
+
+    const/4 v7, 0x5
+
+    if-ne v5, v7, :cond_b
 
     return v2
 
-    :cond_8
-    if-eqz v0, :cond_9
+    :cond_b
+    if-eqz v0, :cond_c
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mStackScrollLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mStackScrollLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->closeControlsIfOutsideTouch(Landroid/view/MotionEvent;)V
+    invoke-virtual {v2, p1}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->closeControlsIfOutsideTouch(Landroid/view/MotionEvent;)V
 
-    :cond_9
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
+    :cond_c
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->isDozing()Z
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->isDozing()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_d
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/StatusBar;->mDozeScrimController:Lcom/android/systemui/statusbar/phone/DozeScrimController;
+
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->extendPulse()V
+
+    :cond_d
+    if-eqz v0, :cond_e
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mBottom:I
+
+    int-to-float v5, v5
+
+    cmpl-float v2, v2, v5
+
+    if-ltz v2, :cond_e
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mExpandingBelowNotch:Z
+
+    const/4 v6, 0x1
+
+    :cond_e
+    if-eqz v6, :cond_f
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mStatusBarView:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
+
+    invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    return v1
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mService:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/phone/StatusBar;->mDozeScrimController:Lcom/android/systemui/statusbar/phone/DozeScrimController;
-
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->extendPulse()V
-
-    :cond_a
+    :cond_f
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
     return v1
 
-    :cond_b
-    :goto_3
+    :cond_10
+    :goto_4
     return v2
 .end method
 
@@ -775,7 +833,7 @@
 .end method
 
 .method protected fitSystemWindows(Landroid/graphics/Rect;)Z
-    .locals 4
+    .locals 8
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getFitsSystemWindows()Z
 
@@ -785,7 +843,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
@@ -814,35 +872,62 @@
     :goto_0
     move v0, v1
 
-    iget v1, p1, Landroid/graphics/Rect;->right:I
+    const/4 v1, 0x0
 
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
+    const/4 v3, 0x0
 
-    if-ne v1, v3, :cond_2
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getRootWindowInsets()Landroid/view/WindowInsets;
 
-    iget v1, p1, Landroid/graphics/Rect;->left:I
+    move-result-object v4
 
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
+    invoke-virtual {v4}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
 
-    if-eq v1, v3, :cond_3
+    move-result-object v4
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
+
+    move-result v3
+
+    invoke-virtual {v4}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
+
+    move-result v1
 
     :cond_2
-    iget v1, p1, Landroid/graphics/Rect;->right:I
+    iget v5, p1, Landroid/graphics/Rect;->left:I
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
+    invoke-static {v5, v3}, Ljava/lang/Math;->max(II)I
 
-    iget v1, p1, Landroid/graphics/Rect;->left:I
+    move-result v5
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
+    iget v6, p1, Landroid/graphics/Rect;->right:I
+
+    invoke-static {v6, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v6
+
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
+
+    if-ne v6, v7, :cond_3
+
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
+
+    if-eq v5, v7, :cond_4
+
+    :cond_3
+    iput v6, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
+
+    iput v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->applyMargins()V
 
-    :cond_3
-    if-eqz v0, :cond_4
+    :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {p0, v2, v2, v2, v2}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setPadding(IIII)V
 
-    :cond_4
+    :cond_5
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
     iput v2, p1, Landroid/graphics/Rect;->top:I
@@ -851,63 +936,63 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     iget v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
-    :cond_6
+    :cond_7
     iput v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mRightInset:I
 
     iput v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mLeftInset:I
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->applyMargins()V
 
-    :cond_7
+    :cond_8
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getPaddingLeft()I
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getPaddingRight()I
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getPaddingTop()I
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->getPaddingBottom()I
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     goto :goto_1
 
-    :cond_8
+    :cond_9
     move v1, v2
 
     nop
 
-    :cond_9
+    :cond_a
     :goto_1
     move v0, v1
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     invoke-virtual {p0, v2, v2, v2, v2}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setPadding(IIII)V
 
-    :cond_a
+    :cond_b
     iput v2, p1, Landroid/graphics/Rect;->top:I
 
     :goto_2
@@ -1440,6 +1525,14 @@
     invoke-direct {v0, v1, p0, v2, v3}, Lcom/android/systemui/statusbar/DragDownHelper;-><init>(Landroid/content/Context;Landroid/view/View;Lcom/android/systemui/ExpandHelper$Callback;Lcom/android/systemui/statusbar/DragDownHelper$DragDownCallback;)V
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->setDragDownHelper(Lcom/android/systemui/statusbar/DragDownHelper;)V
+
+    return-void
+.end method
+
+.method public setStatusBarView(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->mStatusBarView:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
     return-void
 .end method

@@ -825,7 +825,6 @@ Prøv på nytt om %2$d sekunder."</string>
     <string name="lockscreen_unlock_left">Venstre hurtigtast låser også opp</string>
     <string name="lockscreen_unlock_right">Høyre hurtigtast låser også opp</string>
     <string name="manage_notifications_text">Administrer varsler</string>
-    <string name="managed_profile_foreground_toast">Du bruker jobbprofilen din</string>
     <string name="managed_user_title">Alle jobbapper</string>
     <string name="media_category">Medier</string>
     <string name="media_projection_action_text">Start nå</string>
@@ -1125,7 +1124,7 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="quick_settings_reset_confirmation_title">Vil du skjule %1$s?</string>
     <string name="quick_settings_rotation_locked_label">Rotasjonen er låst</string>
     <string name="quick_settings_rotation_locked_landscape_label">Landskap</string>
-    <string name="quick_settings_rotation_locked_portrait_label">Portrett</string>
+    <string name="quick_settings_rotation_locked_portrait_label">Stående</string>
     <string name="quick_settings_rotation_unlocked_label">Rotér automatisk</string>
     <string name="quick_settings_rssi_emergency_only">Bare nødanrop</string>
     <string name="quick_settings_rssi_label">RSSI</string>
@@ -1319,7 +1318,7 @@ Telefonen kan blir for varm hvis du:
     <string name="title_usb_accessory">USB-enhet</string>
     <string name="touch_filtered_warning">Fordi en app skjuler tillatelsesforespørselen, kan ikke Innstillinger bekrefte svaret ditt.</string>
     <string name="track_frame_time">GPU-gjengivelse av profil</string>
-    <string name="transition_animation_scale_title">Overgangsanimasjonsskala</string>
+    <string name="transition_animation_scale_title">Animasjonsskala for overgang</string>
     <string name="tts_default_lang_summary">Velger språkspesifikk stemme</string>
     <string name="tts_default_lang_title">Språk</string>
     <string name="tts_default_pitch_summary">Påvirker tonehøyden for syntetisert tale</string>

@@ -825,7 +825,6 @@ Subukang muli sa loob ng %2$d (na) segundo."</string>
     <string name="lockscreen_unlock_left">Ina-unlock din ng kaliwang shortcut ang</string>
     <string name="lockscreen_unlock_right">Ina-unlock din ng kanang shortcut ang</string>
     <string name="manage_notifications_text">Pamahalaan ang mga notification</string>
-    <string name="managed_profile_foreground_toast">Ginagamit mo ang iyong profile sa trabaho</string>
     <string name="managed_user_title">Lahat ng app sa trabaho</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Magsimula ngayon</string>

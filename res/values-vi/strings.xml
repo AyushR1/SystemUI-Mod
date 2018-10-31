@@ -684,7 +684,7 @@ tắt tiếng"</string>
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • Đang sạc (%s cho tới khi đầy)</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • Đang sạc nhanh (%s cho tới khi đầy)</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • Đang sạc chậm (%s cho tới khi đầy)</string>
-    <string name="keyguard_indication_dash_charging_time">Đang sạc nhanh (%s cho đến khi đầy)</string>
+    <string name="keyguard_indication_dash_charging_time">Dash Charging (%s until full)</string>
     <string name="keyguard_indication_trust_disabled">Thiết bị sẽ vẫn bị khóa cho tới khi bạn mở khóa theo cách thủ công</string>
     <string name="keyguard_indication_trust_granted">Được mở khóa cho %1$s</string>
     <string name="keyguard_indication_trust_managed">%1$s đang chạy</string>
@@ -711,7 +711,7 @@ tắt tiếng"</string>
     <string name="keyguard_plugged_in">%s • Đang sạc</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Đang sạc nhanh</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Đang sạc chậm</string>
-    <string name="keyguard_plugged_in_dash_charging">Sạc nhanh</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
     <string name="keyguard_plugged_in_turbo_power_charging">Đã kết nối sạc nhanh</string>
     <string name="keyguard_sim_error_message_short">Thẻ không hợp lệ.</string>
     <string name="keyguard_sim_locked_message">Thẻ SIM đã bị khóa.</string>
@@ -829,7 +829,6 @@ Hãy thử lại sau %2$d giây."</string>
     <string name="lockscreen_unlock_left">Lối tắt bên trái cũng mở khóa</string>
     <string name="lockscreen_unlock_right">Lối tắt bên phải cũng mở khóa</string>
     <string name="manage_notifications_text">Quản lý thông báo</string>
-    <string name="managed_profile_foreground_toast">Bạn đang sử dụng hồ sơ công việc của mình</string>
     <string name="managed_user_title">Tất cả ứng dụng làm việc</string>
     <string name="media_category">Phương tiện</string>
     <string name="media_projection_action_text">Bắt đầu ngay</string>

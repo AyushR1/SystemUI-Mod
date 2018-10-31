@@ -542,8 +542,8 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs."</string>
     <string name="expanded_header_battery_charging_with_time">%s per completar la càrrega</string>
     <string name="expanded_header_battery_not_charging">"No s'està carregant"</string>
     <string name="experimental">Experimental</string>
-    <string name="external_source_trusted">Permeses</string>
-    <string name="external_source_untrusted">No permeses</string>
+    <string name="external_source_trusted">Amb permís</string>
+    <string name="external_source_untrusted">Sense permís</string>
     <string name="failed_to_open_app_settings_toast">"No s'ha pogut obrir la configuració de: %1$s"</string>
     <string name="fingerprint_dialog_touch_sensor">"Toca el sensor d'empremtes digitals"</string>
     <string name="fingerprint_not_recognized">"No s'ha reconegut"</string>
@@ -829,7 +829,6 @@ Torna-ho a provar d'aquí a %2$d segons."</string>
     <string name="lockscreen_unlock_left">"La drecera de l'esquerra també desbloqueja el dispositiu"</string>
     <string name="lockscreen_unlock_right">La drecera de la dreta també desbloqueja el dispositiu</string>
     <string name="manage_notifications_text">Gestiona les notificacions</string>
-    <string name="managed_profile_foreground_toast">Estàs utilitzant el perfil professional</string>
     <string name="managed_user_title">Totes les aplic. de feina</string>
     <string name="media_category">Multimèdia</string>
     <string name="media_projection_action_text">Comença ara</string>
@@ -1381,7 +1380,7 @@ Es pot sobreescalfar si:
     <string name="usb_debugging_always">"Dona sempre permís des d'aquest equip"</string>
     <string name="usb_debugging_message">"L'empremta digital de la clau de l'RSA de l'equip és:
 %1$s"</string>
-    <string name="usb_debugging_secondary_user_message">"L'usuari que té iniciada la sessió al dispositiu en aquest moment no pot activar la depuració per USB. Per utilitzar aquesta funció, cal canviar a l'usuari principal."</string>
+    <string name="usb_debugging_secondary_user_message">"L'usuari que té iniciada la sessió al dispositiu en aquest moment no pot activar la depuració USB. Per utilitzar aquesta funció, cal canviar a l'usuari principal."</string>
     <string name="usb_debugging_secondary_user_title">No es permet la depuració USB</string>
     <string name="usb_debugging_title">Vols permetre la depuració USB?</string>
     <string name="usb_device_confirm_prompt">Vols obrir %1$s per gestionar %2$s?</string>

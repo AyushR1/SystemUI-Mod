@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">လက်ဝဲ ဖြတ်လမ်းလင့်ခ်ဖြင့်လည်း လော့ခ်ဖွင့်ရန်</string>
     <string name="lockscreen_unlock_right">လက်ယာ ဖြတ်လမ်းလင့်ခ်ဖြင့်လည်း လော့ခ်ဖွင့်ရန်</string>
     <string name="manage_notifications_text">အကြောင်းကြားချက်များကို စီမံရန်</string>
-    <string name="managed_profile_foreground_toast">သင်သည် အလုပ်ပရိုဖိုင်းအား သုံးနေသည်</string>
     <string name="managed_user_title">အလုပ်သုံးအက်ပ်များအားလုံး</string>
     <string name="media_category">မီဒီယာ</string>
     <string name="media_projection_action_text">ယခု စတင်ပါ</string>

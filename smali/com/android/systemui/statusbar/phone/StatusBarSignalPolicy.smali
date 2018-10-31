@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    const v1, 0x104060d
+    const v1, 0x1040611
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -113,7 +113,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    const v1, 0x104061c
+    const v1, 0x1040620
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -123,7 +123,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    const v1, 0x1040629
+    const v1, 0x104062d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -133,7 +133,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    const v1, 0x1040616
+    const v1, 0x104061a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -143,7 +143,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    const v1, 0x1040628
+    const v1, 0x104062c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -209,12 +209,12 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0803a7
+    const v0, 0x7f0803a6
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0803be
+    const v0, 0x7f0803bd
 
     :goto_0
     return v0
@@ -908,7 +908,7 @@
 .end method
 
 .method public setSubs(Ljava/util/List;)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -960,9 +960,11 @@
 
     move-result v4
 
-    const/4 v5, 0x0
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
-    invoke-direct {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(ILcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$1;)V
+    const/4 v6, 0x0
+
+    invoke-direct {v3, v4, v5, v6}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;-><init>(ILandroid/content/Context;Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$1;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

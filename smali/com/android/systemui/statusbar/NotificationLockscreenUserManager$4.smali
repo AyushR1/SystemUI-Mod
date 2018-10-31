@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$4;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$600(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$400(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     move-result-object v0
 

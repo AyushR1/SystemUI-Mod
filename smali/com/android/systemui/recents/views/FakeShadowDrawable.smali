@@ -89,7 +89,7 @@
 
     iput v1, p0, Lcom/android/systemui/recents/views/FakeShadowDrawable;->mShadowEndColor:I
 
-    const v1, 0x7f07015b
+    const v1, 0x7f07015d
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -97,7 +97,7 @@
 
     iput v1, p0, Lcom/android/systemui/recents/views/FakeShadowDrawable;->mInsetShadow:F
 
-    const v1, 0x7f07015c
+    const v1, 0x7f07015e
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -139,7 +139,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0703a7
+    const v0, 0x7f0703a9
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -150,7 +150,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0703ca
+    const v0, 0x7f0703cc
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

@@ -105,6 +105,8 @@
 
 .field private mPhoneState:Ljava/lang/String;
 
+.field private mPulsing:Z
+
 .field private mSecondaryDisplayShowing:I
 
 .field private mShowKeyguardWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -665,6 +667,14 @@
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mExternallyEnabled:Z
+
+    return v0
+.end method
+
+.method static synthetic access$5000(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mPulsing:Z
 
     return v0
 .end method
@@ -4757,6 +4767,14 @@
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    return-void
+.end method
+
+.method public setPulsing(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mPulsing:Z
 
     return-void
 .end method

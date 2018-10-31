@@ -825,7 +825,6 @@ Codec තේරීම: පසුධාවන ගුණත්වය"</string>
     <string name="lockscreen_unlock_left">වම් කෙටි මගද අගුලු හැරේ</string>
     <string name="lockscreen_unlock_right">දකුණු කෙටි මගද අගුලු හැරේ</string>
     <string name="manage_notifications_text">දැනුම් දීම් කළමනාකරණය කරන්න</string>
-    <string name="managed_profile_foreground_toast">ඔබ ඔබේ කාර්යාල පැතිකඩ භාවිත කරමින් සිටී</string>
     <string name="managed_user_title">සියලු කාර්යාල යෙදුම්</string>
     <string name="media_category">මාධ්‍ය</string>
     <string name="media_projection_action_text">දැන් අරඹන්න</string>

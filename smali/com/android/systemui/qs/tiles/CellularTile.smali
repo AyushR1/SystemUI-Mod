@@ -207,7 +207,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110369
+    const v3, 0x7f110368
 
     const/4 v4, 0x2
 
@@ -310,7 +310,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110367
+    const v3, 0x7f110366
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -323,7 +323,7 @@
 
     invoke-direct {v1, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f110368
+    const v3, 0x7f110367
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -331,7 +331,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f110366
+    const v4, 0x7f110365
 
     const/4 v5, 0x1
 
@@ -431,7 +431,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f11043b
+    const v1, 0x7f11043a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -630,7 +630,7 @@
     :goto_1
     iput-boolean v2, p1, Lcom/android/systemui/plugins/qs/QSTile$SignalState;->activityOut:Z
 
-    const v2, 0x7f110363
+    const v2, 0x7f110362
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -719,7 +719,7 @@
 
     iput v3, p1, Lcom/android/systemui/plugins/qs/QSTile$SignalState;->state:I
 
-    const v3, 0x7f1104fb
+    const v3, 0x7f1104fc
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

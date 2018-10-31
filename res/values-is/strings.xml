@@ -825,7 +825,6 @@ Reyndu aftur eftir %2$d sekúndur."</string>
     <string name="lockscreen_unlock_left">Flýtilykill til vinstri opnar einnig</string>
     <string name="lockscreen_unlock_right">Flýtilykill til hægri opnar einnig</string>
     <string name="manage_notifications_text">Stjórna tilkynningum</string>
-    <string name="managed_profile_foreground_toast">Þú ert að nota vinnusniðið</string>
     <string name="managed_user_title">Öll vinnuforrit</string>
     <string name="media_category">Margmiðlun</string>
     <string name="media_projection_action_text">Byrja núna</string>

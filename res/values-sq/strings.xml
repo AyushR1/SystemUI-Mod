@@ -825,7 +825,6 @@ Provo sërish për %2$d sekonda."</string>
     <string name="lockscreen_unlock_left">Shkurtorja majtas shkyç po ashtu</string>
     <string name="lockscreen_unlock_right">Shkurtorja djathtas shkyç po ashtu</string>
     <string name="manage_notifications_text">Menaxho njoftimet</string>
-    <string name="managed_profile_foreground_toast">Po përdor profilin tënd të punës</string>
     <string name="managed_user_title">Të gjitha aplikacionet e punës</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Fillo tani</string>

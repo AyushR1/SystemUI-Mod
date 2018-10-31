@@ -35,6 +35,8 @@
 
 .field private mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
+.field private mShowPercentAvailable:Z
+
 .field private mStatusIconArea:Landroid/view/ViewGroup;
 
 .field private mSystemIconsBaseMargin:I
@@ -153,7 +155,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070421
+    const v1, 0x7f070423
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -161,7 +163,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsSwitcherHiddenExpandedMargin:I
 
-    const v1, 0x7f07041f
+    const v1, 0x7f070421
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -173,13 +175,29 @@
 
     move-result-object v1
 
-    const v2, 0x7f07014f
+    const v2, 0x7f070150
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSideNudge:I
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x1120022
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mShowPercentAvailable:Z
 
     return-void
 .end method
@@ -463,7 +481,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070420
+    const v4, 0x7f070422
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -562,7 +580,7 @@
 .end method
 
 .method private updateVisibilities()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
@@ -630,6 +648,8 @@
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mKeyguardUserSwitcher:Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher;
 
+    const/4 v1, 0x1
+
     if-nez v0, :cond_4
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mUserSwitcherController:Lcom/android/systemui/statusbar/policy/UserSwitcherController;
@@ -642,8 +662,6 @@
 
     move-result v0
 
-    const/4 v1, 0x1
-
     if-le v0, v1, :cond_3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
@@ -655,16 +673,28 @@
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
-    const/16 v1, 0x8
+    const/16 v3, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/MultiUserSwitch;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/phone/MultiUserSwitch;->setVisibility(I)V
 
     :cond_4
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryView:Lcom/android/systemui/BatteryMeterView;
 
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryCharging:Z
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryCharging:Z
 
+    if-eqz v3, :cond_5
+
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mShowPercentAvailable:Z
+
+    if-eqz v3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v1, v2
+
+    :goto_2
     invoke-virtual {v0, v1}, Lcom/android/systemui/BatteryMeterView;->setForceShowPercent(Z)V
 
     return-void
@@ -809,7 +839,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0702cd
+    const v2, 0x7f0702ce
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -837,7 +867,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0702d3
+    const v2, 0x7f0702d4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -849,7 +879,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0702d0
+    const v2, 0x7f0702d1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -875,7 +905,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070420
+    const v2, 0x7f070422
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -905,7 +935,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f07041e
+    const v5, 0x7f070420
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -925,7 +955,7 @@
 
     move-result-object v2
 
-    const v3, 0x10501b8
+    const v3, 0x10501bb
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -953,7 +983,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07018b
+    const v2, 0x7f07018d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -977,7 +1007,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07040a
+    const v2, 0x7f07040c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1116,6 +1146,28 @@
     check-cast v0, Lcom/android/systemui/statusbar/policy/BatteryController;
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    return-void
+.end method
+
+.method public onOverlayChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x1120022
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mShowPercentAvailable:Z
 
     return-void
 .end method

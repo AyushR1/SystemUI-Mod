@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‎‎‏‎‏‏‎‏‎‏‎‎‎‎‏‎‏‎‏‏‏‏‎‎‏‎‎‏‎‎‎‎‎‎‏‏‎‎‏‎‎‏‏‎‎‎‎‎‎‎‎‏‏‎‎‎‏‎Left shortcut also unlocks‎‏‎‎‏‎</string>
     <string name="lockscreen_unlock_right">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‎‎‏‏‏‎‏‏‏‎‏‎‎‎‎‎‎‏‏‏‏‎‎‏‎‎‎‏‏‏‏‏‏‏‏‏‏‎‎‏‎‎‎‏‎‎‎‎‏‎‏‏‎‏‏‏‎Right shortcut also unlocks‎‏‎‎‏‎</string>
     <string name="manage_notifications_text">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‏‏‏‎‎‎‎‎‏‏‎‎‎‏‎‎‎‎‎‏‎‏‏‎‏‏‏‎‏‏‎‏‎‏‎‎‏‏‎‏‎‎‎‏‎‎‏‎‎‎‎‏‏‎‎‎‎‏‎Manage notifications‎‏‎‎‏‎</string>
-    <string name="managed_profile_foreground_toast">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‏‏‎‎‏‏‏‏‎‎‏‏‏‏‏‏‎‏‏‏‎‎‏‏‏‎‎‏‏‏‏‏‎‎‎‏‏‎‎‎‏‏‏‏‏‎‎‎‏‏‏‎‎‏‎‏‎‎‎You're using your work profile‎‏‎‎‏‎"</string>
     <string name="managed_user_title">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‏‎‏‏‏‏‏‏‏‏‏‎‎‎‎‏‎‎‎‏‎‏‏‎‎‎‏‏‎‏‎‏‏‎‏‎‎‏‎‏‎‎‎‎‎‎‎‎‎‏‎‏‏‏‏‎‏‎‏‎‎‎‎‏‎‏‎‏‎‏‎‎All work apps‎‏‎‎‏‎</string>
     <string name="media_category">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‏‎‏‏‏‏‏‎‏‏‏‏‎‎‏‏‏‎‎‏‏‎‎‏‏‎‎‏‎‎‎‎‏‏‎‏‏‏‎‏‎‎‎‏‏‏‎‎‎‎‏‎‎‎‏‎‎‎‏‎‏‏‏‏‏‎‎‎‎‏‎Media‎‏‎‎‏‎</string>
     <string name="media_projection_action_text">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‏‎‎‎‏‏‏‎‏‎‎‏‎‏‏‎‎‎‎‏‎‏‎‏‏‏‎‎‏‎‏‎‎‎‎‎‎‎‎‎‎‏‏‎‏‎‎‏‏‎‏‎‎‎‏‎‎Start now‎‏‎‎‏‎</string>

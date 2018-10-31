@@ -829,7 +829,6 @@
     <string name="lockscreen_unlock_left">اختصار اليسار يلغي أيضًا تأمين</string>
     <string name="lockscreen_unlock_right">اختصار اليمين يلغي أيضًا تأمين</string>
     <string name="manage_notifications_text">إدارة الإشعارات</string>
-    <string name="managed_profile_foreground_toast">أنت تستخدم ملفك الشخصي للعمل</string>
     <string name="managed_user_title">كل تطبيقات العمل</string>
     <string name="media_category">الوسائط</string>
     <string name="media_projection_action_text">البدء الآن</string>

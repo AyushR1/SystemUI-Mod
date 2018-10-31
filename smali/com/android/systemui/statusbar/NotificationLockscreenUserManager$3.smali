@@ -44,7 +44,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager$3;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$500(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/util/SparseBooleanArray;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->access$300(Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)Landroid/util/SparseBooleanArray;
 
     move-result-object v0
 

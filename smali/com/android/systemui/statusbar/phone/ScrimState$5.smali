@@ -48,19 +48,13 @@
 
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState$5;->mBlankScreen:Z
 
-    nop
-
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState$5;->mWallpaperSupportsAmbientMode:Z
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState$5;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->hasLockscreenWallpaper()Z
-
-    move-result v1
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState$5;->mHasBackdrop:Z
 
     if-nez v1, :cond_0
 

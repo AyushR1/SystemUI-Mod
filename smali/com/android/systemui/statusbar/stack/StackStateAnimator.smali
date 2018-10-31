@@ -207,7 +207,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07016a
+    const v1, 0x7f07016c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070350
+    const v1, 0x7f070351
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -990,7 +990,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_16
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1188,13 +1188,13 @@
 
     cmpl-float v5, v5, v6
 
-    if-nez v5, :cond_13
+    if-nez v5, :cond_15
 
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableView;->getTransientContainer()Landroid/view/ViewGroup;
 
     move-result-object v5
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_15
 
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableView;->getTransientContainer()Landroid/view/ViewGroup;
 
@@ -1226,11 +1226,13 @@
 
     const/4 v8, 0x0
 
-    if-ne v5, v7, :cond_9
+    if-ne v5, v7, :cond_a
 
     invoke-virtual {v1, v4}, Lcom/android/systemui/statusbar/stack/StackScrollState;->getViewStateForView(Landroid/view/View;)Lcom/android/systemui/statusbar/stack/ExpandableViewState;
 
     move-result-object v5
+
+    if-eqz v5, :cond_9
 
     iget-object v6, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mTmpState:Lcom/android/systemui/statusbar/stack/ExpandableViewState;
 
@@ -1256,39 +1258,57 @@
 
     invoke-virtual {v6, v4}, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->applyToView(Landroid/view/View;)V
 
-    goto/16 :goto_4
-
     :cond_9
-    iget v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
-
-    const/16 v7, 0x14
-
-    if-ne v5, v7, :cond_a
-
-    invoke-virtual {v1, v4}, Lcom/android/systemui/statusbar/stack/StackScrollState;->getViewStateForView(Landroid/view/View;)Lcom/android/systemui/statusbar/stack/ExpandableViewState;
-
-    move-result-object v5
-
-    iget v6, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
-
-    iget v7, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mPulsingAppearingTranslation:I
-
-    int-to-float v7, v7
-
-    add-float/2addr v6, v7
-
-    iput v6, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
-
-    iput v8, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->alpha:F
-
     goto/16 :goto_4
 
     :cond_a
     iget v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
 
-    const/16 v7, 0xe
+    const/16 v7, 0x14
 
     if-ne v5, v7, :cond_c
+
+    invoke-virtual {v1, v4}, Lcom/android/systemui/statusbar/stack/StackScrollState;->getViewStateForView(Landroid/view/View;)Lcom/android/systemui/statusbar/stack/ExpandableViewState;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_b
+
+    iput v8, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->alpha:F
+
+    iget v7, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
+
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableView;->getTranslationY()F
+
+    move-result v8
+
+    iput v8, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
+
+    iget-object v8, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mAnimationFilter:Lcom/android/systemui/statusbar/stack/AnimationFilter;
+
+    iput-boolean v6, v8, Lcom/android/systemui/statusbar/stack/AnimationFilter;->animateAlpha:Z
+
+    iget-object v6, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mAnimationProperties:Lcom/android/systemui/statusbar/stack/AnimationProperties;
+
+    const-wide/16 v8, 0x113
+
+    iput-wide v8, v6, Lcom/android/systemui/statusbar/stack/AnimationProperties;->duration:J
+
+    iget-object v6, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mAnimationProperties:Lcom/android/systemui/statusbar/stack/AnimationProperties;
+
+    invoke-virtual {v5, v4, v6}, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->animateTo(Landroid/view/View;Lcom/android/systemui/statusbar/stack/AnimationProperties;)V
+
+    iput v7, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
+
+    :cond_b
+    goto/16 :goto_4
+
+    :cond_c
+    iget v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
+
+    const/16 v7, 0xe
+
+    if-ne v5, v7, :cond_e
 
     invoke-virtual {v1, v4}, Lcom/android/systemui/statusbar/stack/StackScrollState;->getViewStateForView(Landroid/view/View;)Lcom/android/systemui/statusbar/stack/ExpandableViewState;
 
@@ -1300,7 +1320,7 @@
 
     iget-boolean v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->headsUpFromBottom:Z
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_d
 
     iget-object v5, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mTmpState:Lcom/android/systemui/statusbar/stack/ExpandableViewState;
 
@@ -1312,7 +1332,7 @@
 
     goto :goto_1
 
-    :cond_b
+    :cond_d
     iget-object v5, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mTmpState:Lcom/android/systemui/statusbar/stack/ExpandableViewState;
 
     iput v8, v5, Lcom/android/systemui/statusbar/stack/ExpandableViewState;->yTranslation:F
@@ -1340,20 +1360,20 @@
 
     goto/16 :goto_4
 
-    :cond_c
+    :cond_e
     iget v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
 
     const/16 v7, 0xf
 
     const/16 v9, 0x10
 
-    if-eq v5, v7, :cond_d
+    if-eq v5, v7, :cond_f
 
     iget v5, v3, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout$AnimationEvent;->animationType:I
 
-    if-ne v5, v9, :cond_13
+    if-ne v5, v9, :cond_15
 
-    :cond_d
+    :cond_f
     iget-object v5, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mHeadsUpDisappearChildren:Ljava/util/HashSet;
 
     invoke-virtual {v5, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -1364,7 +1384,7 @@
 
     const/4 v10, 0x0
 
-    if-ne v7, v9, :cond_e
+    if-ne v7, v9, :cond_10
 
     nop
 
@@ -1372,7 +1392,7 @@
 
     goto :goto_2
 
-    :cond_e
+    :cond_10
     move v7, v10
 
     :goto_2
@@ -1382,7 +1402,7 @@
 
     move-result-object v7
 
-    if-nez v7, :cond_f
+    if-nez v7, :cond_11
 
     iget-object v7, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mHostLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
@@ -1428,7 +1448,7 @@
 
     invoke-direct {v5, v4}, Lcom/android/systemui/statusbar/stack/-$$Lambda$StackStateAnimator$583ttX1KKMjNzUBxpRTbg9B4uQA;-><init>(Lcom/android/systemui/statusbar/ExpandableView;)V
 
-    :cond_f
+    :cond_11
     move-object v14, v5
 
     const/4 v5, 0x0
@@ -1437,7 +1457,7 @@
 
     instance-of v7, v4, Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_13
 
     move-object v7, v4
 
@@ -1447,11 +1467,11 @@
 
     move-result v8
 
-    if-eqz v8, :cond_10
+    if-eqz v8, :cond_12
 
     const/4 v6, 0x0
 
-    :cond_10
+    :cond_12
     invoke-virtual {v7}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/NotificationData$Entry;
 
     move-result-object v8
@@ -1462,7 +1482,7 @@
 
     move-result-object v9
 
-    if-eqz v9, :cond_11
+    if-eqz v9, :cond_13
 
     iget-object v9, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mTmpLocation:[I
 
@@ -1518,13 +1538,13 @@
 
     goto :goto_3
 
-    :cond_11
+    :cond_13
     move/from16 v17, v5
 
     move/from16 v16, v6
 
     :goto_3
-    if-eqz v16, :cond_12
+    if-eqz v16, :cond_14
 
     const-wide/16 v6, 0x1a4
 
@@ -1552,14 +1572,14 @@
 
     goto :goto_4
 
-    :cond_12
+    :cond_14
     move-object v1, v14
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_15
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    :cond_13
+    :cond_15
     :goto_4
     iget-object v1, v0, Lcom/android/systemui/statusbar/stack/StackStateAnimator;->mNewEvents:Ljava/util/ArrayList;
 
@@ -1571,7 +1591,7 @@
 
     goto/16 :goto_0
 
-    :cond_14
+    :cond_16
     return-void
 .end method
 

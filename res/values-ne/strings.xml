@@ -553,7 +553,7 @@
     <string name="force_hw_ui_summary">2d चित्र कोर्नका लागि GPU को प्रयोगलाई जोड दिनुहोस्</string>
     <string name="force_msaa">4x MSAA जोड गर्नुहोस्</string>
     <string name="force_msaa_summary">OpenGL ES २.० अनुप्रयोगमा ४x MSAA सक्षम पार्नुहोस्</string>
-    <string name="force_resizable_activities">गतिविधिहरू रिसाइज गर्नको लागि बाध्य गर्नुहोस्</string>
+    <string name="force_resizable_activities">आकार बदल्न योग्य हुने बनाउन गतिविधिहरूलाई बाध्यात्मक बनाउनुहोस्।</string>
     <string name="force_resizable_activities_summary">म्यानिफेेस्ट मानहरूको ख्याल नगरी, बहु-विन्डोको लागि सबै रिसाइज गर्न सकिने गतिविधिहरू बनाउनुहोस्।</string>
     <string name="force_rtl_layout_all_locales">RTL लेआउट दिशामा जबर्जस्ती गर्नुहोस्</string>
     <string name="force_rtl_layout_all_locales_summary">सबै लोकेलहरूको लागि RTLमा स्क्रिन लेआउट दिशामा जबर्जस्ती गर्नुहोस्</string>
@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">बायाँतिरको सर्टकटले पनि अनलक गर्छ</string>
     <string name="lockscreen_unlock_right">दायाँतिरको सर्टकटले पनि अनलक गर्छ</string>
     <string name="manage_notifications_text">सूचनाहरू व्यवस्थापन गर्नुहोस्</string>
-    <string name="managed_profile_foreground_toast">तपाईँले कार्य प्रोफाइल प्रयोग गर्दै हुनुहुन्छ</string>
     <string name="managed_user_title">कार्य प्रोफाइलका सबै अनुप्रयोगहरू</string>
     <string name="media_category">मिडिया</string>
     <string name="media_projection_action_text">अहिले सुरु गर्नुहोस्</string>

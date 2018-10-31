@@ -24,8 +24,6 @@
 
 .field private mMinFraction:F
 
-.field private mPanelFraction:F
-
 .field private mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
 
@@ -54,14 +52,6 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mBarTransitions:Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;
 
     return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)F
-    .locals 1
-
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mPanelFraction:F
-
-    return v0
 .end method
 
 .method public static cornerCutoutMargins(Landroid/view/DisplayCutout;Landroid/view/Display;)Landroid/util/Pair;
@@ -352,33 +342,27 @@
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_3
 
-    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
 
-    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+    invoke-virtual {v1}, Landroid/view/DisplayCutout;->isEmpty()Z
 
-    return-void
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mLastOrientation:I
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_3
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    invoke-virtual {v1}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
-
-    move-result v1
-
-    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    invoke-virtual {v1}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    move-result v1
-
-    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
-
-    if-eqz p1, :cond_2
-
     iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     iget-object v3, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -437,6 +421,14 @@
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
     :cond_2
+    return-void
+
+    :cond_3
+    :goto_0
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
     return-void
 .end method
 
@@ -843,8 +835,6 @@
 
     invoke-super {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/PanelBar;->panelExpansionChanged(FZ)V
 
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mPanelFraction:F
-
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->updateScrimFraction()V
 
     const/4 v0, 0x0
@@ -930,7 +920,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07014f
+    const v1, 0x7f070150
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -946,7 +936,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07040c
+    const v2, 0x7f07040e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

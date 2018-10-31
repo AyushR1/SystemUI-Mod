@@ -302,10 +302,10 @@
     <string name="battery_panel_title">Batteriforbrug</string>
     <string name="battery_saver_confirmation_ok">Aktivér</string>
     <string name="battery_saver_confirmation_title">Vil du aktivere Batterisparefunktion?</string>
-    <string name="battery_saver_notification_action_text">Deaktiver Batterisparefunktion</string>
+    <string name="battery_saver_notification_action_text">Deaktiver batterisparefunktion</string>
     <string name="battery_saver_notification_text">Reducerer ydeevne og baggrundsdata</string>
     <string name="battery_saver_notification_title">Batterisparefunktion er aktiveret</string>
-    <string name="battery_saver_start_action">Aktivér Batterisparefunktion</string>
+    <string name="battery_saver_start_action">Aktivér batterisparefunktion</string>
     <string name="block">Bloker alle underretninger</string>
     <string name="bluetooth_a2dp_profile_summary_connected">Forbundet til medielyd</string>
     <string name="bluetooth_a2dp_profile_summary_use_for">Brug til medielyd</string>
@@ -827,7 +827,6 @@ Prøv igen om %2$d sekunder."</string>
     <string name="lockscreen_unlock_left">Venstre genvej låser også op</string>
     <string name="lockscreen_unlock_right">Højre genvej låser også op</string>
     <string name="manage_notifications_text">Administrer underretninger</string>
-    <string name="managed_profile_foreground_toast">Du bruger din arbejdsprofil</string>
     <string name="managed_user_title">Alle arbejdsapps</string>
     <string name="media_category">Medie</string>
     <string name="media_projection_action_text">Start nu</string>

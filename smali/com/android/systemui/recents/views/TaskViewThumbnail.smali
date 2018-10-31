@@ -219,7 +219,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703ca
+    const v1, 0x7f0703cc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -235,7 +235,7 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    const v1, 0x7f0703a6
+    const v1, 0x7f0703a8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

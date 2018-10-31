@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07038d
+    const v1, 0x7f07038f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -43,7 +43,7 @@
 
     iput v1, p0, Lcom/android/systemui/qs/tileimpl/QSIconViewImpl;->mIconSizePx:I
 
-    const v1, 0x7f070393
+    const v1, 0x7f070395
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

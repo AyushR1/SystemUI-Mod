@@ -57,6 +57,8 @@
     .end annotation
 .end field
 
+.field private mWasPulsing:Z
+
 .field private mWidgetPadding:F
 
 
@@ -128,7 +130,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07046c
+    const v1, 0x7f07046e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -138,7 +140,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070462
+    const v2, 0x7f070464
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -779,7 +781,7 @@
 
     move-result-object v1
 
-    const v2, 0x104024d
+    const v2, 0x1040251
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -939,7 +941,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070470
+    const v1, 0x7f070472
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -959,7 +961,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070462
+    const v3, 0x7f070464
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -979,7 +981,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07046d
+    const v3, 0x7f07046f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1000,7 +1002,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070468
+    const v3, 0x7f07046a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1146,7 +1148,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07046d
+    const v1, 0x7f07046f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1250,9 +1252,13 @@
 
     iget-boolean v4, v0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
 
-    if-eqz v4, :cond_0
+    const/4 v5, 0x0
 
-    const/4 v4, 0x0
+    if-nez v4, :cond_1
+
+    iget-boolean v4, v0, Lcom/android/keyguard/KeyguardStatusView;->mWasPulsing:Z
+
+    if-eqz v4, :cond_0
 
     goto :goto_0
 
@@ -1265,7 +1271,13 @@
 
     sub-int/2addr v4, v6
 
+    goto :goto_1
+
+    :cond_1
     :goto_0
+    move v4, v5
+
+    :goto_1
     iget-object v6, v0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
 
     invoke-virtual {v6}, Lcom/android/keyguard/KeyguardSliceView;->hasHeader()Z
@@ -1274,45 +1286,55 @@
 
     const/4 v7, 0x1
 
-    if-nez v6, :cond_2
+    if-nez v6, :cond_3
 
     iget-boolean v8, v0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
 
-    if-eqz v8, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v8, 0x0
+    if-eqz v8, :cond_2
 
     goto :goto_2
 
     :cond_2
-    :goto_1
-    move v8, v7
-
-    :goto_2
-    const-wide/16 v9, 0x226
-
-    if-eqz v8, :cond_3
-
-    const-wide/16 v11, 0x0
+    move v8, v5
 
     goto :goto_3
 
     :cond_3
+    :goto_2
+    move v8, v7
+
+    :goto_3
+    const-wide/16 v9, 0x226
+
+    if-nez v8, :cond_5
+
+    iget-boolean v11, v0, Lcom/android/keyguard/KeyguardStatusView;->mWasPulsing:Z
+
+    if-eqz v11, :cond_4
+
+    goto :goto_4
+
+    :cond_4
     const-wide/16 v11, 0x4
 
     div-long v11, v9, v11
 
-    :goto_3
+    goto :goto_5
+
+    :cond_5
+    :goto_4
+    const-wide/16 v11, 0x0
+
+    :goto_5
+    iput-boolean v5, v0, Lcom/android/keyguard/KeyguardStatusView;->mWasPulsing:Z
+
     iget-object v13, v0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
 
     invoke-virtual {v13}, Lcom/android/keyguard/KeyguardSliceView;->getLayoutTransition()Landroid/animation/LayoutTransition;
 
     move-result-object v13
 
-    if-eqz v13, :cond_4
+    if-eqz v13, :cond_6
 
     iget-object v13, v0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
 
@@ -1324,41 +1346,41 @@
 
     move-result v13
 
-    if-eqz v13, :cond_4
+    if-eqz v13, :cond_6
 
     move v13, v7
 
-    goto :goto_4
+    goto :goto_6
 
-    :cond_4
-    const/4 v13, 0x0
+    :cond_6
+    move v13, v5
 
-    :goto_4
+    :goto_6
     iget-object v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockView:Landroid/widget/TextClock;
 
     const/high16 v15, 0x3f800000    # 1.0f
 
-    if-ne v1, v14, :cond_8
+    if-ne v1, v14, :cond_a
 
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_7
 
     iget v15, v0, Lcom/android/keyguard/KeyguardStatusView;->mSmallClockScale:F
 
     nop
 
-    :cond_5
+    :cond_7
     move v5, v15
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_8
 
     sget-object v7, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
-    goto :goto_5
+    goto :goto_7
 
-    :cond_6
+    :cond_8
     sget-object v7, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    :goto_5
+    :goto_7
     iget-object v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockView:Landroid/widget/TextClock;
 
     invoke-virtual {v14}, Landroid/widget/TextClock;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1367,7 +1389,7 @@
 
     invoke-virtual {v14}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    if-eqz v13, :cond_7
+    if-eqz v13, :cond_9
 
     iget-object v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockView:Landroid/widget/TextClock;
 
@@ -1429,9 +1451,9 @@
 
     invoke-virtual {v14}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    goto :goto_6
+    goto :goto_8
 
-    :cond_7
+    :cond_9
     iget-object v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockView:Landroid/widget/TextClock;
 
     int-to-float v15, v2
@@ -1458,38 +1480,38 @@
 
     invoke-virtual {v14}, Landroid/widget/TextClock;->invalidate()V
 
-    :goto_6
-    goto/16 :goto_b
+    :goto_8
+    goto/16 :goto_d
 
-    :cond_8
+    :cond_a
     iget-object v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockSeparator:Landroid/view/View;
 
-    if-ne v1, v14, :cond_e
+    if-ne v1, v14, :cond_10
 
-    if-eqz v6, :cond_9
+    if-eqz v6, :cond_b
 
     iget-boolean v14, v0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
 
-    if-nez v14, :cond_9
+    if-nez v14, :cond_b
 
     move v14, v7
 
-    goto :goto_7
+    goto :goto_9
 
-    :cond_9
-    const/4 v14, 0x0
+    :cond_b
+    move v14, v5
 
-    :goto_7
+    :goto_9
     const/16 v16, 0x0
 
-    if-eqz v14, :cond_a
+    if-eqz v14, :cond_c
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_a
+    :cond_c
     move/from16 v15, v16
 
-    :goto_8
+    :goto_a
     iget-object v5, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockSeparator:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1498,20 +1520,20 @@
 
     invoke-virtual {v5}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    if-eqz v13, :cond_d
+    if-eqz v13, :cond_f
 
     iget v5, v0, Lcom/android/keyguard/KeyguardStatusView;->mDarkAmount:F
 
     cmpl-float v5, v5, v16
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_d
 
-    goto :goto_9
+    goto :goto_b
 
-    :cond_b
+    :cond_d
     const/4 v7, 0x0
 
-    :goto_9
+    :goto_b
     move v5, v7
 
     iget-object v7, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockSeparator:Landroid/view/View;
@@ -1538,13 +1560,13 @@
 
     move-result-object v1
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_e
 
     const/4 v7, 0x0
 
-    goto :goto_a
+    goto :goto_c
 
-    :cond_c
+    :cond_e
     new-instance v7, Lcom/android/systemui/util/wakelock/KeepAwakeAnimationListener;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/keyguard/KeyguardStatusView;->getContext()Landroid/content/Context;
@@ -1553,7 +1575,7 @@
 
     invoke-direct {v7, v3}, Lcom/android/systemui/util/wakelock/KeepAwakeAnimationListener;-><init>(Landroid/content/Context;)V
 
-    :goto_a
+    :goto_c
     invoke-virtual {v1, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
@@ -1574,9 +1596,9 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    goto :goto_b
+    goto :goto_d
 
-    :cond_d
+    :cond_f
     iget-object v1, v0, Lcom/android/keyguard/KeyguardStatusView;->mClockSeparator:Landroid/view/View;
 
     int-to-float v3, v2
@@ -1587,8 +1609,8 @@
 
     invoke-virtual {v1, v15}, Landroid/view/View;->setAlpha(F)V
 
-    :cond_e
-    :goto_b
+    :cond_10
+    :goto_d
     return-void
 .end method
 
@@ -1622,8 +1644,35 @@
 .method public setPulsing(ZZ)V
     .locals 1
 
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mWasPulsing:Z
+
+    :cond_1
     iput-boolean p1, p0, Lcom/android/keyguard/KeyguardStatusView;->mPulsing:Z
 
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardSliceView;->hasHeader()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 p2, 0x0
+
+    :cond_2
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/keyguard/KeyguardSliceView;->setPulsing(ZZ)V

@@ -39,9 +39,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView$1;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->access$000(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;)F
-
-    move-result v0
+    iget v0, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mPanelFraction:F
 
     const/4 v1, 0x0
 

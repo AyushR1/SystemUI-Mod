@@ -40,6 +40,8 @@
 
 .field private final mLastConfiguration:Landroid/content/res/Configuration;
 
+.field private mLastEstimate:Lcom/android/systemui/power/Estimate;
+
 .field private mLowBatteryAlertCloseLevel:I
 
 .field private final mLowBatteryReminderLevels:[I
@@ -1029,8 +1031,8 @@
     return-void
 .end method
 
-.method protected maybeShowBatteryWarning(ZZII)V
-    .locals 16
+.method protected maybeShowBatteryWarning(IZZII)V
+    .locals 17
 
     move-object/from16 v9, p0
 
@@ -1044,13 +1046,13 @@
 
     const/4 v11, 0x1
 
-    move/from16 v12, p3
+    move/from16 v12, p4
 
-    move/from16 v13, p4
+    move/from16 v13, p5
 
     if-ne v13, v12, :cond_1
 
-    if-eqz p2, :cond_0
+    if-eqz p3, :cond_0
 
     goto :goto_0
 
@@ -1072,15 +1074,34 @@
 
     move-result v15
 
-    if-eqz v15, :cond_2
+    if-eqz v15, :cond_4
 
-    iget-object v1, v9, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+    iget-object v1, v9, Lcom/android/systemui/power/PowerUI;->mLastEstimate:Lcom/android/systemui/power/Estimate;
 
-    invoke-interface {v1}, Lcom/android/systemui/power/EnhancedEstimates;->getEstimate()Lcom/android/systemui/power/Estimate;
+    if-eqz v1, :cond_2
+
+    iget v2, v9, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
+
+    move/from16 v8, p1
+
+    if-eq v2, v8, :cond_3
+
+    goto :goto_2
+
+    :cond_2
+    move/from16 v8, p1
+
+    :goto_2
+    iget-object v2, v9, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+
+    invoke-interface {v2}, Lcom/android/systemui/power/EnhancedEstimates;->getEstimate()Lcom/android/systemui/power/Estimate;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    iput-object v1, v9, Lcom/android/systemui/power/PowerUI;->mLastEstimate:Lcom/android/systemui/power/Estimate;
+
+    :cond_3
+    if-eqz v1, :cond_5
 
     iget-wide v2, v1, Lcom/android/systemui/power/Estimate;->estimateMillis:J
 
@@ -1110,7 +1131,7 @@
 
     const/16 v3, 0x2d
 
-    if-lt v2, v3, :cond_2
+    if-lt v2, v3, :cond_5
 
     iget-wide v2, v9, Lcom/android/systemui/power/PowerUI;->mTimeRemaining:J
 
@@ -1118,40 +1139,50 @@
 
     cmp-long v2, v2, v4
 
-    if-lez v2, :cond_2
+    if-lez v2, :cond_5
 
     iput-boolean v0, v9, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
     iput-boolean v0, v9, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
 
-    :cond_2
+    goto :goto_3
+
+    :cond_4
+    move/from16 v8, p1
+
+    :cond_5
+    :goto_3
     iget-wide v5, v9, Lcom/android/systemui/power/PowerUI;->mTimeRemaining:J
 
-    iget v8, v9, Lcom/android/systemui/power/PowerUI;->mBatteryStatus:I
+    iget v7, v9, Lcom/android/systemui/power/PowerUI;->mBatteryStatus:I
 
     move-object v0, v9
 
-    move/from16 v1, p1
+    move/from16 v1, p2
 
-    move/from16 v2, p2
+    move/from16 v2, p3
 
     move v3, v12
 
     move v4, v13
 
+    move/from16 v16, v7
+
     move v7, v10
+
+    move/from16 v8, v16
 
     invoke-virtual/range {v0 .. v8}, Lcom/android/systemui/power/PowerUI;->shouldShowLowBatteryWarning(ZZIIJZI)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_8
 
     iget-object v0, v9, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
     invoke-interface {v0, v14}, Lcom/android/systemui/power/PowerUI$WarningsUI;->showLowBatteryWarning(Z)V
 
-    if-eqz v15, :cond_7
+    if-eqz v15, :cond_a
 
     iget-wide v0, v9, Lcom/android/systemui/power/PowerUI;->mTimeRemaining:J
 
@@ -1163,7 +1194,7 @@
 
     cmp-long v0, v0, v2
 
-    if-ltz v0, :cond_4
+    if-ltz v0, :cond_7
 
     iget v0, v9, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
@@ -1171,27 +1202,27 @@
 
     aget v1, v1, v11
 
-    if-ge v0, v1, :cond_3
+    if-ge v0, v1, :cond_6
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_3
+    :cond_6
     iput-boolean v11, v9, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
-    goto :goto_3
+    goto :goto_5
 
-    :cond_4
-    :goto_2
+    :cond_7
+    :goto_4
     iput-boolean v11, v9, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
 
-    goto :goto_3
+    goto :goto_5
 
-    :cond_5
+    :cond_8
     iget-wide v4, v9, Lcom/android/systemui/power/PowerUI;->mTimeRemaining:J
 
     move-object v0, v9
 
-    move/from16 v1, p1
+    move/from16 v1, p2
 
     move v2, v12
 
@@ -1203,21 +1234,21 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_9
 
     iget-object v0, v9, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
     invoke-interface {v0}, Lcom/android/systemui/power/PowerUI$WarningsUI;->dismissLowBatteryWarning()V
 
-    goto :goto_3
+    goto :goto_5
 
-    :cond_6
+    :cond_9
     iget-object v0, v9, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
     invoke-interface {v0}, Lcom/android/systemui/power/PowerUI$WarningsUI;->updateLowBatteryWarning()V
 
-    :cond_7
-    :goto_3
+    :cond_a
+    :goto_5
     return-void
 .end method
 

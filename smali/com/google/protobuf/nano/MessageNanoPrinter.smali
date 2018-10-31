@@ -468,7 +468,6 @@
 
     move-object/from16 v18, v0
 
-    .end local v15    # "arrayType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_4
     move/from16 v19, v7
 
@@ -489,12 +488,9 @@
     :goto_1
     const/16 v16, 0x0
 
-    .local v16, "i":I
     :goto_2
     move/from16 v17, v16
 
-    .end local v16    # "i":I
-    .local v17, "i":I
     move-object/from16 v18, v0
 
     move/from16 v0, v17
@@ -511,8 +507,6 @@
 
     add-int/lit8 v16, v0, 0x1
 
-    .end local v0    # "i":I
-    .restart local v16    # "i":I
     move-object/from16 v0, v18
 
     move/from16 v7, v19
@@ -667,11 +661,6 @@
 
     invoke-static {v12, v7, v3, v4}, Lcom/google/protobuf/nano/MessageNanoPrinter;->print(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/lang/StringBuffer;)V
 
-    .end local v0    # "getter":Ljava/lang/reflect/Method;
-    .end local v10    # "method":Ljava/lang/reflect/Method;
-    .end local v11    # "name":Ljava/lang/String;
-    .end local v12    # "subfieldName":Ljava/lang/String;
-    .end local v13    # "hazzer":Ljava/lang/reflect/Method;
     goto :goto_9
 
     :catch_0
@@ -796,7 +785,6 @@
 
     invoke-static {v8, v9, v3, v4}, Lcom/google/protobuf/nano/MessageNanoPrinter;->print(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/lang/StringBuffer;)V
 
-    .line 187
     const-string v8, "value"
 
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -878,8 +866,6 @@
 
     move-object v1, v0
 
-    .end local v0    # "identifier":Ljava/lang/String;
-    .local v1, "identifier":Ljava/lang/String;
     :goto_d
     return-void
 .end method

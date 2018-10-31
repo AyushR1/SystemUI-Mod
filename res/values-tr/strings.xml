@@ -829,7 +829,6 @@ sessiz"</string>
     <string name="lockscreen_unlock_left">Sol kısayol aynı zamanda kilidi açar</string>
     <string name="lockscreen_unlock_right">Sağ kısayol aynı zamanda kilidi açar</string>
     <string name="manage_notifications_text">Bildirimleri yönet</string>
-    <string name="managed_profile_foreground_toast">İş profilinizi kullanıyorsunuz</string>
     <string name="managed_user_title">Tüm iş uygulamaları</string>
     <string name="media_category">Medya</string>
     <string name="media_projection_action_text">Şimdi başlat</string>

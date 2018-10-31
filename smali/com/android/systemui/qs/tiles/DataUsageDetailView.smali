@@ -170,13 +170,13 @@
 
     cmp-long v5, v10, v12
 
-    const v10, 0x7f110435
+    const v10, 0x7f110434
 
-    const v11, 0x7f110437
+    const v11, 0x7f110436
 
     if-gtz v5, :cond_1
 
-    const v5, 0x7f11043a
+    const v5, 0x7f110439
 
     iget-wide v12, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->limitLevel:J
 
@@ -215,7 +215,7 @@
     goto :goto_1
 
     :cond_1
-    const v5, 0x7f110439
+    const v5, 0x7f110438
 
     iget-wide v6, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->usageLevel:J
 
@@ -263,11 +263,11 @@
 
     :cond_2
     :goto_0
-    const v5, 0x7f110436
+    const v5, 0x7f110435
 
     iget-wide v12, v1, Lcom/android/settingslib/net/DataUsageController$DataUsageInfo;->usageLevel:J
 
-    const v6, 0x7f110438
+    const v6, 0x7f110437
 
     new-array v7, v8, [Ljava/lang/Object;
 
@@ -472,7 +472,7 @@
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    const v0, 0x7f070353
+    const v0, 0x7f070354
 
     const v1, 0x1020016
 
@@ -480,7 +480,7 @@
 
     const v1, 0x7f0a0385
 
-    const v2, 0x7f070354
+    const v2, 0x7f070355
 
     invoke-static {p0, v1, v2}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/view/View;II)V
 

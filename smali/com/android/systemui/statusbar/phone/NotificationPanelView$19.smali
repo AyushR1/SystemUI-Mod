@@ -43,7 +43,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView$19;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$1800(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->access$1900(Lcom/android/systemui/statusbar/phone/NotificationPanelView;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -884,7 +884,6 @@ Try again in %2$d seconds."</string>
     <string name="lockscreen_unlock_left">Left shortcut also unlocks</string>
     <string name="lockscreen_unlock_right">Right shortcut also unlocks</string>
     <string name="manage_notifications_text">Manage notifications</string>
-    <string name="managed_profile_foreground_toast">"You're using your work profile"</string>
     <string name="managed_user_title">All work apps</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Start now</string>
@@ -1270,6 +1269,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="screen_pinning_description">This keeps it in view until you unpin. Touch &amp; hold Back and Overview to unpin.</string>
     <string name="screen_pinning_description_accessible">This keeps it in view until you unpin. Touch &amp; hold Overview to unpin.</string>
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">This keeps it in view until you unpin. Touch &amp; hold fingerprint sensor to unpin.</string>
     <string name="screen_pinning_description_recents_invisible">This keeps it in view until you unpin. Touch &amp; hold Back and Home to unpin.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">This keeps it in view until you unpin. Touch &amp; hold Home to unpin.</string>
     <string name="screen_pinning_exit">Screen unpinned</string>
@@ -1279,6 +1279,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="screen_pinning_title">Screen is pinned</string>
     <string name="screen_pinning_toast">To unpin this screen, touch &amp; hold Back and Overview buttons</string>
     <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">To unpin this screen, touch &amp; hold fingerprint sensor</string>
     <string name="screen_pinning_toast_recents_invisible">To unpin this screen, touch &amp; hold Back and Home buttons</string>
     <string name="screen_zoom_summary_custom">Custom (%d)</string>
     <string name="screen_zoom_summary_default">Default</string>
@@ -1391,7 +1392,7 @@ be monitored"</string>
     <string name="switch_bar_off">Off</string>
     <string name="switch_bar_on">On</string>
     <string name="system_ui_aod_date_pattern">eeeMMMd</string>
-    <string name="system_ui_date_pattern">@android:string/system_ui_date_pattern</string>
+    <string name="system_ui_date_pattern">@android:string/tethered_notification_title</string>
     <string name="system_ui_tuner">System UI Tuner</string>
     <string name="tether_settings_title_all">Tethering &amp; portable hotspot</string>
     <string name="tether_settings_title_bluetooth">Bluetooth tethering</string>
@@ -1594,7 +1595,7 @@ Any user can update apps for all other users."</string>
     <string name="zen_priority_introduction">"You won't be disturbed by sounds and vibrations, except from alarms, reminders, events, and callers you specify. You'll still hear anything you choose to play including music, videos, and games."</string>
     <string name="zen_silence_introduction">This blocks ALL sounds and vibrations, including from alarms, music, videos, and games.</string>
     <string name="zen_silence_introduction_voice">"This blocks ALL sounds and vibrations, including from alarms, music, videos, and games. You'll still be able to make phone calls."</string>
+    <item type="string" name="APKTOOL_DUMMY_3c4">false</item>
     <item type="string" name="APKTOOL_DUMMY_3c5">false</item>
-    <item type="string" name="APKTOOL_DUMMY_3c6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_4fe">false</item>
+    <item type="string" name="APKTOOL_DUMMY_4ff">false</item>
 </resources>

@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;->mItems:Lcom/android/systemui/qs/QSDetailItems;
 
-    const v2, 0x7f110424
+    const v2, 0x7f110423
 
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/qs/QSDetailItems;->setEmptyState(II)V
 
@@ -191,7 +191,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f11043e
+    const v11, 0x7f11043d
 
     new-array v12, v9, [Ljava/lang/Object;
 
@@ -218,7 +218,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f11043d
+    const v11, 0x7f11043c
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -248,7 +248,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f11043f
+    const v9, 0x7f11043e
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -363,7 +363,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110425
+    const v1, 0x7f110424
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

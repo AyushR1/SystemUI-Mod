@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -81,7 +81,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     const/4 v1, 0x0
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v3, v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->animateCollapsePanels(I)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     const-string v1, "android.intent.action.SCREEN_OFF"
@@ -127,7 +127,7 @@
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->resetUserExpandedStates()V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     const-string v1, "android.app.action.SHOW_DEVICE_MONITORING_DIALOG"
@@ -146,7 +146,7 @@
 
     invoke-virtual {v1}, Lcom/android/systemui/qs/QSPanel;->showDeviceMonitoringDialog()V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
     const-string v1, "android.intent.action.SCREEN_CAMERA_GESTURE"
@@ -154,6 +154,8 @@
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
+
+    const/4 v2, 0x1
 
     if-eqz v1, :cond_7
 
@@ -165,22 +167,23 @@
 
     move-result-object v1
 
-    const-string v2, "user_setup_complete"
+    const-string v3, "user_setup_complete"
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v1, v3, v4}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    const/4 v3, 0x1
-
-    nop
+    goto :goto_0
 
     :cond_5
-    move v1, v3
+    move v2, v4
+
+    :goto_0
+    move v1, v2
 
     if-nez v1, :cond_6
 
@@ -193,7 +196,38 @@
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBar;->onCameraLaunchGestureDetected(I)V
 
+    goto :goto_1
+
     :cond_7
-    :goto_0
+    const-string v1, "com.android.systemui.ACTION_DISMISS_KEYGUARD"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "launch"
+
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "launch"
+
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Intent;
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/StatusBar$10;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v3, v1, v2, v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->startActivityDismissingKeyguard(Landroid/content/Intent;ZZ)V
+
+    :cond_8
+    :goto_1
     return-void
 .end method

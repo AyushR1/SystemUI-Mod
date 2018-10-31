@@ -946,7 +946,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040209
+    const v2, 0x104020d
 
     const/4 v3, 0x1
 
@@ -966,7 +966,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040208
+    const v4, 0x104020c
 
     new-array v5, v3, [Ljava/lang/Object;
 
@@ -1141,7 +1141,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v6, 0x10401f1
+    const v6, 0x10401f5
 
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1149,7 +1149,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v7, 0x10401f0
+    const v7, 0x10401f4
 
     new-array v8, v5, [Ljava/lang/Object;
 
@@ -1164,7 +1164,7 @@
     :cond_1
     iget-object v3, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v6, 0x10401ee
+    const v6, 0x10401f2
 
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1172,7 +1172,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v7, 0x10401ed
+    const v7, 0x10401f1
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1315,7 +1315,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v3, 0x10401ef
+    const v3, 0x10401f3
 
     new-array v4, v2, [Ljava/lang/Object;
 
@@ -1332,7 +1332,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v3, 0x10401f2
+    const v3, 0x10401f6
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1677,7 +1677,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v2, 0x10401e6
+    const v2, 0x10401ea
 
     const/4 v3, 0x1
 
@@ -1697,7 +1697,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v4, 0x10401e5
+    const v4, 0x10401e9
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -1749,7 +1749,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x10401e9
+    const v4, 0x10401ed
 
     invoke-virtual {v1, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1765,7 +1765,7 @@
 
     aput-object v6, v4, v5
 
-    const v5, 0x10401e8
+    const v5, 0x10401ec
 
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1813,7 +1813,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x1040207
+    const v4, 0x104020b
 
     invoke-virtual {v1, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1829,7 +1829,7 @@
 
     aput-object v6, v4, v5
 
-    const v5, 0x1040206
+    const v5, 0x104020a
 
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1902,7 +1902,7 @@
 
     move-result v2
 
-    const v3, 0x1040203
+    const v3, 0x1040207
 
     const v4, 0x108035d
 
@@ -1924,7 +1924,7 @@
 
     iget-object v7, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v8, 0x10401f3
+    const v8, 0x10401f7
 
     new-array v6, v6, [Ljava/lang/Object;
 
@@ -1952,7 +1952,7 @@
 
     iget-object v10, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v11, 0x10401ea
+    const v11, 0x10401ee
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2011,7 +2011,7 @@
 
     iget-object v7, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v8, 0x10401f7
+    const v8, 0x10401fb
 
     new-array v9, v6, [Ljava/lang/Object;
 
@@ -2039,7 +2039,7 @@
 
     iget-object v11, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v12, 0x10401e7
+    const v12, 0x10401eb
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2132,7 +2132,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v2, 0x10401f6
+    const v2, 0x10401fa
 
     const/4 v3, 0x1
 
@@ -2152,7 +2152,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v4, 0x10401f5
+    const v4, 0x10401f9
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -2233,7 +2233,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x1040205
+    const v4, 0x1040209
 
     invoke-virtual {v1, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2249,7 +2249,7 @@
 
     aput-object v4, v2, v5
 
-    const v4, 0x1040204
+    const v4, 0x1040208
 
     invoke-virtual {v3, v4, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2373,7 +2373,7 @@
     :cond_4
     iget-object v7, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v8, 0x10401ec
+    const v8, 0x10401f0
 
     new-array v9, v4, [Ljava/lang/Object;
 
@@ -2391,7 +2391,7 @@
 
     iget-object v8, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
-    const v9, 0x10401eb
+    const v9, 0x10401ef
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

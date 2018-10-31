@@ -828,7 +828,6 @@
     <string name="lockscreen_unlock_left">Комбінація клавіш ліворуч також розблоковує</string>
     <string name="lockscreen_unlock_right">Комбінація клавіш праворуч також розблоковує</string>
     <string name="manage_notifications_text">Керувати сповіщеннями</string>
-    <string name="managed_profile_foreground_toast">Ви в робочому профілі</string>
     <string name="managed_user_title">Усі робочі додатки</string>
     <string name="media_category">Медіа</string>
     <string name="media_projection_action_text">Почати зараз</string>
@@ -1186,6 +1185,7 @@
     <string name="saved_network">Збережено додатком %1$s</string>
     <string name="screen_pinning_description">Ви постійно бачитимете екран, доки не відкріпите його. Щоб відкріпити екран, натисніть і втримуйте кнопки \"Назад\" та \"Огляд\".</string>
     <string name="screen_pinning_description_accessible">Ви постійно бачитимете екран, доки не відкріпите його. Щоб відкріпити екран, натисніть і втримуйте кнопку \"Огляд\".</string>
+    <string name="screen_pinning_description_no_navbar">Ви постійно бачитимете екран, доки не відкріпите його. Щоб відкріпити екран, натисніть &amp; і утримуйте кнопку \"Назад\".</string>
     <string name="screen_pinning_description_recents_invisible">Ви бачитимете цей екран, доки не відкріпите його. Для цього натисніть і утримуйте кнопки \"Назад\" та \"Головний екран\".</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Ви бачитимете цей екран, доки не відкріпите його. Для цього натисніть і утримуйте кнопку \"Головний екран\".</string>
     <string name="screen_pinning_exit">Екран відкріплено</string>
@@ -1194,6 +1194,7 @@
     <string name="screen_pinning_start">Екран закріплено</string>
     <string name="screen_pinning_title">Екран закріплено</string>
     <string name="screen_pinning_toast">Щоб відкріпити цей екран, натисніть і утримуйте кнопки \"Назад\" та \"Огляд\"</string>
+    <string name="screen_pinning_toast_no_navbar">Щоб відкріпити цей екран, натисніть &amp; і утримуйте кнопку \"Назад\"</string>
     <string name="screen_pinning_toast_recents_invisible">Щоб відкріпити цей екран, натисніть і утримуйте кнопки \"Назад\" та \"Головний екран\"</string>
     <string name="screen_zoom_summary_custom">Спеціальний масштаб (%d)</string>
     <string name="screen_zoom_summary_default">За умовчанням</string>

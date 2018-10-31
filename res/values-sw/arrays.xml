@@ -24,28 +24,28 @@
     </string-array>
     <string-array name="battery_options">
         <item>Onyesha asilimia kila wakati</item>
-        <item>Onyesha asilimia wakati inachaji (chaguo msingi)</item>
+        <item>Onyesha asilimia wakati inachaji (chaguomsingi)</item>
         <item>Usionyeshe aikoni hii</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>Biti 16 kwa kila sampuli</item>
         <item>Biti 24 kwa kila sampuli</item>
         <item>Biti 32 kwa kila sampuli</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>Biti 16 kwa kila sampuli</item>
         <item>Biti 24 kwa kila sampuli</item>
         <item>Biti 32 kwa kila sampuli</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>Mono</item>
         <item>Stereo</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>Mono</item>
         <item>Stereo</item>
     </string-array>
@@ -62,21 +62,21 @@
         <item>Kazi Bora Zaidi (Kasi Maalum ya Biti)</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>kHz 44.1</item>
         <item>kHz 48.0</item>
         <item>kHz 88.2</item>
         <item>kHz 96.0</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>kHz 44.1</item>
         <item>kHz 48.0</item>
         <item>kHz 88.2</item>
         <item>kHz 96.0</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_summaries">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>SBC</item>
         <item>AAC</item>
         <item>Sauti ya Qualcomm® aptX™</item>
@@ -86,7 +86,7 @@
         <item>Zima Kodeki Zisizo za Lazima</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
-        <item>Tumia Uteuzi wa Mfumo (Chaguo msingi)</item>
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
         <item>SBC</item>
         <item>AAC</item>
         <item>Sauti ya Qualcomm® aptX™</item>
@@ -108,14 +108,14 @@
         <item>avrcp16</item>
     </string-array>
     <string-array name="bluetooth_avrcp_versions">
-        <item>AVRCP 1.4 (Chaguo msingi)</item>
+        <item>AVRCP 1.4 (Chaguomsingi)</item>
         <item>AVRCP 1.3</item>
         <item>AVRCP 1.5</item>
         <item>AVRCP 1.6</item>
     </string-array>
     <string-array name="clock_options">
         <item>Onyesha saa, dakika na sekunde</item>
-        <item>Onyesha saa na dakika (chaguo msingi)</item>
+        <item>Onyesha saa na dakika (chaguomsingi)</item>
         <item>Usionyeshe aikoni hii</item>
     </string-array>
     <string-array name="color_mode_descriptions">
@@ -124,7 +124,7 @@
         <item>Rangi zilizoboreshwa kwa ajili ya maudhui dijitali</item>
     </string-array>
     <string-array name="color_mode_names">
-        <item>Maridadi (chaguo msingi)</item>
+        <item>Maridadi (chaguomsingi)</item>
         <item>Asili</item>
         <item>Muundo-msingi</item>
     </string-array>

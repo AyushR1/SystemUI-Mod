@@ -25,7 +25,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v1, 0x7f1104c0
+    const v1, 0x7f1104c1
 
     invoke-static {p1, v0, v1}, Lcom/android/systemui/screenshot/GlobalScreenshot;->notifyScreenshotError(Landroid/content/Context;Landroid/app/NotificationManager;I)V
 

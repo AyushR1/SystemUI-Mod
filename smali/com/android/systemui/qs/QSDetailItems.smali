@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07035e
+    const v1, 0x7f07035f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -356,7 +356,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSDetailItems;->mEmptyText:Landroid/widget/TextView;
 
-    const v1, 0x7f070359
+    const v1, 0x7f07035a
 
     invoke-static {v0, v1}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
 
@@ -379,13 +379,13 @@
 
     const v3, 0x1020016
 
-    const v4, 0x7f070367
+    const v4, 0x7f070368
 
     invoke-static {v2, v3, v4}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/view/View;II)V
 
     const v3, 0x1020010
 
-    const v4, 0x7f070368
+    const v4, 0x7f070369
 
     invoke-static {v2, v3, v4}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/view/View;II)V
 

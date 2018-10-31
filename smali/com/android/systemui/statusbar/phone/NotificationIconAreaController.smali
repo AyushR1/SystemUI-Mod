@@ -11,6 +11,10 @@
 
 .field private final mEntryManager:Lcom/android/systemui/statusbar/NotificationEntryManager;
 
+.field private mFullyDark:Z
+
+.field private mHasShelfIconsWhenFullyDark:Z
+
 .field private mIconHPadding:I
 
 .field private mIconSize:I
@@ -161,7 +165,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateNotificationIcons$0(Lcom/android/systemui/statusbar/NotificationData$Entry;)Lcom/android/systemui/statusbar/StatusBarIconView;
+.method static synthetic lambda$updateShelfIcons$0(Lcom/android/systemui/statusbar/NotificationData$Entry;)Lcom/android/systemui/statusbar/StatusBarIconView;
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationData$Entry;->expandedIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
@@ -184,7 +188,7 @@
 
     move-result-object v0
 
-    const v1, 0x10501a1
+    const v1, 0x10501a4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -192,13 +196,73 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconSize:I
 
-    const v1, 0x7f070410
+    const v1, 0x7f070412
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconHPadding:I
+
+    return-void
+.end method
+
+.method private updateHasShelfIconsWhenFullyDark()V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->getChildCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_1
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationScrollLayout:Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lcom/android/systemui/statusbar/ExpandableNotificationRow;
+
+    if-eqz v4, :cond_0
+
+    move-object v4, v3
+
+    check-cast v4, Lcom/android/systemui/statusbar/ExpandableNotificationRow;
+
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/NotificationData$Entry;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    invoke-virtual {p0, v4, v5, v1, v5}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->shouldShowNotificationIcon(Lcom/android/systemui/statusbar/NotificationData$Entry;ZZZ)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mHasShelfIconsWhenFullyDark:Z
 
     return-void
 .end method
@@ -625,6 +689,26 @@
     return-void
 .end method
 
+.method private updateShelfIcons()V
+    .locals 6
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$W546afVFGfbH0G5bFIpHUIVQOhU;->INSTANCE:Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$W546afVFGfbH0G5bFIpHUIVQOhU;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mFullyDark:Z
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateIconsForLayout(Ljava/util/function/Function;Lcom/android/systemui/statusbar/phone/NotificationIconContainer;ZZZ)V
+
+    return-void
+.end method
+
 .method private updateTintForIcon(Lcom/android/systemui/statusbar/StatusBarIconView;)V
     .locals 5
 
@@ -704,6 +788,14 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
 
     return-object v0
+.end method
+
+.method public hasShelfIconsWhenFullyDark()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mHasShelfIconsWhenFullyDark:Z
+
+    return v0
 .end method
 
 .method protected inflateIconArea(Landroid/view/LayoutInflater;)Landroid/view/View;
@@ -863,6 +955,16 @@
     return-void
 .end method
 
+.method public setFullyDark(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mFullyDark:Z
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateShelfIcons()V
+
+    return-void
+.end method
+
 .method public setIsolatedIconLocation(Landroid/graphics/Rect;Z)V
     .locals 1
 
@@ -992,23 +1094,13 @@
 .end method
 
 .method public updateNotificationIcons()V
-    .locals 6
+    .locals 0
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateStatusBarIcons()V
 
-    sget-object v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$UqZBoYLzFV9iQ2ZKXh5_vFY0A6w;->INSTANCE:Lcom/android/systemui/statusbar/phone/-$$Lambda$NotificationIconAreaController$UqZBoYLzFV9iQ2ZKXh5_vFY0A6w;
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateShelfIcons()V
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mShelfIcons:Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateIconsForLayout(Ljava/util/function/Function;Lcom/android/systemui/statusbar/phone/NotificationIconContainer;ZZZ)V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->updateHasShelfIconsWhenFullyDark()V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->applyNotificationIconsTint()V
 

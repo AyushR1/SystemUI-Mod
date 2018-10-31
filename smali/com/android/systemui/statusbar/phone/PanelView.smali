@@ -2353,7 +2353,7 @@
 
     iput v2, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mTouchSlop:I
 
-    const v2, 0x7f07017d
+    const v2, 0x7f07017f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -2361,7 +2361,7 @@
 
     iput v2, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mHintDistance:F
 
-    const v2, 0x7f070433
+    const v2, 0x7f070435
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

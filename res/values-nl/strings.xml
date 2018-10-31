@@ -684,7 +684,7 @@ prioriteit"</string>
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • Opladen (vol over %s)</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • Snel opladen (vol over %s)</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • Langzaam opladen (vol over %s)</string>
-    <string name="keyguard_indication_dash_charging_time">Dash Charging (%s tot vol)</string>
+    <string name="keyguard_indication_dash_charging_time">Snel opladen (%s tot volledig opgeladen)</string>
     <string name="keyguard_indication_trust_disabled">Het apparaat blijft vergrendeld totdat u het handmatig ontgrendelt</string>
     <string name="keyguard_indication_trust_granted">Ontgrendeld voor %1$s</string>
     <string name="keyguard_indication_trust_managed">%1$s is actief</string>
@@ -829,7 +829,6 @@ Probeer het over %2$d seconden opnieuw."</string>
     <string name="lockscreen_unlock_left">Snelkoppeling links ontgrendelt ook</string>
     <string name="lockscreen_unlock_right">Snelkoppeling rechts ontgrendelt ook</string>
     <string name="manage_notifications_text">Meldingen beheren</string>
-    <string name="managed_profile_foreground_toast">Je gebruikt je werkprofiel</string>
     <string name="managed_user_title">Alle werk-apps</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Nu starten</string>
@@ -1187,6 +1186,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="saved_network">"Opgeslagen door '%1$s'"</string>
     <string name="screen_pinning_description">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Terug en Overzicht en houd deze vast om het scherm los te maken.</string>
     <string name="screen_pinning_description_accessible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Overzicht en houd dit vast om het scherm los te maken.</string>
+    <string name="screen_pinning_description_no_navbar">"Het scherm blijft zichtbaar totdat je het losmaakt. Houd 'Terug' ingedrukt om het los te maken."</string>
     <string name="screen_pinning_description_recents_invisible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Terug en Home en houd deze vast om het scherm los te maken.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Home en houd dit vast om het scherm los te maken.</string>
     <string name="screen_pinning_exit">Scherm losgemaakt</string>
@@ -1195,6 +1195,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="screen_pinning_start">Scherm vastgezet</string>
     <string name="screen_pinning_title">Scherm is vastgezet</string>
     <string name="screen_pinning_toast">Tik op Terug en Overzicht en houd deze knoppen vast om dit scherm los te maken</string>
+    <string name="screen_pinning_toast_no_navbar">Blijf de Terug-knop aanraken om dit scherm los te maken</string>
     <string name="screen_pinning_toast_recents_invisible">Tik op Terug en Home en houd deze knoppen vast om dit scherm los te maken</string>
     <string name="screen_zoom_summary_custom">Aangepast (%d)</string>
     <string name="screen_zoom_summary_default">Standaard</string>
@@ -1323,7 +1324,7 @@ Je telefoon kan warm worden als je:
     <string name="title_usb_accessory">USB-accessoire</string>
     <string name="touch_filtered_warning">Aangezien een app een toestemmingsverzoek afdekt, kan Instellingen je reactie niet verifiëren.</string>
     <string name="track_frame_time">GPU-rendering van profiel</string>
-    <string name="transition_animation_scale_title">Overgangsanimatieschaal</string>
+    <string name="transition_animation_scale_title">Overgangs­animatieschaal</string>
     <string name="tts_default_lang_summary">De taalspecifieke stem voor de gesproken tekst instellen</string>
     <string name="tts_default_lang_title">Taal</string>
     <string name="tts_default_pitch_summary">Is van invloed op de toon van de synthetisch gegenereerde spraak</string>
@@ -1460,7 +1461,7 @@ Elke gebruiker kan apps updaten voor alle andere gebruikers."</string>
     <string name="wifi_unmetered_label">Gratis</string>
     <string name="wifi_verbose_logging">Uitgebreide wifi-logregistratie insch.</string>
     <string name="wifi_verbose_logging_summary">Logniveau voor wifi verhogen, weergeven per SSID RSSI in wifi-kiezer</string>
-    <string name="window_animation_scale_title">Vensteranimatieschaal</string>
+    <string name="window_animation_scale_title">Venster­animatieschaal</string>
     <string name="zen_alarm_warning">Je hoort je volgende wekker niet %1$s</string>
     <string name="zen_alarm_warning_indef">Je hoort je volgende wekker niet %1$s tenzij je dit voor die tijd uitschakelt</string>
     <string name="zen_alarms_introduction">"Je wordt niet gestoord door geluiden en trillingen, behalve bij wekkers. Je kunt nog steeds alles horen wat je wilt afspelen, waaronder muziek, video's en games."</string>

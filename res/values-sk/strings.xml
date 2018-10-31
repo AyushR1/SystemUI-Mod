@@ -828,7 +828,6 @@ Skúste to znova o %2$d s."</string>
     <string name="lockscreen_unlock_left">Ľavá skratka tiež odomkne</string>
     <string name="lockscreen_unlock_right">Pravá skratka tiež odomkne</string>
     <string name="manage_notifications_text">Spravovať upozornenia</string>
-    <string name="managed_profile_foreground_toast">Používate svoj pracovný profil.</string>
     <string name="managed_user_title">Všetky pracovné aplikácie</string>
     <string name="media_category">Médiá</string>
     <string name="media_projection_action_text">Spustiť</string>

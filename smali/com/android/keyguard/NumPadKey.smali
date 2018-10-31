@@ -256,7 +256,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/NumPadKey;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f08038a
+    const v3, 0x7f080389
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

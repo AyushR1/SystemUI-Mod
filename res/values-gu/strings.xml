@@ -825,7 +825,6 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="lockscreen_unlock_left">ડાબો શૉર્ટકટ પણ અનલૉક કરે છે</string>
     <string name="lockscreen_unlock_right">જમણો શૉર્ટકટ પણ અનલૉક કરે છે</string>
     <string name="manage_notifications_text">સૂચનાઓને મેનેજ કરો</string>
-    <string name="managed_profile_foreground_toast">તમે તમારી કાર્ય પ્રોફાઇલનો ઉપયોગ કરી રહ્યાં છો</string>
     <string name="managed_user_title">તમામ કાર્ય અ‍ૅપ્લિકેશનો</string>
     <string name="media_category">મીડિયા</string>
     <string name="media_projection_action_text">હવે પ્રારંભ કરો</string>

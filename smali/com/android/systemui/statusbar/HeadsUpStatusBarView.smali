@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070319
+    const v1, 0x7f07031a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -239,7 +239,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070386
+    const v1, 0x7f070387
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -669,34 +669,10 @@
 .end method
 
 .method public setPanelTranslation(F)V
-    .locals 1
+    .locals 0
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->isLayoutRtl()Z
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->setTranslationX(F)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mCutOutInset:I
-
-    int-to-float v0, v0
-
-    add-float/2addr v0, p1
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->setTranslationX(F)V
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mCutOutInset:I
-
-    int-to-float v0, v0
-
-    sub-float v0, p1, v0
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->setTranslationX(F)V
-
-    :goto_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->updateDrawingRect()V
 
     return-void

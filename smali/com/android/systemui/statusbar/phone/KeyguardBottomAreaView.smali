@@ -39,6 +39,8 @@
 
 .field private mBurnInXOffset:I
 
+.field private mBurnInYOffset:I
+
 .field private mCameraPreview:Landroid/view/View;
 
 .field private mDarkAmount:F
@@ -1276,7 +1278,7 @@
 .end method
 
 .method public dozeTimeTick()V
-    .locals 5
+    .locals 7
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDarkAmount:F
 
@@ -1292,23 +1294,37 @@
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
 
-    int-to-float v2, v0
+    neg-int v1, v1
+
+    int-to-double v1, v1
 
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v3
 
-    double-to-float v3, v3
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
 
-    const/high16 v4, 0x40a00000    # 5.0f
+    int-to-double v5, v5
 
-    mul-float/2addr v3, v4
+    mul-double/2addr v3, v5
 
-    add-float/2addr v2, v3
+    const-wide/high16 v5, 0x4000000000000000L    # 2.0
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setTranslationY(F)V
+    mul-double/2addr v3, v5
+
+    add-double/2addr v1, v3
+
+    double-to-int v1, v1
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
+
+    add-int v3, v0, v1
+
+    int-to-float v3, v3
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     :cond_0
     return-void
@@ -1733,7 +1749,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070190
+    const v1, 0x7f070192
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1745,13 +1761,25 @@
 
     move-result-object v0
 
-    const v1, 0x7f070191
+    const v1, 0x7f070193
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMarginAmbient:I
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f07010a
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
 
@@ -1782,7 +1810,7 @@
 
     move-result-object v2
 
-    const v3, 0x10501b8
+    const v3, 0x10501bb
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1818,7 +1846,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07018a
+    const v3, 0x7f07018c
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1830,7 +1858,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f070185
+    const v4, 0x7f070187
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2064,7 +2092,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070190
+    const v1, 0x7f070192
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2076,13 +2104,25 @@
 
     move-result-object v0
 
-    const v1, 0x7f070191
+    const v1, 0x7f070193
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMarginAmbient:I
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f07010a
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->updateCameraVisibility()V
 
@@ -2350,7 +2390,7 @@
 .end method
 
 .method public setDarkAmount(F)V
-    .locals 6
+    .locals 4
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDarkAmount:F
 
@@ -2363,56 +2403,21 @@
     :cond_0
     iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDarkAmount:F
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
 
-    cmpl-float v1, p1, v0
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    if-nez v1, :cond_1
+    const v2, 0x3f333333    # 0.7f
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f070191
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v1, v2, p1}, Landroid/util/MathUtils;->lerp(FFF)F
 
     move-result v1
 
-    invoke-static {}, Ljava/lang/Math;->random()D
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    move-result-wide v2
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationText:Landroid/widget/TextView;
-
-    invoke-virtual {v4}, Landroid/widget/TextView;->getTextSize()F
-
-    move-result v4
-
-    float-to-double v4, v4
-
-    mul-double/2addr v2, v4
-
-    double-to-int v2, v2
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMarginAmbient:I
-
-    :cond_1
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const v3, 0x3f333333    # 0.7f
-
-    invoke-static {v2, v3, p1}, Landroid/util/MathUtils;->lerp(FFF)F
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setAlpha(F)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
+    const/4 v1, 0x0
 
     iget v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
 
@@ -2422,11 +2427,11 @@
 
     int-to-float v2, v2
 
-    invoke-static {v0, v2, p1}, Landroid/util/MathUtils;->lerp(FFF)F
+    invoke-static {v1, v2, p1}, Landroid/util/MathUtils;->lerp(FFF)F
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setTranslationY(F)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     return-void
 .end method

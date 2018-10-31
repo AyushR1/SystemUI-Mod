@@ -398,7 +398,7 @@ Seleção"</string>
     <string name="branded_monitoring_description_app_personal">Você está conectado a %1$s, que pode monitorar sua atividade pessoal na rede, incluindo e-mails, apps e websites.</string>
     <string name="branded_vpn_footer">A rede pode ser monitorada</string>
     <string name="broadcast_tile">Transmitir bloco</string>
-    <string name="bt_hci_snoop_log">Ativar log de rastreamento Bluetooth HCI</string>
+    <string name="bt_hci_snoop_log">Ativar registro de rastreamento Bluetooth HCI</string>
     <string name="bt_hci_snoop_log_summary">Capturar todos os pacotes Bluetooth HCI em um arquivo (ative o Bluetooth depois de alterar esta configuração)</string>
     <string name="bt_is_off">Bluetooth desativado</string>
     <string name="bugreport_in_power">Atalho para relatório do bug</string>
@@ -625,7 +625,7 @@ prioridade"</string>
     <string name="invalid_charger_text">Usar o carregador que acompanha o dispositivo</string>
     <string name="invalid_charger_title">Não é possível carregar via USB</string>
     <string name="keep_screen_on">Permanecer ativo</string>
-    <string name="keep_screen_on_summary">A tela nunca entrará em inatividade enquanto estiver carregando.</string>
+    <string name="keep_screen_on_summary">A tela nunca entrará em suspensão enquanto estiver carregando.</string>
     <string name="keyboard_key_back">Voltar</string>
     <string name="keyboard_key_backspace">Barra de espaço</string>
     <string name="keyboard_key_button_template">Botão %1$s</string>
@@ -828,7 +828,6 @@ Tente novamente em %2$d segundos."</string>
     <string name="lockscreen_unlock_left">O atalho à esquerda também desbloqueia</string>
     <string name="lockscreen_unlock_right">O atalho à direita também desbloqueia</string>
     <string name="manage_notifications_text">Gerenciar notificações</string>
-    <string name="managed_profile_foreground_toast">Você está usando seu perfil de trabalho</string>
     <string name="managed_user_title">Todos os apps de trabalho</string>
     <string name="media_category">Mídia</string>
     <string name="media_projection_action_text">Iniciar agora</string>
@@ -1213,7 +1212,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="screenshot_saving_title">Salvando captura de tela...</string>
     <string name="search_menu_title">Pesquisar</string>
     <string name="select_application">Selecionar app</string>
-    <string name="select_logd_size_dialog_title">Sel. tam. de logger/buffer de log</string>
+    <string name="select_logd_size_dialog_title">Sel. tam. de logger/buffer de registro</string>
     <string name="select_logd_size_title">Tamanhos de buffer de logger</string>
     <string name="select_logpersist_dialog_title">Selecionar buffers de registro para armazenar constantemente no dispositivo</string>
     <string name="select_logpersist_title">Armazenar dados de logger constantemente no dispositivo</string>

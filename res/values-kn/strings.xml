@@ -825,7 +825,6 @@
     <string name="lockscreen_unlock_left">ಎಡ ಶಾರ್ಟ್‌ಕಟ್ ಕೂಡ ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ</string>
     <string name="lockscreen_unlock_right">ಬಲ ಶಾರ್ಟ್‌ಕಟ್ ಕೂಡ ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ</string>
     <string name="manage_notifications_text">ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
-    <string name="managed_profile_foreground_toast">ನಿಮ್ಮ ಕೆಲಸದ ಪ್ರೊಫೈಲ್‌ ಅನ್ನು ನೀವು ಬಳಸುತ್ತಿರುವಿರಿ</string>
     <string name="managed_user_title">ಎಲ್ಲ ಕೆಲಸದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
     <string name="media_category">ಮಾಧ್ಯಮ</string>
     <string name="media_projection_action_text">ಈಗ ಪ್ರಾರಂಭಿಸಿ</string>

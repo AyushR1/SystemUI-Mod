@@ -417,7 +417,7 @@
 
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/ExpandableOutlineView;->mShouldTranslateContents:Z
 
-    const v1, 0x7f070317
+    const v1, 0x7f070318
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 

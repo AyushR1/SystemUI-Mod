@@ -770,7 +770,7 @@ pekee"</string>
     <string name="kg_wrong_pin">Nambari ya PIN si sahihi</string>
     <string name="label_view">Ona</string>
     <string name="launch_defaults_none">Hakuna chaguo-misingi zilizowekwa</string>
-    <string name="launch_defaults_some">Baadhi ya chaguo msingi zimewekwa</string>
+    <string name="launch_defaults_some">Baadhi ya chaguomsingi zimewekwa</string>
     <string name="lb_control_display_fast_forward_multiplier">X%1$d</string>
     <string name="lb_control_display_rewind_multiplier">X%1$d</string>
     <string name="lb_guidedaction_continue_title">Endelea</string>
@@ -825,7 +825,6 @@ pekee"</string>
     <string name="lockscreen_unlock_left">Njia ya mkato ya kushoto pia inafungua</string>
     <string name="lockscreen_unlock_right">Njia ya mkato ya kulia pia inafungua</string>
     <string name="manage_notifications_text">Dhibiti arifa</string>
-    <string name="managed_profile_foreground_toast">Unatumia wasifu wako wa kazini</string>
     <string name="managed_user_title">Programu zote za kazini</string>
     <string name="media_category">Vyombo vya Habari</string>
     <string name="media_projection_action_text">Anza sasa</string>
@@ -920,7 +919,7 @@ Umeunganishwa pia kwenye VPN, ambayo inaweza kufuatilia shughuli zako mtandaoni.
     <string name="mr_system_route_name">Mfumo</string>
     <string name="mr_user_route_category_name">Vifaa</string>
     <string name="nav_bar">Sehemu ya viungo muhimu</string>
-    <string name="nav_bar_default">(chaguo msingi)</string>
+    <string name="nav_bar_default">(chaguomsingi)</string>
     <string name="nav_bar_layout">Mpangilio</string>
     <string name="no_application">Hakuna chochote</string>
     <string name="no_auto_saver_action">Hapana, asante</string>
@@ -1193,7 +1192,7 @@ Umeunganishwa pia kwenye VPN, ambayo inaweza kufuatilia shughuli zako mtandaoni.
     <string name="screen_pinning_toast">Ili ubandue skrini hii, gusa na ushikilie kitufe cha Nyuma na Muhtasari</string>
     <string name="screen_pinning_toast_recents_invisible">Ili ubandue skrini hii, gusa na ushikilie vitufe vya Nyuma na Mwanzo</string>
     <string name="screen_zoom_summary_custom">Kiwango maalum (%d)</string>
-    <string name="screen_zoom_summary_default">Chaguo msingi</string>
+    <string name="screen_zoom_summary_default">Chaguomsingi</string>
     <string name="screen_zoom_summary_extremely_large">Kubwa zaidi</string>
     <string name="screen_zoom_summary_large">Kubwa</string>
     <string name="screen_zoom_summary_small">Ndogo</string>
@@ -1339,7 +1338,7 @@ Simu yako inaweza kuwa moto sana ikiwa:
     <string name="tts_lang_use_system">Tumia lugha ya mfumo</string>
     <string name="tts_play_example_summary">Cheza onyesho fupi la usanisi usemaji</string>
     <string name="tts_play_example_title">Sikiliza mfano</string>
-    <string name="tts_reset_speech_pitch_summary">Rejesha mipangilio ya ubora wa matamshi kuwa ya chaguo msingi.</string>
+    <string name="tts_reset_speech_pitch_summary">Rejesha mipangilio ya ubora wa matamshi kuwa ya chaguomsingi.</string>
     <string name="tts_reset_speech_pitch_title">Weka upya mipangilio ya ubora wa matamshi</string>
     <string name="tts_settings">Mipangilio ya kusoma maandishi kwa sauti</string>
     <string name="tts_settings_title">Kusoma maandishi kwa sauti</string>
@@ -1347,7 +1346,7 @@ Simu yako inaweza kuwa moto sana ikiwa:
     <string name="tts_status_not_supported">%1$s haiwezi kutumiwa</string>
     <string name="tts_status_ok">%1$s inaweza kutumiwa kikamilifu</string>
     <string name="tts_status_requires_network">%1$s inahitaji muunganisho wa mtandao</string>
-    <string name="tts_status_title">Hali ya lugha chaguo msingi</string>
+    <string name="tts_status_title">Hali ya lugha chaguomsingi</string>
     <string name="tuner_app">Programu ya %1$s</string>
     <string name="tuner_circle">Mduara</string>
     <string name="tuner_full_importance_settings">Udhibiti wa arifa</string>

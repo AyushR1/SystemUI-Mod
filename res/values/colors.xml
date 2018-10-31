@@ -288,8 +288,10 @@
     <color name="qs_tile_disabled_color">#ff9e9e9e</color>
     <color name="qs_tile_divider">#29ffffff</color>
     <color name="qs_user_detail_icon_muted">#ffffffff</color>
-    <color name="quick_step_track_background_dark">#61000000</color>
-    <color name="quick_step_track_background_light">#33ffffff</color>
+    <color name="quick_step_track_background_background_dark">#1f000000</color>
+    <color name="quick_step_track_background_background_light">#33ffffff</color>
+    <color name="quick_step_track_background_foreground_dark">#38000000</color>
+    <color name="quick_step_track_background_foreground_light">#59ffffff</color>
     <color name="recents_clear_all_button_bg_dark_color">#cc000000</color>
     <color name="recents_clear_all_button_bg_light_color">#ccffffff</color>
     <color name="recents_freeform_workspace_bg_color">#33ffffff</color>

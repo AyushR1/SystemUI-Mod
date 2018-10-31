@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/systemui/ScreenDecorations$RestartingPreDrawListener;,
         Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;,
         Lcom/android/systemui/ScreenDecorations$TunablePaddingTagListener;
     }
@@ -22,6 +23,10 @@
 # instance fields
 .field private mBottomOverlay:Landroid/view/View;
 
+.field private mCutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+.field private mCutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
 .field private mDensity:F
 
 .field private mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
@@ -30,13 +35,15 @@
 
 .field private mOverlay:Landroid/view/View;
 
+.field private mPendingRotationChange:Z
+
 .field private mRotation:I
 
-.field private mRoundedDefault:I
+.field protected mRoundedDefault:I
 
-.field private mRoundedDefaultBottom:I
+.field protected mRoundedDefaultBottom:I
 
-.field private mRoundedDefaultTop:I
+.field protected mRoundedDefaultTop:I
 
 .field private mWindowManager:Landroid/view/WindowManager;
 
@@ -78,6 +85,46 @@
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic access$200(Lcom/android/systemui/ScreenDecorations;)I
+    .locals 1
+
+    iget v0, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
+
+    return v0
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/ScreenDecorations;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
+
+    return v0
+.end method
+
+.method static synthetic access$302(Lcom/android/systemui/ScreenDecorations;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
+
+    return p1
+.end method
+
+.method static synthetic access$500(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$600(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
     return-object v0
 .end method
@@ -202,7 +249,7 @@
 .end method
 
 .method private setupDecorations()V
-    .locals 13
+    .locals 7
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
 
@@ -230,155 +277,153 @@
 
     const/4 v5, 0x1
 
-    invoke-direct {v0, v3, v5, v4}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;-><init>(Landroid/content/Context;ZLjava/lang/Runnable;)V
+    invoke-direct {v0, v3, v5, v4, p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;-><init>(Landroid/content/Context;ZLjava/lang/Runnable;Lcom/android/systemui/ScreenDecorations;)V
 
-    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    check-cast v3, Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
-    invoke-virtual {v3, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    check-cast v0, Landroid/view/ViewGroup;
 
-    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    invoke-static {v3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    move-result-object v3
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    move-result-object v1
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+    invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    new-instance v1, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
 
-    new-instance v3, Lcom/android/systemui/-$$Lambda$ScreenDecorations$aq1MVJyy_LkZ11q5t5cPVZOqbG0;
+    new-instance v0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    invoke-direct {v3, p0}, Lcom/android/systemui/-$$Lambda$ScreenDecorations$aq1MVJyy_LkZ11q5t5cPVZOqbG0;-><init>(Lcom/android/systemui/ScreenDecorations;)V
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
 
-    const/4 v4, 0x0
+    new-instance v2, Lcom/android/systemui/-$$Lambda$ScreenDecorations$aq1MVJyy_LkZ11q5t5cPVZOqbG0;
 
-    invoke-direct {v1, v2, v4, v3}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;-><init>(Landroid/content/Context;ZLjava/lang/Runnable;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/-$$Lambda$ScreenDecorations$aq1MVJyy_LkZ11q5t5cPVZOqbG0;-><init>(Lcom/android/systemui/ScreenDecorations;)V
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+    const/4 v3, 0x0
 
-    check-cast v2, Landroid/view/ViewGroup;
+    invoke-direct {v0, v1, v3, v2, p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;-><init>(Landroid/content/Context;ZLjava/lang/Runnable;Lcom/android/systemui/ScreenDecorations;)V
 
-    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
 
-    const/16 v3, 0x100
+    check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setSystemUiVisibility(I)V
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    const/4 v6, 0x0
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setAlpha(F)V
+    const/16 v1, 0x100
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setSystemUiVisibility(I)V
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateViews()V
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->getWindowLayoutParams()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-interface {v2, v3, v6}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mBottomOverlay:Landroid/view/View;
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->getBottomLayoutParams()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-interface {v2, v3, v6}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Landroid/util/DisplayMetrics;
+    new-instance v0, Landroid/util/DisplayMetrics;
 
-    invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
+    invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    iget-object v3, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
 
-    invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+    invoke-virtual {v1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    iget v3, v2, Landroid/util/DisplayMetrics;->density:F
+    iget v1, v0, Landroid/util/DisplayMetrics;->density:F
 
-    iput v3, p0, Lcom/android/systemui/ScreenDecorations;->mDensity:F
+    iput v1, p0, Lcom/android/systemui/ScreenDecorations;->mDensity:F
 
-    const-class v3, Lcom/android/systemui/tuner/TunerService;
+    const-class v1, Lcom/android/systemui/tuner/TunerService;
 
-    invoke-static {v3}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, Lcom/android/systemui/tuner/TunerService;
+    check-cast v1, Lcom/android/systemui/tuner/TunerService;
 
-    const-string v6, "sysui_rounded_size"
+    const-string v2, "sysui_rounded_size"
 
-    filled-new-array {v6}, [Ljava/lang/String;
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v3, p0, v6}, Lcom/android/systemui/tuner/TunerService;->addTunable(Lcom/android/systemui/tuner/TunerService$Tunable;[Ljava/lang/String;)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/systemui/tuner/TunerService;->addTunable(Lcom/android/systemui/tuner/TunerService$Tunable;[Ljava/lang/String;)V
 
-    new-instance v3, Lcom/android/systemui/ScreenDecorations$2;
+    new-instance v1, Lcom/android/systemui/ScreenDecorations$2;
 
-    iget-object v8, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
 
-    sget-object v6, Lcom/android/systemui/Dependency;->MAIN_HANDLER:Lcom/android/systemui/Dependency$DependencyKey;
+    sget-object v4, Lcom/android/systemui/Dependency;->MAIN_HANDLER:Lcom/android/systemui/Dependency$DependencyKey;
 
-    invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Lcom/android/systemui/Dependency$DependencyKey;)Ljava/lang/Object;
+    invoke-static {v4}, Lcom/android/systemui/Dependency;->get(Lcom/android/systemui/Dependency$DependencyKey;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v4
 
-    move-object v9, v6
+    check-cast v4, Landroid/os/Handler;
 
-    check-cast v9, Landroid/os/Handler;
+    const-string v6, "accessibility_display_inversion_enabled"
 
-    const-string v10, "accessibility_display_inversion_enabled"
+    invoke-direct {v1, p0, v2, v4, v6}, Lcom/android/systemui/ScreenDecorations$2;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
 
-    move-object v6, v3
+    invoke-virtual {v1, v5}, Lcom/android/systemui/qs/SecureSetting;->setListening(Z)V
 
-    move-object v7, p0
+    invoke-virtual {v1, v3}, Lcom/android/systemui/qs/SecureSetting;->onChange(Z)V
 
-    move-object v11, v0
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
-    move-object v12, v1
+    new-instance v3, Lcom/android/systemui/ScreenDecorations$3;
 
-    invoke-direct/range {v6 .. v12}, Lcom/android/systemui/ScreenDecorations$2;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/ScreenDecorations$3;-><init>(Lcom/android/systemui/ScreenDecorations;)V
 
-    invoke-virtual {v3, v5}, Lcom/android/systemui/qs/SecureSetting;->setListening(Z)V
-
-    invoke-virtual {v3, v4}, Lcom/android/systemui/qs/SecureSetting;->onChange(Z)V
-
-    iget-object v4, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
-
-    new-instance v5, Lcom/android/systemui/ScreenDecorations$3;
-
-    invoke-direct {v5, p0}, Lcom/android/systemui/ScreenDecorations$3;-><init>(Lcom/android/systemui/ScreenDecorations;)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     return-void
 .end method
@@ -467,7 +512,7 @@
 
     move-result-object v0
 
-    const v1, 0x112006e
+    const v1, 0x1120070
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -499,6 +544,87 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
+    return-void
+.end method
+
+.method private updateRoundedCornerRadii()V
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0703d4
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0703d6
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0703d5
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iget v3, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefault:I
+
+    if-ne v3, v0, :cond_1
+
+    iget v3, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultBottom:I
+
+    if-ne v3, v2, :cond_1
+
+    iget v3, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultTop:I
+
+    if-eq v3, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v3, 0x1
+
+    :goto_1
+    if-eqz v3, :cond_2
+
+    iput v0, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefault:I
+
+    iput v1, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultTop:I
+
+    iput v2, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultBottom:I
+
+    const-string v4, "sysui_rounded_size"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p0, v4, v5}, Lcom/android/systemui/ScreenDecorations;->onTuningChanged(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
     return-void
 .end method
 
@@ -632,6 +758,18 @@
 
     :cond_3
     :goto_0
+    iget-object v4, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutTop:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+    iget v5, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
+
+    invoke-virtual {v4, v5}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setRotation(I)V
+
+    iget-object v4, p0, Lcom/android/systemui/ScreenDecorations;->mCutoutBottom:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
+
+    iget v5, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
+
+    invoke-virtual {v4, v5}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setRotation(I)V
+
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateWindowVisibilities()V
 
     return-void
@@ -803,7 +941,13 @@
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
+
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->updateOrientation()V
+
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateRoundedCornerRadii()V
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->shouldDrawCutout()Z
 
@@ -934,47 +1078,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0703d2
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefault:I
-
-    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0703d4
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultTop:I
-
-    iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0703d3
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/systemui/ScreenDecorations;->mRoundedDefaultBottom:I
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateRoundedCornerRadii()V
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->hasRoundedCorners()Z
 
@@ -998,7 +1102,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703d1
+    const v1, 0x7f0703d3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1045,6 +1149,13 @@
 .method protected updateOrientation()V
     .locals 2
 
+    iget-boolean v0, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/systemui/util/leak/RotationUtils;->getExactRotation(Landroid/content/Context;)I
@@ -1053,18 +1164,18 @@
 
     iget v1, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v1, :cond_1
 
     iput v0, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mOverlay:Landroid/view/View;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateLayoutParams()V
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateViews()V
 
-    :cond_0
+    :cond_1
     return-void
 .end method

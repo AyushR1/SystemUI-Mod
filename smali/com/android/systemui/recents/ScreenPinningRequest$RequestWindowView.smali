@@ -106,27 +106,42 @@
 .end method
 
 .method private hasNavigationBar()Z
-    .locals 1
+    .locals 2
+
+    const/4 v0, 0x0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->this$0:Lcom/android/systemui/recents/ScreenPinningRequest;
+    iget-object v1, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->this$0:Lcom/android/systemui/recents/ScreenPinningRequest;
 
-    invoke-static {v0}, Lcom/android/systemui/recents/ScreenPinningRequest;->access$300(Lcom/android/systemui/recents/ScreenPinningRequest;)Landroid/view/IWindowManager;
+    invoke-static {v1}, Lcom/android/systemui/recents/ScreenPinningRequest;->access$300(Lcom/android/systemui/recents/ScreenPinningRequest;)Landroid/view/IWindowManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Landroid/view/IWindowManager;->hasNavigationBar()Z
+    invoke-interface {v1}, Landroid/view/IWindowManager;->hasNavigationBar()Z
 
-    move-result v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/android/internal/util/custom/NavbarUtils;->isEnabled(Landroid/content/Context;)Z
+
+    move-result v1
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    nop
+
+    :cond_0
     return v0
 
     :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
+    move-exception v1
 
     return v0
 .end method
@@ -318,15 +333,82 @@
 
     move-result v5
 
-    const v7, 0x7f1104ac
+    const v7, 0x7f1104ab
 
-    const v8, 0x7f0a02d0
+    const v8, 0x7f1104ac
 
-    const v9, 0x7f0a02d1
+    const v9, 0x7f0a02d0
 
-    const v10, 0x7f0a02d7
+    const v10, 0x7f0a02d1
 
-    if-eqz v1, :cond_8
+    const v11, 0x7f0a02d7
+
+    if-eqz v1, :cond_9
+
+    iget-object v12, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
+
+    invoke-virtual {v12, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v11, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
+
+    invoke-virtual {v11, v10}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v6}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v10, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
+
+    invoke-virtual {v10, v9}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v6}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-direct {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->hasNavigationBar()Z
+
+    move-result v9
+
+    if-nez v9, :cond_7
+
+    invoke-direct {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->supportsGesturesOnFP()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_6
+
+    move v7, v8
+
+    goto :goto_4
+
+    :cond_6
+    goto :goto_4
+
+    :cond_7
+    if-eqz v5, :cond_8
+
+    const v7, 0x7f1104aa
+
+    goto :goto_4
+
+    :cond_8
+    const v7, 0x7f1104a9
+
+    :goto_4
+    goto :goto_5
+
+    :cond_9
+    iget-object v12, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
+
+    invoke-virtual {v12, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v6}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v11, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
 
@@ -342,82 +424,39 @@
 
     move-result-object v9
 
-    invoke-virtual {v9, v6}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v9, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
-
-    invoke-virtual {v9, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v6}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-direct {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->hasNavigationBar()Z
-
-    move-result v8
-
-    if-nez v8, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    if-eqz v5, :cond_7
-
-    const v7, 0x7f1104ab
-
-    goto :goto_4
-
-    :cond_7
-    const v7, 0x7f1104aa
-
-    :goto_4
-    goto :goto_5
-
-    :cond_8
-    iget-object v11, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
-
-    invoke-virtual {v11, v10}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v6}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v10, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
-
-    invoke-virtual {v10, v9}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
     invoke-virtual {v9, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v9, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
-
-    invoke-virtual {v9, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v2}, Landroid/view/View;->setVisibility(I)V
-
     invoke-direct {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->hasNavigationBar()Z
 
-    move-result v8
+    move-result v9
 
-    if-nez v8, :cond_9
+    if-nez v9, :cond_b
+
+    invoke-direct {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->supportsGesturesOnFP()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_a
+
+    move v7, v8
 
     goto :goto_5
 
-    :cond_9
-    if-eqz v5, :cond_a
+    :cond_a
+    goto :goto_5
+
+    :cond_b
+    if-eqz v5, :cond_c
 
     const v7, 0x7f1104ae
 
     goto :goto_5
 
-    :cond_a
+    :cond_c
     const v7, 0x7f1104ad
 
     :goto_5
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_d
 
     invoke-virtual {p0}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->getContext()Landroid/content/Context;
 
@@ -487,7 +526,7 @@
 
     invoke-virtual {v12, v13}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_d
 
     iget-object v12, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
 
@@ -505,7 +544,7 @@
 
     invoke-virtual {v12, v13}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_b
+    :cond_d
     iget-object v8, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
 
     const v9, 0x7f0a02cf
@@ -518,13 +557,13 @@
 
     invoke-virtual {v8, v7}, Landroid/widget/TextView;->setText(I)V
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_e
 
     move v2, v6
 
     nop
 
-    :cond_c
+    :cond_e
     iget-object v6, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mLayout:Landroid/view/ViewGroup;
 
     const v8, 0x7f0a02c9
@@ -556,6 +595,24 @@
     invoke-virtual {p0, v6, v8}, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
+.end method
+
+.method private supportsGesturesOnFP()Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x11200c1
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method private swapChildrenIfRtlAndVertical(Landroid/view/View;)V
@@ -672,7 +729,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/recents/ScreenPinningRequest$RequestWindowView;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f060173
+    const v4, 0x7f060175
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
 
