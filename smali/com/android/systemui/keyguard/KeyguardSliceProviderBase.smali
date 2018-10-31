@@ -377,7 +377,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080200
+    const v1, 0x7f080136
 
     invoke-static {v0, v1}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -436,7 +436,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080200
+    const v2, 0x7f080136
 
     invoke-static {v1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -506,7 +506,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1100c1
+    const v2, 0x7f1100b3
 
     .line 172
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -523,7 +523,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0805d5
+    const v2, 0x7f0803ac
 
     invoke-static {v1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -801,7 +801,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1105e6
+    const v1, 0x7f110525
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
