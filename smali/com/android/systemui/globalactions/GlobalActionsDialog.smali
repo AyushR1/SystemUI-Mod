@@ -306,7 +306,7 @@
 
     move-result-object v0
 
-    const v6, 0x11200d6
+    const v6, 0x11200d8
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -812,11 +812,11 @@
 
     const v7, 0x1080387
 
-    const v8, 0x104025e
+    const v8, 0x1040262
 
-    const v9, 0x104025d
+    const v9, 0x1040261
 
-    const v10, 0x104025c
+    const v10, 0x1040260
 
     move-object v4, v0
 
@@ -1257,7 +1257,7 @@
 
     const v1, 0x10802f3
 
-    const v2, 0x104024a
+    const v2, 0x104024e
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/systemui/globalactions/GlobalActionsDialog$4;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
 
@@ -1295,7 +1295,7 @@
 
     const v1, 0x10802a2
 
-    const v2, 0x104024e
+    const v2, 0x1040252
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/systemui/globalactions/GlobalActionsDialog$3;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
 
@@ -1309,7 +1309,7 @@
 
     const v1, 0x108038c
 
-    const v2, 0x1040250
+    const v2, 0x1040254
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/systemui/globalactions/GlobalActionsDialog$6;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
 
@@ -1323,7 +1323,7 @@
 
     const v1, 0x10804d1
 
-    const v2, 0x1040255
+    const v2, 0x1040259
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/systemui/globalactions/GlobalActionsDialog$2;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
 
@@ -1337,7 +1337,7 @@
 
     const v1, 0x10804f1
 
-    const v2, 0x104025a
+    const v2, 0x104025e
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/systemui/globalactions/GlobalActionsDialog$5;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
 

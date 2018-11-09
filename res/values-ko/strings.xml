@@ -1184,6 +1184,7 @@
     <string name="screen_pinning_description">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 뒤로 및 최근 사용을 길게 터치하세요.</string>
     <string name="screen_pinning_description_accessible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 최근 사용을 길게 터치하세요.</string>
     <string name="screen_pinning_description_no_navbar">이렇게 유지하면 고정을 해제할 때까지 계속 볼 수 있습니다. &amp; 를 터치하면 고정이 해제됩니다.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">이렇게 유지하면 고정을 해제할 때까지 계속 볼 수 있습니다. &amp; 지문 인식 센서를 누르면 고정이 해제됩니다.</string>
     <string name="screen_pinning_description_recents_invisible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 뒤로 및 홈을 길게 터치하세요.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">고정 해제할 때까지 계속 표시됩니다. 고정 해제하려면 홈을 길게 터치하세요.</string>
     <string name="screen_pinning_exit">화면 고정 해제됨</string>
@@ -1193,6 +1194,7 @@
     <string name="screen_pinning_title">화면 고정됨</string>
     <string name="screen_pinning_toast">이 화면을 고정 해제하려면 뒤로 및 최근 사용 버튼을 길게 터치하세요.</string>
     <string name="screen_pinning_toast_no_navbar">이 화면의 고정을 해제하려면 뒤의 &amp; 버튼을 길게 누릅니다.</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">이 화면의 고정을 해제하려면 &amp; 지문인식 센서를 누릅니다.</string>
     <string name="screen_pinning_toast_recents_invisible">이 화면을 고정 해제하려면 뒤로 및 홈 버튼을 길게 터치하세요.</string>
     <string name="screen_zoom_summary_custom">맞춤(%d)</string>
     <string name="screen_zoom_summary_default">기본</string>

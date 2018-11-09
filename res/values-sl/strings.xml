@@ -1184,6 +1184,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="screen_pinning_description">S tem ostane zaslon viden, dokler ga ne odpnete. Če ga želite odpeti, hkrati pridržite gumba za nazaj in pregled.</string>
     <string name="screen_pinning_description_accessible">S tem ostane zaslon viden, dokler ga ne odpnete. Če ga želite odpeti, pridržite gumb za pregled.</string>
     <string name="screen_pinning_description_no_navbar">To ga ohrani prikazanega, dokler ga ne odpnete. Dotaknite se in pridržite gumb Nazaj, da ga odpnete.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">To ga ohrani prikazanega, dokler ga ne odpnete. Dotaknite se in pridržite tipalo za prstne odtise, da ga odpnete.</string>
     <string name="screen_pinning_description_recents_invisible">S tem ostane zaslon viden, dokler ga ne odpnete. Če ga želite odpeti, hkrati pridržite gumba za nazaj in za začetni zaslon.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">S tem ostane zaslon viden, dokler ga ne odpnete. Če ga želite odpeti, pridržite gumb za začetni zaslon.</string>
     <string name="screen_pinning_exit">Zaslon je odpet</string>
@@ -1193,6 +1194,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="screen_pinning_title">Zaslon je pripet</string>
     <string name="screen_pinning_toast">Če želite odpeti ta zaslon, hkrati pridržite gumba za nazaj in za pregled.</string>
     <string name="screen_pinning_toast_no_navbar">Da odpnete ta zaslon, se dotaknite in pridržite gumb Nazaj</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Da odpnete ta zaslon, se dotaknite in pridržite tipalo za prstne odtise</string>
     <string name="screen_pinning_toast_recents_invisible">Če želite odpeti ta zaslon, hkrati pridržite gumba za nazaj in za začetni zaslon.</string>
     <string name="screen_zoom_summary_custom">Po meri (%d)</string>
     <string name="screen_zoom_summary_default">Privzeto</string>

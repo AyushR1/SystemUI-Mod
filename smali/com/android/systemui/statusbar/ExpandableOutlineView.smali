@@ -63,11 +63,11 @@
 
     sget-object v2, Lcom/android/systemui/statusbar/-$$Lambda$5MBgGbVXpg7XHgCv0UsDp2v7mps;->INSTANCE:Lcom/android/systemui/statusbar/-$$Lambda$5MBgGbVXpg7XHgCv0UsDp2v7mps;
 
-    const v3, 0x7f0a035c
+    const v3, 0x7f0a035f
 
-    const v4, 0x7f0a035a
+    const v4, 0x7f0a035d
 
-    const v5, 0x7f0a035b
+    const v5, 0x7f0a035e
 
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/statusbar/notification/AnimatableProperty;->from(Ljava/lang/String;Ljava/util/function/BiConsumer;Ljava/util/function/Function;III)Lcom/android/systemui/statusbar/notification/AnimatableProperty;
 
@@ -81,11 +81,11 @@
 
     sget-object v3, Lcom/android/systemui/statusbar/-$$Lambda$CcOzLRI6prAuqo1UrMutjbjeKjw;->INSTANCE:Lcom/android/systemui/statusbar/-$$Lambda$CcOzLRI6prAuqo1UrMutjbjeKjw;
 
-    const v4, 0x7f0a0080
+    const v4, 0x7f0a0083
 
-    const v5, 0x7f0a007e
+    const v5, 0x7f0a0081
 
-    const v6, 0x7f0a007f
+    const v6, 0x7f0a0082
 
     invoke-static/range {v1 .. v6}, Lcom/android/systemui/statusbar/notification/AnimatableProperty;->from(Ljava/lang/String;Ljava/util/function/BiConsumer;Ljava/util/function/Function;III)Lcom/android/systemui/statusbar/notification/AnimatableProperty;
 

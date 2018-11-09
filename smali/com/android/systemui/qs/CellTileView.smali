@@ -80,7 +80,7 @@
     :cond_0
     iget-object v0, p2, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
-    const v1, 0x7f0a028a
+    const v1, 0x7f0a028d
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->getTag(I)Ljava/lang/Object;
 

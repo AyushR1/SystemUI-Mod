@@ -62,7 +62,7 @@
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
-    const/16 v3, 0xc
+    const/16 v3, 0xb
 
     if-ne v1, v3, :cond_1
 
@@ -79,7 +79,7 @@
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
-    const/16 v3, 0xd
+    const/16 v3, 0xc
 
     if-ne v1, v3, :cond_2
 
@@ -324,26 +324,9 @@
     :cond_f
     iget v1, p1, Landroid/os/Message;->what:I
 
-    const/16 v3, 0xb
+    const/16 v3, 0xd
 
-    if-ne v1, v3, :cond_10
-
-    const-string v1, "handleClearState"
-
-    move-object v0, v1
-
-    iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->this$0:Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-
-    invoke-virtual {v1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->handleClearState()V
-
-    goto :goto_4
-
-    :cond_10
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    const/16 v3, 0xe
-
-    if-ne v1, v3, :cond_12
+    if-ne v1, v3, :cond_11
 
     const-string v1, "handleSetListeningInternal"
 
@@ -355,11 +338,11 @@
 
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_10
 
     goto :goto_3
 
-    :cond_11
+    :cond_10
     move v2, v4
 
     :goto_3
@@ -367,12 +350,12 @@
 
     goto :goto_4
 
-    :cond_12
+    :cond_11
     iget v1, p1, Landroid/os/Message;->what:I
 
-    const/16 v2, 0xf
+    const/16 v2, 0xe
 
-    if-ne v1, v2, :cond_13
+    if-ne v1, v2, :cond_12
 
     const-string v1, "handleStale"
 
@@ -385,7 +368,7 @@
     :goto_4
     goto :goto_5
 
-    :cond_13
+    :cond_12
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;

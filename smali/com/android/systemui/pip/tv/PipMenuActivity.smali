@@ -78,7 +78,7 @@
     invoke-virtual {p0}, Lcom/android/systemui/pip/tv/PipMenuActivity;->finish()V
 
     :cond_0
-    const v0, 0x7f0d016b
+    const v0, 0x7f0d016c
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/tv/PipMenuActivity;->setContentView(I)V
 
@@ -90,7 +90,7 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/pip/tv/PipMenuActivity;->mRestorePipSizeWhenClose:Z
 
-    const v0, 0x7f0a0267
+    const v0, 0x7f0a026a
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/tv/PipMenuActivity;->findViewById(I)Landroid/view/View;
 

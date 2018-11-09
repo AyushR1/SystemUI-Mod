@@ -1187,6 +1187,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="screen_pinning_description">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh &amp; tahan tombol Kembali dan Ringkasan untuk melepas pin.</string>
     <string name="screen_pinning_description_accessible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh dan tahan tombol Ringkasan untuk melepas pin.</string>
     <string name="screen_pinning_description_no_navbar">Hal ini membuatnya tetap dalam tampilan sampai Anda melepas sematan. Sentuh &amp; tahan tombol kembali untuk melepas sematan.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Hal ini membuatnya tetap dalam tampilan sampai Anda melepas sematan. Sentuh &amp; tahan pemindai sidik jari untuk melepas sematan.</string>
     <string name="screen_pinning_description_recents_invisible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh &amp; tahan tombol Kembali dan Beranda untuk melepas pin.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Ini akan terus ditampilkan sampai Anda melepas pin. Sentuh dan tahan tombol Beranda untuk melepas pin.</string>
     <string name="screen_pinning_exit">Layar dilepas pinnya</string>
@@ -1196,6 +1197,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="screen_pinning_title">Layar dipasangi pin</string>
     <string name="screen_pinning_toast">Untuk melepas pin layar ini, sentuh &amp; tahan tombol Kembali dan Ringkasan</string>
     <string name="screen_pinning_toast_no_navbar">Untuk melepaskan sematan layar ini, sentuh &amp; tahan tombol kembali</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Untuk melepaskan sematan layar ini, sentuh &amp; tahan pemindai sidik jari</string>
     <string name="screen_pinning_toast_recents_invisible">Untuk melepas pin layar ini, sentuh &amp; tahan tombol Kembali dan Beranda</string>
     <string name="screen_zoom_summary_custom">(%d) khusus</string>
     <string name="screen_zoom_summary_default">Default</string>

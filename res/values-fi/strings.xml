@@ -1186,6 +1186,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="saved_network">Tallentaja: %1$s</string>
     <string name="screen_pinning_description">Pysyy näkyvissä, kunnes irrotat sen. Irrota painamalla pitkään Edellinen ja Viimeisimmät.</string>
     <string name="screen_pinning_description_accessible">Pysyy näkyvissä, kunnes irrotat sen. Irrota painamalla pitkään Viimeisimmät.</string>
+    <string name="screen_pinning_description_no_navbar">Ruutu pyörii, ei navigointia</string>
     <string name="screen_pinning_description_recents_invisible">Pysyy näkyvissä, kunnes irrotat sen. Irrota painamalla pitkään Edellinen ja Aloitusnäyttö.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Pysyy näkyvissä, kunnes irrotat sen. Irrota painamalla pitkään Aloitusnäyttö.</string>
     <string name="screen_pinning_exit">Näyttö irrotettu</string>
@@ -1194,6 +1195,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="screen_pinning_start">Näyttö kiinnitetty</string>
     <string name="screen_pinning_title">Näyttö on kiinnitetty</string>
     <string name="screen_pinning_toast">Irrota näyttö koskettamalla pitkään Takaisin- ja Viimeisimmät-painikkeita</string>
+    <string name="screen_pinning_toast_no_navbar">Lukitse ohjelma, ei navigointia</string>
     <string name="screen_pinning_toast_recents_invisible">Irrota näyttö koskettamalla pitkään Takaisin- ja Aloitusnäyttö-painikkeita</string>
     <string name="screen_zoom_summary_custom">Muokattu (%d)</string>
     <string name="screen_zoom_summary_default">Oletus</string>

@@ -113,7 +113,7 @@
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mIndicationArea:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a0195
+    const v0, 0x7f0a0198
 
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     :goto_0
     iput v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mInitialTextColor:I
 
-    const v0, 0x7f0a0194
+    const v0, 0x7f0a0197
 
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1433,7 +1433,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTextView:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
 
-    const v5, 0x1040336
+    const v5, 0x104033a
 
     invoke-virtual {v4, v5}, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->switchIndication(I)V
 

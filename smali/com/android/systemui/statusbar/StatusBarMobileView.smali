@@ -93,7 +93,7 @@
 
     nop
 
-    const v1, 0x7f0d0158
+    const v1, 0x7f0d0159
 
     const/4 v2, 0x0
 
@@ -117,7 +117,7 @@
 .method private init()V
     .locals 2
 
-    const v0, 0x7f0a01f7
+    const v0, 0x7f0a01fa
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -127,7 +127,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileGroup:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a01fc
+    const v0, 0x7f0a01ff
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -137,7 +137,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobile:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01fe
+    const v0, 0x7f0a0201
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +147,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileType:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01fa
+    const v0, 0x7f0a01fd
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +157,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileRoaming:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01fb
+    const v0, 0x7f0a01fe
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileRoamingSpace:Landroid/view/View;
 
-    const v0, 0x7f0a01f8
+    const v0, 0x7f0a01fb
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mIn:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01f9
+    const v0, 0x7f0a01fc
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mOut:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0177
+    const v0, 0x7f0a017a
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->findViewById(I)Landroid/view/View;
 

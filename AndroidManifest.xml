@@ -112,7 +112,11 @@
     <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
     <protected-broadcast android:name="com.android.settingslib.action.REGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"/>
-    <application android:allowBackup="false" android:allowClearUserData="false" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_label" android:name=".SystemUIApplication" android:persistent="true" android:process="com.android.systemui" android:supportsRtl="true" android:theme="@style/Theme.SystemUI">
+    <uses-permission android:name="org.pixelexperience.weather.client.READ_WEATHER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="org.pixelexperience.ambient.play.history.MANAGE_HISTORY"/>
+    <application android:allowBackup="false" android:allowClearUserData="false" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_label" android:name=".SystemUIApplication" android:persistent="true" android:process="com.android.systemui" android:supportsRtl="true" android:theme="@style/Theme.SystemUI" android:usesCleartextTraffic="true">
         <service android:exported="true" android:name="SystemUIService"/>
         <service android:exported="true" android:name="SystemUISecondaryUserService" android:permission="com.android.systemui.permission.SELF"/>
         <service android:exported="false" android:name=".screenshot.TakeScreenshotService" android:process=":screenshot"/>

@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/NotificationDozeHelper$3;->val$view:Landroid/view/View;
 
-    const v1, 0x7f0a00f6
+    const v1, 0x7f0a00f9
 
     const/4 v2, 0x0
 
@@ -54,7 +54,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/NotificationDozeHelper$3;->val$view:Landroid/view/View;
 
-    const v1, 0x7f0a00f6
+    const v1, 0x7f0a00f9
 
     invoke-virtual {v0, v1, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 

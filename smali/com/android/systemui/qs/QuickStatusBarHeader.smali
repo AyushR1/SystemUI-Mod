@@ -873,7 +873,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
-    const v6, 0x7f0803b4
+    const v6, 0x7f0803b5
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -894,7 +894,7 @@
 
     iget-object v5, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
-    const v6, 0x7f0803b3
+    const v6, 0x7f0803b4
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1395,7 +1395,7 @@
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a028d
+    const v0, 0x7f0a0290
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1405,7 +1405,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHeaderQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
 
-    const v0, 0x7f0a0294
+    const v0, 0x7f0a0297
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1413,7 +1413,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mSystemIconsView:Landroid/view/View;
 
-    const v0, 0x7f0a028e
+    const v0, 0x7f0a0291
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1421,7 +1421,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQuickQsStatusIcons:Landroid/view/View;
 
-    const v0, 0x7f0a031e
+    const v0, 0x7f0a0321
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1439,7 +1439,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIconManager:Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;
 
-    const v2, 0x7f0a0157
+    const v2, 0x7f0a015a
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1447,7 +1447,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHeaderTextContainerView:Landroid/view/View;
 
-    const v2, 0x7f0a01dc
+    const v2, 0x7f0a01df
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1455,7 +1455,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mLongPressTooltipView:Landroid/view/View;
 
-    const v2, 0x7f0a0325
+    const v2, 0x7f0a0328
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1463,7 +1463,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mStatusContainer:Landroid/view/View;
 
-    const v2, 0x7f0a0327
+    const v2, 0x7f0a032a
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1471,7 +1471,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mStatusSeparator:Landroid/view/View;
 
-    const v2, 0x7f0a022b
+    const v2, 0x7f0a022e
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1481,7 +1481,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mNextAlarmIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a022c
+    const v2, 0x7f0a022f
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1491,7 +1491,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mNextAlarmTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0a02aa
+    const v2, 0x7f0a02ad
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1501,7 +1501,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a02ab
+    const v2, 0x7f0a02ae
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1541,7 +1541,7 @@
 
     move-result v4
 
-    const v5, 0x7f0a00a9
+    const v5, 0x7f0a00ac
 
     const/4 v6, 0x0
 
@@ -1553,7 +1553,7 @@
 
     invoke-virtual {v6, v4}, Lcom/android/systemui/statusbar/phone/StatusBarIconController$TintedIconManager;->setTint(I)V
 
-    const v6, 0x7f0a0074
+    const v6, 0x7f0a0077
 
     invoke-virtual {p0, v6}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 
@@ -1585,7 +1585,7 @@
 
     invoke-virtual {v5, p0}, Lcom/android/systemui/statusbar/policy/Clock;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v5, 0x7f0a00ce
+    const v5, 0x7f0a00d1
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/qs/QuickStatusBarHeader;->findViewById(I)Landroid/view/View;
 

@@ -103,13 +103,13 @@
 .method private bindButtons()V
     .locals 12
 
-    const v0, 0x7f0a0077
+    const v0, 0x7f0a007a
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a017b
+    const v1, 0x7f0a017e
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -117,13 +117,13 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a01f4
+    const v2, 0x7f0a01f7
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    const v3, 0x7f0a037b
+    const v3, 0x7f0a037e
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     :cond_2
     :goto_0
-    const v3, 0x7f0a0057
+    const v3, 0x7f0a005a
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -324,7 +324,7 @@
     move-result-object v0
 
     :goto_0
-    const v1, 0x7f0a026a
+    const v1, 0x7f0a026d
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -334,7 +334,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a026b
+    const v1, 0x7f0a026e
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -383,7 +383,7 @@
     move-result-object v1
 
     :cond_1
-    const v2, 0x7f0a013b
+    const v2, 0x7f0a013e
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -391,7 +391,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f0a0269
+    const v3, 0x7f0a026c
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -419,7 +419,7 @@
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v6, 0x7f0a0171
+    const v6, 0x7f0a0174
 
     invoke-virtual {p0, v6}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -455,7 +455,7 @@
 .method private bindName()V
     .locals 3
 
-    const v0, 0x7f0a00a3
+    const v0, 0x7f0a00a6
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -499,7 +499,7 @@
 .method private bindPrompt()V
     .locals 3
 
-    const v0, 0x7f0a0078
+    const v0, 0x7f0a007b
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -813,13 +813,13 @@
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_0
-    const v0, 0x7f0a027e
+    const v0, 0x7f0a0281
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a00b1
+    const v1, 0x7f0a00b4
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -827,7 +827,7 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a00b2
+    const v2, 0x7f0a00b5
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 
@@ -835,7 +835,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f0a0155
+    const v3, 0x7f0a0158
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/NotificationInfo;->findViewById(I)Landroid/view/View;
 

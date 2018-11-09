@@ -1185,6 +1185,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="screen_pinning_description">Der Bildschirm bleibt so lange eingeblendet, bis du die Fixierung aufhebst. Berühre und halte dazu \"Zurück\" und \"Übersicht\".</string>
     <string name="screen_pinning_description_accessible">Der Bildschirm bleibt so lange eingeblendet, bis du die Fixierung aufhebst. Berühre und halte dazu \"Übersicht\".</string>
     <string name="screen_pinning_description_no_navbar">Der Bildschirm wird solange angezeigt, bis Sie die Fixierung aufheben. Berühren und halten Sie \"Zurück\", wenn Sie die Fixierung aufheben möchten.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Der Bildschirm wird solange angezeigt, bis Sie die Fixierung aufheben. Berühren und halten Sie \"Zurück\", wenn Sie die Fixierung aufheben möchten.</string>
     <string name="screen_pinning_description_recents_invisible">Der Bildschirm wird so lange angezeigt, bis du die Fixierung aufhebst. Berühre und halte dazu \"Zurück\" und \"Startbildschirm\".</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Der Bildschirm wird so lange angezeigt, bis du die Fixierung aufhebst. Berühre und halte dazu \"Startbildschirm\".</string>
     <string name="screen_pinning_exit">Fixierung für Bildschirm aufgehoben</string>
@@ -1194,6 +1195,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="screen_pinning_title">Bildschirm ist fixiert</string>
     <string name="screen_pinning_toast">Um die Fixierung für diesen Bildschirm aufzuheben, berühre und halte \"Zurück\" und \"Übersicht\"</string>
     <string name="screen_pinning_toast_no_navbar">Um die Fixierung dieses Bildschirms aufzuheben, \"Zurück\" berühren und halten</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Um die Fixierung dieses Bildschirms aufzuheben, \"Zurück\" berühren und halten</string>
     <string name="screen_pinning_toast_recents_invisible">Um die Fixierung für diesen Bildschirm aufzuheben, berühre und halte \"Zurück\" und \"Startbildschirm\"</string>
     <string name="screen_zoom_summary_custom">Benutzerdefiniert (%d)</string>
     <string name="screen_zoom_summary_default">Standard</string>

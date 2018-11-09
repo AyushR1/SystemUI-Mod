@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d015f
+    const v1, 0x7f0d0160
 
     const/4 v2, 0x0
 
@@ -165,7 +165,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mDarkContext:Landroid/view/ContextThemeWrapper;
 
-    const v2, 0x7f0a03a8
+    const v2, 0x7f0a03ab
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mWifiGroup:Landroid/widget/LinearLayout;
 
-    const v2, 0x7f0a03ac
+    const v2, 0x7f0a03af
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mWifiIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a03a9
+    const v2, 0x7f0a03ac
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mIn:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a03ab
+    const v2, 0x7f0a03ae
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -205,7 +205,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mOut:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a03ae
+    const v2, 0x7f0a03b1
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mSignalSpacer:Landroid/view/View;
 
-    const v2, 0x7f0a03a6
+    const v2, 0x7f0a03a9
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarWifiView;->mAirplaneSpacer:Landroid/view/View;
 
-    const v2, 0x7f0a0177
+    const v2, 0x7f0a017a
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/StatusBarWifiView;->findViewById(I)Landroid/view/View;
 

@@ -423,7 +423,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d008c
+    const v1, 0x7f0d008d
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher;->mUserSwitcherContainer:Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher$Container;
 
@@ -431,7 +431,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher;->mUserSwitcherContainer:Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher$Container;
 
-    const v1, 0x7f0a01a2
+    const v1, 0x7f0a01a5
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher$Container;->findViewById(I)Landroid/view/View;
 

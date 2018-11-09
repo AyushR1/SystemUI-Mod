@@ -688,6 +688,7 @@ prioritet"</string>
     <string name="keyguard_indication_trust_disabled">Enheden vil forblive låst, indtil du manuelt låser den op</string>
     <string name="keyguard_indication_trust_granted">Låst op for %1$s</string>
     <string name="keyguard_indication_trust_managed">%1$s kører</string>
+    <string name="keyguard_indication_turbo_power_time">Hurtig opladning tilsluttet (%s indtil fuldt opladt)</string>
     <string name="keyguard_instructions_when_pattern_disabled">Tryk på menuen for at låse op.</string>
     <string name="keyguard_low_battery">Tilslut din oplader.</string>
     <string name="keyguard_missing_sim_instructions">Indsæt et SIM-kort.</string>
@@ -711,6 +712,7 @@ Kontakt din tjenesteudbyder for at få et nyt SIM-kort."</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Oplader hurtigt</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Oplader langsomt</string>
     <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">Hurtig opladning tilsluttet</string>
     <string name="keyguard_sim_error_message_short">Ugyldigt kort.</string>
     <string name="keyguard_sim_locked_message">SIM-kortet er låst.</string>
     <string name="keyguard_sim_puk_locked_message">SIM-kortet er låst med PUK-kode.</string>
@@ -1184,6 +1186,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="saved_network">Gemt af %1$s</string>
     <string name="screen_pinning_description">Dette fastholder skærmen i visningen, indtil du frigør den. Tryk på Tilbage og Overblik, og hold fingeren nede for at frigøre skærmen.</string>
     <string name="screen_pinning_description_accessible">Dette fastholder skærmen i visningen, indtil du frigør den. Tryk på Tilbage, og hold fingeren nede for at frigøre skærmen.</string>
+    <string name="screen_pinning_description_no_navbar">Dette fastholder skærmen i visningen, indtil du frigør den. Tryk på Tilbage, og hold fingeren nede for at frigøre skærmen.</string>
     <string name="screen_pinning_description_recents_invisible">Dette fastholder skærmen i visningen, indtil du frigør den. Hold Tilbage og Startskærm nede for at frigøre skærmen.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Dette fastholder skærmen i visningen, indtil du frigør den. Hold Startskærm nede for at frigøre skærmen.</string>
     <string name="screen_pinning_exit">Skærmen blev frigjort</string>
@@ -1192,6 +1195,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="screen_pinning_start">Skærmen blev fastgjort</string>
     <string name="screen_pinning_title">Skærmen er fastgjort</string>
     <string name="screen_pinning_toast">Hold knapperne Tilbage og Oversigt nede for at frigøre skærmen</string>
+    <string name="screen_pinning_toast_no_navbar">Hvis du vil frigøre dette skærmbillede, skal du trykke på Tilbage og holde fingeren nede</string>
     <string name="screen_pinning_toast_recents_invisible">Hold knapperne Tilbage og Startskærm nede for at frigøre skærmen</string>
     <string name="screen_zoom_summary_custom">Tilpasset (%d)</string>
     <string name="screen_zoom_summary_default">Standard</string>

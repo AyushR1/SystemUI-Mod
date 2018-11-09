@@ -644,7 +644,7 @@
 .end method
 
 .method private handleGroupSummaryRemoved(Ljava/lang/String;)V
-    .locals 5
+    .locals 9
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationEntryManager;->mNotificationData:Lcom/android/systemui/statusbar/NotificationData;
 
@@ -652,11 +652,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_6
 
     iget-object v1, v0, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_6
 
     iget-object v1, v0, Lcom/android/systemui/statusbar/NotificationData$Entry;->row:Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
@@ -664,7 +664,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_6
 
     iget-object v1, v0, Lcom/android/systemui/statusbar/NotificationData$Entry;->notification:Landroid/service/notification/StatusBarNotification;
 
@@ -693,48 +693,92 @@
 
     const/4 v2, 0x0
 
+    move v3, v2
+
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v4
 
-    if-ge v2, v3, :cond_2
+    if-ge v3, v4, :cond_6
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/systemui/statusbar/ExpandableNotificationRow;
-
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getStatusBarNotification()Landroid/service/notification/StatusBarNotification;
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+    check-cast v4, Lcom/android/systemui/statusbar/ExpandableNotificationRow;
 
-    move-result-object v4
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/NotificationData$Entry;
 
-    iget v4, v4, Landroid/app/Notification;->flags:I
+    move-result-object v5
 
-    and-int/lit8 v4, v4, 0x40
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->getStatusBarNotification()Landroid/service/notification/StatusBarNotification;
 
-    if-eqz v4, :cond_1
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/app/Notification;->flags:I
+
+    and-int/lit8 v6, v6, 0x40
+
+    const/4 v7, 0x1
+
+    if-eqz v6, :cond_1
+
+    move v6, v7
 
     goto :goto_1
 
     :cond_1
-    const/4 v4, 0x1
-
-    invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->setKeepInParent(Z)V
-
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->setRemoved()V
+    move v6, v2
 
     :goto_1
-    add-int/lit8 v2, v2, 0x1
+    sget-boolean v8, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->FORCE_REMOTE_INPUT_HISTORY:Z
+
+    if-eqz v8, :cond_3
+
+    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/NotificationEntryManager;->shouldKeepForRemoteInput(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_2
+
+    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/NotificationEntryManager;->shouldKeepForSmartReply(Lcom/android/systemui/statusbar/NotificationData$Entry;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    :cond_2
+    move v8, v7
+
+    goto :goto_2
+
+    :cond_3
+    move v8, v2
+
+    :goto_2
+    if-nez v6, :cond_5
+
+    if-eqz v8, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v4, v7}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->setKeepInParent(Z)V
+
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->setRemoved()V
+
+    :cond_5
+    :goto_3
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_6
     return-void
 .end method
 
@@ -2894,7 +2938,7 @@
     :goto_3
     invoke-virtual {p4, v5}, Lcom/android/systemui/statusbar/ExpandableNotificationRow;->setLegacy(Z)V
 
-    const v5, 0x7f0a0167
+    const v5, 0x7f0a016a
 
     iget v6, p1, Lcom/android/systemui/statusbar/NotificationData$Entry;->targetSdk:I
 

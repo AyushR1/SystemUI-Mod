@@ -205,7 +205,7 @@
 .method public static isGrayscale(Landroid/widget/ImageView;Lcom/android/internal/util/NotificationColorUtil;)Z
     .locals 4
 
-    const v0, 0x7f0a0166
+    const v0, 0x7f0a0169
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->getTag(I)Ljava/lang/Object;
 

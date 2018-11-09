@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/slice/builders/impl/ListBuilder$HeaderBuilder;,
         Landroidx/slice/builders/impl/ListBuilder$RowBuilder;
     }
 .end annotation
@@ -16,11 +15,5 @@
 .method public abstract addRow(Landroidx/slice/builders/impl/TemplateBuilderImpl;)V
 .end method
 
-.method public abstract createHeaderBuilder(Landroid/net/Uri;)Landroidx/slice/builders/impl/TemplateBuilderImpl;
-.end method
-
 .method public abstract createRowBuilder(Landroid/net/Uri;)Landroidx/slice/builders/impl/TemplateBuilderImpl;
-.end method
-
-.method public abstract setHeader(Landroidx/slice/builders/impl/TemplateBuilderImpl;)V
 .end method

@@ -723,7 +723,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/volume/CarVolumeDialogImpl;->mDialog:Lcom/android/systemui/volume/CarVolumeDialogImpl$CustomDialog;
 
-    const v3, 0x7f0d004d
+    const v3, 0x7f0d004e
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/volume/CarVolumeDialogImpl$CustomDialog;->setContentView(I)V
 
@@ -737,7 +737,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/volume/CarVolumeDialogImpl;->mWindow:Landroid/view/Window;
 
-    const v3, 0x7f0a0399
+    const v3, 0x7f0a039c
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 

@@ -72,7 +72,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mTransformedView:Landroid/view/View;
 
-    const v1, 0x7f0a035f
+    const v1, 0x7f0a0362
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -102,7 +102,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mTransformedView:Landroid/view/View;
 
-    const v1, 0x7f0a0360
+    const v1, 0x7f0a0363
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -249,7 +249,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a035f
+    const v2, 0x7f0a0362
 
     invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -265,7 +265,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0360
+    const v2, 0x7f0a0363
 
     invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 

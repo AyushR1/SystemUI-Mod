@@ -3131,7 +3131,7 @@
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a00f5
+    const v0, 0x7f0a00f8
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/DividerView;->findViewById(I)Landroid/view/View;
 
@@ -3141,7 +3141,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mHandle:Lcom/android/systemui/stackdivider/DividerHandleView;
 
-    const v0, 0x7f0a00f4
+    const v0, 0x7f0a00f7
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/DividerView;->findViewById(I)Landroid/view/View;
 
@@ -3149,7 +3149,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mBackground:Landroid/view/View;
 
-    const v0, 0x7f0a01f5
+    const v0, 0x7f0a01f8
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/DividerView;->findViewById(I)Landroid/view/View;
 

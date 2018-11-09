@@ -1186,6 +1186,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="screen_pinning_description">Astfel rămâne afișat până anulați fixarea. Atingeți lung opțiunile Înapoi și Recente pentru a anula fixarea.</string>
     <string name="screen_pinning_description_accessible">Astfel rămâne afișat până anulați fixarea. Atingeți lung opțiunea Recente pentru a anula fixarea.</string>
     <string name="screen_pinning_description_no_navbar">Ecranul este afișat până anulați fixarea. Atingeți lung Înapoi pentru a anula fixarea.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Ecranul este afișat până anulați fixarea. Atingeți lung senzorul de amprentă pentru a anula fixarea.</string>
     <string name="screen_pinning_description_recents_invisible">Astfel rămâne afișat până anulați fixarea. Atingeți lung opțiunile Înapoi și Acasă pentru a anula fixarea.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Astfel rămâne afișat până anulați fixarea. Atingeți lung opțiunea Acasă pentru a anula fixarea.</string>
     <string name="screen_pinning_exit">Fixarea ecranului anulată</string>
@@ -1195,6 +1196,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="screen_pinning_title">Ecranul este fixat</string>
     <string name="screen_pinning_toast">Pentru a anula fixarea acestui ecran, atingeți lung butoanele Înapoi și Recente</string>
     <string name="screen_pinning_toast_no_navbar">Pentru a anula fixarea acestui ecran, atingeți și țineți apăsat butonul Înapoi</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Pentru a anula fixarea acestui ecran, atingeți și țineți apăsat senzorul de amprentă</string>
     <string name="screen_pinning_toast_recents_invisible">Pentru a anula fixarea acestui ecran, atingeți lung butoanele Înapoi și Acasă</string>
     <string name="screen_zoom_summary_custom">Personalizat (%d)</string>
     <string name="screen_zoom_summary_default">Prestabilit</string>

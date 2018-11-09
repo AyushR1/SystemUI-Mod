@@ -42,19 +42,19 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0a0302
+    const v2, 0x7f0a0305
 
     invoke-virtual {v0, v2, v1}, Lcom/android/systemui/statusbar/ExpandableView;->setTag(ILjava/lang/Object;)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/stack/ExpandableViewState$4;->val$child:Lcom/android/systemui/statusbar/ExpandableView;
 
-    const v2, 0x7f0a0301
+    const v2, 0x7f0a0304
 
     invoke-virtual {v0, v2, v1}, Lcom/android/systemui/statusbar/ExpandableView;->setTag(ILjava/lang/Object;)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/stack/ExpandableViewState$4;->val$child:Lcom/android/systemui/statusbar/ExpandableView;
 
-    const v2, 0x7f0a0300
+    const v2, 0x7f0a0303
 
     invoke-virtual {v0, v2, v1}, Lcom/android/systemui/statusbar/ExpandableView;->setTag(ILjava/lang/Object;)V
 

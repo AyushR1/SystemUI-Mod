@@ -103,8 +103,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
+            "Ljava/lang/ref/WeakReference<",
             "Lcom/android/settingslib/applications/ApplicationsState$Session;",
-            ">;"
+            ">;>;"
         }
     .end annotation
 .end field
@@ -1253,7 +1254,7 @@
 .end method
 
 .method rebuildActiveSessions()V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
@@ -1298,7 +1299,11 @@
 
     iget-object v3, p0, Lcom/android/settingslib/applications/ApplicationsState;->mActiveSessions:Ljava/util/ArrayList;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v4, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v4, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
     add-int/lit8 v1, v1, 0x1

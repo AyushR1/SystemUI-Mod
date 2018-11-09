@@ -608,9 +608,27 @@
 .method public setHotspotEnabled(Z)V
     .locals 4
 
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWaitingForCallback:Z
+
+    if-eqz v0, :cond_1
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "HotspotController"
+
+    const-string v1, "Ignoring setHotspotEnabled; waiting for callback."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    :cond_1
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     new-instance v1, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$OnStartTetheringCallback;
 
@@ -624,7 +642,7 @@
 
     sget-boolean v2, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->DEBUG:Z
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
     const-string v2, "HotspotController"
 
@@ -632,14 +650,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_2
     iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v2, v0, v0, v1}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v1, v0}, Landroid/net/ConnectivityManager;->stopTethering(I)V

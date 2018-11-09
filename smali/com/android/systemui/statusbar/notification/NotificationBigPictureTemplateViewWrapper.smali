@@ -33,7 +33,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/NotificationBigPictureTemplateViewWrapper;->mPicture:Landroid/widget/ImageView;
 
-    const v3, 0x7f0a016b
+    const v3, 0x7f0a016e
 
     invoke-virtual {v2, v3, v1}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
 

@@ -78,6 +78,24 @@
 
 
 # virtual methods
+.method public addInflateListener(Lcom/android/systemui/AutoReinflateContainer$InflateListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/AutoReinflateContainer;->mInflateListeners:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/AutoReinflateContainer;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/android/systemui/AutoReinflateContainer$InflateListener;->onInflated(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public inflateLayout()V
     .locals 5
 

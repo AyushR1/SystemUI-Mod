@@ -1187,6 +1187,7 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
     <string name="screen_pinning_description">"Bu işlem, siz sabitlemeyi kaldırana kadar ekranı görünür durumda tutar. Sabitlemeyi kaldırmak için Geri'ye ve Genel Bakış'a dokunup basılı tutun."</string>
     <string name="screen_pinning_description_accessible">"Bu işlem, siz sabitlemeyi kaldırana kadar ekranı görünür durumda tutar. Sabitlemeyi kaldırmak için Genel bakış'a dokunup basılı tutun."</string>
     <string name="screen_pinning_description_no_navbar">Bu işlem, siz sabitlemeyi kaldırana kadar ekranı görünür durumda tutar. Sabitlemeyi kaldırmak için Geri tuşuna dokunun ve basılı tutun.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Bu işlem, siz sabitlemeyi kaldırana kadar ekranda görünür tutar. Sabitlemeyi kaldırmak için parmak izi sensörüne dokunun ve basılı tutun.</string>
     <string name="screen_pinning_description_recents_invisible">"Bu işlem, siz sabitlemeyi kaldırana kadar ekranı görünür durumda tutar. Sabitlemeyi kaldırmak için Geri'ye ve Ana sayfaya dokunup basılı tutun."</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Bu işlem, siz sabitlemeyi kaldırana kadar ekranı görünür durumda tutar. Sabitlemeyi kaldırmak için Ana sayfaya dokunup basılı tutun.</string>
     <string name="screen_pinning_exit">Ekran sabitlemesi kaldırıldı</string>
@@ -1196,6 +1197,7 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
     <string name="screen_pinning_title">Ekran sabitlendi</string>
     <string name="screen_pinning_toast">Bu ekranın sabitlemesini kaldırmak için Geri ve Genel Bakış düğmelerine dokunup basılı tutun</string>
     <string name="screen_pinning_toast_no_navbar">Bu ekran görünümünü kaldırmak için, Geri tuşuna dokunun ve basılı tutun</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Bu ekranın sabitlemesini kaldırmak için parmak izi sensörüne dokunun ve basılı tutun</string>
     <string name="screen_pinning_toast_recents_invisible">Bu ekranın sabitlemesini kaldırmak için Geri ve Ana sayfa düğmelerine dokunup basılı tutun</string>
     <string name="screen_zoom_summary_custom">Özel (%d)</string>
     <string name="screen_zoom_summary_default">Varsayılan</string>

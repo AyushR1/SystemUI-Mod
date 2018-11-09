@@ -37,7 +37,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/car/FullscreenUserSwitcher;->mParent:Landroid/view/View;
 
-    const v1, 0x7f0a00b6
+    const v1, 0x7f0a00b9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/car/FullscreenUserSwitcher;->mContainer:Landroid/view/View;
 
-    const v1, 0x7f0a0388
+    const v1, 0x7f0a038b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

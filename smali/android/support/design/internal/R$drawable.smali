@@ -17,4 +17,4 @@
 # static fields
 .field public static final design_bottom_navigation_item_background:I = 0x7f08010f
 
-.field public static final navigation_empty_icon:I = 0x7f080340
+.field public static final navigation_empty_icon:I = 0x7f080341

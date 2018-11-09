@@ -155,7 +155,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/BatteryMeterView;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const v3, 0x1040613
+    const v3, 0x1040617
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -309,7 +309,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d002f
+    const v1, 0x7f0d0030
 
     const/4 v2, 0x0
 

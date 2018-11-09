@@ -511,8 +511,6 @@
 
     if-nez p1, :cond_7
 
-    if-nez p4, :cond_7
-
     const/4 v1, 0x1
 
     if-ne p5, v1, :cond_0
@@ -531,6 +529,8 @@
     iget-boolean v4, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
     if-nez v4, :cond_2
+
+    if-nez p4, :cond_2
 
     iget-object v4, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
 
@@ -1280,7 +1280,7 @@
 .end method
 
 .method shouldDismissLowBatteryWarning(ZIIJZ)Z
-    .locals 5
+    .locals 6
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
@@ -1296,58 +1296,61 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+    iget-object v3, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
 
-    invoke-interface {v0}, Lcom/android/systemui/power/EnhancedEstimates;->getLowWarningThreshold()J
+    invoke-interface {v3}, Lcom/android/systemui/power/EnhancedEstimates;->getLowWarningThreshold()J
 
     move-result-wide v3
 
-    cmp-long v0, p4, v3
+    cmp-long v3, p4, v3
 
-    if-lez v0, :cond_0
+    if-lez v3, :cond_0
 
-    move v0, v2
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    move v3, v1
 
     :goto_0
     if-le p3, p2, :cond_1
 
     if-lez p3, :cond_1
 
-    move v3, v2
+    move v4, v2
 
     goto :goto_1
 
     :cond_1
-    move v3, v1
+    move v4, v1
 
     :goto_1
-    if-nez p6, :cond_3
+    if-eqz p6, :cond_2
 
-    if-nez p1, :cond_3
+    if-eqz v0, :cond_4
 
-    if-eqz v3, :cond_2
-
-    iget-object v4, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
-
-    invoke-interface {v4}, Lcom/android/systemui/power/EnhancedEstimates;->isHybridNotificationEnabled()Z
-
-    move-result v4
+    :cond_2
+    if-nez p1, :cond_4
 
     if-eqz v4, :cond_3
 
-    if-eqz v0, :cond_2
+    iget-object v5, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+
+    invoke-interface {v5}, Lcom/android/systemui/power/EnhancedEstimates;->isHybridNotificationEnabled()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    if-eqz v3, :cond_3
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     goto :goto_3
 
-    :cond_3
+    :cond_4
     :goto_2
     move v1, v2
 

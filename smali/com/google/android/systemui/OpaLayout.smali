@@ -2262,12 +2262,12 @@
 
     if-eqz v1, :cond_0
 
-    const v2, 0x7f08029c
+    const v2, 0x7f08029d
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f08029a
+    const v2, 0x7f08029b
 
     :goto_0
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -2357,7 +2357,7 @@
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029a
+    const v0, 0x7f0a029d
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 
@@ -2365,7 +2365,7 @@
 
     iput-object v0, p0, Lcom/google/android/systemui/OpaLayout;->mRed:Landroid/view/View;
 
-    const v0, 0x7f0a007a
+    const v0, 0x7f0a007d
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 
@@ -2373,7 +2373,7 @@
 
     iput-object v0, p0, Lcom/google/android/systemui/OpaLayout;->mBlue:Landroid/view/View;
 
-    const v0, 0x7f0a03bd
+    const v0, 0x7f0a03c0
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 
@@ -2381,7 +2381,7 @@
 
     iput-object v0, p0, Lcom/google/android/systemui/OpaLayout;->mYellow:Landroid/view/View;
 
-    const v0, 0x7f0a0138
+    const v0, 0x7f0a013b
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 
@@ -2389,7 +2389,7 @@
 
     iput-object v0, p0, Lcom/google/android/systemui/OpaLayout;->mGreen:Landroid/view/View;
 
-    const v0, 0x7f0a03a3
+    const v0, 0x7f0a03a6
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 
@@ -2399,7 +2399,7 @@
 
     iput-object v0, p0, Lcom/google/android/systemui/OpaLayout;->mWhite:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a015e
+    const v0, 0x7f0a0161
 
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/OpaLayout;->findViewById(I)Landroid/view/View;
 

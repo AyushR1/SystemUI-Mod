@@ -707,7 +707,7 @@
     :pswitch_2
     iget-object v1, p0, Lcom/android/settingslib/notification/ZenDurationDialog;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040701
+    const v2, 0x1040705
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -972,7 +972,7 @@
     move v1, v2
 
     :goto_0
-    const v4, 0x7f0a00c2
+    const v4, 0x7f0a00c5
 
     invoke-virtual {v0, v4}, Lcom/android/systemui/statusbar/StatusBarIconView;->getTag(I)Ljava/lang/Object;
 
@@ -2258,7 +2258,7 @@
 
     invoke-super {p0}, Lcom/android/systemui/statusbar/ActivatableNotificationView;->onFinishInflate()V
 
-    const v0, 0x7f0a00b9
+    const v0, 0x7f0a00bc
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationShelf;->findViewById(I)Landroid/view/View;
 

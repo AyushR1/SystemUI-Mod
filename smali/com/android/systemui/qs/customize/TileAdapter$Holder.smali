@@ -83,7 +83,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/customize/TileAdapter$Holder;->mTileView:Lcom/android/systemui/qs/customize/CustomizeTileView;
 
-    const v1, 0x7f0a034a
+    const v1, 0x7f0a034d
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/customize/CustomizeTileView;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +147,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/customize/TileAdapter$Holder;->mTileView:Lcom/android/systemui/qs/customize/CustomizeTileView;
 
-    const v3, 0x7f0a034a
+    const v3, 0x7f0a034d
 
     invoke-virtual {v0, v3}, Lcom/android/systemui/qs/customize/CustomizeTileView;->findViewById(I)Landroid/view/View;
 
@@ -209,7 +209,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/customize/TileAdapter$Holder;->mTileView:Lcom/android/systemui/qs/customize/CustomizeTileView;
 
-    const v4, 0x7f0a034a
+    const v4, 0x7f0a034d
 
     invoke-virtual {v0, v4}, Lcom/android/systemui/qs/customize/CustomizeTileView;->findViewById(I)Landroid/view/View;
 

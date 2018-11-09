@@ -118,7 +118,7 @@
 
     invoke-direct {v2, v3}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0a00b9
+    const v3, 0x7f0a00bc
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
@@ -182,7 +182,7 @@
 
     invoke-super {p0, p1, p2, p3}, Lcom/android/systemui/tuner/CustomListPreference;->onDialogStateRestored(Landroid/app/DialogFragment;Landroid/app/Dialog;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0a00b9
+    const v0, 0x7f0a00bc
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 

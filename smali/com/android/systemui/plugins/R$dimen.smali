@@ -2259,63 +2259,65 @@
 
 .field public static final volume_slider_interspacing:I = 0x7f070461
 
-.field public static final wide_type_icon_start_padding:I = 0x7f070462
+.field public static final weather_icon_size:I = 0x7f070462
 
-.field public static final wide_type_icon_start_padding_qs:I = 0x7f070463
+.field public static final wide_type_icon_start_padding:I = 0x7f070463
 
-.field public static final widget_big_font_size:I = 0x7f070464
+.field public static final wide_type_icon_start_padding_qs:I = 0x7f070464
 
-.field public static final widget_bottom_separator_padding:I = 0x7f070465
+.field public static final widget_big_font_size:I = 0x7f070465
 
-.field public static final widget_horizontal_padding:I = 0x7f070466
+.field public static final widget_bottom_separator_padding:I = 0x7f070466
 
-.field public static final widget_icon_bottom_padding:I = 0x7f070467
+.field public static final widget_horizontal_padding:I = 0x7f070467
 
-.field public static final widget_icon_padding:I = 0x7f070468
+.field public static final widget_icon_bottom_padding:I = 0x7f070468
 
-.field public static final widget_icon_size:I = 0x7f070469
+.field public static final widget_icon_padding:I = 0x7f070469
 
-.field public static final widget_label_font_size:I = 0x7f07046a
+.field public static final widget_icon_size:I = 0x7f07046a
 
-.field public static final widget_pulsing_bottom_padding:I = 0x7f07046b
+.field public static final widget_label_font_size:I = 0x7f07046b
 
-.field public static final widget_separator_thickness:I = 0x7f07046c
+.field public static final widget_pulsing_bottom_padding:I = 0x7f07046c
 
-.field public static final widget_separator_width:I = 0x7f07046d
+.field public static final widget_separator_thickness:I = 0x7f07046d
 
-.field public static final widget_small_font_size:I = 0x7f07046e
+.field public static final widget_separator_width:I = 0x7f07046e
 
-.field public static final widget_small_font_stroke:I = 0x7f07046f
+.field public static final widget_small_font_size:I = 0x7f07046f
 
-.field public static final widget_title_bottom_margin:I = 0x7f070470
+.field public static final widget_small_font_stroke:I = 0x7f070470
 
-.field public static final widget_title_font_size:I = 0x7f070471
+.field public static final widget_title_bottom_margin:I = 0x7f070471
 
-.field public static final widget_vertical_padding:I = 0x7f070472
+.field public static final widget_title_font_size:I = 0x7f070472
 
-.field public static final wifi_preference_badge_padding:I = 0x7f070473
+.field public static final widget_vertical_padding:I = 0x7f070473
 
-.field public static final wireless_charging_anim_battery_level_text_size_end:I = 0x7f070474
+.field public static final wifi_preference_badge_padding:I = 0x7f070474
 
-.field public static final wireless_charging_anim_battery_level_text_size_start:I = 0x7f070475
+.field public static final wireless_charging_anim_battery_level_text_size_end:I = 0x7f070475
 
-.field public static final wireless_charging_circle_radius_end:I = 0x7f070476
+.field public static final wireless_charging_anim_battery_level_text_size_start:I = 0x7f070476
 
-.field public static final wireless_charging_circle_radius_start:I = 0x7f070477
+.field public static final wireless_charging_circle_radius_end:I = 0x7f070477
 
-.field public static final wireless_charging_dots_radius_end:I = 0x7f070478
+.field public static final wireless_charging_circle_radius_start:I = 0x7f070478
 
-.field public static final wireless_charging_dots_radius_start:I = 0x7f070479
+.field public static final wireless_charging_dots_radius_end:I = 0x7f070479
 
-.field public static final z_distance_between_notifications:I = 0x7f07047a
+.field public static final wireless_charging_dots_radius_start:I = 0x7f07047a
 
-.field public static final zen_mode_condition_detail_bottom_padding:I = 0x7f07047b
+.field public static final z_distance_between_notifications:I = 0x7f07047b
 
-.field public static final zen_mode_condition_detail_button_padding:I = 0x7f07047c
+.field public static final zen_mode_condition_detail_bottom_padding:I = 0x7f07047c
 
-.field public static final zen_mode_condition_detail_item_interline_spacing:I = 0x7f07047d
+.field public static final zen_mode_condition_detail_button_padding:I = 0x7f07047d
 
-.field public static final zen_mode_condition_detail_item_spacing:I = 0x7f07047e
+.field public static final zen_mode_condition_detail_item_interline_spacing:I = 0x7f07047e
+
+.field public static final zen_mode_condition_detail_item_spacing:I = 0x7f07047f
 
 
 # direct methods

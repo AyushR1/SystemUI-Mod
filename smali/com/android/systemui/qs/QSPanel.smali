@@ -125,7 +125,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d0128
+    const v2, 0x7f0d0129
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0d0121
+    const v2, 0x7f0d0122
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0d011f
+    const v2, 0x7f0d0120
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0082
+    const v2, 0x7f0a0085
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/qs/QSPanel;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    const v3, 0x7f0a0084
+    const v3, 0x7f0a0087
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/qs/QSPanel;->findViewById(I)Landroid/view/View;
 
@@ -676,7 +676,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d011d
+    const v1, 0x7f0d011e
 
     const/4 v2, 0x0
 
@@ -1826,7 +1826,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0084
+    const v0, 0x7f0a0087
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/QSPanel;->findViewById(I)Landroid/view/View;
 
@@ -1883,47 +1883,21 @@
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QSPanel;->updatePageIndicator()V
 
-    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mRecords:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/systemui/qs/QSPanel$TileRecord;
-
-    iget-object v3, v2, Lcom/android/systemui/qs/QSPanel$TileRecord;->tile:Lcom/android/systemui/plugins/qs/QSTile;
-
-    invoke-interface {v3}, Lcom/android/systemui/plugins/qs/QSTile;->clearState()V
-
-    goto :goto_0
-
-    :cond_0
     iget-boolean v1, p0, Lcom/android/systemui/qs/QSPanel;->mListening:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->refreshAllTiles()V
 
-    :cond_1
+    :cond_0
     iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
     invoke-interface {v1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->updateResources()Z
 
-    :cond_2
+    :cond_1
     return-void
 .end method

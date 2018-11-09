@@ -16,6 +16,8 @@
 
 .field private final mContext:Landroid/content/Context;
 
+.field private mDisableOnVolumeUp:Z
+
 .field private mNewVolumeUp:Z
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
@@ -53,21 +55,46 @@
 
     iput-object p2, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mAudioManager:Landroid/media/AudioManager;
 
+    const/4 v0, 0x1
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x11200a2
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mDisableOnVolumeUp:Z
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    iput-boolean v0, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mDisableOnVolumeUp:Z
+
+    :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/volume/SafetyWarningDialog;->getWindow()Landroid/view/Window;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/16 v1, 0x7da
+    const/16 v2, 0x7da
 
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
-
-    const/4 v0, 0x1
+    invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/volume/SafetyWarningDialog;->setShowForAllUsers(Z)V
 
     iget-object v0, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
 
-    const v1, 0x10405a8
+    const v1, 0x10405ac
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -75,33 +102,33 @@
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/volume/SafetyWarningDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
+    const/4 v0, -0x1
 
-    const v1, 0x1040013
+    iget-object v1, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const v2, 0x1040013
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const/4 v1, -0x1
+    move-result-object v1
 
-    invoke-virtual {p0, v1, v0, p0}, Lcom/android/systemui/volume/SafetyWarningDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v0, v1, p0}, Lcom/android/systemui/volume/SafetyWarningDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
+    const/4 v0, -0x2
 
-    const v1, 0x1040009
+    iget-object v1, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const v2, 0x1040009
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    check-cast v1, Landroid/content/DialogInterface$OnClickListener;
+    const/4 v2, 0x0
 
-    const/4 v2, -0x2
+    check-cast v2, Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v2, v0, v1}, Lcom/android/systemui/volume/SafetyWarningDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/systemui/volume/SafetyWarningDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     invoke-virtual {p0, p0}, Lcom/android/systemui/volume/SafetyWarningDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -157,6 +184,10 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/volume/SafetyWarningDialog;->mDisableOnVolumeUp:Z
+
+    if-eqz v0, :cond_0
 
     const/16 v0, 0x18
 

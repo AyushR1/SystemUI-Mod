@@ -173,7 +173,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMediaController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f08023f
+    const v3, 0x7f080240
 
     invoke-static {v2, v3}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -211,7 +211,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/pip/phone/PipMediaController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f080242
+    const v4, 0x7f080243
 
     invoke-static {v3, v4}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -245,7 +245,7 @@
 
     iget-object v4, p0, Lcom/android/systemui/pip/phone/PipMediaController;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f08028b
+    const v7, 0x7f08028c
 
     invoke-static {v4, v7}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -279,7 +279,7 @@
 
     iget-object v7, p0, Lcom/android/systemui/pip/phone/PipMediaController;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f08028c
+    const v8, 0x7f08028d
 
     invoke-static {v7, v8}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 

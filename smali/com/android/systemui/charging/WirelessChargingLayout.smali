@@ -35,13 +35,13 @@
 
     move/from16 v1, p3
 
-    const v2, 0x7f0d0171
+    const v2, 0x7f0d0172
 
     move-object/from16 v3, p1
 
     invoke-static {v3, v2, v0}, Lcom/android/systemui/charging/WirelessChargingLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v2, 0x7f0a03b1
+    const v2, 0x7f0a03b4
 
     invoke-virtual {v0, v2}, Lcom/android/systemui/charging/WirelessChargingLayout;->findViewById(I)Landroid/view/View;
 
@@ -49,7 +49,7 @@
 
     check-cast v2, Lcom/android/systemui/charging/WirelessChargingView;
 
-    const v4, 0x7f0a03af
+    const v4, 0x7f0a03b2
 
     invoke-virtual {v0, v4}, Lcom/android/systemui/charging/WirelessChargingLayout;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     move-result-object v5
 
-    const v12, 0x7f070475
+    const v12, 0x7f070476
 
     invoke-virtual {v5, v12}, Landroid/content/res/Resources;->getFloat(I)F
 
@@ -131,7 +131,7 @@
 
     move-result-object v12
 
-    const v13, 0x7f070474
+    const v13, 0x7f070475
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getFloat(I)F
 

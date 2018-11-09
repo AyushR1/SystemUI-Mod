@@ -494,7 +494,7 @@
 
     nop
 
-    const v0, 0x7f0a019a
+    const v0, 0x7f0a019d
 
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardHostView;->findViewById(I)Landroid/view/View;
 

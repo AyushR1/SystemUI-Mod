@@ -51,7 +51,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/car/CarFacetButton;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0d0038
+    const v0, 0x7f0d0039
 
     invoke-static {p1, v0, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -133,7 +133,7 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/car/CarFacetButton;->mUnselectedAlpha:F
 
-    const v0, 0x7f0a009b
+    const v0, 0x7f0a009e
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/car/CarFacetButton;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/car/CarFacetButton;->mSelectedIconResourceId:I
 
-    const v0, 0x7f0a009c
+    const v0, 0x7f0a009f
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/car/CarFacetButton;->findViewById(I)Landroid/view/View;
 

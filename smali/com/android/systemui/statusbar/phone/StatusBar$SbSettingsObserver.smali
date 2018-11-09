@@ -76,7 +76,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$SbSettingsObserver;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2300(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2800(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     :cond_0
     return-void
@@ -87,7 +87,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$SbSettingsObserver;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2300(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2800(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     return-void
 .end method

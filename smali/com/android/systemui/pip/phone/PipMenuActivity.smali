@@ -1040,7 +1040,7 @@
 .method private updateActionViews(Landroid/graphics/Rect;)V
     .locals 11
 
-    const v0, 0x7f0a0115
+    const v0, 0x7f0a0118
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -1104,7 +1104,7 @@
 
     if-ge v5, v6, :cond_1
 
-    const v5, 0x7f0d00f5
+    const v5, 0x7f0d00f6
 
     iget-object v6, p0, Lcom/android/systemui/pip/phone/PipMenuActivity;->mActionsGroup:Landroid/widget/LinearLayout;
 
@@ -1722,7 +1722,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0d00f6
+    const v0, 0x7f0d00f7
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->setContentView(I)V
 
@@ -1740,7 +1740,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    const v0, 0x7f0a006a
+    const v0, 0x7f0a006d
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -1754,7 +1754,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a01f3
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -1776,7 +1776,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v0, 0x7f0a02fc
+    const v0, 0x7f0a02ff
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -1796,7 +1796,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00ee
+    const v0, 0x7f0a00f1
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -1838,7 +1838,7 @@
 
     iput v0, p0, Lcom/android/systemui/pip/phone/PipMenuActivity;->mBetweenActionPaddingLand:I
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f0a0117
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/pip/phone/PipMenuActivity;->findViewById(I)Landroid/view/View;
 

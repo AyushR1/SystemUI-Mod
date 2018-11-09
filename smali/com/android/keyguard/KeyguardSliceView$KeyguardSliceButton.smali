@@ -20,6 +20,10 @@
 .end annotation
 
 
+# instance fields
+.field private shouldTintDrawable:Z
+
+
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
@@ -31,6 +35,10 @@
     const v2, 0x7f12018d
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->shouldTintDrawable:Z
 
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->onDensityOrFontScaleChanged()V
 
@@ -44,6 +52,13 @@
 .method private updateDrawableColors()V
     .locals 5
 
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->shouldTintDrawable:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->getCurrentTextColor()I
 
     move-result v0
@@ -57,20 +72,20 @@
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_1
+    if-ge v3, v2, :cond_2
 
     aget-object v4, v1, v3
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-virtual {v4, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    :cond_0
+    :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -97,7 +112,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070466
+    const v3, 0x7f070467
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -127,7 +142,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f070468
+    const v3, 0x7f070469
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -194,6 +209,14 @@
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->updateDrawableColors()V
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->updatePadding()V
+
+    return-void
+.end method
+
+.method public setShouldTintDrawable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->shouldTintDrawable:Z
 
     return-void
 .end method

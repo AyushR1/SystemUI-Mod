@@ -106,7 +106,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ForegroundServicesDialog;->mInflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0d0068
+    const v2, 0x7f0d0069
 
     const/4 v3, 0x0
 
@@ -122,7 +122,7 @@
 
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-    const v1, 0x10401c5
+    const v1, 0x10401c9
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/ForegroundServicesDialog;->getString(I)Ljava/lang/String;
 

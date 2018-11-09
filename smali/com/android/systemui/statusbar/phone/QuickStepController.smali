@@ -424,7 +424,7 @@
 .end method
 
 .method private handleTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 21
+    .locals 20
 
     move-object/from16 v1, p0
 
@@ -487,20 +487,24 @@
 
     packed-switch v6, :pswitch_data_0
 
-    goto/16 :goto_b
+    :cond_2
+    :goto_1
+    const/4 v3, 0x0
+
+    goto/16 :goto_c
 
     :pswitch_0
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickStepStarted:Z
 
-    if-nez v0, :cond_13
+    if-nez v0, :cond_2
 
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mAllowGestureDetection:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    goto/16 :goto_b
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -531,7 +535,7 @@
 
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mIsVertical:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     nop
 
@@ -539,36 +543,36 @@
 
     move-result v0
 
-    if-le v10, v0, :cond_3
+    if-le v10, v0, :cond_4
 
-    if-le v10, v9, :cond_3
+    if-le v10, v9, :cond_4
 
     const/4 v0, 0x1
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_4
     const/4 v0, 0x0
 
-    :goto_1
+    :goto_2
     nop
 
     invoke-static {}, Lcom/android/systemui/shared/system/NavigationBarCompat;->getQuickStepTouchSlopPx()I
 
     move-result v11
 
-    if-le v9, v11, :cond_4
+    if-le v9, v11, :cond_5
 
-    if-le v9, v10, :cond_4
+    if-le v9, v10, :cond_5
 
     const/4 v11, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_4
+    :cond_5
     const/4 v11, 0x0
 
-    :goto_2
+    :goto_3
     move v12, v8
 
     iget v13, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTouchDownY:I
@@ -585,8 +589,8 @@
 
     move-result v15
 
-    :goto_3
-    move/from16 v20, v12
+    :goto_4
+    move/from16 v19, v12
 
     move v12, v0
 
@@ -594,47 +598,47 @@
 
     move v14, v13
 
-    move/from16 v13, v20
+    move/from16 v13, v19
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_5
+    :cond_6
     nop
 
     invoke-static {}, Lcom/android/systemui/shared/system/NavigationBarCompat;->getQuickScrubTouchSlopPx()I
 
     move-result v0
 
-    if-le v9, v0, :cond_6
+    if-le v9, v0, :cond_7
 
-    if-le v9, v10, :cond_6
+    if-le v9, v10, :cond_7
 
     const/4 v0, 0x1
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_6
+    :cond_7
     const/4 v0, 0x0
 
-    :goto_4
+    :goto_5
     nop
 
     invoke-static {}, Lcom/android/systemui/shared/system/NavigationBarCompat;->getQuickStepTouchSlopPx()I
 
     move-result v11
 
-    if-le v10, v11, :cond_7
+    if-le v10, v11, :cond_8
 
-    if-le v10, v9, :cond_7
+    if-le v10, v9, :cond_8
 
     const/4 v11, 0x1
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_7
+    :cond_8
     const/4 v11, 0x0
 
-    :goto_5
+    :goto_6
     move v12, v7
 
     iget v13, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTouchDownX:I
@@ -651,14 +655,14 @@
 
     move-result v15
 
-    goto :goto_3
+    goto :goto_4
 
-    :goto_6
+    :goto_7
     iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickScrubActive:Z
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_9
 
-    if-eqz v11, :cond_8
+    if-eqz v11, :cond_9
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
@@ -666,31 +670,31 @@
 
     move-result v2
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_2
 
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/QuickStepController;->startQuickStep(Landroid/view/MotionEvent;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_1
 
-    :cond_8
+    :cond_9
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->isQuickScrubEnabled()Z
 
     move-result v2
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_a
 
-    goto/16 :goto_b
+    goto/16 :goto_1
 
-    :cond_9
+    :cond_a
     iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mDragPositive:Z
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_c
 
     iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mIsVertical:Z
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTrackRect:Landroid/graphics/Rect;
 
@@ -698,48 +702,48 @@
 
     move-result v2
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_a
+    :cond_b
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTrackRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
-    :goto_7
+    :goto_8
     sub-int/2addr v0, v2
 
-    :cond_b
+    :cond_c
     move v2, v0
 
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mDragPositive:Z
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
-    if-gez v2, :cond_c
+    if-gez v2, :cond_d
 
-    if-ge v13, v14, :cond_c
-
-    :goto_8
-    const/4 v0, 0x1
-
-    goto :goto_9
-
-    :cond_c
-    const/4 v0, 0x0
-
-    goto :goto_9
-
-    :cond_d
-    if-ltz v2, :cond_c
-
-    if-le v13, v14, :cond_c
-
-    goto :goto_8
+    if-ge v13, v14, :cond_d
 
     :goto_9
-    move/from16 v17, v0
+    const/4 v0, 0x1
+
+    goto :goto_a
+
+    :cond_d
+    const/4 v0, 0x0
+
+    goto :goto_a
+
+    :cond_e
+    if-ltz v2, :cond_d
+
+    if-le v13, v14, :cond_d
+
+    goto :goto_9
+
+    :goto_a
+    move/from16 v16, v0
 
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
@@ -757,7 +761,7 @@
 
     const/4 v3, 0x0
 
-    move/from16 v18, v8
+    move/from16 v17, v8
 
     const/high16 v8, 0x3f800000    # 1.0f
 
@@ -765,35 +769,35 @@
 
     move-result v3
 
-    if-eqz v17, :cond_e
+    if-eqz v16, :cond_f
 
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickScrubActive:Z
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_f
 
-    if-eqz v12, :cond_e
+    if-eqz v12, :cond_f
 
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/QuickStepController;->startQuickScrub()V
 
-    :cond_e
+    :cond_f
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickScrubActive:Z
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_2
 
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mDragPositive:Z
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
-    if-gez v2, :cond_10
-
-    :cond_f
-    iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mDragPositive:Z
-
-    if-nez v0, :cond_13
-
-    if-gtz v2, :cond_13
+    if-gez v2, :cond_11
 
     :cond_10
+    iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mDragPositive:Z
+
+    if-nez v0, :cond_2
+
+    if-gtz v2, :cond_2
+
+    :cond_11
     :try_start_0
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mOverviewEventSender:Lcom/android/systemui/OverviewProxyService;
 
@@ -807,22 +811,22 @@
 
     nop
 
-    move/from16 v19, v2
+    move/from16 v18, v2
 
-    goto :goto_a
+    goto :goto_b
 
     :catch_0
     move-exception v0
 
     const-string v8, "QuickStepController"
 
-    move/from16 v19, v2
+    move/from16 v18, v2
 
     const-string v2, "Failed to send progress of quick scrub."
 
     invoke-static {v8, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_a
+    :goto_b
     int-to-float v0, v7
 
     iput v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mHighlightCenter:F
@@ -831,14 +835,14 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->invalidate()V
 
-    goto :goto_b
+    goto/16 :goto_1
 
     :pswitch_1
     const/4 v2, 0x1
 
     invoke-direct {v1, v2}, Lcom/android/systemui/statusbar/phone/QuickStepController;->endQuickScrub(Z)V
 
-    goto :goto_b
+    goto/16 :goto_1
 
     :pswitch_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
@@ -855,7 +859,7 @@
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTrackAnimator:Landroid/animation/AnimatorSet;
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_12
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTrackAnimator:Landroid/animation/AnimatorSet;
 
@@ -865,7 +869,7 @@
 
     iput-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTrackAnimator:Landroid/animation/AnimatorSet;
 
-    :cond_11
+    :cond_12
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->getCurrentView()Landroid/view/View;
@@ -884,7 +888,7 @@
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mHitTarget:Lcom/android/systemui/statusbar/phone/ButtonDispatcher;
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_13
 
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mHitTarget:Lcom/android/systemui/statusbar/phone/ButtonDispatcher;
 
@@ -892,7 +896,7 @@
 
     invoke-virtual {v3, v7}, Lcom/android/systemui/statusbar/phone/ButtonDispatcher;->setDelayTouchFeedback(Z)V
 
-    :cond_12
+    :cond_13
     iput v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTouchDownX:I
 
     iput v2, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mTouchDownY:I
@@ -925,14 +929,13 @@
 
     iput-boolean v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickStepStarted:Z
 
-    const/4 v3, 0x1
+    const/4 v7, 0x1
 
-    iput-boolean v3, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mAllowGestureDetection:Z
+    iput-boolean v7, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mAllowGestureDetection:Z
 
     nop
 
-    :cond_13
-    :goto_b
+    :goto_c
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickScrubActive:Z
 
     if-nez v0, :cond_15
@@ -949,21 +952,21 @@
 
     if-ne v6, v2, :cond_16
 
-    goto :goto_c
+    goto :goto_d
 
     :cond_14
     const/4 v2, 0x1
 
-    :goto_c
+    :goto_d
     invoke-direct/range {p0 .. p1}, Lcom/android/systemui/statusbar/phone/QuickStepController;->proxyMotionEvents(Landroid/view/MotionEvent;)Z
 
-    goto :goto_d
+    goto :goto_e
 
     :cond_15
     const/4 v2, 0x1
 
     :cond_16
-    :goto_d
+    :goto_e
     iget-boolean v0, v1, Lcom/android/systemui/statusbar/phone/QuickStepController;->mQuickScrubActive:Z
 
     if-nez v0, :cond_18
@@ -974,27 +977,22 @@
 
     if-eqz v4, :cond_17
 
-    goto :goto_e
-
-    :cond_17
-    const/16 v16, 0x0
-
     goto :goto_f
 
-    :cond_18
-    :goto_e
-    move/from16 v16, v2
+    :cond_17
+    move v2, v3
 
+    nop
+
+    :cond_18
     :goto_f
-    return v16
+    return v2
 
     :cond_19
     :goto_10
     move-object/from16 v5, p1
 
-    const/4 v2, 0x0
-
-    return v2
+    return v4
 
     nop
 

@@ -46,7 +46,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0d0066
+    const v0, 0x7f0d0067
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/ForcedResizableInfoActivity;->setContentView(I)V
 

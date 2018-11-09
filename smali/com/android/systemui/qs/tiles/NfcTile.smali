@@ -218,7 +218,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/NfcTile;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f08025e
+    const v1, 0x7f08025f
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -226,7 +226,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/tiles/NfcTile;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f08025d
+    const v2, 0x7f08025e
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

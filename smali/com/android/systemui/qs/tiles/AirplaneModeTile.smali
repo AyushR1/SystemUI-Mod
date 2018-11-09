@@ -31,7 +31,7 @@
 
     nop
 
-    const v0, 0x7f080281
+    const v0, 0x7f080282
 
     invoke-static {v0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 

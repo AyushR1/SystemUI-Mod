@@ -34,7 +34,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    const v0, 0x7f0d0067
+    const v0, 0x7f0d0068
 
     invoke-direct {p0, p1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 
@@ -70,7 +70,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/ForegroundServicesDialog$PackageItemAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0067
+    const v1, 0x7f0d0068
 
     const/4 v2, 0x0
 
@@ -84,7 +84,7 @@
     move-object v0, p2
 
     :goto_0
-    const v1, 0x7f0a0050
+    const v1, 0x7f0a0053
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v2, 0x7f0a0053
+    const v2, 0x7f0a0056
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

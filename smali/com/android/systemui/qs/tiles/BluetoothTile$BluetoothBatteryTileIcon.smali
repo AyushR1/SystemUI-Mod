@@ -46,7 +46,7 @@
 
     iget v1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothBatteryTileIcon;->mIconScale:F
 
-    const v2, 0x7f080249
+    const v2, 0x7f08024a
 
     invoke-static {p1, v2, v0, v1}, Lcom/android/settingslib/graph/BluetoothDeviceLayerDrawable;->createLayerDrawable(Landroid/content/Context;IIF)Lcom/android/settingslib/graph/BluetoothDeviceLayerDrawable;
 

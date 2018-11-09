@@ -1187,6 +1187,7 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="screen_pinning_description">Megjelenítve tartja addig, amíg Ön fel nem oldja a rögzítést. A feloldáshoz tartsa lenyomva a Vissza és az Áttekintés lehetőséget.</string>
     <string name="screen_pinning_description_accessible">Megjelenítve tartja addig, amíg Ön fel nem oldja a rögzítést. A feloldáshoz tartsa lenyomva az Áttekintés lehetőséget.</string>
     <string name="screen_pinning_description_no_navbar">Mindaddig megjelenítve marad, amíg Ön fel nem oldja a rögzítést. A feloldáshoz érintse meg és tartsa lenyomva a Vissza gombot.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Mindaddig megjelenítve marad, amíg Ön fel nem oldja a rögzítést. A feloldáshoz érintse meg és tartsa lenyomva az ujjlenyomat-olvasót.</string>
     <string name="screen_pinning_description_recents_invisible">Megjelenítve tartja addig, amíg Ön fel nem oldja a rögzítést. A feloldáshoz tartsa lenyomva a Vissza és a Kezdőképernyő elemet.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Megjelenítve tartja addig, amíg Ön fel nem oldja a rögzítést. A feloldáshoz tartsa lenyomva a Kezdőképernyő elemet.</string>
     <string name="screen_pinning_exit">Képernyő rögzítése feloldva</string>
@@ -1196,6 +1197,7 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="screen_pinning_title">A képernyő rögzítve van</string>
     <string name="screen_pinning_toast">A képernyő rögzítésének feloldásához tartsa lenyomva a Vissza és az Áttekintés gombot</string>
     <string name="screen_pinning_toast_no_navbar">Képernyő rögzítésének feloldásához érintse meg és tartsa nyomva a Vissza gombot</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Képernyő rögzítésének feloldásához érintse meg és tartsa nyomva az ujjlenyomat-olvasót</string>
     <string name="screen_pinning_toast_recents_invisible">A képernyő rögzítésének feloldásához tartsa lenyomva a Vissza és a Kezdőképernyő gombot</string>
     <string name="screen_zoom_summary_custom">Egyéni (%d)</string>
     <string name="screen_zoom_summary_default">Alapértelmezett</string>

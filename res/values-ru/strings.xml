@@ -685,7 +685,7 @@
     <string name="keyguard_indication_trust_disabled">Устройство необходимо будет разблокировать вручную</string>
     <string name="keyguard_indication_trust_granted">Разблокировано для пользователя %1$s</string>
     <string name="keyguard_indication_trust_managed">Агент \"%1$s\" работает</string>
-    <string name="keyguard_indication_turbo_power_time">Быстрая зарядка активна (%s до полной зарядки)</string>
+    <string name="keyguard_indication_turbo_power_time">Быстрая зарядка подключена (%s до полной зарядки)</string>
     <string name="keyguard_instructions_when_pattern_disabled">Для разблокировки нажмите \"Меню\".</string>
     <string name="keyguard_low_battery">Подключите зарядное устройство.</string>
     <string name="keyguard_missing_sim_instructions">Вставьте SIM-карту.</string>
@@ -709,7 +709,7 @@
     <string name="keyguard_plugged_in_charging_fast">Идет быстрая зарядка (%s)</string>
     <string name="keyguard_plugged_in_charging_slowly">Идет медленная зарядка (%s)</string>
     <string name="keyguard_plugged_in_dash_charging">Быстрая зарядка</string>
-    <string name="keyguard_plugged_in_turbo_power_charging">Быстрая зарядка активна</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">Быстрая зарядка подключена</string>
     <string name="keyguard_sim_error_message_short">Ошибка SIM-карты.</string>
     <string name="keyguard_sim_locked_message">SIM-карта заблокирована.</string>
     <string name="keyguard_sim_puk_locked_message">SIM-карта заблокирована с помощью PUK-кода.</string>
@@ -1183,7 +1183,8 @@
     <string name="saved_network">Кто сохранил: %1$s</string>
     <string name="screen_pinning_description">Приложение останется активным, пока вы не отмените блокировку, нажав и удерживая кнопки \"Назад\" и \"Обзор\".</string>
     <string name="screen_pinning_description_accessible">Приложение останется активным, пока вы не отмените блокировку, нажав и удерживая кнопку \"Обзор\".</string>
-    <string name="screen_pinning_description_no_navbar">Приложение останется активным, пока вы не отмените блокировку. Нажмите &amp;, для открепления.</string>
+    <string name="screen_pinning_description_no_navbar">Приложение останется активным, пока вы не отмените блокировку. Нажмите и удерживайте Назад для отмены блокировки.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Приложение остаётся активным, до тех пор, пока вы не отмените блокировку. Нажмите и удерживайте палец на сканере отпечатков, чтобы отменить блокировку.</string>
     <string name="screen_pinning_description_recents_invisible">Приложение останется активным, пока вы не отмените блокировку, нажав и удерживая кнопки \"Назад\" и \"Главный экран\".</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Приложение останется активным, пока вы не отмените блокировку, нажав и удерживая кнопку \"Главный экран\".</string>
     <string name="screen_pinning_exit">Блокировка выключена</string>
@@ -1193,6 +1194,7 @@
     <string name="screen_pinning_title">Блокировка в приложении включена</string>
     <string name="screen_pinning_toast">Чтобы отменить блокировку, нажмите и удерживайте кнопки \"Назад\" и \"Обзор\"</string>
     <string name="screen_pinning_toast_no_navbar">Чтобы открепить экран, нажмите и удерживайте кнопку «Назад»</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Чтобы разблокировать экран, нажмите и удерживайте палец на сканере отпечатков пальцев</string>
     <string name="screen_pinning_toast_recents_invisible">Чтобы отменить блокировку, нажмите и удерживайте кнопки \"Назад\" и \"Главный экран\"</string>
     <string name="screen_zoom_summary_custom">Другой (%d)</string>
     <string name="screen_zoom_summary_default">По умолчанию</string>

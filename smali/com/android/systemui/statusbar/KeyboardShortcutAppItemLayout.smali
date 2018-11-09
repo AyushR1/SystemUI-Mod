@@ -33,7 +33,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0a0188
+    const v0, 0x7f0a018b
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/KeyboardShortcutAppItemLayout;->findViewById(I)Landroid/view/View;
 
@@ -41,7 +41,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0a018a
+    const v1, 0x7f0a018d
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/KeyboardShortcutAppItemLayout;->findViewById(I)Landroid/view/View;
 

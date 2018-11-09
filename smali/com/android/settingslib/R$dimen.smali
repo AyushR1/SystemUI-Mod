@@ -33,4 +33,4 @@
 
 .field public static final two_target_pref_small_icon_size:I = 0x7f070434
 
-.field public static final wifi_preference_badge_padding:I = 0x7f070473
+.field public static final wifi_preference_badge_padding:I = 0x7f070474

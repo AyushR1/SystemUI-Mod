@@ -66,7 +66,7 @@
 
     nop
 
-    const v0, 0x7f0a0158
+    const v0, 0x7f0a015b
 
     invoke-virtual {p3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     check-cast v4, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;
 
-    const v0, 0x7f0a0248
+    const v0, 0x7f0a024b
 
     invoke-virtual {p3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     check-cast v5, Lcom/android/systemui/statusbar/stack/NotificationStackScrollLayout;
 
-    const v0, 0x7f0a0242
+    const v0, 0x7f0a0245
 
     invoke-virtual {p3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     check-cast v6, Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    const v0, 0x7f0a00a9
+    const v0, 0x7f0a00ac
 
     invoke-virtual {p3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

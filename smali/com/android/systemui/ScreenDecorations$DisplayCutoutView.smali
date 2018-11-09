@@ -96,7 +96,7 @@
 
     iput-object p4, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mDecorations:Lcom/android/systemui/ScreenDecorations;
 
-    const v0, 0x7f0a00f1
+    const v0, 0x7f0a00f4
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->setId(I)V
 

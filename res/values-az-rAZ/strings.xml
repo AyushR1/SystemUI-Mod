@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyguard_indication_dash_charging_time">Dash Enerji Yığma (tam dolmaya %s qaldı)</string>
+    <string name="keyguard_indication_turbo_power_time">TurboPower bağlandı (tam dolmasına %s qaldı)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Enerji Yığma</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower bağlandı</string>
+    <string name="screen_pinning_description_no_navbar">Bu əməliyyat, siz sancaqı çıxarana qədər tətbiqi aktiv saxlayır. Sancaqı çıxarmaq üçün Geri düyməsinə basıb saxlayın.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Bu əməliyyat, siz sancaqı çıxarana qədər tətbiqi aktiv saxlayır. Sancaqı çıxarmaq üçün barmaq izi sensoruna basıb saxlayın.</string>
+    <string name="screen_pinning_toast_no_navbar">Bu ekrandan çıxmaq üçün Geri düyməsinə basıb saxlayın</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Bu ekrandan çıxmaq üçün barmaq izi sensoruna basıb saxlayın</string>
+</resources>

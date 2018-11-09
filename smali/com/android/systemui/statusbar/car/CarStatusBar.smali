@@ -387,12 +387,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0d0041
+    const v0, 0x7f0d0042
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0d0042
+    const v0, 0x7f0d0043
 
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/car/CarStatusBar;->buildBottomBar(I)V
@@ -406,12 +406,12 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0d003b
+    const v0, 0x7f0d003c
 
     goto :goto_1
 
     :cond_2
-    const v0, 0x7f0d003c
+    const v0, 0x7f0d003d
 
     :goto_1
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/car/CarStatusBar;->buildLeft(I)V
@@ -425,12 +425,12 @@
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0d0048
+    const v0, 0x7f0d0049
 
     goto :goto_2
 
     :cond_4
-    const v0, 0x7f0d0049
+    const v0, 0x7f0d004a
 
     :goto_2
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/car/CarStatusBar;->buildRight(I)V
@@ -446,7 +446,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d00da
+    const v2, 0x7f0d00db
 
     if-eqz v0, :cond_0
 
@@ -578,7 +578,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0074
+    const v1, 0x7f0a0077
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -748,7 +748,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/car/CarStatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
 
-    const v3, 0x7f0a0130
+    const v3, 0x7f0a0133
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
 

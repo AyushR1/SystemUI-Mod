@@ -1186,6 +1186,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="screen_pinning_description">La pantalla se mantiene visible hasta que dejas de fijarla. Para ello, mantén pulsados los botones Atrás y Aplicaciones recientes.</string>
     <string name="screen_pinning_description_accessible">La pantalla se mantiene visible hasta que dejas de fijarla. Para ello, mantén pulsado el botón Aplicaciones recientes.</string>
     <string name="screen_pinning_description_no_navbar">Fija el contenido en pantalla. Mantén el botón Atrás para desfijar.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Esto mantiene la pantalla a la vista hasta que la sueltes. Manten presionado el sensor de huella para soltar.</string>
     <string name="screen_pinning_description_recents_invisible">La pantalla se mantiene visible hasta que dejas de fijarla. Para ello, mantén pulsados los botones Atrás e Inicio.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">La pantalla se mantiene visible hasta que dejas de fijarla. Para ello, mantén pulsado el botón Inicio.</string>
     <string name="screen_pinning_exit">La pantalla ya no está fija</string>
@@ -1195,6 +1196,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="screen_pinning_title">Pantalla fijada</string>
     <string name="screen_pinning_toast">Mantén pulsado el botón Atrás y el de aplicaciones recientes para dejar de fijar esta pantalla</string>
     <string name="screen_pinning_toast_no_navbar">Mantén pulsado el botón Atrás para dejar de fijar esta pantalla</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Para soltar esta pantalla, manten tocado el sensor de huella</string>
     <string name="screen_pinning_toast_recents_invisible">Mantén pulsado el botón Atrás y el de Inicio para dejar de fijar esta pantalla</string>
     <string name="screen_zoom_summary_custom">Personalizado (%d)</string>
     <string name="screen_zoom_summary_default">Predeterminado</string>

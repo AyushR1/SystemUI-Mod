@@ -684,7 +684,7 @@
     <string name="keyguard_indication_charging_time" formatted="false">%2$s • चार्ज हो रहा है (%s में पूरा होगा)</string>
     <string name="keyguard_indication_charging_time_fast" formatted="false">%2$s • तेज़ चार्ज हो रहा है (%s में पूरा होगा)</string>
     <string name="keyguard_indication_charging_time_slowly" formatted="false">%2$s • धीरे चार्ज हो रहा है (%s में पूरा होगा)</string>
-    <string name="keyguard_indication_dash_charging_time">डैश चार्जिंग (%s पूर्ण होने में)</string>
+    <string name="keyguard_indication_dash_charging_time">डैश चार्जिंग (%s में पूर्ण)</string>
     <string name="keyguard_indication_trust_disabled">जब तक कि आप मैन्‍युअल रूप से अनलॉक नहीं करते तब तक डिवाइस लॉक रहेगा</string>
     <string name="keyguard_indication_trust_granted">%1$s के लिए अनलॉक किया गया</string>
     <string name="keyguard_indication_trust_managed">%1$s चल रहा है</string>
@@ -1186,6 +1186,7 @@
     <string name="saved_network">%1$s के द्वारा सहेजा गया</string>
     <string name="screen_pinning_description">"इससे वह तब तक दिखता रहता है जब तक कि आप उसे अनपिन नहीं कर देते. अनपिन करने के लिए, 'वापस जाएं' और 'खास जानकारी' को दबाकर रखें."</string>
     <string name="screen_pinning_description_accessible">"इससे वह तब तक दिखता रहता है जब तक कि आप उसे अनपिन नहीं कर देते. अनपिन करने के लिए, 'खास जानकारी' को दबाकर रखें."</string>
+    <string name="screen_pinning_description_no_navbar">यह इसे तब तक दृश्य में रखता है जब तक आप अनपिन नहीं करते। अनपिन करने के लिए बैक बटन को कुछ देर दबाएँ रखें।</string>
     <string name="screen_pinning_description_recents_invisible">इससे वह तब तक दिखाई देती है जब तक आप उसे अनपिन नहीं कर देते. अनपिन करने के लिए, होम और वापस जाएं वाले बटन को दबाकर रखें.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">इससे वह तब तक दिखाई देती है जब तक आप उसे अनपिन नहीं कर देते. अनपिन करने के लिए, होम बटन को दबाकर रखें.</string>
     <string name="screen_pinning_exit">स्‍क्रीन अनपिन की गई</string>
@@ -1194,6 +1195,7 @@
     <string name="screen_pinning_start">स्‍क्रीन पिन की गई</string>
     <string name="screen_pinning_title">स्‍क्रीन पिन कर दी गई है</string>
     <string name="screen_pinning_toast">इस स्क्रीन को अनपिन करने के लिए, खास जानकारी और वापस जाएं वाले बटन को दबाकर रखें</string>
+    <string name="screen_pinning_toast_no_navbar">इस स्क्रीन को अनपिन करने के लिए पीछे जाने के बटन को कुछ देर तक छुएँ।</string>
     <string name="screen_pinning_toast_recents_invisible">इस स्क्रीन को अनपिन करने के लिए, होम और वापस जाएं वाले बटन को दबाकर रखें</string>
     <string name="screen_zoom_summary_custom">कस्टम (%d)</string>
     <string name="screen_zoom_summary_default">डिफ़ॉल्ट</string>

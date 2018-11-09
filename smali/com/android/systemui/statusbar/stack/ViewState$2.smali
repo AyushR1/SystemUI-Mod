@@ -28,7 +28,7 @@
 .method public getAnimationEndTag()I
     .locals 1
 
-    const v0, 0x7f0a02c0
+    const v0, 0x7f0a02c3
 
     return v0
 .end method
@@ -36,7 +36,7 @@
 .method public getAnimationStartTag()I
     .locals 1
 
-    const v0, 0x7f0a02c1
+    const v0, 0x7f0a02c4
 
     return v0
 .end method
@@ -44,7 +44,7 @@
 .method public getAnimatorTag()I
     .locals 1
 
-    const v0, 0x7f0a02c2
+    const v0, 0x7f0a02c5
 
     return v0
 .end method

@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBar$DozeServiceHost;->access$1902(Lcom/android/systemui/statusbar/phone/StatusBar$DozeServiceHost;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBar$DozeServiceHost;->access$2502(Lcom/android/systemui/statusbar/phone/StatusBar$DozeServiceHost;Z)Z
 
     return-void
 .end method

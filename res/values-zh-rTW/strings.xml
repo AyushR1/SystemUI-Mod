@@ -1187,6 +1187,7 @@
     <string name="screen_pinning_description">這會讓目前的螢幕畫面保持顯示狀態，直到取消固定為止。按住 [返回] 按鈕和 [總覽] 按鈕即可取消固定。</string>
     <string name="screen_pinning_description_accessible">這會讓目前的螢幕畫面保持顯示狀態，直到取消固定為止。按住 [總覽] 按鈕即可取消固定。</string>
     <string name="screen_pinning_description_no_navbar">這會讓目前的螢幕畫面保持顯示狀態，直到取消固定為止。按住「返回」鍵即可取消固定。</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">這將會固定顯示屏幕，直到您取消為止。觸碰並暗助指紋感測器以取消。</string>
     <string name="screen_pinning_description_recents_invisible">這會讓應用程式顯示在螢幕上，直到取消固定為止。按住 [返回] 按鈕和主螢幕按鈕即可取消固定。</string>
     <string name="screen_pinning_description_recents_invisible_accessible">這會讓應用程式顯示在螢幕上，直到取消固定為止。按住主螢幕按鈕即可取消固定。</string>
     <string name="screen_pinning_exit">已取消固定螢幕畫面</string>
@@ -1196,6 +1197,7 @@
     <string name="screen_pinning_title">螢幕已固定</string>
     <string name="screen_pinning_toast">如要取消固定這個螢幕畫面，請按住「返回」按鈕和「總覽」按鈕</string>
     <string name="screen_pinning_toast_no_navbar">如要取消固定這個畫面，請輕觸並按住返回按鈕。</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">要取消固定，請觸碰並暗助指紋感測器以取消。</string>
     <string name="screen_pinning_toast_recents_invisible">如要取消固定這個螢幕畫面，請按住「返回」按鈕和主螢幕按鈕</string>
     <string name="screen_zoom_summary_custom">自訂 (%d)</string>
     <string name="screen_zoom_summary_default">預設</string>

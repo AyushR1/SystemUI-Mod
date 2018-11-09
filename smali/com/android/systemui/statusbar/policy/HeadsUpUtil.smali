@@ -7,7 +7,7 @@
 .method public static isClickedHeadsUpNotification(Landroid/view/View;)Z
     .locals 2
 
-    const v0, 0x7f0a0178
+    const v0, 0x7f0a017b
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -51,7 +51,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    const v1, 0x7f0a0178
+    const v1, 0x7f0a017b
 
     invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 

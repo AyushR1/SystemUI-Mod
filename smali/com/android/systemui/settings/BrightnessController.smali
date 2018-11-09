@@ -533,7 +533,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController;->mIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f08024e
+    const v1, 0x7f08024f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

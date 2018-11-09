@@ -1187,6 +1187,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="screen_pinning_description">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Terug en Overzicht en houd deze vast om het scherm los te maken.</string>
     <string name="screen_pinning_description_accessible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Overzicht en houd dit vast om het scherm los te maken.</string>
     <string name="screen_pinning_description_no_navbar">"Het scherm blijft zichtbaar totdat je het losmaakt. Houd 'Terug' ingedrukt om het los te maken."</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">"Het scherm blijft zichtbaar totdat je het losmaakt. Houd 'Terug' ingedrukt om het los te maken."</string>
     <string name="screen_pinning_description_recents_invisible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Terug en Home en houd deze vast om het scherm los te maken.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Het scherm blijft zichtbaar totdat je het losmaakt. Tik op Home en houd dit vast om het scherm los te maken.</string>
     <string name="screen_pinning_exit">Scherm losgemaakt</string>

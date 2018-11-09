@@ -303,7 +303,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mNumberPain:Landroid/graphics/Paint;
 
-    const v2, 0x7f08034e
+    const v2, 0x7f08034f
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -2183,7 +2183,7 @@
     return v2
 
     :cond_4
-    const v7, 0x7f0a0166
+    const v7, 0x7f0a0169
 
     invoke-virtual {p0, v7, v6}, Lcom/android/systemui/statusbar/StatusBarIconView;->setTag(ILjava/lang/Object;)V
 
@@ -2229,7 +2229,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f08023c
+    const v7, 0x7f08023d
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

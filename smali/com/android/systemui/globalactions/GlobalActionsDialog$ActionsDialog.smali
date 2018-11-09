@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    const v1, 0x7f0d006a
+    const v1, 0x7f0d006b
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->setContentView(I)V
 
@@ -142,7 +142,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/HardwareUiLayout;->setOutsideTouchListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x104025b
+    const v1, 0x104025f
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->setTitle(I)V
 

@@ -317,7 +317,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f08039e
+    const v6, 0x7f08039f
 
     invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -373,7 +373,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f08039e
+    const v6, 0x7f08039f
 
     invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -727,7 +727,7 @@
 
     new-instance v15, Landroid/app/Notification$Action$Builder;
 
-    const v14, 0x10405d9
+    const v14, 0x10405dd
 
     invoke-virtual {v5, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -735,7 +735,7 @@
 
     move-object/from16 v16, v0
 
-    const v0, 0x7f08027b
+    const v0, 0x7f08027c
 
     invoke-direct {v15, v0, v14, v13}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -795,7 +795,7 @@
 
     new-instance v2, Landroid/app/Notification$Action$Builder;
 
-    const v15, 0x10405b3
+    const v15, 0x10405b7
 
     invoke-virtual {v5, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -803,7 +803,7 @@
 
     move-wide/from16 v19, v6
 
-    const v6, 0x7f08027a
+    const v6, 0x7f08027b
 
     invoke-direct {v2, v6, v15, v0}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -841,7 +841,7 @@
 
     new-instance v7, Landroid/app/Notification$Action$Builder;
 
-    const v15, 0x10401ad
+    const v15, 0x10401b1
 
     invoke-virtual {v5, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -849,7 +849,7 @@
 
     move-object/from16 v21, v0
 
-    const v0, 0x7f080279
+    const v0, 0x7f08027a
 
     invoke-direct {v7, v0, v15, v6}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 

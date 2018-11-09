@@ -1187,6 +1187,7 @@
     <string name="screen_pinning_description">يؤدي هذا إلى استمرار عرض الشاشة المُختارة إلى أن تتم إزالة تثبيتها. المس مع الاستمرار الزرين \"رجوع\" و\"نظرة عامة\" لإزالة التثبيت.</string>
     <string name="screen_pinning_description_accessible">يؤدي هذا إلى استمرار عرض الشاشة المُختارة إلى أن تتم إزالة تثبيتها. المس مع الاستمرار زر \"نظرة عامة\" لإزالة التثبيت.</string>
     <string name="screen_pinning_description_no_navbar">يؤدي هذا إلى استمرار العرض إلى أن يتم إزالة التثبيت. ويمكنك لمس \"رجوع\" مع الاستمرار لإزالة التثبيت.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">هذا يجعلها في العرض حتى تقوم بإلغاء التثبيت. اضغط مطولاً على مستشعر البصمة لإلغاء التثبيت.</string>
     <string name="screen_pinning_description_recents_invisible">يؤدي هذا إلى استمرار عرض الشاشة المُختارة إلى أن تتم إزالة تثبيتها. المس مع الاستمرار الزرين \"رجوع\" و\"الشاشة الرئيسية\" لإزالة التثبيت.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">يؤدي هذا إلى استمرار عرض الشاشة المُختارة إلى أن تتم إزالة تثبيتها. المس مع الاستمرار زر \"الشاشة الرئيسية\" لإزالة التثبيت.</string>
     <string name="screen_pinning_exit">تمَت إزالة تثبيت الشاشة.</string>
@@ -1196,6 +1197,7 @@
     <string name="screen_pinning_title">تم تثبيت الشاشة</string>
     <string name="screen_pinning_toast">لإزالة تثبيت هذه الشاشة، يمكنك أن تلمس مع الاستمرار زرّي \"رجوع\" و\"نظرة عامة\".</string>
     <string name="screen_pinning_toast_no_navbar">لإلغاء تثبيت هذه الشاشة, استمر بالضغط على زر الرجوع</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">لإلغاء تثبيت هذه الشاشة, استمر بالضغط على مستشعر البصمة</string>
     <string name="screen_pinning_toast_recents_invisible">لإزالة تثبيت هذه الشاشة، يمكنك أن تلمس مع الاستمرار زرّي \"رجوع\" و\"الشاشة الرئيسية\".</string>
     <string name="screen_zoom_summary_custom">مخصص (%d)</string>
     <string name="screen_zoom_summary_default">تلقائي</string>

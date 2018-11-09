@@ -380,7 +380,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d0047
+    const v0, 0x7f0d0048
 
     const/4 v1, 0x0
 
@@ -396,7 +396,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0a0155
+    const v0, 0x7f0a0158
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -404,7 +404,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/car/CarQSFragment;->mHeader:Landroid/view/View;
 
-    const v0, 0x7f0a0286
+    const v0, 0x7f0a0289
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -416,7 +416,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/car/CarQSFragment;->mFooter:Lcom/android/systemui/qs/car/CarQSFooter;
 
-    const v1, 0x7f0a0389
+    const v1, 0x7f0a038c
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/car/CarQSFooter;->findViewById(I)Landroid/view/View;
 
@@ -426,7 +426,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/car/CarQSFragment;->mFooter:Lcom/android/systemui/qs/car/CarQSFooter;
 
-    const v1, 0x7f0a038b
+    const v1, 0x7f0a038e
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/car/CarQSFooter;->findViewById(I)Landroid/view/View;
 
@@ -434,7 +434,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/car/CarQSFragment;->mFooterExpandIcon:Landroid/view/View;
 
-    const v0, 0x7f0a038c
+    const v0, 0x7f0a038f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -452,7 +452,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/car/CarQSFragment;->mUserSwitcherContainer:Landroid/view/View;
 
-    const v2, 0x7f0a0388
+    const v2, 0x7f0a038b
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -77,6 +77,8 @@
     .end annotation
 .end field
 
+.field private mWeatherIconSize:I
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -322,7 +324,7 @@
 .end method
 
 .method private showSlice()V
-    .locals 20
+    .locals 21
 
     move-object/from16 v0, p0
 
@@ -330,13 +332,13 @@
 
     const/16 v2, 0x8
 
-    if-nez v1, :cond_f
+    if-nez v1, :cond_11
 
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mSlice:Landroidx/slice/Slice;
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_8
+    goto/16 :goto_b
 
     :cond_0
     new-instance v1, Landroidx/slice/widget/ListContent;
@@ -492,7 +494,7 @@
     move v2, v9
 
     :goto_3
-    if-ge v2, v5, :cond_b
+    if-ge v2, v5, :cond_d
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -516,38 +518,59 @@
 
     move-result-object v12
 
-    iget-object v13, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
-
-    invoke-virtual {v13, v12}, Lcom/android/keyguard/KeyguardSliceView$Row;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v13
 
-    check-cast v13, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;
+    const-string v14, "content://com.android.systemui.keyguard/weather"
 
-    if-nez v13, :cond_6
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    new-instance v14, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;
+    move-result v13
 
-    iget-object v15, v0, Lcom/android/keyguard/KeyguardSliceView;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
-    invoke-direct {v14, v15}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v14, v12}, Lcom/android/keyguard/KeyguardSliceView$Row;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
 
-    move-object v13, v14
+    move-result-object v14
 
-    invoke-virtual {v13, v8}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setTextColor(I)V
+    check-cast v14, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;
 
-    invoke-virtual {v13, v12}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setTag(Ljava/lang/Object;)V
+    if-nez v14, :cond_6
 
-    iget-boolean v14, v0, Lcom/android/keyguard/KeyguardSliceView;->mHasHeader:Z
+    new-instance v15, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;
 
-    sub-int v14, v2, v14
+    iget-object v6, v0, Lcom/android/keyguard/KeyguardSliceView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v15, v6}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;-><init>(Landroid/content/Context;)V
+
+    move-object v14, v15
+
+    xor-int/lit8 v6, v13, 0x1
+
+    invoke-virtual {v14, v6}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setShouldTintDrawable(Z)V
+
+    invoke-virtual {v14, v8}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setTextColor(I)V
+
+    invoke-virtual {v14, v12}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setTag(Ljava/lang/Object;)V
+
+    iget-boolean v6, v0, Lcom/android/keyguard/KeyguardSliceView;->mHasHeader:Z
+
+    sub-int v6, v2, v6
 
     iget-object v15, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
-    invoke-virtual {v15, v13, v14}, Lcom/android/keyguard/KeyguardSliceView$Row;->addView(Landroid/view/View;I)V
+    invoke-virtual {v15, v14, v6}, Lcom/android/keyguard/KeyguardSliceView$Row;->addView(Landroid/view/View;I)V
+
+    goto :goto_4
 
     :cond_6
-    const/4 v14, 0x0
+    xor-int/lit8 v6, v13, 0x1
+
+    invoke-virtual {v14, v6}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setShouldTintDrawable(Z)V
+
+    :goto_4
+    const/4 v6, 0x0
 
     invoke-virtual {v11}, Landroidx/slice/widget/RowContent;->getPrimaryAction()Landroidx/slice/SliceItem;
 
@@ -561,12 +584,12 @@
 
     invoke-virtual {v15}, Landroidx/slice/SliceItem;->getAction()Landroid/app/PendingIntent;
 
-    move-result-object v14
+    move-result-object v6
 
     :cond_7
     iget-object v15, v0, Lcom/android/keyguard/KeyguardSliceView;->mClickActions:Ljava/util/HashMap;
 
-    invoke-virtual {v15, v13, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v15, v14, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {v11}, Landroidx/slice/widget/RowContent;->getTitleItem()Landroidx/slice/SliceItem;
 
@@ -574,59 +597,61 @@
 
     if-nez v15, :cond_8
 
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_8
     invoke-virtual {v15}, Landroidx/slice/SliceItem;->getText()Ljava/lang/CharSequence;
 
     move-result-object v16
 
-    move-object/from16 v6, v16
+    move-object/from16 v4, v16
 
-    :goto_4
-    invoke-virtual {v13, v6}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setText(Ljava/lang/CharSequence;)V
+    :goto_5
+    invoke-virtual {v14, v4}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setText(Ljava/lang/CharSequence;)V
 
     invoke-virtual {v11}, Landroidx/slice/widget/RowContent;->getContentDescription()Ljava/lang/CharSequence;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-virtual {v13, v6}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v14, v4}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
     invoke-virtual {v10}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
-
-    move-result-object v4
-
-    const-string v7, "image"
-
-    invoke-static {v4, v7}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/Slice;Ljava/lang/String;)Landroidx/slice/SliceItem;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_9
-
-    invoke-virtual {v4}, Landroidx/slice/SliceItem;->getIcon()Landroid/support/v4/graphics/drawable/IconCompat;
 
     move-result-object v7
 
     move-object/from16 v17, v1
 
+    const-string v1, "image"
+
+    invoke-static {v7, v1}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/Slice;Ljava/lang/String;)Landroidx/slice/SliceItem;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_b
+
+    invoke-virtual {v1}, Landroidx/slice/SliceItem;->getIcon()Landroid/support/v4/graphics/drawable/IconCompat;
+
+    move-result-object v7
+
+    move-object/from16 v18, v1
+
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7, v1}, Landroid/support/v4/graphics/drawable/IconCompat;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v7
 
@@ -634,15 +659,23 @@
 
     div-float/2addr v1, v7
 
+    if-eqz v13, :cond_9
+
+    iget v7, v0, Lcom/android/keyguard/KeyguardSliceView;->mWeatherIconSize:I
+
+    goto :goto_6
+
+    :cond_9
     iget v7, v0, Lcom/android/keyguard/KeyguardSliceView;->mIconSize:I
 
+    :goto_6
     int-to-float v7, v7
 
     mul-float/2addr v1, v7
 
     float-to-int v1, v1
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     const/4 v7, 0x1
 
@@ -650,41 +683,49 @@
 
     move-result v3
 
+    if-eqz v13, :cond_a
+
+    iget v7, v0, Lcom/android/keyguard/KeyguardSliceView;->mWeatherIconSize:I
+
+    goto :goto_7
+
+    :cond_a
     iget v7, v0, Lcom/android/keyguard/KeyguardSliceView;->mIconSize:I
 
-    move/from16 v19, v1
+    :goto_7
+    move/from16 v20, v1
 
     const/4 v1, 0x0
 
-    invoke-virtual {v6, v1, v1, v3, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v4, v1, v1, v3, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    goto :goto_5
+    goto :goto_8
 
-    :cond_9
-    move-object/from16 v17, v1
+    :cond_b
+    move-object/from16 v18, v1
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     const/4 v1, 0x0
 
-    :goto_5
+    :goto_8
     const/4 v3, 0x0
 
-    invoke-virtual {v13, v6, v3, v3, v3}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v14, v4, v3, v3, v3}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v13, v0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v14, v0}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    if-eqz v14, :cond_a
+    if-eqz v6, :cond_c
 
     const/4 v7, 0x1
 
-    goto :goto_6
+    goto :goto_9
 
-    :cond_a
+    :cond_c
     move v7, v1
 
-    :goto_6
-    invoke-virtual {v13, v7}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setClickable(Z)V
+    :goto_9
+    invoke-virtual {v14, v7}, Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceButton;->setClickable(Z)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -692,27 +733,27 @@
 
     move-object/from16 v1, v17
 
-    move-object/from16 v3, v18
+    move-object/from16 v3, v19
 
     const/4 v7, 0x1
 
     goto/16 :goto_3
 
-    :cond_b
+    :cond_d
     move-object/from16 v17, v1
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     move v1, v4
 
-    :goto_7
+    :goto_a
     iget-object v2, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
     invoke-virtual {v2}, Lcom/android/keyguard/KeyguardSliceView$Row;->getChildCount()I
 
     move-result v2
 
-    if-ge v1, v2, :cond_d
+    if-ge v1, v2, :cond_f
 
     iget-object v2, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
@@ -726,7 +767,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_c
+    if-nez v3, :cond_e
 
     iget-object v3, v0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
@@ -734,27 +775,27 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    :cond_c
+    :cond_e
     const/4 v2, 0x1
 
     add-int/2addr v1, v2
 
-    goto :goto_7
+    goto :goto_a
 
-    :cond_d
+    :cond_f
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mContentChangeListener:Ljava/lang/Runnable;
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_10
 
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mContentChangeListener:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    :cond_e
+    :cond_10
     return-void
 
-    :cond_f
-    :goto_8
+    :cond_11
+    :goto_b
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
@@ -765,13 +806,13 @@
 
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mContentChangeListener:Ljava/lang/Runnable;
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_12
 
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSliceView;->mContentChangeListener:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    :cond_10
+    :cond_12
     return-void
 .end method
 
@@ -935,13 +976,27 @@
 
     move-result-object v0
 
-    const v1, 0x7f070469
+    const v1, 0x7f07046a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mIconSize:I
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070462
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mWeatherIconSize:I
 
     return-void
 .end method
@@ -973,7 +1028,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a034e
+    const v0, 0x7f0a0351
 
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardSliceView;->findViewById(I)Landroid/view/View;
 
@@ -983,7 +1038,7 @@
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b0
+    const v0, 0x7f0a02b3
 
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardSliceView;->findViewById(I)Landroid/view/View;
 

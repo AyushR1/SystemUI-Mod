@@ -1186,6 +1186,8 @@
     <string name="saved_network">נשמר על ידי %1$s</string>
     <string name="screen_pinning_description">"נשאר בתצוגה עד לביטול ההצמדה. גע בלחצנים 'הקודם' ו'סקירה' והחזק כדי לבטל את ההצמדה."</string>
     <string name="screen_pinning_description_accessible">"נשאר בתצוגה עד לביטול ההצמדה. גע בלחצן 'סקירה' והחזק כדי לבטל את ההצמדה."</string>
+    <string name="screen_pinning_description_no_navbar">"שומר בתצוגה עד לביטול ההצמדה. גע והחזק בו זמנית בלחצן 'הקודם' כדי לבטל הצמדה."</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">המסך ימשיך להיות מוצג עד לאחר שתבטל את הנעיצה. לחץ והחזק על חיישן טביעת האצבע על מנת לבטל את הנעיצה.</string>
     <string name="screen_pinning_description_recents_invisible">"נשאר בתצוגה עד לביטול ההצמדה. יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'דף הבית' כדי לבטל את ההצמדה."</string>
     <string name="screen_pinning_description_recents_invisible_accessible">"נשאר בתצוגה עד לביטול ההצמדה. יש ללחוץ לחיצה ארוכה על הלחצן 'דף הבית' כדי לבטל את ההצמדה."</string>
     <string name="screen_pinning_exit">הצמדת המסך בוטלה</string>
@@ -1195,6 +1197,7 @@
     <string name="screen_pinning_title">המסך מוצמד</string>
     <string name="screen_pinning_toast">"כדי לבטל את ההצמדה של מסך זה, יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'סקירה'"</string>
     <string name="screen_pinning_toast_no_navbar">בכדי לבטל נעיצת מסך זה, גע והחזק בלחצן \"הקודם\"</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">בכדי לבטל נעיצת מסך זה, גע והחזק בחיישן טביעת האצבע</string>
     <string name="screen_pinning_toast_recents_invisible">"כדי לבטל את ההצמדה של מסך זה, יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'דף הבית'"</string>
     <string name="screen_zoom_summary_custom">מותאם אישית (%d)</string>
     <string name="screen_zoom_summary_default">ברירת מחדל</string>

@@ -460,7 +460,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/NotificationTemplateViewWrapper;->mPicture:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a016b
+    const v1, 0x7f0a016e
 
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 

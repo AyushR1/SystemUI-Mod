@@ -29,7 +29,7 @@
 
     const p1, 0x1080389
 
-    const v0, 0x10400e6
+    const v0, 0x10400e8
 
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$SinglePressAction;-><init>(II)V
 
@@ -63,7 +63,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x10400e5
+    const v2, 0x10400e7
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

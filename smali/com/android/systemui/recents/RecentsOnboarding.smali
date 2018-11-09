@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0134
+    const v2, 0x7f0d0135
 
     const/4 v3, 0x0
 
@@ -147,7 +147,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/recents/RecentsOnboarding;->mLayout:Landroid/view/View;
 
-    const v2, 0x7f0a0250
+    const v2, 0x7f0a0253
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/recents/RecentsOnboarding;->mLayout:Landroid/view/View;
 
-    const v2, 0x7f0a00ee
+    const v2, 0x7f0a00f1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -171,7 +171,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/recents/RecentsOnboarding;->mLayout:Landroid/view/View;
 
-    const v2, 0x7f0a005a
+    const v2, 0x7f0a005d
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -11,7 +11,7 @@
     <dimen name="mr_controller_volume_group_list_item_height">61.0dip</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">18.0dip</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">132.0dip</dimen>
-    <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_width_car_mode</item>
+    <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_width</item>
     <dimen name="qs_detail_margin_top">0.0dip</dimen>
     <dimen name="qs_header_tooltip_height">24.0dip</dimen>
     <dimen name="qs_paged_tile_layout_padding_bottom">0.0dip</dimen>

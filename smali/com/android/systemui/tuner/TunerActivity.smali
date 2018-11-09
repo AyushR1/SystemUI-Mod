@@ -120,7 +120,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a00bd
+    const v4, 0x7f0a00c0
 
     const-string v5, "tuner"
 
@@ -223,7 +223,7 @@
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/tuner/TunerActivity;->setTitle(Ljava/lang/CharSequence;)V
 
-    const v5, 0x7f0a00bd
+    const v5, 0x7f0a00c0
 
     invoke-virtual {v4, v5, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -288,7 +288,7 @@
 
     invoke-virtual {v1, p1, v4}, Lcom/android/systemui/tuner/TunerActivity$SubSettingsFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
-    const v4, 0x7f0a00bd
+    const v4, 0x7f0a00c0
 
     invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 

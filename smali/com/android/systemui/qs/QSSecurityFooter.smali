@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0d0129
+    const v2, 0x7f0d012a
 
     const/4 v3, 0x0
 
@@ -123,7 +123,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mRootView:Landroid/view/View;
 
-    const v2, 0x7f0a0129
+    const v2, 0x7f0a012c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,7 +135,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mRootView:Landroid/view/View;
 
-    const v2, 0x7f0a0127
+    const v2, 0x7f0a012a
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -399,7 +399,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d012a
+    const v3, 0x7f0d012b
 
     const/4 v4, 0x0
 
@@ -427,7 +427,7 @@
 
     const/4 v3, -0x2
 
-    const v0, 0x7f0a00e7
+    const v0, 0x7f0a00ea
 
     const/16 v1, 0x8
 
@@ -448,7 +448,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a00e9
+    const v0, 0x7f0a00ec
 
     invoke-virtual {v15, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -471,7 +471,7 @@
 
     move-result-object v5
 
-    const v0, 0x7f0a0094
+    const v0, 0x7f0a0097
 
     if-nez v5, :cond_1
 
@@ -492,7 +492,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0096
+    const v0, 0x7f0a0099
 
     invoke-virtual {v15, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -513,7 +513,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a0227
+    const v0, 0x7f0a022a
 
     if-nez v2, :cond_2
 
@@ -534,7 +534,7 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0229
+    const v0, 0x7f0a022c
 
     invoke-virtual {v15, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -549,7 +549,7 @@
 
     move-result-object v3
 
-    const v0, 0x7f0a039f
+    const v0, 0x7f0a03a2
 
     if-nez v3, :cond_3
 
@@ -570,7 +570,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a03a1
+    const v0, 0x7f0a03a4
 
     invoke-virtual {v15, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -871,12 +871,12 @@
 
     if-eqz v1, :cond_5
 
-    const v0, 0x7f08024d
+    const v0, 0x7f08024e
 
     goto :goto_3
 
     :cond_5
-    const v0, 0x7f080267
+    const v0, 0x7f080268
 
     :cond_6
     :goto_3
@@ -940,7 +940,7 @@
 
     if-eqz p2, :cond_5
 
-    const v2, 0x7f0a0095
+    const v2, 0x7f0a0098
 
     invoke-virtual {p5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -951,7 +951,7 @@
     :cond_5
     if-eqz p3, :cond_6
 
-    const v2, 0x7f0a0228
+    const v2, 0x7f0a022b
 
     invoke-virtual {p5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -962,7 +962,7 @@
     :cond_6
     if-eqz p4, :cond_7
 
-    const v2, 0x7f0a03a0
+    const v2, 0x7f0a03a3
 
     invoke-virtual {p5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

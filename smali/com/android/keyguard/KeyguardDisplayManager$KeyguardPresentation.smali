@@ -144,11 +144,11 @@
 
     iput v2, p0, Lcom/android/keyguard/KeyguardDisplayManager$KeyguardPresentation;->mMarginTop:I
 
-    const v1, 0x7f0d0085
+    const v1, 0x7f0d0086
 
     invoke-virtual {p0, v1}, Lcom/android/keyguard/KeyguardDisplayManager$KeyguardPresentation;->setContentView(I)V
 
-    const v1, 0x7f0a00a9
+    const v1, 0x7f0a00ac
 
     invoke-virtual {p0, v1}, Lcom/android/keyguard/KeyguardDisplayManager$KeyguardPresentation;->findViewById(I)Landroid/view/View;
 

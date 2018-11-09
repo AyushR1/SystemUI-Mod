@@ -15,10 +15,10 @@
 
 
 # static fields
-.field public static final mr_chooser_dialog:I = 0x7f0d00ce
+.field public static final mr_chooser_dialog:I = 0x7f0d00cf
 
-.field public static final mr_chooser_list_item:I = 0x7f0d00cf
+.field public static final mr_chooser_list_item:I = 0x7f0d00d0
 
-.field public static final mr_controller_material_dialog_b:I = 0x7f0d00d0
+.field public static final mr_controller_material_dialog_b:I = 0x7f0d00d1
 
-.field public static final mr_controller_volume_item:I = 0x7f0d00d1
+.field public static final mr_controller_volume_item:I = 0x7f0d00d2

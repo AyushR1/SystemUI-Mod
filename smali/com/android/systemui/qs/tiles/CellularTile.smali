@@ -676,7 +676,7 @@
 
     if-eqz v5, :cond_4
 
-    const v5, 0x7f080260
+    const v5, 0x7f080261
 
     invoke-static {v5}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
@@ -687,7 +687,7 @@
     goto :goto_3
 
     :cond_4
-    const v5, 0x7f080292
+    const v5, 0x7f080293
 
     invoke-static {v5}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 

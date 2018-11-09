@@ -145,7 +145,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a01a4
+    const v2, 0x7f0a01a7
 
     invoke-virtual {v0, v2, v1}, Landroid/widget/Button;->setTag(ILjava/lang/Object;)V
 
@@ -216,7 +216,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/volume/SegmentedButtons;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d014a
+    const v1, 0x7f0d014b
 
     const/4 v2, 0x0
 

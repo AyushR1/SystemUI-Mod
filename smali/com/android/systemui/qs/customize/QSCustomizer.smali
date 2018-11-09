@@ -82,13 +82,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0115
+    const v1, 0x7f0d0116
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     new-instance v0, Lcom/android/systemui/qs/QSDetailClipper;
 
-    const v1, 0x7f0a00cc
+    const v1, 0x7f0a00cf
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/qs/customize/QSCustomizer;->findViewById(I)Landroid/view/View;
 
@@ -164,7 +164,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040586
+    const v4, 0x104058a
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -549,7 +549,7 @@
 .method private updateNavBackDrop(Landroid/content/res/Configuration;)V
     .locals 4
 
-    const v0, 0x7f0a021f
+    const v0, 0x7f0a0222
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/customize/QSCustomizer;->findViewById(I)Landroid/view/View;
 

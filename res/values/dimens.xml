@@ -364,9 +364,9 @@
     <dimen name="glowpadview_glow_radius">75.0dip</dimen>
     <dimen name="glowpadview_inner_radius">15.0dip</dimen>
     <dimen name="go_to_full_shade_appearing_translation">200.0dip</dimen>
-    <item type="dimen" name="group_overflow_number_extra_padding_dark">@android:dimen/notification_header_app_name_margin_start</item>
-    <item type="dimen" name="group_overflow_number_padding">@android:dimen/notification_content_margin_start</item>
-    <item type="dimen" name="group_overflow_number_size">@android:dimen/notification_title_text_size</item>
+    <item type="dimen" name="group_overflow_number_extra_padding_dark">@android:dimen/notification_extra_margin_ambient</item>
+    <item type="dimen" name="group_overflow_number_padding">@android:dimen/notification_content_margin_end</item>
+    <item type="dimen" name="group_overflow_number_size">@android:dimen/notification_text_size</item>
     <dimen name="group_overflow_number_size_dark">16.0sp</dimen>
     <dimen name="halo_diameter">22.0dip</dimen>
     <dimen name="halo_inner_radius">10.0dip</dimen>
@@ -736,10 +736,10 @@
     <dimen name="navbar_search_snap_margin">40.0dip</dimen>
     <dimen name="navigation_bar_deadzone_size">12.0dip</dimen>
     <dimen name="navigation_bar_deadzone_size_max">32.0dip</dimen>
-    <item type="dimen" name="navigation_bar_height">@android:dimen/navigation_bar_height_car_mode</item>
-    <item type="dimen" name="navigation_bar_height_car_mode">@android:dimen/navigation_bar_height_landscape</item>
+    <item type="dimen" name="navigation_bar_height">@android:dimen/navigation_bar_height</item>
+    <item type="dimen" name="navigation_bar_height_car_mode">@android:dimen/navigation_bar_height_car_mode</item>
     <dimen name="navigation_bar_min_swipe_distance">48.0dip</dimen>
-    <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_height_car_mode</item>
+    <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_height</item>
     <dimen name="navigation_extra_key_width">36.0dip</dimen>
     <dimen name="navigation_key_padding">0.0dip</dimen>
     <dimen name="navigation_key_width">70.0dip</dimen>
@@ -750,7 +750,7 @@
     <dimen name="notification_ambient_height">400.0dip</dimen>
     <dimen name="notification_big_circle_margin">12.0dip</dimen>
     <item type="dimen" name="notification_children_container_divider_height">@dimen/notification_divider_height</item>
-    <item type="dimen" name="notification_children_container_margin_top">@android:dimen/notification_custom_view_max_image_height</item>
+    <item type="dimen" name="notification_children_container_margin_top">@android:dimen/notification_content_margin_top</item>
     <dimen name="notification_children_container_top_padding">8.0dip</dimen>
     <dimen name="notification_children_padding">4.0dip</dimen>
     <dimen name="notification_content_margin_start">0.0dip</dimen>
@@ -973,9 +973,9 @@
     <dimen name="restricted_padlock_pading">4.0dip</dimen>
     <dimen name="roaming_icon_start_padding">2.0dip</dimen>
     <dimen name="rounded_corner_content_padding">8.0dip</dimen>
-    <item type="dimen" name="rounded_corner_radius">@android:dimen/screen_percentage_10</item>
-    <item type="dimen" name="rounded_corner_radius_bottom">@android:dimen/screen_percentage_12</item>
-    <item type="dimen" name="rounded_corner_radius_top">@android:dimen/screen_percentage_15</item>
+    <item type="dimen" name="rounded_corner_radius">@android:dimen/rounded_corner_radius</item>
+    <item type="dimen" name="rounded_corner_radius_bottom">@android:dimen/rounded_corner_radius_bottom</item>
+    <item type="dimen" name="rounded_corner_radius_top">@android:dimen/rounded_corner_radius_top</item>
     <dimen name="scenery_z">6.0dip</dimen>
     <dimen name="screen_pinning_nav_highlight_outer_size">84.0dip</dimen>
     <dimen name="screen_pinning_nav_highlight_size">56.0dip</dimen>
@@ -1031,13 +1031,13 @@
     <dimen name="status_bar_header_height_expanded">124.0dip</dimen>
     <dimen name="status_bar_header_height_keyguard">40.0dip</dimen>
     <dimen name="status_bar_header_padding_bottom">48.0dip</dimen>
-    <item type="dimen" name="status_bar_height">@android:dimen/subtitle_corner_radius</item>
+    <item type="dimen" name="status_bar_height">@android:dimen/status_bar_height</item>
     <item type="dimen" name="status_bar_icon_drawing_alpha">90.0%</item>
     <dimen name="status_bar_icon_drawing_size">15.0dip</dimen>
-    <item type="dimen" name="status_bar_icon_drawing_size_dark">@android:dimen/notification_header_margin_bottom</item>
+    <item type="dimen" name="status_bar_icon_drawing_size_dark">@android:dimen/notification_header_icon_size_ambient</item>
     <dimen name="status_bar_icon_padding">0.0dip</dimen>
     <item type="dimen" name="status_bar_icon_scale_factor">1.0</item>
-    <item type="dimen" name="status_bar_icon_size">@android:dimen/subtitle_shadow_radius</item>
+    <item type="dimen" name="status_bar_icon_size">@android:dimen/status_bar_icon_size</item>
     <dimen name="status_bar_left_clock_end_padding">7.0dip</dimen>
     <dimen name="status_bar_left_clock_starting_padding">0.0dip</dimen>
     <dimen name="status_bar_padding_end">6.0dip</dimen>
@@ -1115,6 +1115,7 @@
     <dimen name="volume_row_slider_height">48.0dip</dimen>
     <dimen name="volume_row_slider_padding_start">12.0dip</dimen>
     <dimen name="volume_slider_interspacing">8.0dip</dimen>
+    <dimen name="weather_icon_size">17.0dip</dimen>
     <dimen name="wide_type_icon_start_padding">2.0dip</dimen>
     <dimen name="wide_type_icon_start_padding_qs">3.0dip</dimen>
     <dimen name="widget_big_font_size">64.0dip</dimen>

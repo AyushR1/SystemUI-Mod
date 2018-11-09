@@ -267,24 +267,24 @@
 
     if-eqz p2, :cond_0
 
-    const v0, 0x7f08030f
+    const v0, 0x7f080310
 
     return v0
 
     :cond_0
-    const v0, 0x7f080311
+    const v0, 0x7f080312
 
     return v0
 
     :cond_1
     if-eqz p2, :cond_2
 
-    const v0, 0x7f08030d
+    const v0, 0x7f08030e
 
     return v0
 
     :cond_2
-    const v0, 0x7f080313
+    const v0, 0x7f080314
 
     return v0
 
@@ -293,24 +293,24 @@
 
     if-eqz p2, :cond_4
 
-    const v0, 0x7f080319
+    const v0, 0x7f08031a
 
     return v0
 
     :cond_4
-    const v0, 0x7f080317
+    const v0, 0x7f080318
 
     return v0
 
     :cond_5
     if-eqz p2, :cond_6
 
-    const v0, 0x7f08031b
+    const v0, 0x7f08031c
 
     return v0
 
     :cond_6
-    const v0, 0x7f080315
+    const v0, 0x7f080316
 
     return v0
 .end method
@@ -367,7 +367,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    const v4, 0x7f08030c
+    const v4, 0x7f08030d
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -742,7 +742,7 @@
 
     invoke-direct {v3, v4}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v4, 0x7f080314
+    const v4, 0x7f080315
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -67,7 +67,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d00f7
+    const v0, 0x7f0d00f8
 
     const/4 v1, 0x0
 
@@ -123,7 +123,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0a032f
+    const v0, 0x7f0a0332
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -137,7 +137,7 @@
 
     check-cast v1, Landroid/widget/Switch;
 
-    const v2, 0x7f0a0332
+    const v2, 0x7f0a0335
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

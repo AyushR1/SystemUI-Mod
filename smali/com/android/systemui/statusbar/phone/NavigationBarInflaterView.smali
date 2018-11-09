@@ -463,7 +463,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a0221
+    const v1, 0x7f0a0224
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -643,7 +643,7 @@
 
     if-eqz v2, :cond_4
 
-    const v2, 0x7f0d006d
+    const v2, 0x7f0d006e
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -660,7 +660,7 @@
 
     if-eqz v2, :cond_5
 
-    const v2, 0x7f0d002e
+    const v2, 0x7f0d002f
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -677,7 +677,7 @@
 
     if-eqz v2, :cond_6
 
-    const v2, 0x7f0d012e
+    const v2, 0x7f0d012f
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -694,7 +694,7 @@
 
     if-eqz v2, :cond_7
 
-    const v2, 0x7f0d00ca
+    const v2, 0x7f0d00cb
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -711,7 +711,7 @@
 
     if-eqz v2, :cond_8
 
-    const v2, 0x7f0d00d6
+    const v2, 0x7f0d00d7
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -728,7 +728,7 @@
 
     if-eqz v2, :cond_9
 
-    const v2, 0x7f0d004e
+    const v2, 0x7f0d004f
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -745,7 +745,7 @@
 
     if-eqz v2, :cond_a
 
-    const v2, 0x7f0d0050
+    const v2, 0x7f0d0051
 
     invoke-virtual {p3, v2, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -770,7 +770,7 @@
 
     move-result v4
 
-    const v5, 0x7f0d0051
+    const v5, 0x7f0d0052
 
     invoke-virtual {p3, v5, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1023,7 +1023,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d00db
+    const v2, 0x7f0d00dc
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1035,7 +1035,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0a02ad
+    const v2, 0x7f0a02b0
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setId(I)V
 
@@ -1045,7 +1045,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0d00dc
+    const v2, 0x7f0d00dd
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1057,7 +1057,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot90:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a02ae
+    const v1, 0x7f0a02b1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setId(I)V
 
@@ -1075,7 +1075,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a0109
+    const v1, 0x7f0a010c
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1087,7 +1087,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0a00a0
+    const v2, 0x7f0a00a3
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1125,7 +1125,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a0109
+    const v1, 0x7f0a010c
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1135,7 +1135,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0a00a0
+    const v2, 0x7f0a00a3
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1365,7 +1365,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v7, 0x7f0a0109
+    const v7, 0x7f0a010c
 
     invoke-virtual {v6, v7}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1393,7 +1393,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mRot0:Landroid/widget/FrameLayout;
 
-    const v8, 0x7f0a00a0
+    const v8, 0x7f0a00a3
 
     invoke-virtual {v6, v8}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

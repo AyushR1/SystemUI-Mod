@@ -23,7 +23,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x7f0d0126
+    const v0, 0x7f0d0127
 
     sput v0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->layoutResId:I
 
@@ -255,7 +255,7 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    const v0, 0x7f0a038a
+    const v0, 0x7f0a038d
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/tiles/UserDetailItemView;->findViewById(I)Landroid/view/View;
 
@@ -265,7 +265,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mAvatar:Lcom/android/systemui/statusbar/phone/UserAvatarView;
 
-    const v0, 0x7f0a0389
+    const v0, 0x7f0a038c
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/tiles/UserDetailItemView;->findViewById(I)Landroid/view/View;
 
@@ -303,7 +303,7 @@
     :cond_1
     invoke-direct {p0}, Lcom/android/systemui/qs/tiles/UserDetailItemView;->updateTypeface()V
 
-    const v0, 0x7f0a02a2
+    const v0, 0x7f0a02a5
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/qs/tiles/UserDetailItemView;->findViewById(I)Landroid/view/View;
 

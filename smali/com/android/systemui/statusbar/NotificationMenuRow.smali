@@ -301,7 +301,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d002c
+    const v2, 0x7f0d002d
 
     const/4 v3, 0x0
 
@@ -339,7 +339,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0d00e3
+    const v3, 0x7f0d00e4
 
     const/4 v4, 0x0
 
@@ -353,7 +353,7 @@
 
     new-instance v3, Lcom/android/systemui/statusbar/NotificationMenuRow$NotificationMenuItem;
 
-    const v4, 0x7f08027d
+    const v4, 0x7f08027e
 
     invoke-direct {v3, p0, v1, v2, v4}, Lcom/android/systemui/statusbar/NotificationMenuRow$NotificationMenuItem;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/systemui/statusbar/NotificationGuts$GutsContent;I)V
 
@@ -577,7 +577,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d00e6
+    const v2, 0x7f0d00e7
 
     const/4 v3, 0x0
 
@@ -597,7 +597,7 @@
 
     new-instance v3, Lcom/android/systemui/statusbar/NotificationMenuRow$NotificationMenuItem;
 
-    const v4, 0x7f08028d
+    const v4, 0x7f08028e
 
     invoke-direct {v3, p0, v2, v1, v4}, Lcom/android/systemui/statusbar/NotificationMenuRow$NotificationMenuItem;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/systemui/statusbar/NotificationGuts$GutsContent;I)V
 

@@ -26,11 +26,11 @@
     </style>
     <style name="Animation.RecentPanel" parent="@style/Animation">
         <item name="android:windowEnterAnimation">@android:anim/grow_fade_in_from_bottom</item>
-        <item name="android:windowExitAnimation">@android:anim/slide_in_enter_micro</item>
+        <item name="android:windowExitAnimation">@android:anim/shrink_fade_out_from_bottom</item>
     </style>
     <style name="Animation.ShirtPocketPanel" parent="@style/Animation">
         <item name="android:windowEnterAnimation">@android:anim/grow_fade_in_from_bottom</item>
-        <item name="android:windowExitAnimation">@android:anim/slide_in_enter_micro</item>
+        <item name="android:windowExitAnimation">@android:anim/shrink_fade_out_from_bottom</item>
     </style>
     <style name="Animation.StatusBar" parent="@style/Animation" />
     <style name="AutoSizingList">
@@ -1896,7 +1896,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLines">2</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFeatureSettings</item>
     </style>
     <style name="TextAppearance.Keyguard.Secondary" parent="@style/TextAppearance.Keyguard">
         <item name="android:textSize">@dimen/widget_label_font_size</item>
@@ -3733,7 +3733,7 @@
         <item name="android:background">@null</item>
         <item name="android:paddingBottom">-16.0dip</item>
         <item name="android:singleLine">true</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFeatureSettings</item>
     </style>
     <style name="Widget.TextView.NumPadKey.Klondike" parent="@style/Widget.TextView.NumPadKey">
         <item name="android:textSize">12.0sp</item>
@@ -3745,25 +3745,25 @@
         <item name="android:colorBackground">?android:colorSecondary</item>
     </style>
     <style name="hybrid_notification">
-        <item name="android:paddingStart">@android:dimen/notification_content_margin_top</item>
+        <item name="android:paddingStart">@android:dimen/notification_content_margin_start</item>
         <item name="android:paddingEnd">12.0dip</item>
     </style>
     <style name="hybrid_notification_ambient">
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingStart">@android:dimen/notification_header_app_name_margin_start</item>
-        <item name="android:paddingEnd">@android:dimen/notification_header_app_name_margin_start</item>
+        <item name="android:paddingStart">@android:dimen/notification_extra_margin_ambient</item>
+        <item name="android:paddingEnd">@android:dimen/notification_extra_margin_ambient</item>
     </style>
     <style name="hybrid_notification_text" parent="@android:style/Widget.Material.Notification.Text">
         <item name="android:paddingEnd">4.0dip</item>
     </style>
     <style name="hybrid_notification_text_ambient">
-        <item name="android:textSize">@android:dimen/notification_ambient_title_text_size</item>
+        <item name="android:textSize">@android:dimen/notification_ambient_text_size</item>
         <item name="android:textColor">#eeffffff</item>
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center|top</item>
         <item name="android:maxLines">3</item>
-        <item name="android:paddingStart">@android:dimen/notification_content_margin_top</item>
-        <item name="android:paddingEnd">@android:dimen/notification_content_margin_start</item>
+        <item name="android:paddingStart">@android:dimen/notification_content_margin_start</item>
+        <item name="android:paddingEnd">@android:dimen/notification_content_margin_end</item>
     </style>
     <style name="hybrid_notification_title">
         <item name="android:textAppearance">@android:style/TextAppearance.Material.Notification.Title</item>
@@ -3771,12 +3771,12 @@
     </style>
     <style name="hybrid_notification_title_ambient">
         <item name="android:textAppearance">@android:style/Notification.Header.Ambient</item>
-        <item name="android:textSize">@android:dimen/notification_badge_size</item>
+        <item name="android:textSize">@android:dimen/notification_ambient_title_text_size</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:layout_gravity">center|top</item>
-        <item name="android:layout_marginTop">@android:dimen/notification_header_padding_bottom</item>
-        <item name="android:paddingStart">@android:dimen/notification_content_margin_top</item>
-        <item name="android:paddingEnd">@android:dimen/notification_content_margin_start</item>
+        <item name="android:layout_marginTop">@android:dimen/notification_header_margin_top_ambient</item>
+        <item name="android:paddingStart">@android:dimen/notification_content_margin_start</item>
+        <item name="android:paddingEnd">@android:dimen/notification_content_margin_end</item>
     </style>
     <style name="keyguard_presentation_theme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
         <item name="wallpaperTextColor">@android:color/primary_text_material_dark</item>
@@ -3794,8 +3794,8 @@
     <style name="widget_big_thin">
         <item name="android:textSize">@dimen/widget_big_font_size</item>
         <item name="android:paddingBottom">@dimen/bottom_text_spacing_digital</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
-        <item name="android:fontFeatureSettings">@android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:fontFamily">@android:string/config_headlineFontFeatureSettings</item>
+        <item name="android:fontFeatureSettings">@android:string/config_helpIntentNameKey</item>
     </style>
     <style name="widget_label">
         <item name="android:textSize">@dimen/widget_label_font_size</item>

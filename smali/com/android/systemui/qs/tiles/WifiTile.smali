@@ -795,7 +795,7 @@
 
     if-eqz v7, :cond_f
 
-    const v11, 0x7f080285
+    const v11, 0x7f080286
 
     invoke-static {v11}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
@@ -822,7 +822,7 @@
 
     iput v3, p1, Lcom/android/systemui/plugins/qs/QSTile$SignalState;->state:I
 
-    const v11, 0x7f08026e
+    const v11, 0x7f08026f
 
     invoke-static {v11}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
@@ -862,7 +862,7 @@
     :cond_11
     if-eqz v5, :cond_12
 
-    const v11, 0x7f08026f
+    const v11, 0x7f080270
 
     invoke-static {v11}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
@@ -879,7 +879,7 @@
     goto :goto_a
 
     :cond_12
-    const v11, 0x7f080275
+    const v11, 0x7f080276
 
     invoke-static {v11}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 

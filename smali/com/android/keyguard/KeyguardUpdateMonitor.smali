@@ -72,8 +72,6 @@
 
 .field private final mDreamManager:Landroid/service/dreams/IDreamManager;
 
-.field private mFailedAttempts:Landroid/util/SparseIntArray;
-
 .field private mFingerprintCancelSignal:Landroid/os/CancellationSignal;
 
 .field private mFingerprintRunningState:I
@@ -236,12 +234,6 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mServiceStates:Ljava/util/HashMap;
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFailedAttempts:Landroid/util/SparseIntArray;
 
     nop
 
@@ -3791,18 +3783,6 @@
     return-void
 .end method
 
-.method public clearFailedUnlockAttempts()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFailedAttempts:Landroid/util/SparseIntArray;
-
-    sget v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->sCurrentUser:I
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseIntArray;->delete(I)V
-
-    return-void
-.end method
-
 .method public clearFingerprintRecognized()V
     .locals 1
 
@@ -4388,20 +4368,6 @@
 
     :cond_3
     return-void
-.end method
-
-.method public getFailedUnlockAttempts(I)I
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFailedAttempts:Landroid/util/SparseIntArray;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public getNextSubIdForState(Lcom/android/internal/telephony/IccCardConstants$State;)I
@@ -5509,22 +5475,6 @@
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleReportEmergencyCallAction()V
 
     :goto_0
-    return-void
-.end method
-
-.method public reportFailedStrongAuthUnlockAttempt(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFailedAttempts:Landroid/util/SparseIntArray;
-
-    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getFailedUnlockAttempts(I)I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/SparseIntArray;->put(II)V
-
     return-void
 .end method
 

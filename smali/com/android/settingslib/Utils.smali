@@ -346,7 +346,7 @@
 .method public static isDeviceProvisioningPackage(Landroid/content/res/Resources;Ljava/lang/String;)Z
     .locals 2
 
-    const v0, 0x104012f
+    const v0, 0x1040131
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -480,6 +480,26 @@
     iget-object v0, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     const-string v3, "com.android.printspooler"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iget-object v0, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const-string v3, "org.pixelexperience.weather.client"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iget-object v0, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const-string v3, "org.pixelexperience.ambient.play.history"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

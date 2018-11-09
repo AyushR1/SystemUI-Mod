@@ -92,7 +92,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/HybridGroupManager;->mParent:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0d006f
+    const v2, 0x7f0d0070
 
     const/4 v3, 0x0
 
@@ -124,7 +124,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/HybridGroupManager;->mParent:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0d0070
+    const v2, 0x7f0d0071
 
     const/4 v3, 0x0
 

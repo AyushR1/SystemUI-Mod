@@ -1186,6 +1186,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="screen_pinning_description">Ela é mantida à vista até que seja liberada. Toque em Voltar e em Visão geral e mantenha essas opções pressionadas para liberar.</string>
     <string name="screen_pinning_description_accessible">Ela é mantida à vista até que seja liberada. Toque em Visão geral e mantenha essa opção pressionada para liberar.</string>
     <string name="screen_pinning_description_no_navbar">Ela é mantida à vista até que seja liberada. Mantenha o botão Voltar pressionado para liberar.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Ela é mantida à vista até que seja liberada. Toque e segure o sensor de impressão de digital para liberar.</string>
     <string name="screen_pinning_description_recents_invisible">Ela é mantida à vista até que seja liberada. Toque em Voltar e em Início e mantenha essas opções pressionadas para liberar.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Ela é mantida à vista até que seja liberada. Toque em Início e mantenha essa opção pressionada para liberar.</string>
     <string name="screen_pinning_exit">Tela liberada</string>
@@ -1195,6 +1196,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="screen_pinning_title">A tela está fixada</string>
     <string name="screen_pinning_toast">Para liberar esta tela, mantenha os botões Voltar e Visão geral pressionados</string>
     <string name="screen_pinning_toast_no_navbar">Para liberar esta tela, mantenha o botão Voltar pressionado</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Para liberar esta tela, toque e segure o sensor de impressão de digital</string>
     <string name="screen_pinning_toast_recents_invisible">Para liberar essa tela, toque nos botões Voltar e Início e mantenha-os pressionados</string>
     <string name="screen_zoom_summary_custom">Personalizada (%d)</string>
     <string name="screen_zoom_summary_default">Padrão</string>

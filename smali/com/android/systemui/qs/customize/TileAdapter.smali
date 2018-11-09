@@ -1460,7 +1460,7 @@
 
     new-instance v3, Lcom/android/systemui/qs/customize/TileAdapter$Holder;
 
-    const v4, 0x7f0d0116
+    const v4, 0x7f0d0117
 
     invoke-virtual {v1, v4, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1477,7 +1477,7 @@
 
     new-instance v3, Lcom/android/systemui/qs/customize/TileAdapter$Holder;
 
-    const v4, 0x7f0d0113
+    const v4, 0x7f0d0114
 
     invoke-virtual {v1, v4, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1488,7 +1488,7 @@
     return-object v3
 
     :cond_1
-    const v3, 0x7f0d0117
+    const v3, 0x7f0d0118
 
     invoke-virtual {v1, v3, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

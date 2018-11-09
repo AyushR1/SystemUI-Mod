@@ -429,7 +429,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f0d013d
+    const v6, 0x7f0d013e
 
     invoke-virtual {v4, v6}, Landroid/app/AlertDialog$Builder;->setView(I)Landroid/app/AlertDialog$Builder;
 
@@ -463,7 +463,7 @@
 
     iget-object v4, v1, Lcom/android/systemui/media/MediaProjectionPermissionActivity;->mDialog:Landroid/app/AlertDialog;
 
-    const v6, 0x7f0a029b
+    const v6, 0x7f0a029e
 
     invoke-virtual {v4, v6}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 

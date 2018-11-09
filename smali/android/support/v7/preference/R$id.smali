@@ -15,12 +15,12 @@
 
 
 # static fields
-.field public static final icon_frame:I = 0x7f0a0164
+.field public static final icon_frame:I = 0x7f0a0167
 
-.field public static final seekbar:I = 0x7f0a02f6
+.field public static final seekbar:I = 0x7f0a02f9
 
-.field public static final seekbar_value:I = 0x7f0a02f7
+.field public static final seekbar_value:I = 0x7f0a02fa
 
-.field public static final spinner:I = 0x7f0a0318
+.field public static final spinner:I = 0x7f0a031b
 
-.field public static final switchWidget:I = 0x7f0a032e
+.field public static final switchWidget:I = 0x7f0a0331

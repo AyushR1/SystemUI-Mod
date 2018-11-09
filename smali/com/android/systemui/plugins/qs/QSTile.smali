@@ -49,7 +49,12 @@
 .method public abstract addCallback(Lcom/android/systemui/plugins/qs/QSTile$Callback;)V
 .end method
 
-.method public abstract clearState()V
+.method public clearState()V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    return-void
 .end method
 
 .method public abstract click()V

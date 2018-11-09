@@ -179,8 +179,6 @@
 
     invoke-interface {v5, p0, v6}, Lcom/android/systemui/plugins/qs/QSTile;->setListening(Ljava/lang/Object;Z)V
 
-    invoke-interface {v5}, Lcom/android/systemui/plugins/qs/QSTile;->clearState()V
-
     invoke-interface {v5}, Lcom/android/systemui/plugins/qs/QSTile;->refreshState()V
 
     const/4 v6, 0x0

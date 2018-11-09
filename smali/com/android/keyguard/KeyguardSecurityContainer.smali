@@ -216,6 +216,8 @@
 
     check-cast v1, Lcom/android/keyguard/KeyguardSecurityView;
 
+    invoke-interface {v1}, Lcom/android/keyguard/KeyguardSecurityView;->reset()V
+
     :cond_2
     return-object v1
 .end method
@@ -239,27 +241,27 @@
     return v0
 
     :pswitch_1
-    const v0, 0x7f0a019e
+    const v0, 0x7f0a01a1
 
     return v0
 
     :pswitch_2
-    const v0, 0x7f0a019d
+    const v0, 0x7f0a01a0
 
     return v0
 
     :pswitch_3
-    const v0, 0x7f0a0197
+    const v0, 0x7f0a019a
 
     return v0
 
     :pswitch_4
-    const v0, 0x7f0a0199
+    const v0, 0x7f0a019c
 
     return v0
 
     :pswitch_5
-    const v0, 0x7f0a0198
+    const v0, 0x7f0a019b
 
     return v0
 
@@ -278,115 +280,109 @@
 .end method
 
 .method private reportFailedUnlockAttempt(II)V
-    .locals 10
+    .locals 9
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-virtual {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentFailedPasswordAttempts(I)I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getFailedUnlockAttempts(I)I
+    add-int/lit8 v0, v0, 0x1
 
-    move-result v1
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
-
-    move-result-object v2
+    move-result-object v1
 
     nop
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v3, p1}, Landroid/app/admin/DevicePolicyManager;->getMaximumFailedPasswordsForWipe(Landroid/content/ComponentName;I)I
+    invoke-virtual {v1, v2, p1}, Landroid/app/admin/DevicePolicyManager;->getMaximumFailedPasswordsForWipe(Landroid/content/ComponentName;I)I
 
-    move-result v3
+    move-result v2
 
-    if-lez v3, :cond_0
+    if-lez v2, :cond_0
 
-    sub-int v4, v3, v1
+    sub-int v3, v2, v0
 
     goto :goto_0
 
     :cond_0
-    const v4, 0x7fffffff
+    const v3, 0x7fffffff
 
     :goto_0
-    const/4 v5, 0x5
+    const/4 v4, 0x5
 
-    if-ge v4, v5, :cond_4
+    if-ge v3, v4, :cond_4
 
-    invoke-virtual {v2, p1}, Landroid/app/admin/DevicePolicyManager;->getProfileWithMinimumFailedPasswordsForWipe(I)I
+    invoke-virtual {v1, p1}, Landroid/app/admin/DevicePolicyManager;->getProfileWithMinimumFailedPasswordsForWipe(I)I
 
-    move-result v5
+    move-result v4
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    if-ne v5, p1, :cond_1
+    if-ne v4, p1, :cond_1
 
-    if-eqz v5, :cond_2
+    if-eqz v4, :cond_2
 
-    const/4 v6, 0x3
+    const/4 v5, 0x3
 
     goto :goto_1
 
     :cond_1
-    const/16 v7, -0x2710
+    const/16 v6, -0x2710
 
-    if-eq v5, v7, :cond_2
+    if-eq v4, v6, :cond_2
 
-    const/4 v6, 0x2
+    const/4 v5, 0x2
 
     :cond_2
     :goto_1
-    if-lez v4, :cond_3
+    if-lez v3, :cond_3
 
-    invoke-direct {p0, v1, v4, v6}, Lcom/android/keyguard/KeyguardSecurityContainer;->showAlmostAtWipeDialog(III)V
+    invoke-direct {p0, v0, v3, v5}, Lcom/android/keyguard/KeyguardSecurityContainer;->showAlmostAtWipeDialog(III)V
 
     goto :goto_2
 
     :cond_3
-    const-string v7, "KeyguardSecurityView"
+    const-string v6, "KeyguardSecurityView"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Too many unlock attempts; user "
+    const-string v8, "Too many unlock attempts; user "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, " will be wiped!"
+    const-string v8, " will be wiped!"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0, v1, v6}, Lcom/android/keyguard/KeyguardSecurityContainer;->showWipeDialog(II)V
+    invoke-direct {p0, v0, v5}, Lcom/android/keyguard/KeyguardSecurityContainer;->showWipeDialog(II)V
 
     :cond_4
     :goto_2
-    invoke-virtual {v0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->reportFailedStrongAuthUnlockAttempt(I)V
+    iget-object v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v5, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-virtual {v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->reportFailedPasswordAttempt(I)V
+    invoke-virtual {v4, p1}, Lcom/android/internal/widget/LockPatternUtils;->reportFailedPasswordAttempt(I)V
 
     if-lez p2, :cond_5
 
-    iget-object v5, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {v5, p2, p1}, Lcom/android/internal/widget/LockPatternUtils;->reportPasswordLockout(II)V
+    invoke-virtual {v4, p2, p1}, Lcom/android/internal/widget/LockPatternUtils;->reportPasswordLockout(II)V
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardSecurityContainer;->showTimeoutDialog(II)V
 
@@ -733,13 +729,9 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-static {v5}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getFailedUnlockAttempts(I)I
+    invoke-virtual {v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentFailedPasswordAttempts(I)I
 
     move-result v5
 
@@ -940,27 +932,27 @@
     return v0
 
     :pswitch_1
-    const v0, 0x7f0d0087
+    const v0, 0x7f0d0088
 
     return v0
 
     :pswitch_2
-    const v0, 0x7f0d0086
+    const v0, 0x7f0d0087
 
     return v0
 
     :pswitch_3
-    const v0, 0x7f0d0082
+    const v0, 0x7f0d0083
 
     return v0
 
     :pswitch_4
-    const v0, 0x7f0d0084
+    const v0, 0x7f0d0085
 
     return v0
 
     :pswitch_5
-    const v0, 0x7f0d0083
+    const v0, 0x7f0d0084
 
     return v0
 
@@ -1021,7 +1013,7 @@
 .method protected onFinishInflate()V
     .locals 2
 
-    const v0, 0x7f0a0391
+    const v0, 0x7f0a0394
 
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardSecurityContainer;->findViewById(I)Landroid/view/View;
 

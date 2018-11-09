@@ -1186,6 +1186,7 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="screen_pinning_description">Obsah bude pripnutý v zobrazení, dokým ho neuvoľníte. Uvoľníte ho stlačením a podržaním tlačidiel Späť a Prehľad.</string>
     <string name="screen_pinning_description_accessible">Obsah bude pripnutý v zobrazení, dokým ho neuvoľníte. Uvoľníte ho stlačením a podržaním tlačidla Prehľad.</string>
     <string name="screen_pinning_description_no_navbar">Obsah bude pripnutý v zobrazení, až kým ho neuvoľníte. Uvoľníte ho stlačením a podržaním tlačidla Späť.</string>
+    <string name="screen_pinning_description_no_navbar_fpsensor">Obsah bude pripnutý v zobrazení, až kým ho neuvoľníte. Uvoľníte ho stlačením a podržaním snímača odtlačkov prstov.</string>
     <string name="screen_pinning_description_recents_invisible">Obsah bude pripnutý v zobrazení, dokým ho neuvoľníte. Uvoľníte ho pridržaním tlačidiel Späť a Domov.</string>
     <string name="screen_pinning_description_recents_invisible_accessible">Obsah bude pripnutý v zobrazení, dokým ho neuvoľníte. Uvoľníte ho pridržaním tlačidla Domov.</string>
     <string name="screen_pinning_exit">Obrazovka bola odopnutá</string>
@@ -1195,6 +1196,7 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="screen_pinning_title">Obrazovka je pripnutá</string>
     <string name="screen_pinning_toast">Ak chcete odopnúť túto obrazovku, pridržte tlačidlá Späť a Prehľad</string>
     <string name="screen_pinning_toast_no_navbar">Na odopnutie tejto obrazovky stlačte a podržte tlačidlo Späť</string>
+    <string name="screen_pinning_toast_no_navbar_fpsensor">Na odopnutie tejto obrazovky stlačte a podržte snímač odtlačkov prstov</string>
     <string name="screen_pinning_toast_recents_invisible">Ak chcete odopnúť túto obrazovku, pridržte tlačidlá Späť a Prehľad</string>
     <string name="screen_zoom_summary_custom">Vlastné (%d)</string>
     <string name="screen_zoom_summary_default">Predvolené</string>

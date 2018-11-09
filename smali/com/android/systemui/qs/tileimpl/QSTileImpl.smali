@@ -768,18 +768,6 @@
     return-void
 .end method
 
-.method public clearState()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mHandler:Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;
-
-    const/16 v1, 0xb
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->sendEmptyMessage(I)Z
-
-    return-void
-.end method
-
 .method public click()V
     .locals 3
 
@@ -939,24 +927,6 @@
     return-object v0
 .end method
 
-.method protected handleClearState()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->newTileState()Lcom/android/systemui/plugins/qs/QSTile$State;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mTmpState:Lcom/android/systemui/plugins/qs/QSTile$State;
-
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->newTileState()Lcom/android/systemui/plugins/qs/QSTile$State;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
-
-    return-void
-.end method
-
 .method protected abstract handleClick()V
 .end method
 
@@ -1027,7 +997,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mHandler:Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;
 
-    const/16 v2, 0xf
+    const/16 v2, 0xe
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->removeMessages(I)V
 
@@ -1251,7 +1221,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mHandler:Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;
 
-    const/16 v1, 0xd
+    const/16 v1, 0xc
 
     invoke-virtual {v0, v1, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
@@ -1267,7 +1237,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mHandler:Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->sendEmptyMessage(I)Z
 
@@ -1319,7 +1289,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xe
+    const/16 v2, 0xd
 
     invoke-virtual {v0, v2, p2, v1, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$H;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 

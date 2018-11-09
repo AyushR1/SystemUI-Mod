@@ -462,7 +462,7 @@
 
     check-cast v3, Lcom/android/systemui/plugins/statusbar/NotificationSwipeActionHelper$SnoozeOption;
 
-    const v4, 0x7f0d00e7
+    const v4, 0x7f0d00e8
 
     iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationSnooze;->mSnoozeOptionContainer:Landroid/view/ViewGroup;
 
@@ -1015,7 +1015,7 @@
     goto :goto_1
 
     :cond_1
-    const v3, 0x7f0a0247
+    const v3, 0x7f0a024a
 
     if-ne v0, v3, :cond_3
 
@@ -1073,7 +1073,7 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/NotificationSnooze;->mCollapsedHeight:I
 
-    const v0, 0x7f0a0247
+    const v0, 0x7f0a024a
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 
@@ -1081,7 +1081,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0312
+    const v0, 0x7f0a0315
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 
@@ -1091,7 +1091,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationSnooze;->mSelectedOptionText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a037b
+    const v0, 0x7f0a037e
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 
@@ -1105,7 +1105,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f0a0117
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 
@@ -1115,7 +1115,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationSnooze;->mExpandButton:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00f2
+    const v0, 0x7f0a00f5
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 
@@ -1129,7 +1129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    const v0, 0x7f0a0313
+    const v0, 0x7f0a0316
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/NotificationSnooze;->findViewById(I)Landroid/view/View;
 

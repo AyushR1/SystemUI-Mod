@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    const v1, 0x11200df
+    const v1, 0x11200e1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    const v1, 0x112006e
+    const v1, 0x112006f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -253,12 +253,12 @@
 
     if-eqz v1, :cond_3
 
-    const v1, 0x104032e
+    const v1, 0x1040332
 
     goto :goto_1
 
     :cond_3
-    const v1, 0x1040313
+    const v1, 0x1040317
 
     :goto_1
     invoke-virtual {p0, v1}, Lcom/android/keyguard/EmergencyButton;->setText(I)V
